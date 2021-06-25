@@ -10,7 +10,7 @@ hideChildren: False
 ---
 ## What Is GroupDocs.Redaction?
 
-GroupDocs.Redaction is a powerful [sanitization](https://en.wikipedia.org/wiki/Sanitization_(classified_information)) [ ](https://en.wikipedia.org/wiki/Sanitization_(classified_information))API that allows to remove or mask classified information from over 30 document types. The main purpose of GroupDocs.Redaction product is an ability to optionally save redacted documents in PDF, transforming all pages into raster images or save redacted document in its original format for further editing.
+GroupDocs.Redaction is a powerful [sanitization](https://en.wikipedia.org/wiki/Sanitization_(classified_information)) API that allows to remove or mask classified information from over 30 document types. The main purpose of GroupDocs.Redaction product is an ability to optionally save redacted documents in PDF, transforming all pages into raster images or save redacted document in its original format for further editing.
 
 GroupDocs.Redaction provides a single format-independent interface for removing sensitive and classified information from the documents, including the document's metadata and annotations.
 
