@@ -53,7 +53,7 @@ The following example demonstrates how to use an implementation of **IOcrConnect
                     new RegexRedaction("(?<=Dear\\s)([^,]+)", marker) // person name
                     new RegexRedaction("\\d{4}", marker)  // card number parts, etc
                 });
-                if (result.Status != RedactionStatus.Failed)
+                if (result.getStatus() != RedactionStatus.Failed)
                 {
                     redactor.save(new SaveOptions(false, "Redacted"));
                 }
