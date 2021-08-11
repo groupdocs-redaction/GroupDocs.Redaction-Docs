@@ -2,7 +2,7 @@
 id: use-microsoft-azure-computer-vision
 url: redaction/net/use-microsoft-azure-computer-vision
 title: Use Microsoft Azure Computer Vision API 
-weight: 4
+weight: 5
 description: ""
 keywords: 
 productName: GroupDocs.Redaction for .NET

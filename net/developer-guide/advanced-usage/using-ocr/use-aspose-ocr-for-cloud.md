@@ -51,10 +51,53 @@ public class AsposeOCRForCloudConnector : IOcrConnector
 
     protected virtual RecognizedImage CreateDtoFromResponse(JToken jToken)
     {
-        // Recursively parse json tree with regions and text lines.
+        return new RecognizedImage(LeafRecursion(jToken));
     }
 
-    ...
+    private TextLine[] LeafRecursion(JToken jToken)
+    {
+        List<TextLine> lines = new List<TextLine>();
+        if (jToken["leaves"].Count() > 0)
+        {
+            foreach (var node in jToken["leaves"])
+            {
+                if (node["leaves"].Count() > 0)
+                {
+                    lines.AddRange(LeafRecursion(node));
+                }
+                else
+                {
+                    TextLine textLine = CreateTextLine(node);
+                    if (textLine != null)
+                    {
+                        lines.Add(textLine);
+                    }
+                }
+            }
+        }
+        return lines.ToArray();
+    }
+
+    private TextLine CreateTextLine(JToken line)
+    {
+        string lineText = line["values"].ToString();
+        Rectangle lineRectangle = GetLineRectangle(line);
+        if (!string.IsNullOrEmpty(lineText) && !lineRectangle.IsEmpty)
+        {
+            return new TextLine(RegularTextLine.SplitToFragments(lineText, lineRectangle));
+        }
+        else
+        {
+            return null;
+        }
+    }
+
+    private Rectangle GetLineRectangle(JToken line)
+    {
+        var rect = line["rect"];
+        return new Rectangle(rect[0].Value<int>(), rect[1].Value<int>(), rect[2].Value<int>() - rect[0].Value<int>(),
+            rect[3].Value<int>() - rect[1].Value<int>());
+    }
 }
 
 ```

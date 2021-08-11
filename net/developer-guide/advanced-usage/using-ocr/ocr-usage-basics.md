@@ -45,7 +45,7 @@ using (Redactor redactor = new Redactor("\\Sample.docx", new LoadOptions(), new 
 
 ```
 
-GroupDocs.Redaction provides two examples of the IOcrConnector implementation, free to use and customize for your needs. First, the [implementation based on Aspose.OCR for Cloud SDK]({{< ref "/redaction/net/developer-guide/advanced-usage/using-ocr/use-aspose-ocr-for-cloud" >}}). Second [implementation is using Microsoft Azure Cognitive Services API]({{< ref "/redaction/net/developer-guide/advanced-usage/using-ocr/use-microsoft-azure-computer-vision" >}}). Both services propose a trial subscription plan, but you can use any other free or paid OCR solution, web-based or on premise, by creating your own implementation of [IOcrConnector](https://apireference.groupdocs.com/net/redaction/groupdocs.redaction.integration.ocr/iocrconnector).
+GroupDocs.Redaction provides three examples of the IOcrConnector implementation, free to use and customize for your needs. First, the [implementation based on Aspose.OCR for Cloud SDK]({{< ref "/redaction/net/developer-guide/advanced-usage/using-ocr/use-aspose-ocr-for-cloud" >}}). Second, the [implementation based on Aspose.OCR on-premise API for .NET]({{< ref "/redaction/net/developer-guide/advanced-usage/using-ocr/use-aspose-ocr-on-premise" >}}). Third [implementation is using Microsoft Azure Cognitive Services API]({{< ref "/redaction/net/developer-guide/advanced-usage/using-ocr/use-microsoft-azure-computer-vision" >}}). Both services propose a trial subscription plan, but you can use any other free or paid OCR solution, web-based or on premise, by creating your own implementation of [IOcrConnector](https://apireference.groupdocs.com/net/redaction/groupdocs.redaction.integration.ocr/iocrconnector).
 
 
 ## More resources
