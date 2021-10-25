@@ -22,7 +22,7 @@ If no filters are set, redactions affects the entire document. All indices are z
 **C#**
 
 ```csharp
-using (Redactor redactor = new Redactor("D:\\Sales in September.xslx"))
+using (Redactor redactor = new Redactor("D:\\Sales in September.xlsx"))
 {
    var filter = new CellFilter()
    {

@@ -8,7 +8,7 @@ keywords:
 productName: GroupDocs.Redaction for .NET
 hideChildren: False
 ---
-GroupDocs.Redaction supports an effective set of document redaction features. It allows to apply redactions for [text](Text%2Bredactions.html), [metadata](Metadata%2Bredactions.html), [annotations](Annotation%2Bredactions.html), [images]({{< ref "redaction/net/developer-guide/basic-usage/image-redactions.md" >}}).
+GroupDocs.Redaction supports an effective set of document redaction features. It allows to apply redactions for [text](Text%2Bredactions.html), [metadata](Metadata%2Bredactions.html), [annotations](Annotation%2Bredactions.html), [images]({{< ref "redaction/net/developer-guide/basic-usage/image-redactions/_index.md" >}}).
 
 Wide range document formats is supported: PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX and others. See full list of supported formats at [supported document formats]({{< ref "redaction/net/getting-started/supported-document-formats.md" >}}) article
 
