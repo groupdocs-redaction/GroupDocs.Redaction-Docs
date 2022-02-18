@@ -3,8 +3,8 @@ id: home
 url: redaction/java
 title: GroupDocs.Redaction for Java
 weight: 1
-description: ""
-keywords: 
+description: A Java API for redaction of sensitive and classified information from the documents. You can redact in adobe pdf, redact in excel or in many of different file formats.
+keywords: redact pdf, redaction, redact in excel, Java
 productName: GroupDocs.Redaction for Java
 hideChildren: True
 ---

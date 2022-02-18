@@ -3,8 +3,8 @@ id: home
 url: redaction/net
 title: GroupDocs.Redaction for .NET
 weight: 1
-description: ""
-keywords: 
+description: A .NET API for redaction of sensitive and classified information from the documents. You can redact in adobe pdf, redact in excel or in many of different file formats using c#
+keywords: redact pdf, redaction, redact in excel
 productName: GroupDocs.Redaction for .NET
 hideChildren: True
 ---

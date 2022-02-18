@@ -3,8 +3,8 @@ id: evaluation-limitations-and-licensing
 url: redaction/java/evaluation-limitations-and-licensing
 title: Evaluation Limitations and Licensing
 weight: 5
-description: ""
-keywords: 
+description: free trial api version for redaction is available to evaluate the API which will be similar as licensed but with few limitations.
+keywords: redaction,license,free trial,api  
 productName: GroupDocs.Redaction for Java
 hideChildren: False
 ---
