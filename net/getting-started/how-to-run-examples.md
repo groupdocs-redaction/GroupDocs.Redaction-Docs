@@ -3,8 +3,8 @@ id: how-to-run-examples
 url: redaction/net/how-to-run-examples
 title: How to Run Examples
 weight: 6
-description: ""
-keywords: 
+description: Learn how to run C# examples which contain many examples of data redaction. You can learn redact in word, how to redact information in pdf or images and many more.
+keywords: data redaction, redact information in pdf, redact in word,  C# 
 productName: GroupDocs.Redaction for .NET
 hideChildren: False
 ---
