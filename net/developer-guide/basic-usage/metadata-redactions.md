@@ -3,14 +3,14 @@ id: metadata-redactions
 url: redaction/net/metadata-redactions
 title: Metadata redactions
 weight: 6
-description: ""
-keywords: 
+description: C# redaction API that allows to replace or remove metadata using filters or search by regular expression.
+keywords: C#, redaction, api, remove metadata
 productName: GroupDocs.Redaction for .NET
 hideChildren: False
 ---
 With GroupDocs.Redaction API you can apply metadata redactions for documents of different formats like PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX and others. See full list at [supported document formats]({{< ref "redaction/net/getting-started/supported-document-formats.md" >}}) article.
 
-GroupDocs.Redactions provides a flexible API that allows to replace or clear metadata using filters or search by regular expression.
+GroupDocs.Redactions provides a flexible API that allows to replace or remove metadata using filters or search by regular expression.
 
 ## Filter metadata
 

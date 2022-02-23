@@ -1,16 +1,16 @@
 ---
 id: text-redactions
 url: redaction/net/text-redactions
-title: Text redactions
+title: Text redaction
 weight: 5
-description: ""
-keywords: 
+description: C# redaction API allows to easily redact data of sensitive or private nature from your documents. You can apply text redaction using exact phrase or regular expression for documents of different formats like PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX and others.
+keywords: c#, redaction, redact data, text redactions  
 productName: GroupDocs.Redaction for .NET
 hideChildren: False
 ---
-GroupDocs.Redaction allows to easily redact sensitive or private data from your documents. The most popular redaction case is to remove a text from a document.
+GroupDocs.Redaction allows to easily redact data of sensitive or private nature from your documents. The most popular redaction case is to remove a text from a document.
 
-With GroupDocs.Redaction API you can apply text redactions using exact phrase or [regular expression](https://docs.microsoft.com/en-us/dotnet/standard/base-types/regular-expressions) for documents of different formats like PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX and others. See full list at [supported document formats]({{< ref "redaction/net/getting-started/supported-document-formats.md" >}}) article.
+With GroupDocs.Redaction API you can apply text redaction using exact phrase or [regular expression](https://docs.microsoft.com/en-us/dotnet/standard/base-types/regular-expressions) for documents of different formats like PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX and others. See full list at [supported document formats]({{< ref "redaction/net/getting-started/supported-document-formats.md" >}}) article.
 
 ## Use exact phrase redaction
 

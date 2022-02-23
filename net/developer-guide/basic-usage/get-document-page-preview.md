@@ -3,8 +3,8 @@ id: get-document-page-preview
 url: redaction/net/get-document-page-preview
 title: Get document page preview
 weight: 3
-description: ""
-keywords: 
+description: The Redactor class supports rendering of the document preview in JPEG, PNG and BMP.
+keywords: redactor, jpeg, png, bmp
 productName: GroupDocs.Redaction for .NET
 hideChildren: False
 ---
@@ -12,8 +12,8 @@ hideChildren: False
 In GroupDocs.Redaction, [Redactor](https://apireference.groupdocs.com/redaction/net/groupdocs.redaction/redactor) class supports rendering of the document preview in on of these image formats:
 
 *   JPEG Image
-*   Portable Network Graphics
-*   Bitmap Image File
+*   Portable Network Graphics (PNG)
+*   Bitmap Image File (BMP)
 
 The following example demonstrates how to get a single page preview of the document.
 

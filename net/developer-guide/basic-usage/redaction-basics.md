@@ -3,14 +3,14 @@ id: redaction-basics
 url: redaction/net/redaction-basics
 title: Redaction basics
 weight: 4
-description: ""
-keywords: 
+description: It allows C# developers to apply metadata, image, annotation and text redaction in their documents. Wide range of document formats is supported, such as: PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX and others.
+keywords: text redaction, c#, PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX.
 productName: GroupDocs.Redaction for .NET
 hideChildren: False
 ---
 GroupDocs.Redaction supports an effective set of document redaction features. It allows to apply redactions for [text](Text%2Bredactions.html), [metadata](Metadata%2Bredactions.html), [annotations](Annotation%2Bredactions.html), [images]({{< ref "redaction/net/developer-guide/basic-usage/image-redactions.md" >}}).
 
-Wide range document formats is supported: PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX and others. See full list of supported formats at [supported document formats]({{< ref "redaction/net/getting-started/supported-document-formats.md" >}}) article
+Wide range of document formats is supported, such as: PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX and others. See full list of supported formats at [supported document formats]({{< ref "redaction/net/getting-started/supported-document-formats.md" >}}) article
 
 ## Redaction types
 

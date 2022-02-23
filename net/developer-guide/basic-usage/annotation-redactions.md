@@ -3,8 +3,8 @@ id: annotation-redactions
 url: redaction/net/annotation-redactions
 title: Annotation redactions
 weight: 7
-description: ""
-keywords: 
+description: You can apply annotation redactions for documents of different formats like PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX and others.
+keywords: annotation, redactions,PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX 
 productName: GroupDocs.Redaction for .NET
 hideChildren: False
 ---

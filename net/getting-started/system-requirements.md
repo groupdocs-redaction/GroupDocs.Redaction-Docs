@@ -3,8 +3,8 @@ id: system-requirements
 url: redaction/net/system-requirements
 title: System Requirements
 weight: 3
-description: ""
-keywords: 
+description: GroupDocs.Redaction for .NET supports any 32-bit or 64-bit operating system where .NET or Mono framework is installed.
+keywords: GroupDocs.Redaction for .NET, redaction
 productName: GroupDocs.Redaction for .NET
 hideChildren: False
 ---

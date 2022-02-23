@@ -3,12 +3,12 @@ id: spreadsheet-redactions
 url: redaction/net/spreadsheet-redactions
 title: Spreadsheet redactions
 weight: 8
-description: ""
-keywords: 
+description: C# redaction API allows to redact data of sensitive or private nature from your XLS, XLSX, ODS spreadsheet document formats. and others
+keywords: c#, redaction, redact data, xls, xlsx, ods 
 productName: GroupDocs.Redaction for .NET
 hideChildren: False
 ---
-GroupDocs.Redaction allows to remove sensitive or private data from your XLS, XLSX, ODS spreadsheet document formats and others. See full list at [supported document formats]({{< ref "redaction/net/getting-started/supported-document-formats.md" >}}) article.
+GroupDocs.Redaction allows to redact data of sensitive or private nature from your XLS, XLSX, ODS spreadsheet document formats and others. See full list at [supported document formats]({{< ref "redaction/net/getting-started/supported-document-formats.md" >}}) article.
 
 ## Filter by spreadsheet and column
 

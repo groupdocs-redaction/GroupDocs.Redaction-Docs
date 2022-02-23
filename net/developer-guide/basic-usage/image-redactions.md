@@ -3,12 +3,12 @@ id: image-redactions
 url: redaction/net/image-redactions
 title: Image redactions
 weight: 9
-description: ""
-keywords: 
+description: Redact data of sensitive nature from images of various formats like JPG, PNG, TIFF and others.
+keywords: redact data,JPG, PNG, TIFF
 productName: GroupDocs.Redaction for .NET
 hideChildren: False
 ---
-GroupDocs.Redactions prodives a set of features to remove sensitive data from images of various formats like JPG, PNG, TIFF and others. See full list at [supported document formats]({{< ref "redaction/net/getting-started/supported-document-formats.md" >}}) article.
+GroupDocs.Redactions prodives a set of features to redact data of sensitive nature from images of various formats like JPG, PNG, TIFF and others. See full list at [supported document formats]({{< ref "redaction/net/getting-started/supported-document-formats.md" >}}) article.
 
 GroupDocs.Redaction since version 21.3 supports two ways of redacting images, both in separate image files and embedded images:
 *   You can put a colored box over a given area, such as header, footer, or an area, where customer's data are expected to appear.
