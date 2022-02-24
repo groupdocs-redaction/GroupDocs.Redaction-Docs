@@ -3,8 +3,8 @@ id: create-custom-format-handler
 url: redaction/net/create-custom-format-handler
 title: Create custom format handler
 weight: 7
-description: ""
-keywords: 
+description: Depending on the document's features and required redaction, you will also need to implement one or several interfaces.
+keywords: redaction
 productName: GroupDocs.Redaction for .NET
 hideChildren: False
 ---

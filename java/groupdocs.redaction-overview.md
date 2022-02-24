@@ -3,11 +3,15 @@ id: groupdocs-redaction-overview
 url: redaction/java/groupdocs-redaction-overview
 title: GroupDocs.Redaction Overview
 weight: 1
-description: ""
-keywords: 
+description: Lets try to know about what is redaction or what does redacted mean. The redaction is the editing a document for the purpose to remove or hide the confidential or sensitive information.
+keywords: what does redacted mean, what is redaction, redaction, Java
 productName: GroupDocs.Redaction for Java
 hideChildren: False
 ---
+## What is redaction?
+
+Lets try to know about what is redaction or what does redacted mean. The redaction is the editing a document for the purpose to remove or hide the confidential or sensitive information.
+
 ## What Is GroupDocs.Redaction?
 
 GroupDocs.Redaction is a powerful [sanitization](https://en.wikipedia.org/wiki/Sanitization_(classified_information)) API that allows to remove or mask classified information from over 30 document types. The main purpose of GroupDocs.Redaction product is an ability to optionally save redacted documents in PDF, transforming all pages into raster images or save redacted document in its original format for further editing.

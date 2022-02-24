@@ -3,12 +3,17 @@ id: groupdocs-redaction-overview
 url: redaction/net/groupdocs-redaction-overview
 title: GroupDocs.Redaction Overview
 weight: 1
-description: ""
-keywords: 
+description: Lets try to know about what is redaction or what does redacted mean. The redaction is the editing a document for the purpose to remove or hide the confidential or sensitive information.
+keywords: what does redacted mean, what is redaction, redaction
 productName: GroupDocs.Redaction for .NET
 hideChildren: False
 ---
-## What Is GroupDocs.Redaction?
+## What is redaction?
+
+Lets try to know about what is redaction or what does redacted mean. The redaction is the editing a document for the purpose to remove or hide the confidential or sensitive information.
+
+
+## What is GroupDocs.Redaction?
 
 GroupDocs.Redaction is a fast, powerful and high quality document redaction tool, providing [sanitization](https://en.wikipedia.org/wiki/Sanitization_(classified_information)) API for .NET (C#, VB, etc) which allows you to redact PDF, Microsoft Word, Excel, PowerPoint and image files, remove the classified information from over 30 document types. The API provides flexible and fully customizable document redaction options with an ability to optionally save all types of redacted documents as PDF, transforming all pages into raster images or save the redacted document in its original format for further editing.  
 
