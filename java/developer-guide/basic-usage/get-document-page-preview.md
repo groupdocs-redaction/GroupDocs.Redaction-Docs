@@ -3,8 +3,8 @@ id: get-document-page-preview
 url: redaction/java/get-document-page-preview
 title: Get document page preview
 weight: 3
-description: ""
-keywords: 
+description:The Redactor class supports rendering of the document preview in JPEG, PNG and BMP.
+keywords: redactor, jpeg, png, bmp
 productName: GroupDocs.Redaction for Java
 hideChildren: False
 ---

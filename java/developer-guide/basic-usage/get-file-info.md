@@ -3,8 +3,8 @@ id: get-file-info
 url: redaction/java/get-file-info
 title: Get file info
 weight: 2
-description: ""
-keywords: 
+description: By using Java the GroupDocs.Redaction provides general document information, which includes FileType, PageCount and FileSize.
+keywords: redaction, java, FileType, PageCount, FileSize
 productName: GroupDocs.Redaction for Java
 hideChildren: False
 ---

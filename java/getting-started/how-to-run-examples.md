@@ -3,8 +3,8 @@ id: how-to-run-examples
 url: redaction/java/how-to-run-examples
 title: How to Run Examples
 weight: 6
-description: ""
-keywords: 
+description: Learn how to run Java examples which contain many examples of data redaction. You can learn redact in word, how to redact information in pdf or images and many more.
+keywords: data redaction, redact information in pdf, redact in word,java 
 productName: GroupDocs.Redaction for Java
 hideChildren: False
 ---

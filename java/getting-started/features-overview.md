@@ -3,14 +3,14 @@ id: features-overview
 url: redaction/java/features-overview
 title: Features Overview
 weight: 1
-description: ""
-keywords: 
+description: Redacted meaning is that a process of modifying or editing a document to remove the confidential information before publishing it. With GroupDocs.Redaction tool you can redact PDF and save redacted document, redact sensitive and classified information from MS Word (DOC, DOCX and more..), Excel (XLS, XLSX and more..), PowerPoint(PPT, PPTX and more) documents and images (JPG, PNG, BMP, GIF and more..).
+keywords: redacted meaning, redact pdf, doc, docx, xls, xlsx, ppt, pptx, jpg, png, gif,bmp
 productName: GroupDocs.Redaction for Java
 hideChildren: False
 ---
 ## Document Redaction
 
-GroupDocs.Redaction provides a single format-independent interface for removing sensitive and classified information from the documents, including the document's metadata and annotations. The main purpose of GroupDocs.Redaction product is an ability to optionally save redacted documents in PDF, transforming all pages into raster images or save redacted document in its original format for further editing.
+Redacted meaning is that a process of modifying or editing a document to remove the confidential information before publishing it. GroupDocs.Redaction is a quality redaction software, providing a single format-independent interface for redacting sensitive and classified information from the PDF, Word, Excel, PowerPoint documents and images, including the ability to change metadata and remove comments. With GroupDocs.Redaction tool you can redact PDF and save redacted document, transforming all pages into raster images or keep the document in its original format for further editing.
 
 Choosing the most appropriate redaction mode depends on your reasons to sanitize the classified information from the document. Let’s review in detail what are the differences between rasterization and saving in original format and how to choose the most suitable for your case.  
 

@@ -3,8 +3,8 @@ id: get-supported-file-formats
 url: redaction/java/get-supported-file-formats
 title: Get supported file formats
 weight: 1
-description: ""
-keywords: 
+description: Get the list of all supported file formats of GroupDocs.Redaction by using Java.
+keywords: java, redaction
 productName: GroupDocs.Redaction for Java
 hideChildren: False
 ---

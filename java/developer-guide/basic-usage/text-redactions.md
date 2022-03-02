@@ -3,8 +3,8 @@ id: text-redactions
 url: redaction/java/text-redactions
 title: Text redactions
 weight: 5
-description: ""
-keywords: 
+description:  Java redaction API allows to easily redact data of sensitive or private nature from your documents. You can apply text redaction using exact phrase or regular expression for documents of different formats like PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX and others.
+keywords: Java, redaction, redact data, text redactions  
 productName: GroupDocs.Redaction for Java
 hideChildren: False
 ---

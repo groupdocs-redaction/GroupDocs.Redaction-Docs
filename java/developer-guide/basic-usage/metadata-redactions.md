@@ -3,8 +3,8 @@ id: metadata-redactions
 url: redaction/java/metadata-redactions
 title: Metadata redactions
 weight: 6
-description: ""
-keywords: 
+description: Java redaction API that allows to replace or remove metadata using filters or search by regular expression.
+keywords: Java, redaction, api, remove metadata
 productName: GroupDocs.Redaction for Java
 hideChildren: False
 ---

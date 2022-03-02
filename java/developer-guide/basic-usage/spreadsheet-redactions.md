@@ -3,8 +3,8 @@ id: spreadsheet-redactions
 url: redaction/java/spreadsheet-redactions
 title: Spreadsheet redactions
 weight: 8
-description: ""
-keywords: 
+description: Java redaction API allows to redact data of sensitive or private nature from your XLS, XLSX, ODS spreadsheet document formats. and others
+keywords: Java, redaction, redact data, xls, xlsx, ods  
 productName: GroupDocs.Redaction for Java
 hideChildren: False
 ---
