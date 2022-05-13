@@ -3,8 +3,8 @@ id: save-with-default-options
 url: redaction/net/save-with-default-options
 title: Save with default options
 weight: 4
-description: ""
-keywords: 
+description: "This article demonstrates the simplest way to save the document"
+keywords: simplest way to save the document
 productName: GroupDocs.Redaction for .NET
 hideChildren: False
 ---

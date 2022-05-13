@@ -3,8 +3,8 @@ id: use-advanced-logging
 url: redaction/net/use-advanced-logging
 title: Use advanced logging
 weight: 4
-description: ""
-keywords: 
+description: "Learn advanced logging techniques available in the redaction API"
+keywords: redaction API
 productName: GroupDocs.Redaction for .NET
 hideChildren: False
 ---

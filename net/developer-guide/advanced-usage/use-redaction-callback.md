@@ -3,8 +3,8 @@ id: use-redaction-callback
 url: redaction/net/use-redaction-callback
 title: Use redaction callback
 weight: 3
-description: ""
-keywords: 
+description: "Learn about redaction API methods to reject or approve specific changes during redaction process"
+keywords: redaction API
 productName: GroupDocs.Redaction for .NET
 hideChildren: False
 ---

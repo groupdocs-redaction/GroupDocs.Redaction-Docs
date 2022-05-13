@@ -3,8 +3,8 @@ id: saving-documents
 url: redaction/net/saving-documents
 title: Saving documents
 weight: 2
-description: ""
-keywords: 
+description: "The articles explain that how to save documents in different ways after making redactions."
+keywords: redactions
 productName: GroupDocs.Redaction for .NET
 hideChildren: False
 ---

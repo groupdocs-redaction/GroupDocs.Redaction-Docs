@@ -3,8 +3,8 @@ id: use-redaction-policies
 url: redaction/net/use-redaction-policies
 title: Use redaction policies
 weight: 4
-description: ""
-keywords: 
+description: "Learn how to deal.If you have a corporate sensitive data removal policy as a list of redaction rules, you don't need to specify them in your code. You can specify an XML document with a list of pre-configured redactions."
+keywords: list of pre-configured redactions
 productName: GroupDocs.Redaction for .NET
 hideChildren: False
 ---

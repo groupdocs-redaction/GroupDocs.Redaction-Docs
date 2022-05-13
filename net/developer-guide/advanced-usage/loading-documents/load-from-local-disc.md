@@ -3,8 +3,8 @@ id: load-from-local-disc
 url: redaction/net/load-from-local-disc
 title: Load from local disc
 weight: 1
-description: ""
-keywords: 
+description: "This article shows how the redaction API is used to load file from disk."
+keywords: redaction API
 productName: GroupDocs.Redaction for .NET
 hideChildren: False
 ---

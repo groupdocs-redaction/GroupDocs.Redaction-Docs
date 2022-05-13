@@ -3,8 +3,8 @@ id: save-to-stream
 url: redaction/net/save-to-stream
 title: Save to Stream
 weight: 6
-description: ""
-keywords: 
+description: "This article demonstrates that how to save a document to any custom file at any location on the local disc or a even a Stream"
+keywords: save a document to any custom file
 productName: GroupDocs.Redaction for .NET
 hideChildren: False
 ---

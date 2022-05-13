@@ -3,8 +3,8 @@ id: load-password-protected-file
 url: redaction/net/load-password-protected-file
 title: Load password-protected file
 weight: 3
-description: ""
-keywords: 
+description: "Learn how to load a password-protected file by using .NET redaction API"
+keywords: redaction API, load a password-protected file
 productName: GroupDocs.Redaction for .NET
 hideChildren: False
 ---

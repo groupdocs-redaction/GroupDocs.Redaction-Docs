@@ -3,8 +3,8 @@ id: save-overwriting-original-file
 url: redaction/net/save-overwriting-original-file
 title: Save overwriting original file
 weight: 3
-description: ""
-keywords: 
+description: "This article demonstrates that how to save the redacted document, replacing an original file"
+keywords: save the redacted document, redacted document
 productName: GroupDocs.Redaction for .NET
 hideChildren: False
 ---

@@ -3,8 +3,8 @@ id: extend-supported-extensions-list
 url: redaction/net/extend-supported-extensions-list
 title: Extend supported extensions list
 weight: 6
-description: ""
-keywords: 
+description: "This method can be used when for some reason files have non-standard extensions or if its format is supported, but not pre-configured"
+keywords: non-standard extensions
 productName: GroupDocs.Redaction for .NET
 hideChildren: False
 ---

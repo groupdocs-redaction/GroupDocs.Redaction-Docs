@@ -3,8 +3,8 @@ id: load-from-stream
 url: redaction/net/load-from-stream
 title: Load from Stream
 weight: 2
-description: ""
-keywords: 
+description: "This article shows that how to load file from stream using redaction API"
+keywords: redaction API
 productName: GroupDocs.Redaction for .NET
 hideChildren: False
 ---
