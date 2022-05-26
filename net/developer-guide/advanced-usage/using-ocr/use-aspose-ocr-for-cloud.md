@@ -3,7 +3,7 @@ id: use-aspose-ocr-for-cloud
 url: redaction/net/use-aspose-ocr-for-cloud
 title: Use Aspose.OCR for Cloud SDK
 weight: 3
-description: ""
+description: "This article explains that how to use Aspose.OCR for Cloud SDK."
 keywords: 
 productName: GroupDocs.Redaction for .NET
 hideChildren: False

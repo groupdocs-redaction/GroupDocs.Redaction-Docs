@@ -3,8 +3,8 @@ id: ocr-usage-basics
 url: redaction/net/ocr-usage-basics
 title: OCR Usage Basics
 weight: 2
-description: ""
-keywords: 
+description: "This article explains that how to integrate any paid or free OCR solution."
+keywords: free OCR solution
 productName: GroupDocs.Redaction for .NET
 hideChildren: False
 ---
