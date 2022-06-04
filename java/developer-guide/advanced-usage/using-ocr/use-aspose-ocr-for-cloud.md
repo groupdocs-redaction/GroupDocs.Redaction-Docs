@@ -3,8 +3,8 @@ id: use-aspose-ocr-for-cloud
 url: redaction/java/use-aspose-ocr-for-cloud
 title: Use Aspose.OCR for Cloud SDK
 weight: 3
-description: ""
-keywords: 
+description: "This article explains that how to use Aspose.OCR for Cloud SDK in Java."
+keywords: Java, Aspose.OCR for Cloud SDK
 productName: GroupDocs.Redaction for Java
 hideChildren: False
 ---

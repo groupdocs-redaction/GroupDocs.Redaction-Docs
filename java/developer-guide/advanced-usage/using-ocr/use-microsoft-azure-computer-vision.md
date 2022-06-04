@@ -3,7 +3,7 @@ id: use-microsoft-azure-computer-vision
 url: redaction/java/use-microsoft-azure-computer-vision
 title: Use Microsoft Azure Computer Vision API 
 weight: 4
-description: ""
+description: "This article explains that how to use Microsoft Azure Computer Vision API."
 keywords: 
 productName: GroupDocs.Redaction for Java
 hideChildren: False

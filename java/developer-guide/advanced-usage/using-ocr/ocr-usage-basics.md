@@ -3,8 +3,8 @@ id: ocr-usage-basics
 url: redaction/java/ocr-usage-basics
 title: OCR Usage Basics
 weight: 2
-description: ""
-keywords: 
+description:"This article explains that how to integrate any paid or free OCR solution in Java."
+keywords: free OCR solution
 productName: GroupDocs.Redaction for Java
 hideChildren: False
 ---
