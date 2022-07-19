@@ -55,6 +55,10 @@ Saving the document in an original format requires deleting or redacting its met
 
 Annotation redactions allow you to remove specific or any annotations (comments, badges, etc.) from the document. You can use regular expressions to match annotations you need to redact out.
 
+#### Remove Page Redactions
+
+Remove Page redactions allow you to remove pages from PDF documents, slides from presentations and worksheets from spreadsheet documents. You can specify the page range and its relative position to remove.
+
 ## Image Redactions
 
 With GroupDocs.Redaction OCR support, you can extract a text from an image, search it for data and redact sensitive data within the image. As an alternative, you can put a colored box over a given area, such as header, footer, or an area, where customer's data are expected to appear. Also you can use it to edit exif data or use it as an exif eraser.
