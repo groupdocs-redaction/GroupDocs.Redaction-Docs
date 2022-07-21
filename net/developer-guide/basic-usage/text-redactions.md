@@ -3,7 +3,7 @@ id: text-redactions
 url: redaction/net/text-redactions
 title: Text redaction
 weight: 5
-description: C# redaction API allows to easily redact data of sensitive or private nature from your documents. You can apply text redaction using exact phrase or regular expression for documents of different formats like PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX and others.
+description: This article explains that how C# redaction API allows you to easily redact data of sensitive or private nature from your documents. You can apply text redaction using exact phrase or regular expression for documents of different formats like PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX and others.
 keywords: c#, redaction, redact data, text redactions  
 productName: GroupDocs.Redaction for .NET
 hideChildren: False

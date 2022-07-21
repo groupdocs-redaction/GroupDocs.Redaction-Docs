@@ -3,7 +3,7 @@ id: create-custom-format-handler
 url: redaction/net/create-custom-format-handler
 title: Create custom format handler
 weight: 7
-description: Depending on the document's features and required redaction, you will also need to implement one or several interfaces.
+description: This article shows how to implement one or several interfaces for the document's features and required redaction.
 keywords: redaction
 productName: GroupDocs.Redaction for .NET
 hideChildren: False

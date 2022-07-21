@@ -4,7 +4,7 @@ url: redaction/net/use-microsoft-azure-computer-vision
 title: Use Microsoft Azure Computer Vision API 
 weight: 5
 description: "This article explains that how to use Microsoft Azure Computer Vision API"
-keywords: 
+keywords: Microsoft Azure Computer Vision API
 productName: GroupDocs.Redaction for .NET
 hideChildren: False
 ---

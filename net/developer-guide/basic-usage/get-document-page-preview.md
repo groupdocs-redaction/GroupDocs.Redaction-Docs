@@ -3,7 +3,7 @@ id: get-document-page-preview
 url: redaction/net/get-document-page-preview
 title: Get document page preview
 weight: 3
-description: The Redactor class supports rendering of the document preview in JPEG, PNG and BMP.
+description: This article shows the implementation of Redactor class which supports the rendering of the document preview in JPEG, PNG and BMP.
 keywords: redactor, jpeg, png, bmp
 productName: GroupDocs.Redaction for .NET
 hideChildren: False

@@ -3,7 +3,7 @@ id: metadata-redactions
 url: redaction/net/metadata-redactions
 title: Metadata redactions
 weight: 6
-description: C# redaction API that allows to replace or remove metadata using filters or search by regular expression.
+description: This article shows that how C# redaction API allows you to replace or remove metadata using filters or search by regular expression.
 keywords: C#, redaction, api, remove metadata
 productName: GroupDocs.Redaction for .NET
 hideChildren: False

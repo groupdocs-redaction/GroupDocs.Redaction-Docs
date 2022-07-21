@@ -4,7 +4,7 @@ url: redaction/net/use-aspose-ocr-on-premise
 title: Use Aspose.OCR for .NET on-premise API
 weight: 4
 description: "This article explains that how to use Aspose.OCR for .NET on-premise API."
-keywords: 
+keywords: Aspose.OCR for .NET on-premise API
 productName: GroupDocs.Redaction for .NET
 hideChildren: False
 ---

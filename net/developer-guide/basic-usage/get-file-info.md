@@ -3,7 +3,7 @@ id: get-file-info
 url: redaction/net/get-file-info
 title: Get file info
 weight: 2
-description: By using C# the GroupDocs.Redaction provides general document information, which includes FileType, PageCount and FileSize.
+description: This article explains the ability of the GroupDocs.Redaction API to get the general document information, which includes FileType, PageCount and FileSize.
 keywords: redaction, c#, FileType, PageCount, FileSize
 productName: GroupDocs.Redaction for .NET
 hideChildren: False

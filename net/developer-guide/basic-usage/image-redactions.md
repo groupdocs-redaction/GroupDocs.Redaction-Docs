@@ -3,7 +3,7 @@ id: image-redactions
 url: redaction/net/image-redactions
 title: Image redactions
 weight: 9
-description: Redact data of sensitive nature from images of various formats like JPG, PNG, TIFF and others.
+description: This article shows that how to redact data of sensitive nature from images of various formats like JPG, PNG, TIFF and others.
 keywords: redact data,JPG, PNG, TIFF
 productName: GroupDocs.Redaction for .NET
 hideChildren: False

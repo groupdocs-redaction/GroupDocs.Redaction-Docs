@@ -3,7 +3,7 @@ id: remove-page-redactions
 url: redaction/net/remove-page-redactions
 title: Remove page redactions
 weight: 10
-description: Remove pages with sensitive data from your PDF, presentation and spreadsheet documents.
+description: This article shows that how to remove pages with sensitive data from your PDF, presentation and spreadsheet documents.
 keywords: remove page,PDF,Excel,PowerPoint,spreadsheet,presentation
 productName: GroupDocs.Redaction for .NET
 hideChildren: False

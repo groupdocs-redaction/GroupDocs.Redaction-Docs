@@ -3,7 +3,7 @@ id: get-supported-file-formats
 url: redaction/net/get-supported-file-formats
 title: Get supported file formats
 weight: 1
-description: Get the list of all supported file formats of GroupDocs.Redaction by using C#.
+description: This article shows that how to get the list of all supported file formats of GroupDocs.Redaction by using C#.
 keywords: C#, redaction
 productName: GroupDocs.Redaction for .NET
 hideChildren: False
