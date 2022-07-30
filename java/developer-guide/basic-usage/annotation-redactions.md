@@ -3,7 +3,7 @@ id: annotation-redactions
 url: redaction/java/annotation-redactions
 title: Annotation redactions
 weight: 7
-description: You can apply annotation redactions for documents of different formats like PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX and others.
+description: This article shows the implementation of annotation redaction for documents of different formats like PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX and others.
 keywords: annotation, redactions,PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX 
 productName: GroupDocs.Redaction for Java
 hideChildren: False

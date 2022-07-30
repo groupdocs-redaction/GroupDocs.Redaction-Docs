@@ -3,8 +3,8 @@ id: create-custom-format-handler
 url: redaction/java/create-custom-format-handler
 title: Create custom format handler
 weight: 6
-description: ""
-keywords: 
+description: "This article shows how to implement one or several interfaces for the document's features and required redaction."
+keywords: redaction
 productName: GroupDocs.Redaction for Java
 hideChildren: False
 ---

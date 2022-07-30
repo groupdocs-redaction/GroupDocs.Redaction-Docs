@@ -3,7 +3,7 @@ id: redaction-basics
 url: redaction/java/redaction-basics
 title: Redaction Basics
 weight: 4
-description: It allows Java developers to apply metadata, image, annotation and text redaction in their documents. Wide range of document formats is supported, such as, PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX and others.
+description: This article shows that how Java developers can apply metadata, image, annotation and text redaction in their documents. Wide range of document formats is supported, such as, PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX and others.
 keywords: text redaction, java, PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX.
 productName: GroupDocs.Redaction for Java
 hideChildren: False
