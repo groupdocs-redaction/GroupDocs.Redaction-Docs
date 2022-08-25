@@ -2,7 +2,7 @@
 id: groupdocs-redaction-for-net-22-7-release-notes
 url: redaction/net/groupdocs-redaction-for-net-22-7-release-notes
 title: GroupDocs.Redaction for .NET 22.7 Release Notes
-weight: 9
+weight: 6
 description: ""
 keywords: 
 productName: GroupDocs.Redaction for .NET
