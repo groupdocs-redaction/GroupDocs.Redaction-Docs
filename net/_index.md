@@ -9,7 +9,7 @@ productName: GroupDocs.Redaction for .NET
 hideChildren: True
 ---
 {{< alert style="info" >}}
-![](redaction/net/images/home.png) **Welcome to the GroupDocs.Redaction for .NET**  
+![](/redaction/net/images/home.png) **Welcome to the GroupDocs.Redaction for .NET**  
 GroupDocs.Redaction for .NET is an API for removing sensitive and classified information from the documents of different file formats. The API provides a single format-independent interface for removing sensitive and classified information from the documents. Using the API you can remove sensitive information and content from the document using different redaction methods and save the document in its original format and create a sanitized PDF document with raster images of original pages. 
 {{< /alert >}}
 

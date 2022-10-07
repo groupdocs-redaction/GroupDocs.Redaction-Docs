@@ -42,13 +42,13 @@ Please choose one from the following list:
 The complete examples package of **GroupDocs.Redaction** is hosted on [Github](https://github.com/groupdocs-redaction/GroupDocs.Redaction-for-.NET). You can either download the ZIP file from [here](https://github.com/groupdocs-redaction/GroupDocs.Redaction-for-.NET/archive/master.zip) or clone the repository of Github using your favorite git client.  
 In case you download the ZIP file, extract the folders on your local disk. The extracted files and folders will look like following image:
 
-![](redaction/net/images/how-to-run-examples.png)
+![](/redaction/net/images/how-to-run-examples.png)
 
 In the extracted Examples folder you can find GroupDocs.Redaction.Examples C# solution file. The project is created in **Microsoft Visual Studio 2017**. The **Resources **folder contains all the sample document and image files used in the examples.  
 To run the examples, open the solution file in Visual Studio and build the project. To add missing references of **GroupDocs.Redaction** see [Development Environment, Installation and Configuration](https://docs.groupdocs.com/display/redactionnet/Development+Environment%2C+Installation+and+Configuration). All the functions are called from **RunExamples.cs**.   
 Un-comment the function you want to run and comment the rest.
 
-![](redaction/net/images/how-to-run-examples_1.png)
+![](/redaction/net/images/how-to-run-examples_1.png)
 
 ## Contribute
 
