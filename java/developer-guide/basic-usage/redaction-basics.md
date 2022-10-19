@@ -14,10 +14,11 @@ GroupDocs.Redaction comes with the following redaction types:
 
 | Type | Description | Classes |
 | --- | --- | --- |
-| [Text]({{< ref "redaction/java/developer-guide/basic-usage/redaction-basics.md" >}}) | Replaces or hides with color block a portion of text within document body | *ExactPhraseRedaction*, *RegexRedaction* |
-| [Metadata]({{< ref "redaction/java/developer-guide/basic-usage/redaction-basics.md" >}}) | Replace metadata values with empty ones or redacts metadata texts | *EraseMetadataRedaction*, *MetadataSearchRedaction* |
-| [Annotations]({{< ref "redaction/java/developer-guide/basic-usage/redaction-basics.md" >}}) | Deletes annotations from document or redacts its texts | *DeleteAnnotationRedaction*, *AnnotationRedaction* |
-| [Images]({{< ref "redaction/java/developer-guide/basic-usage/redaction-basics.md" >}}) | Replaces specific area of an image with a colored box | *ImageAreaRedaction* |
+| [Text]({{< ref "redaction/java/developer-guide/basic-usage/text-redactions.md" >}}) | Replaces or hides with color block a portion of text within document body | *ExactPhraseRedaction*, *RegexRedaction* |
+| [Metadata]({{< ref "redaction/java/developer-guide/basic-usage/metadata-redactions.md" >}}) | Replace metadata values with empty ones or redacts metadata texts | *EraseMetadataRedaction*, *MetadataSearchRedaction* |
+| [Annotations]({{< ref "redaction/java/developer-guide/basic-usage/annotation-redactions.md" >}}) | Deletes annotations from document or redacts its texts | *DeleteAnnotationRedaction*, *AnnotationRedaction* |
+| [Images]({{< ref "redaction/java/developer-guide/basic-usage/image-redactions.md" >}}) | Replaces specific area of an image with a colored box | *ImageAreaRedaction* |
+| [Pages]({{< ref "redaction/java/developer-guide/basic-usage/remove-page-redactions.md" >}}) | Removes specific range of pages (slides, worksheets, etc.) | *RemovePageRedaction* |
 
 ### Apply redaction
 
