@@ -4,11 +4,11 @@ url: redaction/java/installation
 title: Installation
 weight: 4
 description: ""
-keywords: 
+keywords:
 productName: GroupDocs.Redaction for Java
 hideChildren: False
 ---
-GroupDocs hosts all Java APIs on [GroupDocs Repository](https://repository.groupdocs.com/webapp/#/artifacts/browse/tree/General/repo). You can easily use GroupDocs.Redaction for Java API directly in your Maven projects with simple configurations.
+GroupDocs hosts all Java APIs on [GroupDocs Repository](https://releases.groupdocs.com/java/repo/). You can easily use GroupDocs.Redaction for Java API directly in your Maven projects with simple configurations.
 
 ### Specify GroupDocs Repository Configuration
 
@@ -21,7 +21,7 @@ First, you need to specify GroupDocs repository configuration/location in your M
 	<repository>
 		<id>GroupDocsJavaAPI</id>
 		<name>GroupDocs Java API</name>
-		<url>http://repository.groupdocs.com/repo/</url>
+		<url>https://releases.groupdocs.com/java/repo/</url>
 	</repository>
 </repositories>
 ```
@@ -37,7 +37,7 @@ Then define GroupDocs.Redaction for Java API dependency in your `pom.xml` as 
     <dependency>
         <groupId>com.groupdocs</groupId>
         <artifactId>groupdocs-redaction</artifactId>
-        <version>19.10</version> 
+        <version>19.10</version>
     </dependency>
 </dependencies>
 ```
