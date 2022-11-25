@@ -21,6 +21,6 @@ Following are the links to some useful resources you may need to accomplish your
 *   [GroupDocs.Redaction for Java Release Notes]({{< ref "redaction/java/release-notes/_index.md" >}})
 *   [GroupDocs.Redaction for Java Product Page](https://products.groupdocs.com/redaction/java)
 *   [Download GroupDocs.Redaction for Java](https://artifact.groupdocs.com/webapp/#/artifacts/browse/tree/General/repo/com/groupdocs/groupdocs-redaction)
-*   [GroupDocs.Redaction for Java API Reference Guide](https://apireference.groupdocs.com/java/redaction)
+*   [GroupDocs.Redaction for Java API Reference Guide](https://reference.groupdocs.com/java/redaction)
 *   [GroupDocs.Redaction for Java Free Support Forum](https://forum.groupdocs.com/c/redaction)
 *   [GroupDocs.Redaction for Java Paid Support Helpdesk](https://helpdesk.groupdocs.com/)

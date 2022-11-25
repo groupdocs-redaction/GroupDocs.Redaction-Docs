@@ -48,7 +48,7 @@ Obsolete property **Redactor.RedactionCallback** has been **removed**.
 
 ##### Usage
 
-The following example demonstrates how to apply an [ImageAreaRedaction](https://apireference.groupdocs.com/net/redaction/groupdocs.redaction.redactions/imagearearedaction) to all embedded images within a PDF document.
+The following example demonstrates how to apply an [ImageAreaRedaction](https://reference.groupdocs.com/net/redaction/groupdocs.redaction.redactions/imagearearedaction) to all embedded images within a PDF document.
  
 **C#**
 

@@ -18,7 +18,7 @@ GroupDocs.Redaction for .NET also allows you to change image metadata (e.g. edi
 
 ## Redact image area
 
-In order to redact image area, you have to use [ImageAreaRedaction](https://apireference.groupdocs.com/net/redaction/groupdocs.redaction.redactions/imagearearedaction) class:
+In order to redact image area, you have to use [ImageAreaRedaction](https://reference.groupdocs.com/net/redaction/groupdocs.redaction.redactions/imagearearedaction) class:
 
 **C#**
 
@@ -36,11 +36,11 @@ using (Redactor redactor = new Redactor("D:\\test.jpg"))
 }
 ```
 
-If the redaction cannot be applied to this type of files, e.g. MS Word document without embedded images, [RedactorChangeLog.Status](https://apireference.groupdocs.com/net/redaction/groupdocs.redaction/redactorchangelog/properties/status) will be [RedactionStatus.Skipped](https://apireference.groupdocs.com/net/redaction/groupdocs.redaction/redactionstatus).
+If the redaction cannot be applied to this type of files, e.g. MS Word document without embedded images, [RedactorChangeLog.Status](https://reference.groupdocs.com/net/redaction/groupdocs.redaction/redactorchangelog/properties/status) will be [RedactionStatus.Skipped](https://reference.groupdocs.com/net/redaction/groupdocs.redaction/redactionstatus).
 
 ## Redact recognized text from an image
 
-To enable OCR-processing and search for a text using regular expressions, you have to implement [IOcrConnector](https://apireference.groupdocs.com/net/redaction/groupdocs.redaction.integration.ocr/iocrconnector) interface and pass the instance to [RedactorSettings](https://apireference.groupdocs.com/net/redaction/groupdocs.redaction.options/redactorsettings) constructor. For more details, see [OCR Usage Basics]({{< ref "redaction/net/developer-guide/advanced-usage/using-ocr/ocr-usage-basics" >}}) article.
+To enable OCR-processing and search for a text using regular expressions, you have to implement [IOcrConnector](https://reference.groupdocs.com/net/redaction/groupdocs.redaction.integration.ocr/iocrconnector) interface and pass the instance to [RedactorSettings](https://reference.groupdocs.com/net/redaction/groupdocs.redaction.options/redactorsettings) constructor. For more details, see [OCR Usage Basics]({{< ref "redaction/net/developer-guide/advanced-usage/using-ocr/ocr-usage-basics" >}}) article.
 
 **C#**
 
@@ -55,7 +55,7 @@ using (Redactor redactor = new Redactor("D:\\test.jpg", new LoadOptions(), new R
 }
 ```
 
-In the example above **MyCustomOcrConnector** class implements [IOcrConnector](https://apireference.groupdocs.com/net/redaction/groupdocs.redaction.integration.ocr/iocrconnector) interface.
+In the example above **MyCustomOcrConnector** class implements [IOcrConnector](https://reference.groupdocs.com/net/redaction/groupdocs.redaction.integration.ocr/iocrconnector) interface.
 
 ## Clean image metadata
 
@@ -72,11 +72,11 @@ using (Redactor redactor = new Redactor("D:\\photo.jpg"))
 }
 ```
 
-If the redaction cannot be applied to this type of files, e.g. BMP image, [RedactorChangeLog.Status](https://apireference.groupdocs.com/net/redaction/groupdocs.redaction/redactorchangelog/properties/status) will be [RedactionStatus.Skipped](https://apireference.groupdocs.com/net/redaction/groupdocs.redaction/redactionstatus).
+If the redaction cannot be applied to this type of files, e.g. BMP image, [RedactorChangeLog.Status](https://reference.groupdocs.com/net/redaction/groupdocs.redaction/redactorchangelog/properties/status) will be [RedactionStatus.Skipped](https://reference.groupdocs.com/net/redaction/groupdocs.redaction/redactionstatus).
 
 ## Redact embedded images
 
-You can redact image area within all kinds of embedded images inside a document. You can both use [ImageAreaRedaction](https://apireference.groupdocs.com/net/redaction/groupdocs.redaction.redactions/imagearearedaction) class and any type of [TextRedaction](https://apireference.groupdocs.com/net/redaction/groupdocs.redaction.redactions/textredaction) (regular expression, exact phrase), if the OCR is enabled in **RedactorSettings** (see [OCR Usage Basics]({{< ref "redaction/net/developer-guide/advanced-usage/using-ocr/ocr-usage-basics" >}}) article). 
+You can redact image area within all kinds of embedded images inside a document. You can both use [ImageAreaRedaction](https://reference.groupdocs.com/net/redaction/groupdocs.redaction.redactions/imagearearedaction) class and any type of [TextRedaction](https://reference.groupdocs.com/net/redaction/groupdocs.redaction.redactions/textredaction) (regular expression, exact phrase), if the OCR is enabled in **RedactorSettings** (see [OCR Usage Basics]({{< ref "redaction/net/developer-guide/advanced-usage/using-ocr/ocr-usage-basics" >}}) article). 
 
 The following example demonstrates how to redact all embedded images within a Microsoft Word document:
 
@@ -96,7 +96,7 @@ using (Redactor redactor = new Redactor("D:\\sample.docx"))
 }
 ```
 
-If the redaction cannot be applied to this type of files, e.g. a spreadsheet document, [RedactorChangeLog.Status](https://apireference.groupdocs.com/net/redaction/groupdocs.redaction/redactorchangelog/properties/status) will be [RedactionStatus.Skipped](https://apireference.groupdocs.com/net/redaction/groupdocs.redaction/redactionstatus).
+If the redaction cannot be applied to this type of files, e.g. a spreadsheet document, [RedactorChangeLog.Status](https://reference.groupdocs.com/net/redaction/groupdocs.redaction/redactorchangelog/properties/status) will be [RedactionStatus.Skipped](https://reference.groupdocs.com/net/redaction/groupdocs.redaction/redactionstatus).
 
 ## More resources
 

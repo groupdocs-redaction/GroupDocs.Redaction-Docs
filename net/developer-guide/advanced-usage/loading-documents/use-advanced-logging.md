@@ -9,7 +9,7 @@ productName: GroupDocs.Redaction for .NET
 hideChildren: False
 ---
 
-You can implement [ILogger](https://apireference.groupdocs.com/net/redaction/groupdocs.redaction.options/ilogger) interface from GroupDocs.Redaction.Options namespace. This interface requires to implement three methods:
+You can implement [ILogger](https://reference.groupdocs.com/net/redaction/groupdocs.redaction.options/ilogger) interface from GroupDocs.Redaction.Options namespace. This interface requires to implement three methods:
 
 **C#**
 

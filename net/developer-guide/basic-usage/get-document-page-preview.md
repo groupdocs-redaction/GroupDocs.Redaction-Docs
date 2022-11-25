@@ -9,7 +9,7 @@ productName: GroupDocs.Redaction for .NET
 hideChildren: False
 ---
 
-In GroupDocs.Redaction, [Redactor](https://apireference.groupdocs.com/redaction/net/groupdocs.redaction/redactor) class supports rendering of the document preview in on of these image formats:
+In GroupDocs.Redaction, [Redactor](https://reference.groupdocs.com/redaction/net/groupdocs.redaction/redactor) class supports rendering of the document preview in on of these image formats:
 
 *   JPEG Image
 *   Portable Network Graphics (PNG)

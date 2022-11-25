@@ -8,7 +8,7 @@ keywords: redaction API
 productName: GroupDocs.Redaction for .NET
 hideChildren: False
 ---
-As an alternative to a local file, [Redac](https://apireference.groupdocs.com/net/redaction/groupdocs.redaction/redactor)[t](https://apireference.groupdocs.com/net/redaction/groupdocs.redaction/redactor)[or](https://apireference.groupdocs.com/net/redaction/groupdocs.redaction/redactor) can open a document from stream.
+As an alternative to a local file, [Redac](https://reference.groupdocs.com/net/redaction/groupdocs.redaction/redactor)[t](https://reference.groupdocs.com/net/redaction/groupdocs.redaction/redactor)[or](https://reference.groupdocs.com/net/redaction/groupdocs.redaction/redactor) can open a document from stream.
 
 The following example demonstrates how to load and redact a document using Stream:
 

@@ -20,7 +20,7 @@ GroupDocs.Redaction for Java also allows you to change image metadata (e.g. edi
 
 ## Redact image area
 
-In order to redact image area, you have to use [ImageAreaRedaction](https://apireference.groupdocs.com/redaction/java/com.groupdocs.redaction.redactions/ImageAreaRedaction) class:
+In order to redact image area, you have to use [ImageAreaRedaction](https://reference.groupdocs.com/redaction/java/com.groupdocs.redaction.redactions/ImageAreaRedaction) class:
 
 **Java**
 
@@ -44,11 +44,11 @@ try
 finally { redactor.close(); }
 ```
 
-If the redaction cannot be applied to this type of files, e.g. MS Word document without embedded images, [RedactorChangeLog.getStatus()](https://apireference.groupdocs.com/redaction/java/com.groupdocs.redaction/RedactorChangeLog#getStatus()) will be [RedactionStatus.Skipped](https://apireference.groupdocs.com/redaction/java/com.groupdocs.redaction/RedactionStatus).
+If the redaction cannot be applied to this type of files, e.g. MS Word document without embedded images, [RedactorChangeLog.getStatus()](https://reference.groupdocs.com/redaction/java/com.groupdocs.redaction/RedactorChangeLog#getStatus()) will be [RedactionStatus.Skipped](https://reference.groupdocs.com/redaction/java/com.groupdocs.redaction/RedactionStatus).
 
 ## Redact recognized text from an image
 
-To enable OCR-processing and search for a text using regular expressions, you have to implement [IOcrConnector](https://apireference.groupdocs.com/redaction/java/com.groupdocs.redaction.integration/IOcrConnector) interface and pass the instance to [RedactorSettings](https://apireference.groupdocs.com/redaction/java/com.groupdocs.redaction.options/RedactorSettings) constructor. For more details, see [OCR Usage Basics]({{< ref "redaction/java/developer-guide/advanced-usage/using-ocr/ocr-usage-basics" >}}) article.
+To enable OCR-processing and search for a text using regular expressions, you have to implement [IOcrConnector](https://reference.groupdocs.com/redaction/java/com.groupdocs.redaction.integration/IOcrConnector) interface and pass the instance to [RedactorSettings](https://reference.groupdocs.com/redaction/java/com.groupdocs.redaction.options/RedactorSettings) constructor. For more details, see [OCR Usage Basics]({{< ref "redaction/java/developer-guide/advanced-usage/using-ocr/ocr-usage-basics" >}}) article.
 
 **Java**
 
@@ -63,7 +63,7 @@ try (Redactor redactor = new Redactor("D:\\test.jpg", new LoadOptions(), new Red
 }
 ```
 
-In the example above **MyCustomOcrConnector** class implements [IOcrConnector](https://apireference.groupdocs.com/redaction/java/com.groupdocs.redaction.integration/IOcrConnector) interface.
+In the example above **MyCustomOcrConnector** class implements [IOcrConnector](https://reference.groupdocs.com/redaction/java/com.groupdocs.redaction.integration/IOcrConnector) interface.
 
 
 ### Clean image metadata
@@ -92,7 +92,7 @@ If the redaction cannot be applied to this type of files, e.g. BMP image, *Redac
 
 ## Redact embedded images
 
-You can redact image area within all kinds of embedded images inside a document. You can both use [ImageAreaRedaction](https://apireference.groupdocs.com/redaction/java/com.groupdocs.redaction.redactions/ImageAreaRedaction) class and any type of [TextRedaction](https://apireference.groupdocs.com/redaction/java/com.groupdocs.redaction.redactions/TextRedaction) (regular expression, exact phrase), if the OCR is enabled in **RedactorSettings** (see [OCR Usage Basics]({{< ref "redaction/java/developer-guide/advanced-usage/using-ocr/ocr-usage-basics" >}}) article). 
+You can redact image area within all kinds of embedded images inside a document. You can both use [ImageAreaRedaction](https://reference.groupdocs.com/redaction/java/com.groupdocs.redaction.redactions/ImageAreaRedaction) class and any type of [TextRedaction](https://reference.groupdocs.com/redaction/java/com.groupdocs.redaction.redactions/TextRedaction) (regular expression, exact phrase), if the OCR is enabled in **RedactorSettings** (see [OCR Usage Basics]({{< ref "redaction/java/developer-guide/advanced-usage/using-ocr/ocr-usage-basics" >}}) article). 
 
 The following example demonstrates how to redact all embedded images within a Microsoft Word document:
 

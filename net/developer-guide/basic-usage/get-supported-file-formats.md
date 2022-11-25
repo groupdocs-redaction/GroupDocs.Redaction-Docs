@@ -10,8 +10,8 @@ hideChildren: False
 ---
 GroupDocs.Redaction allows to get the list of all supported file formats by these steps:
 
-*   Call [GetSupportedFileTypes](https://apireference.groupdocs.com/net/redaction/groupdocs.redaction/filetype/methods/getsupportedfiletypes)of [FileType](https://apireference.groupdocs.com/net/redaction/groupdocs.redaction/filetype) class;
-*   Enumerate through the collection of [FileType](https://apireference.groupdocs.com/net/redaction/groupdocs.redaction/filetype)objects*.*
+*   Call [GetSupportedFileTypes](https://reference.groupdocs.com/net/redaction/groupdocs.redaction/filetype/methods/getsupportedfiletypes)of [FileType](https://reference.groupdocs.com/net/redaction/groupdocs.redaction/filetype) class;
+*   Enumerate through the collection of [FileType](https://reference.groupdocs.com/net/redaction/groupdocs.redaction/filetype)objects*.*
 
 The following example demonstrates how to get supported file formats list.
 

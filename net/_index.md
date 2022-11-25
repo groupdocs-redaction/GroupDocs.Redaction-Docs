@@ -21,6 +21,6 @@ Following are the links to some useful resources you may need to accomplish your
 *   [GroupDocs.Redaction for .NET Release Notes]({{< ref "redaction/net/release-notes/_index.md" >}})
 *   [GroupDocs.Redaction for .NET Product Page](https://products.groupdocs.com/redaction/net)
 *   [Install GroupDocs.Redaction for .NET NuGet Package](https://www.nuget.org/packages/GroupDocs.Redaction/)
-*   [GroupDocs.Redaction for .NET API Reference Guide](https://apireference.groupdocs.com/net/redaction)
+*   [GroupDocs.Redaction for .NET API Reference Guide](https://reference.groupdocs.com/net/redaction)
 *   [GroupDocs.Redaction for .NET Free Support Forum](https://forum.groupdocs.com/c/redaction)
 *   [GroupDocs.Redaction for .NET Paid Support Helpdesk](https://helpdesk.groupdocs.com/)

@@ -13,7 +13,7 @@ GroupDocs.Redaction supports both types of image documents for Optical Character
 *   image files, such as printed document scans (PNG, JPG, etc.)
 *   embedded images within office documents (PDF, DOCX, etc.)  
 
-You have to implement [IOcrConnector](https://apireference.groupdocs.com/redaction/java/com.groupdocs.redaction.integration/IOcrConnector) interface and pass the instance to [RedactorSettings](https://apireference.groupdocs.com/redaction/java/com.groupdocs.redaction.options/RedactorSettings) constructor.
+You have to implement [IOcrConnector](https://reference.groupdocs.com/redaction/java/com.groupdocs.redaction.integration/IOcrConnector) interface and pass the instance to [RedactorSettings](https://reference.groupdocs.com/redaction/java/com.groupdocs.redaction.options/RedactorSettings) constructor.
 
 For more details, see [OCR Usage Basics]({{< ref "redaction/java/developer-guide/advanced-usage/using-ocr/ocr-usage-basics" >}}) article.
 

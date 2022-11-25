@@ -12,7 +12,7 @@ GroupDocs.Redaction allows to redact data of sensitive or private nature from yo
 
 ## Filter by spreadsheet and column
 
-If you have a document with one or more tables, organized into worksheets (one table per worksheet) - such as Microsoft Excel documents - you can use specific type of textual redactions, [CellColumnRedaction](https://apireference.groupdocs.com/net/redaction/groupdocs.redaction.redactions/cellcolumnredaction). It allows you to set the scope of the redaction to a specific worksheet and/or column. The options are:
+If you have a document with one or more tables, organized into worksheets (one table per worksheet) - such as Microsoft Excel documents - you can use specific type of textual redactions, [CellColumnRedaction](https://reference.groupdocs.com/net/redaction/groupdocs.redaction.redactions/cellcolumnredaction). It allows you to set the scope of the redaction to a specific worksheet and/or column. The options are:
 
 *   optionally set worksheet name or its numeric index (if both are missing, redaction affects all worksheets)
 *   optionally set column (all columns are used, if the column filter is not set)
