@@ -35,7 +35,7 @@ Below is an example of redaction policy XML file (code properties mapping is obv
 ```
 You can use RedactionPolicy.Save() method to create XML documents of this structure, configuring redactions in runtime.
 
-The following example demonstrates how to save a [RedactionPolicy](https://apireference.groupdocs.com/redaction/net/groupdocs.redaction/redactionpolicy) to an XML file.
+The following example demonstrates how to save a [RedactionPolicy](https://reference.groupdocs.com/redaction/net/groupdocs.redaction/redactionpolicy) to an XML file.
  
 **C#**
 

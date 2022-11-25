@@ -8,7 +8,7 @@ keywords: redaction API, load a password-protected file
 productName: GroupDocs.Redaction for .NET
 hideChildren: False
 ---
-In order to open password-protected documents, you have to pass your password to [LoadOptions](https://apireference.groupdocs.com/net/redaction/groupdocs.redaction.options/loadoptions) class constructor or assign it to its [Password](https://apireference.groupdocs.com/net/redaction/groupdocs.redaction.options/loadoptions/properties/password) property of an instance of [LoadOptions](https://apireference.groupdocs.com/net/redaction/groupdocs.redaction.options/loadoptions) class:
+In order to open password-protected documents, you have to pass your password to [LoadOptions](https://reference.groupdocs.com/net/redaction/groupdocs.redaction.options/loadoptions) class constructor or assign it to its [Password](https://reference.groupdocs.com/net/redaction/groupdocs.redaction.options/loadoptions/properties/password) property of an instance of [LoadOptions](https://reference.groupdocs.com/net/redaction/groupdocs.redaction.options/loadoptions) class:
 
 **C#**
 

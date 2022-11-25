@@ -52,7 +52,7 @@ Methods **RedactionPolicy.Save(String)** and **RedactionPolicy.Save(Stream)** ha
 
 ##### Usage
 
-The following example demonstrates how to save a [RedactionPolicy](https://apireference.groupdocs.com/redaction/net/groupdocs.redaction/redactionpolicy) to an XML file.
+The following example demonstrates how to save a [RedactionPolicy](https://reference.groupdocs.com/redaction/net/groupdocs.redaction/redactionpolicy) to an XML file.
  
 **C#**
 

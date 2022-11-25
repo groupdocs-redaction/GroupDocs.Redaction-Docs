@@ -8,7 +8,7 @@ keywords: redaction API
 productName: GroupDocs.Redaction for .NET
 hideChildren: False
 ---
-[GroupDocs.Redaction.Redactor](https://apireference.groupdocs.com/net/redaction/groupdocs.redaction/redactor) class is a main class in Redaction API, providing functionality to open a document. When document is located on the local disk, you can pass its path to [Redactor](https://apireference.groupdocs.com/net/redaction/groupdocs.redaction/redactor)  class constructor.
+[GroupDocs.Redaction.Redactor](https://reference.groupdocs.com/net/redaction/groupdocs.redaction/redactor) class is a main class in Redaction API, providing functionality to open a document. When document is located on the local disk, you can pass its path to [Redactor](https://reference.groupdocs.com/net/redaction/groupdocs.redaction/redactor)  class constructor.
 
 The following example demonstrates how to open a document from local disc:
 
