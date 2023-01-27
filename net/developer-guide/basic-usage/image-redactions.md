@@ -98,6 +98,10 @@ using (Redactor redactor = new Redactor("D:\\sample.docx"))
 
 If the redaction cannot be applied to this type of files, e.g. a spreadsheet document, [RedactorChangeLog.Status](https://reference.groupdocs.com/net/redaction/groupdocs.redaction/redactorchangelog/properties/status) will be [RedactionStatus.Skipped](https://reference.groupdocs.com/net/redaction/groupdocs.redaction/redactionstatus).
 
+## Multi-frame images
+
+You can remove frames from a multi-frame image with a given origin and frame count. For additional information look at [remove page redactions]({{< ref "redaction/net/developer-guide/remove-page-redactions.md" >}}) article.
+
 ## More resources
 
 ### Advanced usage topics

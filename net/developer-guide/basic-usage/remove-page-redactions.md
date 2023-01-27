@@ -11,7 +11,7 @@ hideChildren: False
 
 GroupDocs.Redaction allows to easily to remove pages from PDF documents, slides from presentations and worksheets from spreadsheet documents. 
 
-With GroupDocs.Redaction API you can remove pages by specifying the page range by means of its relative position (the beginning or the end), zero-based index and the count of pages to remove. At this time the supported formats are: PDF, presentations (Microsoft PowerPoint, OpenOffice Presentations) and spreadsheets (Microsoft Excel, OpenOffice Spreadsheets, etc.).
+With GroupDocs.Redaction API you can remove pages by specifying the page range by means of its relative position (the beginning or the end), zero-based index and the count of pages to remove. At this time the supported formats are: PDF, presentations (Microsoft PowerPoint, OpenOffice Presentations), word processing documents (Microsoft Word, OpenOffice Texts, Rich Text Files), spreadsheets (Microsoft Excel, OpenOffice Spreadsheets, etc.) and multi-frame images.
 
 ## Remove page range
 
@@ -46,6 +46,26 @@ using (Redactor redactor = new Redactor("sample.pdf"))
     if (redactor.GetDocumentInfo().PageCount >= 1)
     {
         redactor.Apply(new RemovePageRedaction(PageSeekOrigin.End, 0, 1));
+        redactor.Save();
+    }
+}
+```
+
+## Remove frame from image
+
+In case of a multi-frame image you might need to delete a number of frames (treated as "pages").
+
+The following example demonstrates how to remove 3 frames from an animated GIF image:
+
+**C#**
+
+```csharp
+using (Redactor redactor = new Redactor("sample.gif"))
+{
+    // Removes 5 frames starting from 3nd one, requires at least 7 frames
+    if (redactor.GetDocumentInfo().PageCount >= 7)
+    {
+        redactor.Apply(new RemovePageRedaction(PageSeekOrigin.Begin, 2, 5));
         redactor.Save();
     }
 }
