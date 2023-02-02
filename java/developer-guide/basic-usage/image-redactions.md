@@ -116,4 +116,4 @@ If the redaction cannot be applied to this type of files, e.g. a spreadsheet doc
 
 ## Multi-frame images
 
-You can remove frames from a multi-frame image with a given origin and frame count. For additional information look at [remove page redactions]({{< ref "redaction/java/developer-guide/remove-page-redactions.md" >}}) article.
+You can remove frames from a multi-frame image with a given origin and frame count. For additional information look at [remove page redactions]({{< ref "redaction/java/developer-guide/basic-usage/remove-page-redactions.md" >}}) article.
