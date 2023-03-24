@@ -13,7 +13,7 @@ hideChildren: False
 
 The following table indicates the file formats, supported by GroupDocs.Redaction for .NET.
 
-| Format |   | Document body | Metadata | Annotations(comments) | Remarks | Embedded images | OCR | Remove Page |
+| Format | Description | Document body | Metadata | Annotations(comments) | Remarks | Embedded images | OCR | Remove Page |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | [PDF](https://docs.fileformat.com/pdf/) | Saves the document as PDF (Adobe Portable Document) format | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) |   | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) |
 | [DOC](https://docs.fileformat.com/word-processing/doc) | Microsoft Word 97 - 2007 Document. | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) |   | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) |
@@ -39,7 +39,8 @@ The following table indicates the file formats, supported by GroupDocs.Redactio
 | [PPSM](https://docs.fileformat.com/presentation/ppsm/) | Microsoft PowerPoint Open XML Macro-Enabled Slide Show file | ![(tick)](/redaction/net/images/check.png)  | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) |   | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) |
 | [POTM](https://docs.fileformat.com/presentation/potm/) | Microsoft PowerPoint template | ![(tick)](/redaction/net/images/check.png)  | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) |   | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) |
 | [JPEG](https://docs.fileformat.com/image/jpeg/) | The image file format was standardized by the Joint Photographic Experts Group. | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) |   |   |   | ![(tick)](/redaction/net/images/check.png) |   |
-| TIF/[TIFF](https://docs.fileformat.com/image/tiff/) | Tagged Image File Format | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) |   |   |   | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) |
+| [TIF/TIFF](https://docs.fileformat.com/image/tiff/) | Tagged Image File Format | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) |   |   |   | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) |
 | [PNG](https://docs.fileformat.com/image/png/) | Portable Network Graphics Image | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) |   |   |   | ![(tick)](/redaction/net/images/check.png) |   |
 | [BMP](https://docs.fileformat.com/image/bmp/) | Bitmap Image Files | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) |   |   |   | ![(tick)](/redaction/net/images/check.png) |   |
 | [GIF](https://docs.fileformat.com/image/gif/) | Graphical Interchange Format Image | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) |   |   |   |   | ![(tick)](/redaction/net/images/check.png) |
+| [DJVU](https://docs.fileformat.com/image/djvu/) | DjVu Document Format | ![(tick)](/redaction/net/images/check.png) |  |   |   |   |   | ![(tick)](/redaction/net/images/check.png) |
