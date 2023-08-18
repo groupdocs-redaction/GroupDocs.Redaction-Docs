@@ -50,6 +50,21 @@ using (Redactor redactor = new Redactor(@"sample.docx"))
 }
 ```
 
+You might need to apply redaction to a right-to-left document, such as Arabic or Hebrew. The following example demonstrates how to apply ExactPhraseRedaction to an Arabic PDF document^
+
+**C#**
+
+```csharp
+using (Redactor redactor = new Redactor("Arabic.pdf"))
+{
+    ExactPhraseRedaction red = new ExactPhraseRedaction("أﺑﺠﺪ", new ReplacementOptions("[test]"));
+    red.IsRightToLeft = true;
+    
+    redactor.Apply(red);
+    redactor.Save();
+}
+```
+
 ## Use regular expression
 
 Behind the scenes, "exact phrase" redaction works though regular expressions, which are the baseline approach for redaction. In the example below, we redact out any text, matching "2 digits, space or nothing, 2 digits, again space and 6 digits" with a blue color box:
@@ -63,6 +78,19 @@ using (Redactor redactor = new Redactor(@"sample.docx"))
   redactor.Save();
 }
 ```
+
+If you need to apply redact a whole paragraph, you might also need to use RegexRedaction. The following example demonstrates how to redact the whole paragraph in a PDF document:
+
+**C#**
+
+```csharp
+using (Redactor redactor = new Redactor("LoremIpsum.pdf"))
+{
+    redactor.Apply(new RegexRedaction("(Lorem(\n|.)+?urna)", new ReplacementOptions("[test]")));
+    redactor.Save();
+}
+```
+
 
 ## More resources
 
