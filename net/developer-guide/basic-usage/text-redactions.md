@@ -50,7 +50,7 @@ using (Redactor redactor = new Redactor(@"sample.docx"))
 }
 ```
 
-You might need to apply redaction to a right-to-left document, such as Arabic or Hebrew. The following example demonstrates how to apply ExactPhraseRedaction to an Arabic PDF document^
+You might need to apply redaction to a right-to-left document, such as Arabic or Hebrew. The following example demonstrates how to apply ExactPhraseRedaction to an Arabic PDF document:
 
 **C#**
 
@@ -86,7 +86,7 @@ If you need to apply redact a whole paragraph, you might also need to use RegexR
 ```csharp
 using (Redactor redactor = new Redactor("LoremIpsum.pdf"))
 {
-    redactor.Apply(new RegexRedaction("(Lorem(\n|.)+?urna)", new ReplacementOptions("[test]")));
+    redactor.Apply(new RegexRedaction("(Lorem(\n|.)+?urna)", new ReplacementOptions(System.Drawing.Color.Red)));
     redactor.Save();
 }
 ```
