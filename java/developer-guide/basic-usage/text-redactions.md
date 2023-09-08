@@ -59,7 +59,7 @@ final Redactor redactor = new Redactor("Arabic.pdf");
 try
 {
     ExactPhraseRedaction red = new ExactPhraseRedaction("أﺑﺠﺪ", new ReplacementOptions("[test]"));
-    red.setIsRightToLeft(true);
+    red.setRightToLeft(true);
     redactor.apply(red);
     redactor.save();
 }
@@ -91,7 +91,7 @@ If you need to apply redact a whole paragraph, you might also need to use RegexR
 final Redactor redactor = new Redactor("LoremIpsum.pdf");
 try
 {
-    redactor.apply(RegexRedaction("(Lorem(\n|.)+?urna)", new ReplacementOptions("[test]")));
+    redactor.apply(new RegexRedaction("(Lorem(\n|.)+?urna)", new ReplacementOptions("[test]")));
     SaveOptions saveOptions = new SaveOptions();
     saveOptions.setAddSuffix(true);
     saveOptions.setRasterizeToPDF(false);
