@@ -1,2 +1,1 @@
-Public documentation for GroupDocs.Redaction
-
+Public documentation for [GroupDocs.Redaction](https://products.groupdocs.com/redaction/).
