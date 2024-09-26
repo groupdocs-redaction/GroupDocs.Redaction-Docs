@@ -7,6 +7,7 @@ geekdocNav: false
 geekdocAlign: center
 geekdocAnchor: false
 hideChildren: true
+showFeedbackForm: false
 ---
 
 ## GroupDocs Developers Cookbook
