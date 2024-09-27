@@ -12,34 +12,97 @@ GroupDocs hosts all Java APIs on [GroupDocs Repository](https://releases.groupd
 
 ### Specify GroupDocs Repository Configuration
 
-First, you need to specify GroupDocs repository configuration/location in your Maven `pom.xml` as follows:
+First, you need to specify repository configuration/location in your project as follows:
 
-**XML**
-
-```java
+{{< tabs "example1">}}
+{{< tab "Maven" >}}
+```xml
 <repositories>
 	<repository>
-		<id>GroupDocsJavaAPI</id>
-		<name>GroupDocs Java API</name>
-		<url>https://releases.groupdocs.com/java/repo/</url>
+		<id>GroupDocs Artifact Repository</id>
+        	<name>GroupDocs Artifact Repository</name>
+        	<url>https://releases.groupdocs.com/java/repo/</url>
 	</repository>
 </repositories>
 ```
+{{< /tab >}}
+{{< tab "Gradle" >}}
+```xml
+repositories {
+    maven {
+        url "https://repository.groupdocs.com/repo/"
+    }
+}
+```
+{{< /tab >}}
+{{< tab "Kotlin" >}}
+```xml
+repositories {
+    maven(url = "https://repository.groupdocs.com/repo/")
+}
+```
+{{< /tab >}}
+{{< tab "Ivy" >}}
+```xml
+<ivysettings>
+    <settings defaultResolver="chain"/>
+    <resolvers>
+        <chain name="chain">
+            <ibiblio name="GroupDocs Repository" m2compatible="true" root="https://releases.groupdocs.com/java/repo/"/>
+        </chain>
+    </resolvers>
+</ivysettings>
+```
+{{< /tab >}}
+{{< tab "Sbt" >}}
+```xml
+resolvers += Resolver.url("GroupDocs Repository", url("https://releases.groupdocs.com/java/repo/"))
+```
+{{< /tab >}}
+{{< /tabs >}}
 
-### Define GroupDocs.Redaction for Java API Dependency
+### Add GroupDocs.Redaction as a dependency
 
-Then define GroupDocs.Redaction for Java API dependency in your `pom.xml` as follows:
+Then define GroupDocs.Redaction for Java API dependency in your project as follows:
 
-**XML**
-
-```java
+{{< tabs "example2">}}
+{{< tab "Maven" >}}
+```xml
 <dependencies>
     <dependency>
         <groupId>com.groupdocs</groupId>
         <artifactId>groupdocs-redaction</artifactId>
-        <version>19.10</version>
+        <version>24.9</version>
     </dependency>
 </dependencies>
 ```
+{{< /tab >}}
+{{< tab "Gradle" >}}
+```xml
+dependencies {
+    implementation 'com.groupdocs:groupdocs-redaction:24.9'
+}
+```
+{{< /tab >}}
+{{< tab "Kotlin" >}}
+```xml
+dependencies {
+    implementation("com.groupdocs:groupdocs-redaction:24.9")
+}
+```
+{{< /tab >}}
+{{< tab "Ivy" >}}
+```xml
+<dependency org="com.groupdocs" name="groupdocs-redaction" rev="24.9">
+   <artifact name="groupdocs-redaction" ext="jar"/>
+</dependency>
+```
+{{< /tab >}}
+{{< tab "Sbt" >}}
+```xml
+libraryDependencies += "com.groupdocs" % "groupdocs-redaction" % "24.9"
+```
+{{< /tab >}}
+{{< /tabs >}}
 
 After performing above-mentioned steps, GroupDocs.Redaction for Java dependency will finally be added to your Maven project.
