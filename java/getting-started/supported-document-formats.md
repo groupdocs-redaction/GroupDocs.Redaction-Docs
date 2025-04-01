@@ -43,3 +43,11 @@ The following table indicates the file formats, supported by GroupDocs.Redactio
 | [BMP](https://docs.fileformat.com/image/bmp/) | Bitmap Image Files | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) |   |   |   | ![(tick)](/redaction/net/images/check.png) |   |
 | [GIF](https://docs.fileformat.com/image/gif/) | Graphical Interchange Format Image | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) |   |   |   |   | ![(tick)](/redaction/net/images/check.png) |
 | [DJVU](https://docs.fileformat.com/image/djvu/) | DjVu Document Format | ![(tick)](/redaction/net/images/check.png) |  |   |   |   |   | ![(tick)](/redaction/net/images/check.png) |
+
+{{< alert style="tip" >}}
+
+**Can’t find your file format?**
+
+We’re here to help! Please post a request on our [Free Support Forum](https://forum.groupdocs.com/c/redaction/33), and our team will assist you.
+
+{{< /alert >}}
