@@ -11,7 +11,7 @@ showFeedbackForm: false
 ---
 
 <div class="gdoc-list-descr">
-GroupDocs.Redaction – Redact Sensitive Content from Documents
+GroupDocs.Redaction - Redact Sensitive Content from Documents
 </div>
 
 <h2 class="gdoc-product-title">Documentation</h2>
@@ -96,12 +96,13 @@ GroupDocs.Redaction – Redact Sensitive Content from Documents
             </div>
             <div class="gdoc-platform__col">
                 <div class="gdoc-platform__col-title">
-                <svg class="gdoc-platform__col-icon"><use xlink:href="/img/groupdocs-stack.svg#document"></use></svg>
-                <div>Redact content from documents</div></div>
-                <p>Articles and guides for both basic and advanced development</p>
-                <ul style="text-align: left;list-style:none">
-                    <li>{{< icon "file-alt" >}} <a href='{{< ref "/redaction/java/ocr-usage-basics" >}}'>Redact content using optical character recognition (OCR)</a></li>
-                    <li>{{< icon "file-alt" >}} <a href='{{< ref "/redaction/net/developer-guide/advanced-usage" >}}'>Advanced Usage</a></li>              
+                    <svg class="gdoc-platform__col-icon"><use xlink:href="/img/groupdocs-stack.svg#document"></use></svg>
+                    <div>Remove sensitive information</div>
+                </div>
+                <div class="gdoc-platform__col-descr">Articles and guides for both basic and advanced development</div>
+                <ul class="gdoc-platform__col-links">
+                    <li> <a href='/redaction/java/ocr-usage-basics/'>Redact content using optical character recognition (OCR)</a></li>
+                    <li> <a href='/redaction/java/advanced-usage/'>Advanced usage scenarios</a></li>   
                 </ul>
             </div>
             <div class="gdoc-platform__col">
@@ -131,9 +132,9 @@ GroupDocs.Redaction – Redact Sensitive Content from Documents
                     <svg class="gdoc-platform__col-icon"><use xlink:href="/img/groupdocs-stack.svg#time"></use></svg>
                     <div>Getting Started</div>
                 </div>
-                <div class="gdoc-platform__col-descr">Start quickly with our getting started documentation</div>
+                <div class="gdoc-platform__col-descr">Quickly get started with our beginner’s guide</div>
                 <ul class="gdoc-platform__col-links">
-                    <li> <a href='/redaction/python-net/features-overview/'>Features  Overview</a></li>
+                    <li> <a href='/redaction/python-net/features-overview/'>Features Overview</a></li>
                     <li> <a href='/redaction/python-net/supported-document-formats/'>Supported Document Formats</a></li>
                     <li> <a href='/redaction/python-net/system-requirements/'>System Requirements</a></li>
                     <li> <a href='/redaction/python-net/installation/'>Installation</a></li>
@@ -142,9 +143,9 @@ GroupDocs.Redaction – Redact Sensitive Content from Documents
             <div class="gdoc-platform__col">
                 <div class="gdoc-platform__col-title">
                     <svg class="gdoc-platform__col-icon"><use xlink:href="/img/groupdocs-stack.svg#document"></use></svg>
-                    <div>Adding watermark</div>
+                    <div>Manage and protect classified information</div>
                 </div>
-                <div class="gdoc-platform__col-descr">Articles and guidelines</div>
+                <div class="gdoc-platform__col-descr">Explore articles and guides covering both basic and advanced development topics</div>
                 <ul class="gdoc-platform__col-links">
                     <li> <a href='/watermark/python-net/add-text/'>Adding text watermark</a></li>
                     <li> <a href='/watermark/python-net/add-image/'>Adding image watermark</a></li>                  
