@@ -1,6 +1,6 @@
 ---
 id: use-redaction-policies
-url: redaction/net/use-redaction-policies
+url: redaction/python-net/use-redaction-policies
 title: Use redaction policies
 weight: 4
 description: "Learn how to deal.If you have a corporate sensitive data removal policy as a list of redaction rules, you don't need to specify them in your code. You can specify an XML document with a list of pre-configured redactions."
@@ -35,7 +35,7 @@ Below is an example of redaction policy XML file (code properties mapping is obv
 ```
 You can use RedactionPolicy.Save() method to create XML documents of this structure, configuring redactions in runtime.
 
-The following example demonstrates how to save a [RedactionPolicy](https://reference.groupdocs.com/redaction/net/groupdocs.redaction/redactionpolicy) to an XML file.
+The following example demonstrates how to save a [RedactionPolicy](https://reference.groupdocs.com/redaction/python-net/groupdocs.redaction/redactionpolicy) to an XML file.
  
 **C#**
 

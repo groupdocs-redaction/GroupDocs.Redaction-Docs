@@ -1,6 +1,6 @@
 ---
 id: load-password-protected-file
-url: redaction/net/load-password-protected-file
+url: redaction/python-net/load-password-protected-file
 title: Load password-protected file
 weight: 3
 description: "Learn how to load a password-protected file by using .NET redaction API"
@@ -8,7 +8,7 @@ keywords: redaction API, load a password-protected file
 productName: GroupDocs.Redaction for .NET
 hideChildren: False
 ---
-In order to open password-protected documents, you have to pass your password to [LoadOptions](https://reference.groupdocs.com/net/redaction/groupdocs.redaction.options/loadoptions) class constructor or assign it to its [Password](https://reference.groupdocs.com/net/redaction/groupdocs.redaction.options/loadoptions/properties/password) property of an instance of [LoadOptions](https://reference.groupdocs.com/net/redaction/groupdocs.redaction.options/loadoptions) class:
+In order to open password-protected documents, you have to pass your password to [LoadOptions](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction.options/loadoptions) class constructor or assign it to its [Password](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction.options/loadoptions/properties/password) property of an instance of [LoadOptions](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction.options/loadoptions) class:
 
 **C#**
 

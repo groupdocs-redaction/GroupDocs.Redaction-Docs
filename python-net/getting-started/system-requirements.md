@@ -1,6 +1,6 @@
 ---
 id: system-requirements
-url: redaction/net/system-requirements
+url: redaction/python-net/system-requirements
 title: System Requirements
 weight: 3
 description: GroupDocs.Redaction for .NET supports any 32-bit or 64-bit operating system where .NET or Mono framework is installed.
@@ -13,7 +13,7 @@ hideChildren: False
 
 ## Overview
 
-GroupDocs.Redaction for .NET does not require any external software or third party tool to be installed. Just follow one of the way as described in [Development Environment, Installation and Configuration]({{< ref "redaction/net/getting-started/system-requirements.md" >}}).
+GroupDocs.Redaction for .NET does not require any external software or third party tool to be installed. Just follow one of the way as described in [Development Environment, Installation and Configuration]({{< ref "redaction/python-net/getting-started/system-requirements.md" >}}).
 
 ## Supported Operating Systems
 

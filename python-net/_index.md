@@ -1,6 +1,6 @@
 ---
 id: home
-url: redaction/net
+url: redaction/python-net
 title: GroupDocs.Redaction for .NET
 weight: 1
 description: A .NET API for redaction of sensitive and classified information from the documents. You can redact in adobe pdf, redact in excel or in many of different file formats using c#
@@ -15,12 +15,12 @@ GroupDocs.Redaction for .NET is an API for removing sensitive and classified inf
 
 ## GroupDocs.Redaction for .NET Resources
 Following are the links to some useful resources you may need to accomplish your tasks.
-*   [GroupDocs.Redaction for .NET Online Documentation]({{< ref "redaction/net" >}})
-*   [GroupDocs.Redaction for .NET Features]({{< ref "redaction/net/getting-started/features-overview.md" >}})
-*   [GroupDocs.Redaction for .NET Limitations]({{< ref "redaction/net/getting-started/evaluation-limitations-and-licensing.md" >}})
-*   [GroupDocs.Redaction for .NET Release Notes](https://releases.groupdocs.com/redaction/net/release-notes/)
-*   [GroupDocs.Redaction for .NET Product Page](https://products.groupdocs.com/redaction/net)
+*   [GroupDocs.Redaction for .NET Online Documentation]({{< ref "redaction/python-net" >}})
+*   [GroupDocs.Redaction for .NET Features]({{< ref "redaction/python-net/getting-started/features-overview.md" >}})
+*   [GroupDocs.Redaction for .NET Limitations]({{< ref "redaction/python-net/getting-started/evaluation-limitations-and-licensing.md" >}})
+*   [GroupDocs.Redaction for .NET Release Notes](https://releases.groupdocs.com/redaction/python-net/release-notes/)
+*   [GroupDocs.Redaction for .NET Product Page](https://products.groupdocs.com/redaction/python-net)
 *   [Install GroupDocs.Redaction for .NET NuGet Package](https://www.nuget.org/packages/GroupDocs.Redaction/)
-*   [GroupDocs.Redaction for .NET API Reference Guide](https://reference.groupdocs.com/net/redaction)
+*   [GroupDocs.Redaction for .NET API Reference Guide](https://reference.groupdocs.com/python-net/redaction)
 *   [GroupDocs.Redaction for .NET Free Support Forum](https://forum.groupdocs.com/c/redaction)
 *   [GroupDocs.Redaction for .NET Paid Support Helpdesk](https://helpdesk.groupdocs.com/)

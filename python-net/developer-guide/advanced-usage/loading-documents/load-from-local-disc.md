@@ -1,6 +1,6 @@
 ---
 id: load-from-local-disc
-url: redaction/net/load-from-local-disc
+url: redaction/python-net/load-from-local-disc
 title: Load from local disc
 weight: 1
 description: "This article shows how the redaction API is used to load file from disk."
@@ -8,7 +8,7 @@ keywords: redaction API
 productName: GroupDocs.Redaction for .NET
 hideChildren: False
 ---
-[GroupDocs.Redaction.Redactor](https://reference.groupdocs.com/net/redaction/groupdocs.redaction/redactor) class is a main class in Redaction API, providing functionality to open a document. When document is located on the local disk, you can pass its path to [Redactor](https://reference.groupdocs.com/net/redaction/groupdocs.redaction/redactor)  class constructor.
+[GroupDocs.Redaction.Redactor](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction/redactor) class is a main class in Redaction API, providing functionality to open a document. When document is located on the local disk, you can pass its path to [Redactor](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction/redactor)  class constructor.
 
 The following example demonstrates how to open a document from local disc:
 

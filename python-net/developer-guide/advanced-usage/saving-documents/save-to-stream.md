@@ -1,6 +1,6 @@
 ---
 id: save-to-stream
-url: redaction/net/save-to-stream
+url: redaction/python-net/save-to-stream
 title: Save to Stream
 weight: 6
 description: "This article demonstrates that how to save a document to any custom file at any location on the local disc or a even a Stream"

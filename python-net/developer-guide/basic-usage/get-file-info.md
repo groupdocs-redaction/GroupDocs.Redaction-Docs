@@ -1,6 +1,6 @@
 ---
 id: get-file-info
-url: redaction/net/get-file-info
+url: redaction/python-net/get-file-info
 title: Get file info
 weight: 2
 description: This article explains the ability of the GroupDocs.Redaction API to get the general document information, which includes FileType, PageCount and FileSize.
@@ -40,7 +40,7 @@ using (Redactor redactor = new Redactor(File.OpenRead("source.docx"))
 
 ### Advanced usage topics
 
-To learn more about document redaction features, please refer to the [advanced usage section]({{< ref "redaction/net/developer-guide/advanced-usage/_index.md" >}}).
+To learn more about document redaction features, please refer to the [advanced usage section]({{< ref "redaction/python-net/developer-guide/advanced-usage/_index.md" >}}).
 
 ### GitHub examples
 

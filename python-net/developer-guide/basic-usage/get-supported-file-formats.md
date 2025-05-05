@@ -1,6 +1,6 @@
 ---
 id: get-supported-file-formats
-url: redaction/net/get-supported-file-formats
+url: redaction/python-net/get-supported-file-formats
 title: Get supported file formats
 weight: 1
 description: This article shows that how to get the list of all supported file formats of GroupDocs.Redaction by using C#.
@@ -10,8 +10,8 @@ hideChildren: False
 ---
 GroupDocs.Redaction allows to get the list of all supported file formats by these steps:
 
-*   Call [GetSupportedFileTypes](https://reference.groupdocs.com/net/redaction/groupdocs.redaction/filetype/methods/getsupportedfiletypes)of [FileType](https://reference.groupdocs.com/net/redaction/groupdocs.redaction/filetype) class;
-*   Enumerate through the collection of [FileType](https://reference.groupdocs.com/net/redaction/groupdocs.redaction/filetype)objects*.*
+*   Call [GetSupportedFileTypes](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction/filetype/methods/getsupportedfiletypes)of [FileType](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction/filetype) class;
+*   Enumerate through the collection of [FileType](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction/filetype)objects*.*
 
 The following example demonstrates how to get supported file formats list.
 
@@ -28,7 +28,7 @@ foreach (FileType fileType in supportedFileTypes)
 
 ### Advanced usage topics
 
-To learn more about document redaction features, please refer to the [advanced usage section]({{< ref "redaction/net/developer-guide/advanced-usage/_index.md" >}}).
+To learn more about document redaction features, please refer to the [advanced usage section]({{< ref "redaction/python-net/developer-guide/advanced-usage/_index.md" >}}).
 
 ### GitHub examples
 

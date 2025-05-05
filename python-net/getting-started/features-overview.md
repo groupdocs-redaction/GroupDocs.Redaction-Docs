@@ -1,6 +1,6 @@
 ---
 id: features-overview
-url: redaction/net/features-overview
+url: redaction/python-net/features-overview
 title: Features Overview
 weight: 1
 description: Redacted meaning is that a process of modifying or editing a document to remove the confidential information before publishing it. With GroupDocs.Redaction tool you can redact PDF and save redacted document, redact sensitive and classified information from MS Word (DOC, DOCX and more..), Excel (XLS, XLSX and more..), PowerPoint(PPT, PPTX and more) documents and images (JPG, PNG, BMP, GIF and more..).

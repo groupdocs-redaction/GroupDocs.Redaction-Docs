@@ -1,6 +1,6 @@
 ---
 id: saving-documents
-url: redaction/net/saving-documents
+url: redaction/python-net/saving-documents
 title: Saving documents
 weight: 2
 description: "The articles explain that how to save documents in different ways after making redactions."

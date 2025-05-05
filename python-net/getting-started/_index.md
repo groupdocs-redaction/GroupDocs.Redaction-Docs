@@ -1,6 +1,6 @@
 ---
 id: getting-started
-url: redaction/net/getting-started
+url: redaction/python-net/getting-started
 title: Getting Started
 weight: 2
 description: ""

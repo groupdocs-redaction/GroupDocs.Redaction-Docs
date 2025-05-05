@@ -1,6 +1,6 @@
 ---
 id: select-specific-pages-for-rasterized-pdf
-url: redaction/net/select-specific-pages-for-rasterized-pdf
+url: redaction/python-net/select-specific-pages-for-rasterized-pdf
 title: Select specific pages for rasterized PDF
 weight: 5
 description: "This article demonstrates that how you can specify starting page index (zero based) and the number of pages from this index to save a rasterized PDF"

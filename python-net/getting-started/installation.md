@@ -1,6 +1,6 @@
 ---
 id: installation
-url: redaction/net/installation
+url: redaction/python-net/installation
 title: Installation
 weight: 4
 description: ""
@@ -28,7 +28,7 @@ Follow these steps to reference GroupDocs.Redaction using Package Manager GUI:
       
     
 
-![](/redaction/net/images/installation.png)
+![](/redaction/python-net/images/installation.png)
 
 #### Using Package Manager Console
 
@@ -43,11 +43,11 @@ You can follow the steps below to reference GroupDocs.Redaction for .NET using t
 
 After successful installation, GroupDocs.Redaction will be referenced in your application.  
   
-![](/redaction/net/images/installation_1.png)
+![](/redaction/python-net/images/installation_1.png)
 
 ## Install from official GroupDocs website
 
-You can follow the steps below to reference GroupDocs.Redaction for .NET downloaded from official website [Downloads section](https://downloads.groupdocs.com/redaction/net):
+You can follow the steps below to reference GroupDocs.Redaction for .NET downloaded from official website [Downloads section](https://downloads.groupdocs.com/redaction/python-net):
 
 1.  Unpack zip archive or follow MSI install wizard instructions.
 2.  In the Solution Explorer, expand the project node you want to add a reference to.

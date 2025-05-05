@@ -1,6 +1,6 @@
 ---
 id: extend-supported-extensions-list
-url: redaction/net/extend-supported-extensions-list
+url: redaction/python-net/extend-supported-extensions-list
 title: Extend supported extensions list
 weight: 6
 description: "This article explains the method which can be used when for some reason files have non-standard extensions or if its format is supported, but not pre-configured."
@@ -8,7 +8,7 @@ keywords: non-standard extensions
 productName: GroupDocs.Redaction for .NET
 hideChildren: False
 ---
-This method can be used when for some reason files have non-standard extensions or if its format is supported, but not pre-configured. For instance, all kinds of plain text files (batch, command files, etc.) could be opened. In this case you do not need to create your own format handler. As it is shown below, you can add file extension (e.g. ".dump") as being handled by the same *[DocumentFormatInstance](https://reference.groupdocs.com/net/redaction/groupdocs.redaction.integration/documentformatinstance)* as all plain text files:
+This method can be used when for some reason files have non-standard extensions or if its format is supported, but not pre-configured. For instance, all kinds of plain text files (batch, command files, etc.) could be opened. In this case you do not need to create your own format handler. As it is shown below, you can add file extension (e.g. ".dump") as being handled by the same *[DocumentFormatInstance](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction.integration/documentformatinstance)* as all plain text files:
 
 **C#**
 

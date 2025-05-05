@@ -1,6 +1,6 @@
 ---
 id: use-pdf-redaction-filters
-url: redaction/net/use-pdf-redaction-filters
+url: redaction/python-net/use-pdf-redaction-filters
 title: Use PDF redaction filters
 weight: 2
 description: "This article explains that how to set page-level scope to PDF redactions."
@@ -9,7 +9,7 @@ productName: GroupDocs.Redaction for .NET
 hideChildren: False
 ---
 
-You can combine [PageRangeFilter](https://reference.groupdocs.com/redaction/net/groupdocs.redaction.redactions/pagerangefilter/) and [PageAreaFilter](https://reference.groupdocs.com/redaction/net/groupdocs.redaction.redactions/pageareafilter/) filters in one set in order to set the scope of redaction to an area on a specific page. You have to set an array of instances to **Filters** property of the [ReplacementOptions](https://reference.groupdocs.com/redaction/net/groupdocs.redaction.redactions/replacementoptions/). 
+You can combine [PageRangeFilter](https://reference.groupdocs.com/redaction/python-net/groupdocs.redaction.redactions/pagerangefilter/) and [PageAreaFilter](https://reference.groupdocs.com/redaction/python-net/groupdocs.redaction.redactions/pageareafilter/) filters in one set in order to set the scope of redaction to an area on a specific page. You have to set an array of instances to **Filters** property of the [ReplacementOptions](https://reference.groupdocs.com/redaction/python-net/groupdocs.redaction.redactions/replacementoptions/). 
 
 The following example demonstrates how to apply redaction to the bottom half of the last page in a PDF document.
 

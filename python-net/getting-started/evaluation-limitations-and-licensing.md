@@ -1,6 +1,6 @@
 ---
 id: evaluation-limitations-and-licensing
-url: redaction/net/evaluation-limitations-and-licensing
+url: redaction/python-net/evaluation-limitations-and-licensing
 title: Evaluation Limitations and Licensing
 weight: 5
 description: free trial api version for redaction is available to evaluate the API which will be similar as licensed but with few limitations.
@@ -53,7 +53,7 @@ using (FileStream fileStream = new FileStream("GroupDocs.Redaction.lic", FileMod
 #### Applying Metered License
 
 {{< alert style="info" >}}
-You can also set [Metered](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/metered) license as an alternative to license file. It is a new licensing mechanism that will be used along with existing licensing method. It is useful for the customers who want to be billed based on the usage of the API features. For more details, please refer to [Metered Licensing FAQ](https://purchase.groupdocs.com/faqs/licensing/metered) section.
+You can also set [Metered](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer/metered) license as an alternative to license file. It is a new licensing mechanism that will be used along with existing licensing method. It is useful for the customers who want to be billed based on the usage of the API features. For more details, please refer to [Metered Licensing FAQ](https://purchase.groupdocs.com/faqs/licensing/metered) section.
 {{< /alert >}}
 
 Here are the simple steps to use the `Metered` class.

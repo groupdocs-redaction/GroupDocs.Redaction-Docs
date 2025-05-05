@@ -1,6 +1,6 @@
 ---
 id: remove-page-redactions
-url: redaction/net/remove-page-redactions
+url: redaction/python-net/remove-page-redactions
 title: Remove page redactions
 weight: 10
 description: This article shows that how to remove pages with sensitive data from your PDF, presentation and spreadsheet documents.
@@ -75,7 +75,7 @@ using (Redactor redactor = new Redactor("sample.gif"))
 
 ### Advanced usage topics
 
-To learn more about document redaction features, please refer to the [advanced usage section]({{< ref "redaction/net/developer-guide/advanced-usage/_index.md" >}}).
+To learn more about document redaction features, please refer to the [advanced usage section]({{< ref "redaction/python-net/developer-guide/advanced-usage/_index.md" >}}).
 
 ### GitHub examples
 

@@ -1,6 +1,6 @@
 ---
 id: annotation-redactions
-url: redaction/net/annotation-redactions
+url: redaction/python-net/annotation-redactions
 title: Annotation redactions
 weight: 7
 description: This article shows the implementation of annotation redaction for documents of different formats like PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX and others.
@@ -8,7 +8,7 @@ keywords: annotation, redactions,PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX
 productName: GroupDocs.Redaction for .NET
 hideChildren: False
 ---
-With GroupDocs.Redaction API you can apply annotation redactions for documents of different formats like PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX and others. See full list at [supported document formats]({{< ref "redaction/net/getting-started/supported-document-formats.md" >}}) article.
+With GroupDocs.Redaction API you can apply annotation redactions for documents of different formats like PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX and others. See full list at [supported document formats]({{< ref "redaction/python-net/getting-started/supported-document-formats.md" >}}) article.
 
 GroupDocs.Redactions provides a flexible API that allows to remove sensitive data from annotation text, or completely remove annotations by a regular expression.
 
@@ -48,7 +48,7 @@ using (Redactor redactor = new Redactor(@"C:\test.pdf"))
 
 ### Advanced usage topics
 
-To learn more about document redaction features, please refer to the [advanced usage section]({{< ref "redaction/net/developer-guide/advanced-usage/_index.md" >}}).
+To learn more about document redaction features, please refer to the [advanced usage section]({{< ref "redaction/python-net/developer-guide/advanced-usage/_index.md" >}}).
 
 ### GitHub examples
 

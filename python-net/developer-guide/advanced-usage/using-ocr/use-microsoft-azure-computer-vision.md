@@ -1,6 +1,6 @@
 ---
 id: use-microsoft-azure-computer-vision
-url: redaction/net/use-microsoft-azure-computer-vision
+url: redaction/python-net/use-microsoft-azure-computer-vision
 title: Use Microsoft Azure Computer Vision API 
 weight: 5
 description: "This article explains that how to use Microsoft Azure Computer Vision API"

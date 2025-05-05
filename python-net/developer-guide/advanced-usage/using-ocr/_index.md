@@ -1,6 +1,6 @@
 ---
 id: using-ocr
-url: redaction/net/using-ocr
+url: redaction/python-net/using-ocr
 title: Using OCR to redact image documents
 weight: 1
 description: ""
@@ -13,9 +13,9 @@ GroupDocs.Redaction supports both types of image documents for Optical Character
 *   image files, such as printed document scans (PNG, JPG, etc.)
 *   embedded images within office documents (PDF, DOCX, etc.)  
 
-You have to implement [IOcrConnector](https://reference.groupdocs.com/net/redaction/groupdocs.redaction.integration.ocr/iocrconnector) interface and pass the instance to [RedactorSettings](https://reference.groupdocs.com/net/redaction/groupdocs.redaction.options/redactorsettings) constructor.
+You have to implement [IOcrConnector](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction.integration.ocr/iocrconnector) interface and pass the instance to [RedactorSettings](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction.options/redactorsettings) constructor.
 
-For more details, see [OCR Usage Basics]({{< ref "redaction/net/developer-guide/advanced-usage/using-ocr/ocr-usage-basics" >}}) article.
+For more details, see [OCR Usage Basics]({{< ref "redaction/python-net/developer-guide/advanced-usage/using-ocr/ocr-usage-basics" >}}) article.
 
 ## OCR usage limitations
 

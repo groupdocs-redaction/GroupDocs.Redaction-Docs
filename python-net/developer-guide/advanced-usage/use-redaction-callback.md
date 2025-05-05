@@ -1,6 +1,6 @@
 ---
 id: use-redaction-callback
-url: redaction/net/use-redaction-callback
+url: redaction/python-net/use-redaction-callback
 title: Use redaction callback
 weight: 3
 description: "Learn about redaction API methods to reject or approve specific changes during redaction process"
@@ -8,7 +8,7 @@ keywords: redaction API
 productName: GroupDocs.Redaction for .NET
 hideChildren: False
 ---
-In order to reject or approve specific changes during redaction process or to keep a full log of changes in the document, you need to provide an instance of [IRedactionCallback](https://reference.groupdocs.com/net/redaction/groupdocs.redaction.redactions/iredactioncallback) to a constructor of [RedactorSettings](https://reference.groupdocs.com/net/redaction/groupdocs.redaction.options/redactorsettings) class. The interface contains only one method, [AcceptRedaction()](https://reference.groupdocs.com/net/redaction/groupdocs.redaction.redactions/iredactioncallback/methods/acceptredaction), which receives detailed information about proposed redaction and returns *Boolean* value, accepted or not.
+In order to reject or approve specific changes during redaction process or to keep a full log of changes in the document, you need to provide an instance of [IRedactionCallback](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction.redactions/iredactioncallback) to a constructor of [RedactorSettings](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction.options/redactorsettings) class. The interface contains only one method, [AcceptRedaction()](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction.redactions/iredactioncallback/methods/acceptredaction), which receives detailed information about proposed redaction and returns *Boolean* value, accepted or not.
 
 Below, we create a callback class, dumping changes to system console:
 
@@ -36,7 +36,7 @@ public class RedactionDump : IRedactionCallback
 
 ```
 
-The instance of this class is to be passed to a constructor of the [Redactor](https://reference.groupdocs.com/net/redaction/groupdocs.redaction/redactor) class:
+The instance of this class is to be passed to a constructor of the [Redactor](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction/redactor) class:
 
 **C#**
 

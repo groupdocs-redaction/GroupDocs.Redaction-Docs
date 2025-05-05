@@ -1,6 +1,6 @@
 ---
 id: use-page-area-redaction
-url: redaction/net/use-page-area-redaction
+url: redaction/python-net/use-page-area-redaction
 title: Use PageAreaRedaction
 weight: 3
 description: "This article explains that how to use PageAreaRedaction."
@@ -9,7 +9,7 @@ productName: GroupDocs.Redaction for .NET
 hideChildren: False
 ---
 
-You can use [PageAreaRedaction](https://reference.groupdocs.com/redaction/net/groupdocs.redaction.redactions/pagearearedaction/) to redact an area of a specific page range from all sensitive data in text, images and annnotations.. 
+You can use [PageAreaRedaction](https://reference.groupdocs.com/redaction/python-net/groupdocs.redaction.redactions/pagearearedaction/) to redact an area of a specific page range from all sensitive data in text, images and annnotations.. 
 
 The following example demonstrates how to apply PageAreaRedaction to the right half of the last page in a PDF document.
 

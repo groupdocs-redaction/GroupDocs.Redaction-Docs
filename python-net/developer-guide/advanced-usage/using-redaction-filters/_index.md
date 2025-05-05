@@ -1,6 +1,6 @@
 ---
 id: redaction-filters
-url: redaction/net/redaction-filters
+url: redaction/python-net/redaction-filters
 title: Using redaction filters
 weight: 1
 description: ""
@@ -13,9 +13,9 @@ GroupDocs.Redaction allows you to set the page-based scope for your redaction of
 *   page range, a given number of pages at certain offset from the beginning or the end of the page;
 *   page area (on each page), which is a top-left based rectangle.  
 
-All filters inherit from [RedactionFilter](https://reference.groupdocs.com/redaction/net/groupdocs.redaction.redactions/redactionfilter/) and as an array are set to **Filters** property of the [ReplacementOptions](https://reference.groupdocs.com/redaction/net/groupdocs.redaction.redactions/replacementoptions/).
+All filters inherit from [RedactionFilter](https://reference.groupdocs.com/redaction/python-net/groupdocs.redaction.redactions/redactionfilter/) and as an array are set to **Filters** property of the [ReplacementOptions](https://reference.groupdocs.com/redaction/python-net/groupdocs.redaction.redactions/replacementoptions/).
 
-You can combine these filters in one set in order to set the scope of redaction to an area on a specific page. For more details, see [Use PDF redaction filters]({{< ref "redaction/net/developer-guide/advanced-usage/using-redaction-filters/use-pdf-redaction-filters" >}}) article.
+You can combine these filters in one set in order to set the scope of redaction to an area on a specific page. For more details, see [Use PDF redaction filters]({{< ref "redaction/python-net/developer-guide/advanced-usage/using-redaction-filters/use-pdf-redaction-filters" >}}) article.
 
 ## Redaction filters limitations
 

@@ -1,6 +1,6 @@
 ---
 id: basic-usage
-url: redaction/net/basic-usage
+url: redaction/python-net/basic-usage
 title: Basic usage
 weight: 1
 description: ""

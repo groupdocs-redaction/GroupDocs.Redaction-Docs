@@ -1,6 +1,6 @@
 ---
 id: text-redactions
-url: redaction/net/text-redactions
+url: redaction/python-net/text-redactions
 title: Text redaction
 weight: 5
 description: This article explains that how C# redaction API allows you to easily redact data of sensitive or private nature from your documents. You can apply text redaction using exact phrase or regular expression for documents of different formats like PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX and others.
@@ -10,7 +10,7 @@ hideChildren: False
 ---
 GroupDocs.Redaction allows to easily redact data of sensitive or private nature from your documents. The most popular redaction case is to remove a text from a document.
 
-With GroupDocs.Redaction API you can apply text redaction using exact phrase or [regular expression](https://docs.microsoft.com/en-us/dotnet/standard/base-types/regular-expressions) for documents of different formats like PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX and others. See full list at [supported document formats]({{< ref "redaction/net/getting-started/supported-document-formats.md" >}}) article.
+With GroupDocs.Redaction API you can apply text redaction using exact phrase or [regular expression](https://docs.microsoft.com/en-us/dotnet/standard/base-types/regular-expressions) for documents of different formats like PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX and others. See full list at [supported document formats]({{< ref "redaction/python-net/getting-started/supported-document-formats.md" >}}) article.
 
 ## Use exact phrase redaction
 
@@ -96,7 +96,7 @@ using (Redactor redactor = new Redactor("LoremIpsum.pdf"))
 
 ### Advanced usage topics
 
-To learn more about document redaction features, please refer to the [advanced usage section]({{< ref "redaction/net/developer-guide/advanced-usage/_index.md" >}}).
+To learn more about document redaction features, please refer to the [advanced usage section]({{< ref "redaction/python-net/developer-guide/advanced-usage/_index.md" >}}).
 
 ### GitHub examples
 

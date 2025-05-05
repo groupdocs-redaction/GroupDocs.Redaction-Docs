@@ -1,6 +1,6 @@
 ---
 id: get-document-page-preview
-url: redaction/net/get-document-page-preview
+url: redaction/python-net/get-document-page-preview
 title: Get document page preview
 weight: 3
 description: This article shows the implementation of Redactor class which supports the rendering of the document preview in JPEG, PNG and BMP.
@@ -9,7 +9,7 @@ productName: GroupDocs.Redaction for .NET
 hideChildren: False
 ---
 
-In GroupDocs.Redaction, [Redactor](https://reference.groupdocs.com/redaction/net/groupdocs.redaction/redactor) class supports rendering of the document preview in on of these image formats:
+In GroupDocs.Redaction, [Redactor](https://reference.groupdocs.com/redaction/python-net/groupdocs.redaction/redactor) class supports rendering of the document preview in on of these image formats:
 
 *   JPEG Image
 *   Portable Network Graphics (PNG)

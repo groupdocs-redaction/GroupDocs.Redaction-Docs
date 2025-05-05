@@ -1,6 +1,6 @@
 ---
 id: pre-rasterize
-url: redaction/net/pre-rasterize
+url: redaction/python-net/pre-rasterize
 title: Pre-rasterize
 weight: 5
 description: "This article shows how to pre-rasterize a document using the redaction API."
@@ -10,7 +10,7 @@ hideChildren: False
 ---
 In some cases, you might need to pre-rasterize the document before opening it and applying redactions. 
 
-For instance, you might need to use an [ImageAreaRedaction](https://reference.groupdocs.com/redaction/net/groupdocs.redaction.redactions/imagearearedaction/) for a whole page of a document with searchable text and images. In order to do that, you will need to pass the Boolean flag to the [LoadOptions](https://reference.groupdocs.com/redaction/net/groupdocs.redaction.options/loadoptions/) class constructor.
+For instance, you might need to use an [ImageAreaRedaction](https://reference.groupdocs.com/redaction/python-net/groupdocs.redaction.redactions/imagearearedaction/) for a whole page of a document with searchable text and images. In order to do that, you will need to pass the Boolean flag to the [LoadOptions](https://reference.groupdocs.com/redaction/python-net/groupdocs.redaction.options/loadoptions/) class constructor.
 
 The following example demonstrates how to pre-rasterize a Microsoft Word document:
 

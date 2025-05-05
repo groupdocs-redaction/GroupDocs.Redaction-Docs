@@ -1,6 +1,6 @@
 ---
 id: save-in-rasterized-pdf
-url: redaction/net/save-in-rasterized-pdf
+url: redaction/python-net/save-in-rasterized-pdf
 title: Save in rasterized PDF
 weight: 2
 description: "This article demonstrates that how to save the document as a rasterized PDF file"

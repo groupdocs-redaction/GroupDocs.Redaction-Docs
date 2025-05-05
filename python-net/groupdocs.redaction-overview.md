@@ -1,6 +1,6 @@
 ---
 id: groupdocs-redaction-overview
-url: redaction/net/groupdocs-redaction-overview
+url: redaction/python-net/groupdocs-redaction-overview
 title: GroupDocs.Redaction Overview
 weight: 1
 description: Lets try to know about what is redaction or what does redacted mean. The redaction is the editing a document for the purpose to remove or hide the confidential or sensitive information.

@@ -1,6 +1,6 @@
 ---
 id: create-pdf-with-image-redaction
-url: redaction/net/create-pdf-with-image-redaction
+url: redaction/python-net/create-pdf-with-image-redaction
 title: Create PDF with Image Redaction
 weight: 8
 description: This article shows how to redact the pages of a document as images, redacting entire areas of the page instead or in addition to a specific text.

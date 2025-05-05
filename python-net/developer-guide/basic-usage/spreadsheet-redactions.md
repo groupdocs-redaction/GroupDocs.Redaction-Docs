@@ -1,6 +1,6 @@
 ---
 id: spreadsheet-redactions
-url: redaction/net/spreadsheet-redactions
+url: redaction/python-net/spreadsheet-redactions
 title: Spreadsheet redactions
 weight: 8
 description: This article shows that how C# redaction API allows to redact data of sensitive or private nature from your XLS, XLSX, ODS spreadsheet document formats and others.
@@ -8,11 +8,11 @@ keywords: c#, redaction, redact data, xls, xlsx, ods
 productName: GroupDocs.Redaction for .NET
 hideChildren: False
 ---
-GroupDocs.Redaction allows to redact data of sensitive or private nature from your XLS, XLSX, ODS spreadsheet document formats and others. See full list at [supported document formats]({{< ref "redaction/net/getting-started/supported-document-formats.md" >}}) article.
+GroupDocs.Redaction allows to redact data of sensitive or private nature from your XLS, XLSX, ODS spreadsheet document formats and others. See full list at [supported document formats]({{< ref "redaction/python-net/getting-started/supported-document-formats.md" >}}) article.
 
 ## Filter by spreadsheet and column
 
-If you have a document with one or more tables, organized into worksheets (one table per worksheet) - such as Microsoft Excel documents - you can use specific type of textual redactions, [CellColumnRedaction](https://reference.groupdocs.com/net/redaction/groupdocs.redaction.redactions/cellcolumnredaction). It allows you to set the scope of the redaction to a specific worksheet and/or column. The options are:
+If you have a document with one or more tables, organized into worksheets (one table per worksheet) - such as Microsoft Excel documents - you can use specific type of textual redactions, [CellColumnRedaction](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction.redactions/cellcolumnredaction). It allows you to set the scope of the redaction to a specific worksheet and/or column. The options are:
 
 *   optionally set worksheet name or its numeric index (if both are missing, redaction affects all worksheets)
 *   optionally set column (all columns are used, if the column filter is not set)
@@ -42,7 +42,7 @@ using (Redactor redactor = new Redactor("D:\\Sales in September.xslx"))
 
 ### Advanced usage topics
 
-To learn more about document redaction features, please refer to the [advanced usage section]({{< ref "redaction/net/developer-guide/advanced-usage/_index.md" >}}).
+To learn more about document redaction features, please refer to the [advanced usage section]({{< ref "redaction/python-net/developer-guide/advanced-usage/_index.md" >}}).
 
 ### GitHub examples
 

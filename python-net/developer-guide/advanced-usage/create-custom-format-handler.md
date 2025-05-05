@@ -1,6 +1,6 @@
 ---
 id: create-custom-format-handler
-url: redaction/net/create-custom-format-handler
+url: redaction/python-net/create-custom-format-handler
 title: Create custom format handler
 weight: 7
 description: This article shows how to implement one or several interfaces for the document's features and required redaction.
@@ -8,20 +8,20 @@ keywords: redaction
 productName: GroupDocs.Redaction for .NET
 hideChildren: False
 ---
-If format is not supported, you will need to implement a handler for it by inheriting from [DocumentFormatInstance](https://reference.groupdocs.com/net/redaction/groupdocs.redaction.integration/documentformatinstance) class. Depending on the document's features and required redactions, you will also need to implement one or several interfaces, allowing GroupDocs.Redaction to work with this document format.
+If format is not supported, you will need to implement a handler for it by inheriting from [DocumentFormatInstance](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction.integration/documentformatinstance) class. Depending on the document's features and required redactions, you will also need to implement one or several interfaces, allowing GroupDocs.Redaction to work with this document format.
 
 | Interface | Description |
 | --- | --- |
-| [ITextualFormatInstance](https://reference.groupdocs.com/net/redaction/groupdocs.redaction.integration/itextualformatinstance) | Required for document text redactions to work, replaces occurrences of given regular expression with text or a color block |
-| [IMetadataAccess](https://reference.groupdocs.com/net/redaction/groupdocs.redaction.integration/imetadataaccess) | Required for metadata redactions, reads metadata and changes specific metadata item |
-| [IAnnotatedDocument](https://reference.groupdocs.com/net/redaction/groupdocs.redaction.integration/iannotateddocument) | Required for annotation redactions, changes or deletes annotations, matching given regular expression |
-| [IRasterizableDocument](https://reference.groupdocs.com/net/redaction/groupdocs.redaction.integration/irasterizabledocument) | Required to rasterize (save document as a PDF with page images) |
-| [IImageFormatInstance](https://reference.groupdocs.com/net/redaction/groupdocs.redaction.integration/iimageformatinstance) | Required for raster image format redactions, based on area top-left corner coordinates and area size |
-| [IPreviewable](https://reference.groupdocs.com/net/redaction/groupdocs.redaction.integration/ipreviewable) | Required to provide document general information and preview functionality |
+| [ITextualFormatInstance](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction.integration/itextualformatinstance) | Required for document text redactions to work, replaces occurrences of given regular expression with text or a color block |
+| [IMetadataAccess](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction.integration/imetadataaccess) | Required for metadata redactions, reads metadata and changes specific metadata item |
+| [IAnnotatedDocument](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction.integration/iannotateddocument) | Required for annotation redactions, changes or deletes annotations, matching given regular expression |
+| [IRasterizableDocument](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction.integration/irasterizabledocument) | Required to rasterize (save document as a PDF with page images) |
+| [IImageFormatInstance](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction.integration/iimageformatinstance) | Required for raster image format redactions, based on area top-left corner coordinates and area size |
+| [IPreviewable](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction.integration/ipreviewable) | Required to provide document general information and preview functionality |
 
-Each of these interfaces is optional, i.e. you don't have to implement all of them, e.g. [IImageFormatInstance](https://reference.groupdocs.com/net/redaction/groupdocs.redaction.integration/iimageformatinstance) - if you don't need its functionality or [IMetadataAccess](https://reference.groupdocs.com/net/redaction/groupdocs.redaction.integration/imetadataaccess), if your format does not support metadata.
+Each of these interfaces is optional, i.e. you don't have to implement all of them, e.g. [IImageFormatInstance](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction.integration/iimageformatinstance) - if you don't need its functionality or [IMetadataAccess](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction.integration/imetadataaccess), if your format does not support metadata.
 
-Below, we create a [DocumentFormatInstance](https://reference.groupdocs.com/net/redaction/groupdocs.redaction.integration/documentformatinstance) class with custom logic for textual documents processing, supporting only textual redactions:
+Below, we create a [DocumentFormatInstance](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction.integration/documentformatinstance) class with custom logic for textual documents processing, supporting only textual redactions:
 
 **C#**
 
@@ -101,7 +101,7 @@ config.AvailableFormats.Add(new DocumentFormatConfiguration()
 
 ## Security and password protection
 
-If your format supports security options like password protection, you'll have to pass true or false to [SetAccessGranted](https://reference.groupdocs.com/net/redaction/groupdocs.redaction.integration/documentformatinstance/methods/setaccessgranted) method of [DocumentFormatInstance](https://reference.groupdocs.com/net/redaction/groupdocs.redaction.integration/documentformatinstance) class in your override of [Load](https://reference.groupdocs.com/net/redaction/groupdocs.redaction.integration/documentformatinstance/methods/load) method and throw [IncorrectPasswordException](https://reference.groupdocs.com/net/redaction/groupdocs.redaction.exceptions/incorrectpasswordexception) or [PasswordRequiredException](https://reference.groupdocs.com/net/redaction/groupdocs.redaction.exceptions/passwordrequiredexception), if applicable. For instance:
+If your format supports security options like password protection, you'll have to pass true or false to [SetAccessGranted](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction.integration/documentformatinstance/methods/setaccessgranted) method of [DocumentFormatInstance](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction.integration/documentformatinstance) class in your override of [Load](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction.integration/documentformatinstance/methods/load) method and throw [IncorrectPasswordException](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction.exceptions/incorrectpasswordexception) or [PasswordRequiredException](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction.exceptions/passwordrequiredexception), if applicable. For instance:
 
 **C#**
 

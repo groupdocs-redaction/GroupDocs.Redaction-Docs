@@ -1,6 +1,6 @@
 ---
 id: use-advanced-logging
-url: redaction/net/use-advanced-logging
+url: redaction/python-net/use-advanced-logging
 title: Use advanced logging
 weight: 4
 description: "Learn advanced logging techniques available in the redaction API"
@@ -9,7 +9,7 @@ productName: GroupDocs.Redaction for .NET
 hideChildren: False
 ---
 
-You can implement [ILogger](https://reference.groupdocs.com/net/redaction/groupdocs.redaction.options/ilogger) interface from GroupDocs.Redaction.Options namespace. This interface requires to implement three methods:
+You can implement [ILogger](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction.options/ilogger) interface from GroupDocs.Redaction.Options namespace. This interface requires to implement three methods:
 
 **C#**
 

@@ -1,6 +1,6 @@
 ---
 id: metadata-redactions
-url: redaction/net/metadata-redactions
+url: redaction/python-net/metadata-redactions
 title: Metadata redactions
 weight: 6
 description: This article shows that how C# redaction API allows you to replace or remove metadata using filters or search by regular expression.
@@ -8,13 +8,13 @@ keywords: C#, redaction, api, remove metadata
 productName: GroupDocs.Redaction for .NET
 hideChildren: False
 ---
-With GroupDocs.Redaction API you can apply metadata redactions for documents of different formats like PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX and others. See full list at [supported document formats]({{< ref "redaction/net/getting-started/supported-document-formats.md" >}}) article.
+With GroupDocs.Redaction API you can apply metadata redactions for documents of different formats like PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX and others. See full list at [supported document formats]({{< ref "redaction/python-net/getting-started/supported-document-formats.md" >}}) article.
 
 GroupDocs.Redactions provides a flexible API that allows to replace or remove metadata using filters or search by regular expression.
 
 ## Filter metadata
 
-Base functionality for all redactions, derived from [MetadataRedaction](https://reference.groupdocs.com/net/redaction/groupdocs.redaction.redactions/metadataredaction) base class is *metadata filtering* and it is mandatory for metadata redactions. It uses flagged enumeration [MetadataFilters](https://reference.groupdocs.com/net/redaction/groupdocs.redaction.redactions/metadatafilters), containing items for most frequent metadata entries. You can set the filter to *All*, or any combination of metadata. For instance, the example below sets filter to *Author*, *Manager* and *NameOfApplication* - for textual redaction or cleaning them out:
+Base functionality for all redactions, derived from [MetadataRedaction](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction.redactions/metadataredaction) base class is *metadata filtering* and it is mandatory for metadata redactions. It uses flagged enumeration [MetadataFilters](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction.redactions/metadatafilters), containing items for most frequent metadata entries. You can set the filter to *All*, or any combination of metadata. For instance, the example below sets filter to *Author*, *Manager* and *NameOfApplication* - for textual redaction or cleaning them out:
 
 **C#**
 
@@ -23,7 +23,7 @@ Base functionality for all redactions, derived from [MetadataRedaction](https://
 redaction.Filter = MetadataFilters.Author | MetadataFilters.Manager | MetadataFilters.NameOfApplication;
 ```
 
-Below is the table with full list of [MetadataFilters](https://reference.groupdocs.com/net/redaction/groupdocs.redaction.redactions/metadatafilters) items:
+Below is the table with full list of [MetadataFilters](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction.redactions/metadatafilters) items:
 
 | Filter | Numeric value | Description |
 | --- | --- | --- |
@@ -53,7 +53,7 @@ Below is the table with full list of [MetadataFilters](https://reference.groupd
 
 ## Clean metadata
 
-You can replace all or specific metadata in the document with empty (blank or minimal) values using [EraseMetadataRedaction](https://reference.groupdocs.com/net/redaction/groupdocs.redaction.redactions/erasemetadataredaction) class. The example below blanks out all properties of the document:
+You can replace all or specific metadata in the document with empty (blank or minimal) values using [EraseMetadataRedaction](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction.redactions/erasemetadataredaction) class. The example below blanks out all properties of the document:
 
 **C#**
 
@@ -66,11 +66,11 @@ using (Redactor redactor = new Redactor(@"C:\sample.docx"))
 }
 ```
 
-You can specify [MetadataFilter.All](https://reference.groupdocs.com/net/redaction/groupdocs.redaction.redactions/metadatafilters) or use default constructor to blank out all metadata within given document, Custom - to clear all custom metadata entries.
+You can specify [MetadataFilter.All](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction.redactions/metadatafilters) or use default constructor to blank out all metadata within given document, Custom - to clear all custom metadata entries.
 
 ## Redact metadata
 
-You can use [MetadataSearchRedaction](https://reference.groupdocs.com/net/redaction/groupdocs.redaction.redactions/metadatasearchredaction) to remove sensitive data from document's metadata using regular expressions. For instance, we can remove any mention of "Company Ltd.":
+You can use [MetadataSearchRedaction](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction.redactions/metadatasearchredaction) to remove sensitive data from document's metadata using regular expressions. For instance, we can remove any mention of "Company Ltd.":
 
 **C#**
 
@@ -83,7 +83,7 @@ using (Redactor redactor = new Redactor(@"C:\sample.docx"))
 }
 ```
 
-First argument is regular expression, second is a replacement string. You can also set scope for redaction by setting filter, e.g. to [MetadataFilter.Company](https://reference.groupdocs.com/net/redaction/groupdocs.redaction.redactions/metadatafilters). - it will leave the regular expressions matches undone in all metadata items, except "Company" property:
+First argument is regular expression, second is a replacement string. You can also set scope for redaction by setting filter, e.g. to [MetadataFilter.Company](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction.redactions/metadatafilters). - it will leave the regular expressions matches undone in all metadata items, except "Company" property:
 
 **C#**
 
@@ -99,14 +99,14 @@ using (Redactor redactor = new Redactor(@"C:\sample.docx"))
 
 ## Metadata redaction status
 
-All metadata redactions apply to each metadata item separately, and even if metadata item redaction fails, the rest of the metadata items will be updated. You can find a list of failed, skipped (rejected) metadata items and reasons for that in [ErrorMessage](https://reference.groupdocs.com/net/redaction/groupdocs.redaction/redactionresult/properties/errormessage) property of [RedactorLogEntry.Result](https://reference.groupdocs.com/net/redaction/groupdocs.redaction/redactorlogentry/properties/result).  
+All metadata redactions apply to each metadata item separately, and even if metadata item redaction fails, the rest of the metadata items will be updated. You can find a list of failed, skipped (rejected) metadata items and reasons for that in [ErrorMessage](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction/redactionresult/properties/errormessage) property of [RedactorLogEntry.Result](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction/redactorlogentry/properties/result).  
  
 
 ## More resources
 
 ### Advanced usage topics
 
-To learn more about document redaction features, please refer to the [advanced usage section]({{< ref "redaction/net/developer-guide/advanced-usage/_index.md" >}}).
+To learn more about document redaction features, please refer to the [advanced usage section]({{< ref "redaction/python-net/developer-guide/advanced-usage/_index.md" >}}).
 
 ### GitHub examples
 

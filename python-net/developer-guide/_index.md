@@ -1,6 +1,6 @@
 ---
 id: developer-guide
-url: redaction/net/developer-guide
+url: redaction/python-net/developer-guide
 title: Developer Guide
 weight: 3
 description: ""

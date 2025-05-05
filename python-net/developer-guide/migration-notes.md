@@ -1,6 +1,6 @@
 ---
 id: migration-notes
-url: redaction/net/migration-notes
+url: redaction/python-net/migration-notes
 title: Migration Notes
 weight: 3
 description: ""
@@ -63,4 +63,4 @@ using (Redactor redactor = new Redactor(@"Documents/Doc/sample.docx"))
 }
 ```
 
-For more code examples and specific use cases please refer to our [Developer Guide]({{< ref "redaction/net/developer-guide/_index.md" >}}) documentation or [GitHub](https://github.com/groupdocs-redaction/GroupDocs.Redaction-for-.NET) samples and showcases.
+For more code examples and specific use cases please refer to our [Developer Guide]({{< ref "redaction/python-net/developer-guide/_index.md" >}}) documentation or [GitHub](https://github.com/groupdocs-redaction/GroupDocs.Redaction-for-.NET) samples and showcases.

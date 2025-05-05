@@ -1,6 +1,6 @@
 ---
 id: use-aspose-ocr-for-cloud
-url: redaction/net/use-aspose-ocr-for-cloud
+url: redaction/python-net/use-aspose-ocr-for-cloud
 title: Use Aspose.OCR for Cloud SDK
 weight: 3
 description: "This article explains that how to use Aspose.OCR for Cloud SDK."
@@ -8,7 +8,7 @@ keywords:
 productName: GroupDocs.Redaction for .NET
 hideChildren: False
 ---
-This implementation is based on [Aspose.OCR for Cloud SDK](https://products.aspose.cloud/ocr/net). Although it requires a valid Aspose.Cloud subscription, you can always [request a trial](https://dashboard.aspose.cloud/).
+This implementation is based on [Aspose.OCR for Cloud SDK](https://products.aspose.cloud/ocr/python-net). Although it requires a valid Aspose.Cloud subscription, you can always [request a trial](https://dashboard.aspose.cloud/).
 
 Let's suppose that the Aspose.Cloud AppSid and AppKey are stored in system environment variables ASPOSE_CLOUD_APPSID and ASPOSE_CLOUD_APPKEY. 
 

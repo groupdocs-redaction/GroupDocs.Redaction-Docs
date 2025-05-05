@@ -1,6 +1,6 @@
 ---
 id: use-aspose-ocr-on-premise
-url: redaction/net/use-aspose-ocr-on-premise
+url: redaction/python-net/use-aspose-ocr-on-premise
 title: Use Aspose.OCR for .NET on-premise API
 weight: 4
 description: "This article explains that how to use Aspose.OCR for .NET on-premise API."
@@ -8,7 +8,7 @@ keywords: Aspose.OCR for .NET on-premise API
 productName: GroupDocs.Redaction for .NET
 hideChildren: False
 ---
-This implementation is based on [Aspose.OCR for .NET on-premise API](https://products.aspose.com/ocr/net/). Although it requires a valid license file, you can always request a temporal license for a month to evaluate.
+This implementation is based on [Aspose.OCR for .NET on-premise API](https://products.aspose.com/ocr/python-net/). Although it requires a valid license file, you can always request a temporal license for a month to evaluate.
 
 **C#**
 ```csharp

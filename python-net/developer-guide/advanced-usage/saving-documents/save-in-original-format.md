@@ -1,6 +1,6 @@
 ---
 id: save-in-original-format
-url: redaction/net/save-in-original-format
+url: redaction/python-net/save-in-original-format
 title: Save in original format
 weight: 1
 description: "This article demonstrates that how to save file in its original format with current date as a suffix"

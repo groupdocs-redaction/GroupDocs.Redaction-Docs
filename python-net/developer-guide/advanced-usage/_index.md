@@ -1,6 +1,6 @@
 ---
 id: advanced-usage
-url: redaction/net/advanced-usage
+url: redaction/python-net/advanced-usage
 title: Advanced usage
 weight: 2
 description: ""

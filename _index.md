@@ -147,8 +147,8 @@ GroupDocs.Redaction - Redact Sensitive Content from Documents
                 </div>
                 <div class="gdoc-platform__col-descr">Explore articles and guides covering both basic and advanced development topics</div>
                 <ul class="gdoc-platform__col-links">
-                    <li> <a href='/watermark/python-net/add-text/'>Adding text watermark</a></li>
-                    <li> <a href='/watermark/python-net/add-image/'>Adding image watermark</a></li>                  
+                    <li> <a href='/redaction/python-net/redaction-basics/'>Basic redactions</a></li>
+                    <li> <a href='/redaction/python-net/basic-usage/'>Basic usage</a></li>                        
                 </ul>
             </div>
             <div class="gdoc-platform__col">
