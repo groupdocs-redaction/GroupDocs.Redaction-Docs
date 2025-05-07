@@ -5,13 +5,13 @@ title: Supported Document Formats
 second_title: Documentation
 weight: 2
 description: It supports DOCX, DOCM, DOC, DOT, DOTM, XLS, XLSX, PDF, PPT, JPG, PNG, HTML, EML and many more.
-keywords: DOCX, DOCM, DOC, DOT, DOTM, XLS, XLSX, PDF, PPT, JPG, PNG, HTML, EML  
-productName: GroupDocs.Redaction for .NET
+keywords: file formats, Microsoft Word, Microsoft Excel, Microsoft PowerPoint, PDF, DOCX, DOCM, DOC, DOT, DOTM, XLS, XLSX, PPT, JPG, PNG, HTML, EML  
+productName: GroupDocs.Redaction for Python via .NET
 hideChildren: False
 ---
 ## Supported File Formats
 
-The following table indicates the file formats, supported by GroupDocs.Redaction for .NET.
+The following table indicates the file formats, supported by GroupDocs.Redaction for Python via .NET.
 
 | Format | Description | Document body | Metadata | Annotations(comments) | Remarks | Embedded images | OCR | Remove Page | Page Filters |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |

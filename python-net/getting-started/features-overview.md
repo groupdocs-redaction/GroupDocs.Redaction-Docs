@@ -5,7 +5,7 @@ title: Features Overview
 weight: 1
 description: Redacted meaning is that a process of modifying or editing a document to remove the confidential information before publishing it. With GroupDocs.Redaction tool you can redact PDF and save redacted document, redact sensitive and classified information from MS Word (DOC, DOCX and more..), Excel (XLS, XLSX and more..), PowerPoint(PPT, PPTX and more) documents and images (JPG, PNG, BMP, GIF and more..).
 keywords: redacted meaning, redact pdf, doc, docx, xls, xlsx, ppt, pptx, jpg, png, gif,bmp
-productName: GroupDocs.Redaction for .NET
+productName: GroupDocs.Redaction for Python via .NET
 hideChildren: False
 ---
 ## Document Redaction Tool
@@ -25,6 +25,7 @@ Rasterization is the best option to choose if:
 *   you have a PDF file as an original format;  
     
 *   you need to pass the document to third parties;
+
 *   you need this document to be opened on different platforms.  
     
 

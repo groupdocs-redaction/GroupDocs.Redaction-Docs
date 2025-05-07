@@ -1,77 +1,47 @@
 ---
 id: system-requirements
 url: redaction/python-net/system-requirements
-title: System Requirements
-weight: 3
-description: GroupDocs.Redaction for .NET supports any 32-bit or 64-bit operating system where .NET or Mono framework is installed.
-keywords: GroupDocs.Redaction for .NET, redaction
-productName: GroupDocs.Redaction for .NET
+title: System requirements
+weight: 6
+description: "On this page, you will find the system requirements, supported platforms, and development environments for GroupDocs.Redaction for Python via .NET. This API does not require any external software or third-party tools to be installed."
+keywords: System Requirements, Supported Operating System, Supported Frameworks
+productName: GroupDocs.Watermark for Python via .NET
 hideChildren: False
+toc: True
 ---
-**Contents Summary**
+{{< alert style="info" >}}
 
+GroupDocs.Redaction for Python via .NET operates independently of external software like Microsoft Word, Excel, or PowerPoint. To install GroupDocs.Redaction for Python, simply follow one of the methods described in the [Installation]({{< ref "installation" >}}) section.
 
-## Overview
+{{< /alert >}}
 
-GroupDocs.Redaction for .NET does not require any external software or third party tool to be installed. Just follow one of the way as described in [Development Environment, Installation and Configuration]({{< ref "redaction/python-net/getting-started/system-requirements.md" >}}).
+## Requirements
+
+* [Python 3.9](https://www.python.org/downloads/) or above
+* [.NET 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) Runtime or above
 
 ## Supported Operating Systems
 
-GroupDocs.Redaction for .NET supports any 32-bit or 64-bit operating system where .NET platform is installed including, but not limited to:
+GroupDocs.Redaction for Python via .NET is compatible with both 32-bit and 64-bit operating systems. It relies on the .NET Core Runtime; however, installing the .NET Core Runtime separately is not required.
 
 ### Windows
 
-*   Microsoft Windows 2003 Server ( x64, x86)
-*   Microsoft Windows 2008 Server ( x64, x86)
-*   Microsoft Windows 2012 Server ( x64, x86)
-*   Microsoft Windows 2012 R2 Server ( x64, x86)
-*   Microsoft Windows 2016 Server ( x64, x86)
-*   Microsoft Windows 2019 Server ( x64, x86)
-*   Microsoft Windows Vista ( x64, x86)
-*   Microsoft Windows XP ( x64, x86)
-*   Microsoft Windows 7 ( x64, x86)
-*   Microsoft Windows 8, 8.1 ( x64, x86)
-*   Microsoft Windows 10 ( x64, x86)
+* Microsoft Windows Server 2003 and later
+* Microsoft Windows XP (x64, x86)
+* Microsoft Windows Vista (x64, x86)
+* Microsoft Windows 7, 8, 8.1 (x64, x86)
+* Microsoft Windows 10 (x64, x86)
+* Microsoft Windows 11 (x64)
 
-### UNIX
+### Linux
+* Ubuntu
+* OpenSUSE
+* CentOS
+* and others
 
-*   Linux or any platform, supporting .NET Core 3.1
-
-## Supported Frameworks
-
-GroupDocs.Redaction for .NET  supports Microsoft .NET Framework and .NET Standard 2.0. All implementations of .NET platform, conforming to .NET Standard 2.0, are also supported.
-
-### .NET Frameworks
-
-*   .NET Framework 2.0
-*   .NET Framework 3.5
-*   .NET Framework 4.0
-*   .NET Framework 4.0\_ClientProfile
-*   .NET Framework 4.5.0
-*   .NET Framework 4.5.1
-*   .NET Framework 4.5.2
-*   .NET Framework 4.6.0
-*   .NET Framework 4.6.2
-*   .NET Framework 4.5.0
-*   .NET Framework 4.5.1
-*   .NET Framework 4.6.0
-*   .NET Framework 4.6.2
-*   .NET Framework 4.7
-*   .NET Framework 4.7.2
-*   .NET Standard 2.0 
-
-### .NET Core Framework
-
-*   .NET Core 2.0 and later
 
 ## Development Environments
 
-GroupDocs.Redaction for .NET can be used to develop applications in any development environment that targets the .NET platform, but the following environments are explicitly supported:
+GroupDocs.Redaction for Python requires Python and .NET. You can use any preferred text editor for development, such as Atom, Sublime Text, Visual Studio Code, and more.
 
-*   Microsoft Visual Studio 2010
-*   Microsoft Visual Studio 2011
-*   Microsoft Visual Studio 2012
-*   Microsoft Visual Studio 2013
-*   Microsoft Visual Studio 2015
-*   Microsoft Visual Studio 2017
-*   Microsoft Visual Studio 2019
+  

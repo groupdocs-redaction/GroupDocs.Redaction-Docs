@@ -1,26 +1,26 @@
 ---
 id: home
 url: redaction/python-net
-title: GroupDocs.Redaction for .NET
+title: GroupDocs.Redaction for Python via .NET
 weight: 1
 description: A .NET API for redaction of sensitive and classified information from the documents. You can redact in adobe pdf, redact in excel or in many of different file formats using c#
 keywords: redact pdf, redaction, redact in excel
-productName: GroupDocs.Redaction for .NET
+productName: GroupDocs.Redaction for Python via .NET
 hideChildren: True
 ---
 {{< alert style="info" >}}
-![](/redaction/net/images/home.png) **Welcome to the GroupDocs.Redaction for .NET**  
-GroupDocs.Redaction for .NET is an API for removing sensitive and classified information from the documents of different file formats. The API provides a single format-independent interface for removing sensitive and classified information from the documents. Using the API you can remove sensitive information and content from the document using different redaction methods and save the document in its original format and create a sanitized PDF document with raster images of original pages.
+![](/redaction/net/images/home.png) **Welcome to GroupDocs.Redaction for Python via .NET**  
+GroupDocs.Redaction for Python via .NET is a powerful API that enables the removal of sensitive or classified content from documents across various file formats. It provides a unified, format-independent interface to apply different redaction methods—such as text, metadata, and image redactions—directly within your Python applications. You can save the cleaned document in its original format or export it as a sanitized PDF containing rasterized images of the original pages.
 {{< /alert >}}
 
-## GroupDocs.Redaction for .NET Resources
-Following are the links to some useful resources you may need to accomplish your tasks.
-*   [GroupDocs.Redaction for .NET Online Documentation]({{< ref "redaction/python-net" >}})
-*   [GroupDocs.Redaction for .NET Features]({{< ref "redaction/python-net/getting-started/features-overview.md" >}})
-*   [GroupDocs.Redaction for .NET Limitations]({{< ref "redaction/python-net/getting-started/evaluation-limitations-and-licensing.md" >}})
-*   [GroupDocs.Redaction for .NET Release Notes](https://releases.groupdocs.com/redaction/python-net/release-notes/)
-*   [GroupDocs.Redaction for .NET Product Page](https://products.groupdocs.com/redaction/python-net)
-*   [Install GroupDocs.Redaction for .NET NuGet Package](https://www.nuget.org/packages/GroupDocs.Redaction/)
-*   [GroupDocs.Redaction for .NET API Reference Guide](https://reference.groupdocs.com/python-net/redaction)
-*   [GroupDocs.Redaction for .NET Free Support Forum](https://forum.groupdocs.com/c/redaction)
-*   [GroupDocs.Redaction for .NET Paid Support Helpdesk](https://helpdesk.groupdocs.com/)
+## GroupDocs.Redaction for Python via .NET Resources
+Here are some useful resources to help you get started and make the most of the API:
+*   [GroupDocs.Redaction for Python via .NET Online Documentation]({{< ref "redaction/python-net" >}})
+*   [GroupDocs.Redaction for Python via .NET Features]({{< ref "redaction/python-net/getting-started/features-overview.md" >}})
+*   [GroupDocs.Redaction for Python via .NET Subscription]({{< ref "redaction/python-net/getting-started/licensing-and-subscription.md" >}})
+*   [GroupDocs.Redaction for Python via .NET Release Notes](https://releases.groupdocs.com/redaction/python-net/release-notes/)
+*   [GroupDocs.Redaction for Python via .NET Product Page](https://products.groupdocs.com/redaction/python-net)
+*   [Install GroupDocs.Redaction for Python via .NET NuGet Package](https://www.nuget.org/packages/GroupDocs.Redaction/)
+*   [GroupDocs.Redaction for Python via .NET API Reference Guide](https://reference.groupdocs.com/python-net/redaction)
+*   [GroupDocs.Redaction for Python via .NET Free Support Forum](https://forum.groupdocs.com/c/redaction)
+*   [GroupDocs.Redaction for Python via .NET Paid Support Helpdesk](https://helpdesk.groupdocs.com/)
