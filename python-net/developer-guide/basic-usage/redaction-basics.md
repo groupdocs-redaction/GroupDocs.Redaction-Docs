@@ -5,10 +5,10 @@ title: Redaction basics
 weight: 4
 description: This article shows that how C# developers can apply metadata, image, annotation and text redaction in their documents. Wide range of document formats is supported, such as, PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX and others.
 keywords: text redaction, c#, PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX
-productName: GroupDocs.Redaction for .NET
+productName: GroupDocs.Redaction for Python via .NET
 hideChildren: False
 ---
-GroupDocs.Redaction supports an effective set of document redaction features. It allows to apply redactions for [text](Text%2Bredactions.html), [metadata](Metadata%2Bredactions.html), [annotations](Annotation%2Bredactions.html), [images]({{< ref "redaction/python-net/developer-guide/basic-usage/image-redactions.md" >}}).
+GroupDocs.Redaction supports an effective set of document redaction features. It allows to apply redactions for [text]({{< ref "redaction/python-net/developer-guide/basic-usage/text-redactions.md" >}}), [metadata]({{< ref "redaction/python-net/developer-guide/basic-usage/metadata-redactions.md" >}}), [annotations]({{< ref "redaction/python-net/developer-guide/basic-usage/annotation-redactions.md" >}}), [images]({{< ref "redaction/python-net/developer-guide/basic-usage/image-redactions.md" >}}).
 
 Wide range of document formats is supported, such as: PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX and others. See full list of supported formats at [supported document formats]({{< ref "redaction/python-net/getting-started/supported-document-formats.md" >}}) article
 
@@ -28,17 +28,31 @@ GroupDocs.Redaction comes with the following redaction types:
 
 Applying redaction to a document is done through [Redactor.Apply](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction.redactor/apply/methods/1) method. As a result, you receive [RedactorChangeLog](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction/redactorchangelog) instance, containing a log entry for each redaction applied. The entry contains reference to [Redacton](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction/redaction) instance including its options, status of the operation (see below) and textual descriptions when applicable. If at least one redaction failed, you will see [Status == RedactionStatus.Failed](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction/redactionstatus):
 
-**C#**
+**Python**
 
-```csharp
-using (Redactor redactor = new Redactor("sample.docx"))
-{
-   RedactorChangeLog result = redactor.Apply(new ExactPhraseRedaction("John Doe", new ReplacementOptions("[personal]")));
-   if (result.Status != RedactionStatus.Failed)
-   {
-      redactor.Save();
-   };
-}
+```python
+import groupdocs.redaction as gr
+import groupdocs.redaction.options as gro
+import groupdocs.redaction.redactions as grr
+
+def run():
+
+    # Specify the redaction options
+    repl_opt = grr.ReplacementOptions("[personal]")
+    ex_red = grr.ExactPhraseRedaction("John Doe", repl_opt)
+
+    # Load the document to be redacted
+    with gr.Redactor("source.pdf") as redactor:
+
+        # Apply the redaction
+        result = redactor.apply(ex_red)
+        
+        if (result.status != gr.RedactionStatus.FAILED):
+            # Save the redacted document
+            so = gro.SaveOptions()
+            so.add_suffix = True
+            so.rasterize_to_pdf = False
+            result_path = redactor.save(so)
 ```
 
 All possible statuses of the [RedactionStatus](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction/redactionstatus) enumeration are listed in this table:
@@ -50,52 +64,58 @@ All possible statuses of the [RedactionStatus](https://reference.groupdocs.com/p
 | *Skipped* | Redaction was skipped (not applied) | 1) Trial limitations for redactions were exceeded2) Redaction cannot be applied to this type of document3) All replacements were rejected by user and no changes were made |
 | *Failed* | Redaction failed with exception | An exception occurred in process of redaction |
 
-For detailed information you have to iterate through redaction log entries in [RedactorChangeLog.RedactionLog](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction/redactorchangelog/properties/redactionlog) and check for [ErrorMessage](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction/redactionresult/properties/errormessage) property of any items with status other than *Applied*:
+For detailed information you have to iterate through redaction log entries in [RedactorChangeLog.RedactionLog](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction/redactorchangelog/properties/redaction_log) and check for [ErrorMessage](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction/redactionresult/properties/error_message) property of any items with status other than *Applied*:
 
-**C#**
+**Python**
 
-```csharp
-RedactorChangeLog summary = redactor.Apply( ... );
-if (summary.Status != RedactionStatus.Applied)
-{
-	for (int i = 0; i < summary.RedactionLog.Count; i++)
-	{
-		RedactorLogEntry logEntry = summary.RedactionLog[i];
-    	if (logEntry.Result.Status != RedactionStatus.Applied)
-        {
-			Console.WriteLine("{0} status is {1}, details: {2}", 
-				logEntry.Redaction.GetType().Name, 
-				logEntry.Result.Status, 
-				logEntry.Result.ErrorMessage);
-		}
-	}
-}
+```python
+result = redactor.apply = redactor.Apply( ... );
+if (result.status != gr.RedactionStatus.FAILED):
+    # By default, the redacted document is saved in PDF format
+    result_path = redactor.save()
+    print(f"Document redacted successfully.\nCheck output in {result_path}")
+else:
+    # Dump all failed or skipped redactions
+    print(f"Redaction failed!")
+    for log_entry in result.redaction_log:
+        if (log_entry.result.status != gr.RedactionStatus.APPLIED):
+            print(f"Status is {log_entry.result.status}, details: {log_entry.result.error_message}")
 ```
 
 ## Apply multiple redactions
 
-You can apply as much redactions as you need in a single call to [Redactor.Apply](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction.redactor/apply/methods/1) method, since its overload accepts an array of redactions and redaction policy. In this case, redactions will be applied in the same order as they appear in the array. As an alternative to specifying redaction sets in your code, you can create an XML file with redaction policy, as described [here]({{< ref "redaction/python-net/developer-guide/basic-usage/redaction-basics.md" >}}).
+You can apply as much redactions as you need in a single call to [Redactor.Apply](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction.redactor/apply/methods/1) method, since its overload accepts an array of redactions and redaction policy. In this case, redactions will be applied in the same order as they appear in the array. As an alternative to specifying redaction sets in your code, you can create an XML file with redaction policy, as described [here]({{< ref "redaction/python-net/developer-guide/advanced-usage/use-redaction-policies.md" >}}).
 
-**C#**
+**Python**
 
-```csharp
-using (Redactor redactor = new Redactor("sample.docx"))
-{
-   var redactionList = new Redaction[] 
-   {
-      new ExactPhraseRedaction("John Doe", new ReplacementOptions("[Client]")),
-      new RegexRedaction("Redaction", new ReplacementOptions("[Product]")),
-      new RegexRedaction("\\d{2}\\s*\\d{2}[^\\d]*\\d{6}", new ReplacementOptions(System.Drawing.Color.Blue)),
-      new DeleteAnnotationRedaction(),
-      new EraseMetadataRedaction(MetadataFilters.All)
-   }; 
-   RedactorChangeLog result = redactor.Apply(redactionList);
-   // false, if at least one redaction failed
-   if (result.Status != RedactionStatus.Failed)
-   {
-      redactor.Save();
-   };
-}
+```python
+import groupdocs.redaction as gr
+import groupdocs.redaction.options as gro
+import groupdocs.redaction.redactions as grr
+import groupdocs.pydrawing as grd
+
+def run():
+    # Define color of redaction
+    color = grd.Color.from_argb(255, 220, 20, 60)
+
+    # Provide redaction options
+    redactionList = [
+        grr.ExactPhraseRedaction("John Doe", grr.ReplacementOptions("[Client]")),
+        grr.RegexRedaction("Redaction", grr.ReplacementOptions("[Product]")),
+        grr.RegexRedaction("\\d{2}\\s*\\d{2}[^\\d]*\\d{6}", grr.ReplacementOptions(color)),
+        grr.DeleteAnnotationRedaction(),
+        grr.EraseMetadataRedaction(grr.MetadataFilters.ALL)
+    ]
+
+    # Load the document to be redacted
+    with gr.Redactor("source.docx") as redactor:
+
+        # Apply the redaction
+        result = redactor.apply(redactionList)
+
+        if (result.status != gr.RedactionStatus.FAILED):
+            # By default, the redacted document is saved in PDF format
+            result_path = redactor.save()
 ```
 
 ## More resources
@@ -108,8 +128,8 @@ To learn more about document redaction features, please refer to the [advanced u
 
 You may easily run the code above and see the feature in action in our GitHub examples:
 
+*   [GroupDocs.Redaction for Python via .NET examples](https://github.com/groupdocs-redaction/GroupDocs.Redaction-for-Python-via-.NET)
 *   [GroupDocs.Redaction for .NET examples](https://github.com/groupdocs-redaction/GroupDocs.Redaction-for-.NET)
-    
 *   [GroupDocs.Redaction for Java examples](https://github.com/groupdocs-redaction/GroupDocs.Redaction-for-Java)
     
 

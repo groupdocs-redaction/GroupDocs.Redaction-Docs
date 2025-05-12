@@ -5,95 +5,123 @@ title: Image redactions
 weight: 9
 description: This article shows that how to redact data of sensitive nature from images of various formats like JPG, PNG, TIFF and others.
 keywords: redact data,JPG, PNG, TIFF
-productName: GroupDocs.Redaction for .NET
+productName: GroupDocs.Redaction for Python via .NET
 hideChildren: False
 ---
-GroupDocs.Redactions prodives a set of features to redact data of sensitive nature from images of various formats like JPG, PNG, TIFF and others. See full list at [supported document formats]({{< ref "redaction/python-net/getting-started/supported-document-formats.md" >}}) article.
+GroupDocs.Redactions provides a set of features to redact data of sensitive nature from images of various formats like JPG, PNG, TIFF and others. See full list at [supported document formats]({{< ref "redaction/python-net/getting-started/supported-document-formats.md" >}}) article.
 
-GroupDocs.Redaction since version 21.3 supports two ways of redacting images, both in separate image files and embedded images:
+GroupDocs.Redaction  supports two ways of redacting images, both in separate image files and embedded images:
 *   You can put a colored box over a given area, such as header, footer, or an area, where customer's data are expected to appear.
 *   You can use any 3-rd party OCR engine to process the image, search it for text and redact sensitive data within the image.   
 
-GroupDocs.Redaction for .NET also allows you to change image metadata (e.g. edit EXIF data of an image or act as an "EXIF eraser").
+GroupDocs.Redaction for Python via .NET also allows you to change image metadata (e.g. edit EXIF data of an image or act as an "EXIF eraser").
 
 ## Redact image area
 
 In order to redact image area, you have to use [ImageAreaRedaction](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction.redactions/imagearearedaction) class:
 
-**C#**
+**Python**
 
-```csharp
-using (Redactor redactor = new Redactor("D:\\test.jpg"))
-{
-   System.Drawing.Point samplePoint = new System.Drawing.Point(516, 311);
-   System.Drawing.Size sampleSize = new System.Drawing.Size(170, 35);
-   RedactorChangeLog result = redactor.Apply(new ImageAreaRedaction(samplePoint,
-                new RegionReplacementOptions(System.Drawing.Color.Blue, sampleSize)));
-   if (result.Status != RedactionStatus.Failed)
-   {
-      redactor.Save();
-   };
-}
+```python
+import groupdocs.redaction as gr
+import groupdocs.redaction.options as gro
+import groupdocs.redaction.redactions as grr
+import groupdocs.pydrawing as grd
+
+def run():
+
+    # Define the position on image
+    sample_point = grd.Point(385, 485)
+    # Define the size of the area which need to be redacted
+    sample_size = grd.Size(1793, 2069)
+    # Define color of redaction
+    color = grd.Color.from_argb(255, 220, 20, 60)
+
+    # Specify the redaction options
+    repl_opt = grr.RegionReplacementOptions(color, sample_size)
+    img_red = grr.ImageAreaRedaction(sample_point, repl_opt)
+
+    # Load the document to be redacted
+    with gr.Redactor("source.jpg") as redactor:
+
+        # Apply the redaction
+        result = redactor.apply(img_red)
+
+        if (result.status != gr.RedactionStatus.FAILED):
+            # By default, the redacted document is saved in PDF format
+            result_path = redactor.save()
 ```
 
 If the redaction cannot be applied to this type of files, e.g. MS Word document without embedded images, [RedactorChangeLog.Status](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction/redactorchangelog/properties/status) will be [RedactionStatus.Skipped](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction/redactionstatus).
-
-## Redact recognized text from an image
-
-To enable OCR-processing and search for a text using regular expressions, you have to implement [IOcrConnector](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction.integration.ocr/iocrconnector) interface and pass the instance to [RedactorSettings](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction.options/redactorsettings) constructor. For more details, see [OCR Usage Basics]({{< ref "redaction/python-net/developer-guide/advanced-usage/using-ocr/ocr-usage-basics" >}}) article.
-
-**C#**
-
-```csharp
-using (Redactor redactor = new Redactor("D:\\test.jpg", new LoadOptions(), new RedactorSettings(new MyCustomOcrConnector())))
-{
-   RedactorChangeLog result = redactor.Apply(new RegexRedaction("\\d{4}", new ReplacementOptions(System.Drawing.Color.Blue)));
-   if (result.Status != RedactionStatus.Failed)
-   {
-      redactor.Save();
-   };
-}
-```
-
-In the example above **MyCustomOcrConnector** class implements [IOcrConnector](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction.integration.ocr/iocrconnector) interface.
 
 ## Clean image metadata
 
 The following example demonstrates how to edit exif data (erase them) from a photo or any other image:
 
-**C#**
+**Python**
 
-```csharp
-using (Redactor redactor = new Redactor("D:\\photo.jpg"))
-{
-    redactor.Apply(new EraseMetadataRedaction(MetadataFilters.All));
-    // Save the document to "*_Redacted.*" file in original format
-    redactor.Save(new SaveOptions() { AddSuffix = true, RasterizeToPDF = false });
-}
+```python
+import groupdocs.redaction as gr
+import groupdocs.redaction.options as gro
+import groupdocs.redaction.redactions as grr
+
+def run():
+    
+    print("\n[Example Basic Usage] # clean_image_metadada.py : Clean all image metadata")
+
+    # Specify the redaction options to remove all metadata
+    er_opt = grr.EraseMetadataRedaction(grr.MetadataFilters.ALL)
+
+    # Load the document to be redacted
+    with gr.Redactor("source.jpg") as redactor:
+
+        # Apply the redaction
+        result = redactor.apply(er_opt)
+
+        # Save the redacted document
+        so = gro.SaveOptions()
+        so.add_suffix = True
+        so.rasterize_to_pdf = False
+        result_path = redactor.save(so)
 ```
 
 If the redaction cannot be applied to this type of files, e.g. BMP image, [RedactorChangeLog.Status](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction/redactorchangelog/properties/status) will be [RedactionStatus.Skipped](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction/redactionstatus).
 
 ## Redact embedded images
 
-You can redact image area within all kinds of embedded images inside a document. You can both use [ImageAreaRedaction](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction.redactions/imagearearedaction) class and any type of [TextRedaction](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction.redactions/textredaction) (regular expression, exact phrase), if the OCR is enabled in **RedactorSettings** (see [OCR Usage Basics]({{< ref "redaction/python-net/developer-guide/advanced-usage/using-ocr/ocr-usage-basics" >}}) article). 
+You can redact image area within all kinds of embedded images inside a document. 
 
 The following example demonstrates how to redact all embedded images within a Microsoft Word document:
 
-**C#**
+**Python**
 
-```csharp
-using (Redactor redactor = new Redactor("D:\\sample.docx"))
-{
-   System.Drawing.Point samplePoint = new System.Drawing.Point(516, 311);
-   System.Drawing.Size sampleSize = new System.Drawing.Size(170, 35);
-   RedactorChangeLog result = redactor.Apply(new ImageAreaRedaction(samplePoint,
-                new RegionReplacementOptions(System.Drawing.Color.Blue, sampleSize)));
-   if (result.Status != RedactionStatus.Failed)
-   {
-      redactor.Save();
-   };
-}
+```python
+import groupdocs.redaction as gr
+import groupdocs.redaction.options as gro
+import groupdocs.redaction.redactions as grr
+import groupdocs.pydrawing as grd
+
+def run():
+    # Define the position on image
+    sample_point = grd.Point(516, 311)
+    # Define the size of the area which need to be redacted
+    sample_size = grd.Size(170, 35)
+    # Define color of redaction
+    color = grd.Color.from_argb(255, 220, 20, 60)
+
+    # Specify the redaction options
+    repl_opt = grr.RegionReplacementOptions(color, sample_size)
+    img_red = grr.ImageAreaRedaction(sample_point, repl_opt)
+
+    # Load the document to be redacted
+    with gr.Redactor("source.docx") as redactor:
+
+        # Apply the redaction
+        result = redactor.apply(img_red)
+
+        if (result.status != gr.RedactionStatus.FAILED):
+            # By default, the redacted document is saved in PDF format
+            result_path = redactor.save()
 ```
 
 If the redaction cannot be applied to this type of files, e.g. a spreadsheet document, [RedactorChangeLog.Status](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction/redactorchangelog/properties/status) will be [RedactionStatus.Skipped](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction/redactionstatus).
@@ -114,8 +142,8 @@ To learn more about document redaction features, please refer to the [advanced u
 
 You may easily run the code above and see the feature in action in our GitHub examples:
 
+*   [GroupDocs.Redaction for Python via .NET examples](https://github.com/groupdocs-redaction/GroupDocs.Redaction-for-Python-via-.NET)
 *   [GroupDocs.Redaction for .NET examples](https://github.com/groupdocs-redaction/GroupDocs.Redaction-for-.NET)
-    
 *   [GroupDocs.Redaction for Java examples](https://github.com/groupdocs-redaction/GroupDocs.Redaction-for-Java)
     
 

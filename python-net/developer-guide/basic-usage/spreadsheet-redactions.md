@@ -5,37 +5,37 @@ title: Spreadsheet redactions
 weight: 8
 description: This article shows that how C# redaction API allows to redact data of sensitive or private nature from your XLS, XLSX, ODS spreadsheet document formats and others.
 keywords: c#, redaction, redact data, xls, xlsx, ods 
-productName: GroupDocs.Redaction for .NET
+productName: GroupDocs.Redaction for Python via .NET
 hideChildren: False
 ---
 GroupDocs.Redaction allows to redact data of sensitive or private nature from your XLS, XLSX, ODS spreadsheet document formats and others. See full list at [supported document formats]({{< ref "redaction/python-net/getting-started/supported-document-formats.md" >}}) article.
 
-## Filter by spreadsheet and column
+## Redact spreadsheet content
 
-If you have a document with one or more tables, organized into worksheets (one table per worksheet) - such as Microsoft Excel documents - you can use specific type of textual redactions, [CellColumnRedaction](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction.redactions/cellcolumnredaction). It allows you to set the scope of the redaction to a specific worksheet and/or column. The options are:
+**Python**
 
-*   optionally set worksheet name or its numeric index (if both are missing, redaction affects all worksheets)
-*   optionally set column (all columns are used, if the column filter is not set)
+```python
+import groupdocs.redaction as gr
+import groupdocs.redaction.options as gro
+import groupdocs.redaction.redactions as grr
 
-If no filters are set, redactions affects the entire document. All indices are zero-based. Below is an example, where we use all filters, to redact second column with emails (e.g. loaded from database) on a worksheet "Customers", leaving untouched all other emails in the document:
+def run():
 
-**C#**
+    # Specify the redaction options
+    repl_opt = grr.ReplacementOptions("-redacted-")
+    ex_red = grr.ExactPhraseRedaction("John Doe", repl_opt)
 
-```csharp
-using (Redactor redactor = new Redactor("D:\\Sales in September.xslx"))
-{
-   var filter = new CellFilter()
-   {
-      ColumnIndex = 1, // zero-based 2nd column
-      WorkSheetName = "Customers"
-   };
-   var expression = new Regex("^\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*$");
-   RedactorChangeLog changeLog = redactor.Apply(new CellColumnRedaction(filter, expression, new ReplacementOptions("[customer email]")));
-   if (result.Status != RedactionStatus.Failed)
-   {
-      doc.Save(new SaveOptions() { AddSuffix = true });
-   };
-}
+    #Load the document to be redacted
+    with gr.Redactor("source.xlsx") as redactor:
+
+        #Apply the redaction
+        result = redactor.apply(ex_red)
+
+        # Save the redacted document
+        so = gro.SaveOptions()
+        so.add_suffix = True
+        so.rasterize_to_pdf = False
+        result_path = redactor.save(so)
 ```
 
 ## More resources
@@ -48,8 +48,8 @@ To learn more about document redaction features, please refer to the [advanced u
 
 You may easily run the code above and see the feature in action in our GitHub examples:
 
+*   [GroupDocs.Redaction for Python via .NET examples](https://github.com/groupdocs-redaction/GroupDocs.Redaction-for-Python-via-.NET)
 *   [GroupDocs.Redaction for .NET examples](https://github.com/groupdocs-redaction/GroupDocs.Redaction-for-.NET)
-    
 *   [GroupDocs.Redaction for Java examples](https://github.com/groupdocs-redaction/GroupDocs.Redaction-for-Java)
     
 

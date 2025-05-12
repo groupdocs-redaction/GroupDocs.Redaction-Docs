@@ -5,7 +5,7 @@ title: Annotation redactions
 weight: 7
 description: This article shows the implementation of annotation redaction for documents of different formats like PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX and others.
 keywords: annotation, redactions,PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX 
-productName: GroupDocs.Redaction for .NET
+productName: GroupDocs.Redaction for Python via .NET
 hideChildren: False
 ---
 With GroupDocs.Redaction API you can apply annotation redactions for documents of different formats like PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX and others. See full list at [supported document formats]({{< ref "redaction/python-net/getting-started/supported-document-formats.md" >}}) article.
@@ -16,15 +16,24 @@ GroupDocs.Redactions provides a flexible API that allows to remove sensitive dat
 
 You can use GroupDocs.Redaction to remove all or specific comments and other annotations from the document. For example, we can remove all comments from the document, containing texts like "use", "show" or "describe" in its body:
 
-**C#**
+**Python**
 
-```csharp
-using (Redactor redactor = new Redactor(@"D:\test.docx"))
-{
-   redactor.Apply(new DeleteAnnotationRedaction("(?im:(use|show|describe))"));
+```python
+import groupdocs.redaction as gr
+import groupdocs.redaction.redactions as grr
 
-   redactor.Save()
-}
+def run():
+    # Specify the redaction options
+    a_red = grr.DeleteAnnotationRedaction("(?im:(use|show|describe))")
+
+    # Load the document to be redacted
+    with gr.Redactor("source.pdf") as redactor:
+
+        # Apply the redaction
+        result = redactor.apply(a_red)
+        
+        # Save the redacted document
+        redactor.save()
 ```
 
 You can use constructor without arguments to remove all annotations within the document.
@@ -33,15 +42,24 @@ You can use constructor without arguments to remove all annotations within the d
 
 Instead of removing all or specific annotations, you can remove sensitive data from the annotation text. For instance, we can remove all mentions of "John" in the given document, e.g.:
 
-**C#**
+**Python**
 
-```csharp
-using (Redactor redactor = new Redactor(@"C:\test.pdf"))
-{
-   redactor.Apply(new AnnotationRedaction("(?im:john)", "[redacted]"));
+```python
+import groupdocs.redaction as gr
+import groupdocs.redaction.redactions as grr
 
-   redactor.Save()
-}
+def run():
+    # Specify the redaction options
+    a_red = grr.AnnotationRedaction("(?im:john)", "[redacted]")
+
+    # Load the document to be redacted
+    with gr.Redactor("source.pdf") as redactor:
+
+        # Apply the redaction
+        result = redactor.apply(a_red)
+        
+        # Save the redacted document
+        redactor.save()
 ```
 
 ## More resources
@@ -54,8 +72,8 @@ To learn more about document redaction features, please refer to the [advanced u
 
 You may easily run the code above and see the feature in action in our GitHub examples:
 
+*   [GroupDocs.Redaction for Python via .NET examples](https://github.com/groupdocs-redaction/GroupDocs.Redaction-for-Python-via-.NET)
 *   [GroupDocs.Redaction for .NET examples](https://github.com/groupdocs-redaction/GroupDocs.Redaction-for-.NET)
-    
 *   [GroupDocs.Redaction for Java examples](https://github.com/groupdocs-redaction/GroupDocs.Redaction-for-Java)
     
 
