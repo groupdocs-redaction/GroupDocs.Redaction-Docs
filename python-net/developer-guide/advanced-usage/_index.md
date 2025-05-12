@@ -5,6 +5,6 @@ title: Advanced usage
 weight: 2
 description: ""
 keywords: 
-productName: GroupDocs.Redaction for .NET
+productName: GroupDocs.Redaction for Python via .NET
 hideChildren: False
 ---

@@ -5,62 +5,46 @@ title: Migration Notes
 weight: 3
 description: ""
 keywords: 
-productName: GroupDocs.Redaction for .NET
+productName: GroupDocs.Redaction for Python via .NET
 hideChildren: False
 ---
-### Why To Migrate?
+### Why Migrate?  
 
-  
-Here are the key reasons to use the new updated API provided by GroupDocs.Redaction for .NET since version 19.9:
+Here are the key reasons to switch to the new, updated API provided by **GroupDocs.Redaction for Python via .NET** since version 19.9:
 
-*   **Redactor** class introduced as a **single entry point** to manage the document redaction process (instead of **Document**class from previous versions).
+*   The **Redactor** class was introduced as a **single entry point** for managing the document redaction process (replacing the older **Document** class from previous versions).
     
-*   Methods **RedactWith()** of the **Document** class were replaced with similar **Apply()** methods in **Redactor** class.
+*   The **RedactWith()** methods of the **Document** class were replaced with equivalent **apply()** methods in the **Redactor** class.
     
-*   Method **Document.Save(Stream, SaveOptions)** was replaced with **Redactor.Save(Stream, RasterizationOptions)**.
-*   Constructor **LoadOptions(DocumentFormatConfiguration)** was removed.  
+*   The method **Document.save(stream, save_options)** was replaced with **Redactor.save(stream, rasterization_options)**.
     
-*   Exception and option classes were put in separate namespaces.   
+*   The constructor **LoadOptions(DocumentFormatConfiguration)** was removed.  
     
-*   **RedactionSummary** was renamed into **RedactorChangeLog**, **RedactionLogEntry** into **RedactorLogEntry**, **MetadataFilter** into **MetadataFilters**.  
+*   Exception and option classes were reorganized into separate namespaces.  
     
-*   Obsolete members were removed from Public API.
+*   **RedactionSummary** was renamed to **RedactorChangeLog**, **RedactionLogEntry** to **RedactorLogEntry**, and **MetadataFilter** to **MetadataFilters**.  
     
-*   Added a number of new exception classes and base exception class for GroupDocs.Redaction exceptions.  
+*   Obsolete members were removed from the Public API.
     
+*   A number of new exception classes were added along with a base exception class for GroupDocs.Redaction-specific exceptions.  
 
-### How To Migrate?
 
-The following example demonstrates how to redact Microsoft Office Word document and dumping statuses of applied redactions using old and new API:  
+### How to Migrate?  
 
-**Old coding style**
+The following example demonstrates how to redact a Microsoft Word document and display the statuses of the applied redactions using the old and new APIs:  
 
-```csharp
-using (Document doc = Redactor.Load(@"Documents/Doc/sample.docx"))
-{
-    // Here we can use document instance to perform redactions
-	RedactionSummary summary = doc.RedactWith(new ExactPhraseRedaction("John Doe", new ReplacementOptions("[personal]")));
-	foreach (RedactionLogEntry entry in summary.RedactionLog)
-	{
-		Console.WriteLine(entry.Status.ToString());
-	}
-    doc.Save();
-}
-```
 
-**New coding style**
+```python
+from groupdocs_redaction import Document, ExactPhraseRedaction, ReplacementOptions
 
-```csharp
-using (Redactor redactor = new Redactor(@"Documents/Doc/sample.docx"))
-{
-    // Here we can use document instance to perform redactions
-    RedactorChangeLog result = redactor.Apply(new ExactPhraseRedaction("John Doe", new ReplacementOptions("[personal]")));
-	foreach (RedactorLogEntry entry in result.RedactionLog)
-	{
-		Console.WriteLine(entry.Status.ToString());
-	}
-	redactor.Save();
-}
-```
+# Load the document
+with Document("sample.docx") as doc:
+    # Apply redaction
+    summary = doc.redact_with(ExactPhraseRedaction("John Doe", ReplacementOptions("[personal]")))
 
-For more code examples and specific use cases please refer to our [Developer Guide]({{< ref "redaction/python-net/developer-guide/_index.md" >}}) documentation or [GitHub](https://github.com/groupdocs-redaction/GroupDocs.Redaction-for-.NET) samples and showcases.
+    # Display status of each redaction
+    for entry in summary.redaction_log:
+        print(entry.status)
+
+    # Save the document
+    doc.save()
