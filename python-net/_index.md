@@ -15,12 +15,12 @@ GroupDocs.Redaction for Python via .NET is a powerful API that enables the remov
 
 ## GroupDocs.Redaction for Python via .NET Resources
 Here are some useful resources to help you get started and make the most of the API:
-*   [GroupDocs.Redaction for Python via .NET Online Documentation]({{< ref "redaction/python-net" >}})
-*   [GroupDocs.Redaction for Python via .NET Features]({{< ref "redaction/python-net/getting-started/features-overview.md" >}})
-*   [GroupDocs.Redaction for Python via .NET Subscription]({{< ref "redaction/python-net/getting-started/licensing-and-subscription.md" >}})
-*   [GroupDocs.Redaction for Python via .NET Release Notes](https://releases.groupdocs.com/redaction/python-net/release-notes/)
-*   [GroupDocs.Redaction for Python via .NET Product Page](https://products.groupdocs.com/redaction/python-net)
-*   [Install GroupDocs.Redaction for Python via .NET NuGet Package](https://www.nuget.org/packages/GroupDocs.Redaction/)
-*   [GroupDocs.Redaction for Python via .NET API Reference Guide](https://reference.groupdocs.com/python-net/redaction)
-*   [GroupDocs.Redaction for Python via .NET Free Support Forum](https://forum.groupdocs.com/c/redaction)
-*   [GroupDocs.Redaction for Python via .NET Paid Support Helpdesk](https://helpdesk.groupdocs.com/)
+*   [Online Documentation]({{< ref "redaction/python-net" >}})
+*   [Features]({{< ref "redaction/python-net/getting-started/features-overview.md" >}})
+*   [Subscription]({{< ref "redaction/python-net/getting-started/licensing-and-subscription.md" >}})
+*   [Release Notes](https://releases.groupdocs.com/redaction/python-net/release-notes/)
+*   [Product Page](https://products.groupdocs.com/redaction/python-net)
+*   [PyPi install](https://pypi.org/project/groupdocs-redaction-net/)
+*   [API Reference Guide](https://reference.groupdocs.com/python-net/redaction)
+*   [Free Support Forum](https://forum.groupdocs.com/c/redaction)
+*   [Paid Support Helpdesk](https://helpdesk.groupdocs.com/)

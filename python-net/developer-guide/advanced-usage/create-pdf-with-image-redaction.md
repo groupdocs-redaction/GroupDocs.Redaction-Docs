@@ -12,9 +12,7 @@ hideChildren: False
 In some cases you might need to redact the pages of a document as images, redacting entire areas of the page instead or in addition to a specific text. With GroupDocs.Redaction you can use the following approach:  
 
 *   open the document and apply all required redactions to the document's body (text, annotations, etc.);
-    
 *   save it as a rasterized PDF file (containing images of the original document's pages);
-    
 *   apply ImageAreaRedaction to remove specific areas on the pages within the PDF document.  
     
 The following example demonstrates how to create a rasterized PDF from a Microsoft Word document and apply image redactions to its pages:

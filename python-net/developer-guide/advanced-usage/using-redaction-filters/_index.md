@@ -5,7 +5,7 @@ title: Using redaction filters
 weight: 1
 description: ""
 keywords: 
-productName: GroupDocs.Redaction for .NET
+productName: GroupDocs.Redaction for Python via .NET
 hideChildren: False
 ---
 

@@ -15,13 +15,13 @@ GroupDocs.Redaction for Java is an API for removing sensitive and classified inf
 
 ## GroupDocs.Redaction for Java Resources
 Following are the links to some useful resources you may need to accomplish your tasks.
-*   [GroupDocs.Redaction for Java Online Documentation]({{< ref "redaction/java" >}})
-*   [GroupDocs.Redaction for Java Features]({{< ref "redaction/java/getting-started/features-overview.md" >}})
-*   [GroupDocs.Redaction for Java Limitations]({{< ref "redaction/java/getting-started/evaluation-limitations-and-licensing.md" >}})
-*   [GroupDocs.Redaction for Java Release Notes](https://releases.groupdocs.com/redaction/java/release-notes/)
-*   [GroupDocs.Redaction for Java Product Page](https://products.groupdocs.com/redaction/java)
-*   [GroupDocs.Redaction for Java Releases](https://releases.groupdocs.com/redaction/java/)
-*   [GroupDocs.Redaction for Java Maven Repository](https://releases.groupdocs.com/java/repo/com/groupdocs/groupdocs-redaction/)
-*   [GroupDocs.Redaction for Java API Reference Guide](https://reference.groupdocs.com/java/redaction)
-*   [GroupDocs.Redaction for Java Free Support Forum](https://forum.groupdocs.com/c/redaction)
-*   [GroupDocs.Redaction for Java Paid Support Helpdesk](https://helpdesk.groupdocs.com/)
+*   [Online Documentation]({{< ref "redaction/java" >}})
+*   [Features]({{< ref "redaction/java/getting-started/features-overview.md" >}})
+*   [Limitations]({{< ref "redaction/java/getting-started/evaluation-limitations-and-licensing.md" >}})
+*   [Release Notes](https://releases.groupdocs.com/redaction/java/release-notes/)
+*   [Product Page](https://products.groupdocs.com/redaction/java)
+*   [Releases](https://releases.groupdocs.com/redaction/java/)
+*   [Maven Repository](https://releases.groupdocs.com/java/repo/com/groupdocs/groupdocs-redaction/)
+*   [API Reference Guide](https://reference.groupdocs.com/java/redaction)
+*   [Free Support Forum](https://forum.groupdocs.com/c/redaction)
+*   [Paid Support Helpdesk](https://helpdesk.groupdocs.com/)

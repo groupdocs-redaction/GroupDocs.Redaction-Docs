@@ -5,7 +5,7 @@ title: Use PDF redaction filters
 weight: 2
 description: "This article explains that how to set page-level scope to PDF redactions."
 keywords: free PDF page scope
-productName: GroupDocs.Redaction for .NET
+productName: GroupDocs.Redaction for Python via .NET
 hideChildren: False
 ---
 
@@ -13,9 +13,9 @@ You can combine [PageRangeFilter](https://reference.groupdocs.com/redaction/pyth
 
 The following example demonstrates how to apply redaction to the bottom half of the last page in a PDF document.
 
-**C#**
+**Python**
 
-```csharp
+```python
 using (Redactor redactor = new Redactor("Sample.pdf"))
 {
     // Get the actual size information for the last page:
@@ -42,8 +42,8 @@ using (Redactor redactor = new Redactor("Sample.pdf"))
 
 You may easily run the code above and see the feature in action in our GitHub examples:
 
+*   [GroupDocs.Redaction for Python via .NET examples](https://github.com/groupdocs-redaction/GroupDocs.Redaction-for-Python-via-.NET)
 *   [GroupDocs.Redaction for .NET examples](https://github.com/groupdocs-redaction/GroupDocs.Redaction-for-.NET)
-    
 *   [GroupDocs.Redaction for Java examples](https://github.com/groupdocs-redaction/GroupDocs.Redaction-for-Java)
     
 
