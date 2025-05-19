@@ -38,11 +38,11 @@ Licenses can be applied from different locations:
 
 When you reference _GroupDocs.Redaction.dll_ in the application, the library is copied to your output directory (unless **Copy Local** in the properties for that entry is set to false). The easiest way to set a license is often to place the license file in the same folder as _GroupDocs.Redaction.dll_ and specify just the filename without the path.
 
-Use the [setLicense](https://reference.groupdocs.com/redaction/net/groupdocs.redaction/license/setlicense/) method to license a component.
+Use the [setLicense](https://reference.groupdocs.com/redaction/python-net/groupdocs.redaction/license/set_license/) method to license a component.
 
 Calling `setLicense` multiple times is not harmful, it simply wastes processor time.
 
-Calling [setMeteredKey](https://reference.groupdocs.com/redaction/net/groupdocs.redaction/metered/setmeteredkey/) multiple times is not harmful either but wastes processor time and can accumulate consumption improperly.
+Calling [setMeteredKey](https://reference.groupdocs.com/redaction/python-net/groupdocs.redaction/metered/set_metered_key/) multiple times is not harmful either but wastes processor time and can accumulate consumption improperly.
 
 #### Apply the License
 

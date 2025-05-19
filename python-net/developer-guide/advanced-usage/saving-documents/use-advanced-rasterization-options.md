@@ -10,7 +10,7 @@ hideChildren: False
 ---
 ## Use advanced rasterization options
 
-In order to use the advanced rasterization options you have to pass one of the options to [Save](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction/redactor/methods/save) method. In this case the document will be rasterized to PDF, but the scan-like effects will be applied to its pages.
+In order to use the advanced rasterization options you have to pass one of the options to [Save](https://reference.groupdocs.com/redaction/python-net/groupdocs.redaction/redactor/save/) method. In this case the document will be rasterized to PDF, but the scan-like effects will be applied to its pages.
 
 The following example demonstrates how to apply the [AdvancedRasterizationOptions](https://reference.groupdocs.com/redaction/python-net/groupdocs.redaction.options/advancedrasterizationoptions/) with default settings. 
 

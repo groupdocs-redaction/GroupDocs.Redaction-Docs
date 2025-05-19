@@ -21,6 +21,6 @@ Here are some useful resources to help you get started and make the most of the 
 *   [Release Notes](https://releases.groupdocs.com/redaction/python-net/release-notes/)
 *   [Product Page](https://products.groupdocs.com/redaction/python-net)
 *   [PyPi install](https://pypi.org/project/groupdocs-redaction-net/)
-*   [API Reference Guide](https://reference.groupdocs.com/python-net/redaction)
+*   [API Reference Guide](https://reference.groupdocs.com/redaction/python-net/)
 *   [Free Support Forum](https://forum.groupdocs.com/c/redaction)
 *   [Paid Support Helpdesk](https://helpdesk.groupdocs.com/)

@@ -14,7 +14,7 @@ GroupDocs.Redactions provides a flexible API that allows to replace or remove me
 
 ## Filter metadata
 
-Base functionality for all redactions, derived from [MetadataRedaction](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction.redactions/metadataredaction) base class is *metadata filtering* and it is mandatory for metadata redactions. It uses flagged enumeration [MetadataFilters](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction.redactions/metadatafilters), containing items for most frequent metadata entries. You can set the filter to *All*, or any combination of metadata. For instance, the example below sets filter to *Author*, *Manager* and *NameOfApplication* - for textual redaction or cleaning them out:
+Base functionality for all redactions, derived from [MetadataRedaction](https://reference.groupdocs.com/redaction/python-net/groupdocs.redaction.redactions/metadataredaction/) base class is *metadata filtering* and it is mandatory for metadata redactions. It uses flagged enumeration [MetadataFilters](https://reference.groupdocs.com/redaction/python-net/groupdocs.redaction.redactions/metadatafilters/), containing items for most frequent metadata entries. You can set the filter to *All*, or any combination of metadata. For instance, the example below sets filter to *Author*, *Manager* and *NameOfApplication* - for textual redaction or cleaning them out:
 
 **Python**
 
@@ -23,7 +23,7 @@ Base functionality for all redactions, derived from [MetadataRedaction](https://
 redaction.Filter = MetadataFilters.AUTHOR | MetadataFilters.MANAGER | MetadataFilters.NAME_OF_APPLICATION;
 ```
 
-Below is the table with full list of [MetadataFilters](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction.redactions/metadatafilters) items:
+Below is the table with full list of [MetadataFilters](https://reference.groupdocs.com/redaction/python-net/groupdocs.redaction.redactions/metadatafilters/) items:
 
 | Filter | Numeric value | Description |
 | --- | --- | --- |
@@ -53,7 +53,7 @@ Below is the table with full list of [MetadataFilters](https://reference.groupd
 
 ## Clean metadata
 
-You can replace all or specific metadata in the document with empty (blank or minimal) values using [EraseMetadataRedaction](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction.redactions/erasemetadataredaction) class. The example below blanks out all properties of the document:
+You can replace all or specific metadata in the document with empty (blank or minimal) values using [EraseMetadataRedaction](https://reference.groupdocs.com/redaction/python-net/groupdocs.redaction.redactions/erasemetadataredaction/) class. The example below blanks out all properties of the document:
 
 **Python**
 
@@ -81,11 +81,11 @@ def run():
         result_path = redactor.save(so)
 ```
 
-You can specify [MetadataFilter.All](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction.redactions/metadatafilters) or use default constructor to blank out all metadata within given document, Custom - to clear all custom metadata entries.
+You can specify [MetadataFilter.All](https://reference.groupdocs.com/redaction/python-net/groupdocs.redaction.redactions/metadatafilters/) or use default constructor to blank out all metadata within given document, Custom - to clear all custom metadata entries.
 
 ## Redact metadata
 
-You can use [MetadataSearchRedaction](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction.redactions/metadatasearchredaction) to remove sensitive data from document's metadata using regular expressions. For instance, we can remove any mention of "Company Ltd.":
+You can use [MetadataSearchRedaction](https://reference.groupdocs.com/redaction/python-net/groupdocs.redaction.redactions/metadatasearchredaction/) to remove sensitive data from document's metadata using regular expressions. For instance, we can remove any mention of "Company Ltd.":
 
 **Python**
 
@@ -112,7 +112,7 @@ def run():
         result_path = redactor.save(so)
 ```
 
-First argument is regular expression, second is a replacement string. You can also set scope for redaction by setting filter, e.g. to [MetadataFilter.Company](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction.redactions/metadatafilters). - it will leave the regular expressions matches undone in all metadata items, except "Company" property:
+First argument is regular expression, second is a replacement string. You can also set scope for redaction by setting filter, e.g. to [MetadataFilter.Company](https://reference.groupdocs.com/redaction/python-net/groupdocs.redaction.redactions/metadatafilters/). - it will leave the regular expressions matches undone in all metadata items, except "Company" property:
 
 **Python**
 
@@ -142,7 +142,7 @@ def run():
 
 ## Metadata redaction status
 
-All metadata redactions apply to each metadata item separately, and even if metadata item redaction fails, the rest of the metadata items will be updated. You can find a list of failed, skipped (rejected) metadata items and reasons for that in [ErrorMessage](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction/redactionresult/properties/errormessage) property of [RedactorLogEntry.Result](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction/redactorlogentry/properties/result).  
+All metadata redactions apply to each metadata item separately, and even if metadata item redaction fails, the rest of the metadata items will be updated. You can find a list of failed, skipped (rejected) metadata items and reasons for that in [ErrorMessage](https://reference.groupdocs.com/redaction/python-net/groupdocs.redaction/redactionresult/error_message/) property of [RedactorLogEntry.Result](https://reference.groupdocs.com/redaction/python-net/groupdocs.redaction/redactorlogentry/result/).  
  
 
 ## More resources

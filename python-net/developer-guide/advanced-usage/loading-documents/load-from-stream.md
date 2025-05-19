@@ -8,7 +8,7 @@ keywords: redaction API
 productName: GroupDocs.Redaction for Python via .NET
 hideChildren: False
 ---
-As an alternative to a local file, [Redac](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction/redactor)[t](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction/redactor)[or](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction/redactor) can open a document from stream.
+As an alternative to a local file, [Redactor](https://reference.groupdocs.com/redaction/python-net/groupdocs.redaction/redactor/) can open a document from stream.
 
 The following example demonstrates how to load and redact a document using Stream:
 

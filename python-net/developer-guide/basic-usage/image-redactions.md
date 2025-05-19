@@ -18,7 +18,7 @@ GroupDocs.Redaction for Python via .NET also allows you to change image metadat
 
 ## Redact image area
 
-In order to redact image area, you have to use [ImageAreaRedaction](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction.redactions/imagearearedaction) class:
+In order to redact image area, you have to use [ImageAreaRedaction](https://reference.groupdocs.com/redaction/python-net/groupdocs.redaction.redactions/imagearearedaction/) class:
 
 **Python**
 
@@ -52,7 +52,7 @@ def run():
             result_path = redactor.save()
 ```
 
-If the redaction cannot be applied to this type of files, e.g. MS Word document without embedded images, [RedactorChangeLog.Status](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction/redactorchangelog/properties/status) will be [RedactionStatus.Skipped](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction/redactionstatus).
+If the redaction cannot be applied to this type of files, e.g. MS Word document without embedded images, [RedactorChangeLog.Status](https://reference.groupdocs.com/redaction/python-net/groupdocs.redaction/redactorchangelog/status/) will be [RedactionStatus.Skipped](https://reference.groupdocs.com/redaction/python-net/groupdocs.redaction/redactionstatus/).
 
 ## Clean image metadata
 
@@ -85,7 +85,7 @@ def run():
         result_path = redactor.save(so)
 ```
 
-If the redaction cannot be applied to this type of files, e.g. BMP image, [RedactorChangeLog.Status](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction/redactorchangelog/properties/status) will be [RedactionStatus.Skipped](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction/redactionstatus).
+If the redaction cannot be applied to this type of files, e.g. BMP image, [RedactorChangeLog.Status](https://reference.groupdocs.com/redaction/python-net/groupdocs.redaction/redactorchangelog/status/) will be [RedactionStatus.Skipped](https://reference.groupdocs.com/redaction/python-net/groupdocs.redaction/redactionstatus/).
 
 ## Redact embedded images
 
@@ -124,7 +124,7 @@ def run():
             result_path = redactor.save()
 ```
 
-If the redaction cannot be applied to this type of files, e.g. a spreadsheet document, [RedactorChangeLog.Status](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction/redactorchangelog/properties/status) will be [RedactionStatus.Skipped](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction/redactionstatus).
+If the redaction cannot be applied to this type of files, e.g. a spreadsheet document, [RedactorChangeLog.Status](https://reference.groupdocs.com/redaction/python-net/groupdocs.redaction/redactorchangelog/status/) will be [RedactionStatus.Skipped](https://reference.groupdocs.com/redaction/python-net/groupdocs.redaction/redactionstatus/).
 
 ## Multi-frame images
 

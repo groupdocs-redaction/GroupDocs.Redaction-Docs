@@ -8,9 +8,9 @@ keywords: simplest way to save the document
 productName: GroupDocs.Redaction for Python via .NET
 hideChildren: False
 ---
-The simplest way to save the document is it provide no parameters to [Save](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction/redactor/methods/save) method. In this case the document will be rasterized to PDF and will have the same name as the original one except its extension (.PDF). The PDF file will be overwritten.
+The simplest way to save the document is it provide no parameters to [Save](https://reference.groupdocs.com/redaction/python-net/groupdocs.redaction/redactor/save/) method. In this case the document will be rasterized to PDF and will have the same name as the original one except its extension (.PDF). The PDF file will be overwritten.
 
-The following example demonstrates usage of [Save()](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction/redactor/methods/save) method with default options.
+The following example demonstrates usage of [Save()](https://reference.groupdocs.com/redaction/python-net/groupdocs.redaction/redactor/save/) method with default options.
 
 **Python**
 

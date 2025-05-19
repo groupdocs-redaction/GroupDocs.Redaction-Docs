@@ -8,7 +8,7 @@ keywords: redaction API, load a password-protected file
 productName: GroupDocs.Redaction for Python via .NET
 hideChildren: False
 ---
-In order to open password-protected documents, you have to pass your password to [LoadOptions](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction.options/loadoptions) class constructor or assign it to its [Password](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction.options/loadoptions/properties/password) property of an instance of [LoadOptions](https://reference.groupdocs.com/python-net/redaction/groupdocs.redaction.options/loadoptions) class:
+In order to open password-protected documents, you have to pass your password to [LoadOptions](https://reference.groupdocs.com/redaction/python-net/groupdocs.redaction.options/loadoptions/) class constructor or assign it to its [Password](https://reference.groupdocs.com/redaction/python-net/groupdocs.redaction.options/loadoptions/password/) property of an instance of [LoadOptions](https://reference.groupdocs.com/redaction/python-net/groupdocs.redaction.options/loadoptions/) class:
 
 **Python**
 
