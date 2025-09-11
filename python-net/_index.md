@@ -8,10 +8,17 @@ keywords: redact pdf, redaction, redact in excel
 productName: GroupDocs.Redaction for Python via .NET
 hideChildren: True
 ---
-{{< alert style="info" >}}
-![](/redaction/net/images/home.png) **Welcome to GroupDocs.Redaction for Python via .NET**  
+<img src="/redaction/python-net/images/home.svg" alt="GroupDocs.Redaction" align="left" style="width:110px; margin: 0 30px 30px 0"/>
+
+<img src="https://img.shields.io/pypi/v/groupdocs-redaction-net?label=GroupDocs.Redaction%20for%20Python%20PyPI" alt="PyPI package">
+<img src="https://img.shields.io/pypi/dm/groupdocs-redaction-net?label=pypi%20downloads" alt="PyPI downloads">
+
+{{< button style="primary" link="https://releases.groupdocs.com/redaction/python-net/" >}} <svg class="gdoc-icon gdoc-product-doc__btn-icon"><use xlink:href="/img/groupdocs-stack.svg#document"></use></svg> Release notes {{< /button >}} 
+{{< button style="primary" link="https://pypi.org/project/groupdocs-redaction-net" >}} {{< icon "gdoc_download" >}} Package repository {{< /button >}}
+
+**Welcome to GroupDocs.Redaction for Python via .NET**  <br/>   
+
 GroupDocs.Redaction for Python via .NET is a powerful API that enables the removal of sensitive or classified content from documents across various file formats. It provides a unified, format-independent interface to apply different redaction methods—such as text, metadata, and image redactions—directly within your Python applications. You can save the cleaned document in its original format or export it as a sanitized PDF containing rasterized images of the original pages.
-{{< /alert >}}
 
 ## GroupDocs.Redaction for Python via .NET Resources
 Here are some useful resources to help you get started and make the most of the API:
