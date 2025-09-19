@@ -32,6 +32,7 @@ GroupDocs.Redaction for .NET supports any 32-bit or 64-bit operating system whe
 *   Microsoft Windows 7 ( x64, x86)
 *   Microsoft Windows 8, 8.1 ( x64, x86)
 *   Microsoft Windows 10 ( x64, x86)
+*   Microsoft Windows 11 ( x64, x86)
 
 ### UNIX
 
@@ -64,6 +65,10 @@ GroupDocs.Redaction for .NET  supports Microsoft .NET Framework and .NET Stan
 
 *   .NET Core 2.0 and later
 
+### .NET (Unified Platform) 
+
+*   NET 6.0 and later
+
 ## Development Environments
 
 GroupDocs.Redaction for .NET can be used to develop applications in any development environment that targets the .NET platform, but the following environments are explicitly supported:
@@ -75,3 +80,4 @@ GroupDocs.Redaction for .NET can be used to develop applications in any develo
 *   Microsoft Visual Studio 2015
 *   Microsoft Visual Studio 2017
 *   Microsoft Visual Studio 2019
+*   Microsoft Visual Studio 2022
