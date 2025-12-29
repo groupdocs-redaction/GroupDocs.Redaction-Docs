@@ -3,29 +3,108 @@ id: how-to-run-examples
 url: redaction/java/how-to-run-examples
 title: How to Run Examples
 weight: 6
-description: Learn how to run Java examples which contain many examples of data redaction. You can learn redact in word, how to redact information in pdf or images and many more.
-keywords: data redaction, redact information in pdf, redact in word,java 
+description: Learn how to run all Java examples for GroupDocs.Redaction. Step-by-step guide to clone the repository, install dependencies, and execute all examples using Maven.
+keywords: run examples, Java examples, Maven, run all examples, code examples, tutorial
 productName: GroupDocs.Redaction for Java
 hideChildren: False
 ---
-## Download from GitHub
 
-The complete examples package of **GroupDocs.Redaction** is hosted on [GitHub](https://github.com/groupdocs-redaction/GroupDocs.Redaction-for-Java). You can either download the ZIP file from [here](https://github.com/groupdocs-redaction/GroupDocs.Readction-for-Java/archive/master.zip) or clone the repository of GitHub using your favourite GitHub client.
+## Prerequisites
 
-In case you download the ZIP file, extract the folders on your local disk. The extracted files and folders will look like following image:
+Before running the examples, ensure you have:
 
-![](/redaction/java/images/how-to-run-examples.png)
+- **Java JDK 8 or later** (JDK 17 LTS recommended) - See [System Requirements]({{< ref "redaction/java/getting-started/system-requirements.md" >}})
+- **Maven 3.6 or later** - For building and running examples
+- **Git** - To clone the repository (optional)
 
-Open Eclipse and import the project to get started with it. Archived project file can also be imported.Follow the given steps to run the application:
+## Getting the Examples
 
-*   Go to project properties.
-*   Click on Java Build Path.
-*   Go to Libraries and external Jars (GroupDocs.Redaction.Jar).
+### Option 1: Clone from GitHub
 
-![](/redaction/java/images/how-to-run-examples_1.png)
+Clone the repository to your local machine:
 
-## Contribute
+```bash
+git clone https://github.com/groupdocs-redaction/GroupDocs.Redaction-for-Java.git
+cd GroupDocs.Redaction-for-Java
+```
 
-If you like to add or improve an example, we encourage you to contribute to the project. All examples in this repository are open source and can be freely used in your own applications.
+### Option 2: Download ZIP
 
-To contribute, you can fork the repository, edit the code example and create a pull request. We will review the changes and include it in the repository if found helpful.
+Download the repository as a ZIP file from [GitHub](https://github.com/groupdocs-redaction/GroupDocs.Redaction-for-Java) and extract it.
+
+## Installation
+
+Navigate to the `Examples` directory and install dependencies:
+
+```bash
+cd Examples
+mvn clean install
+```
+
+This command will:
+- Download the GroupDocs.Redaction library and all required dependencies
+- Compile all example classes
+- Prepare the project for execution
+
+## Running All Examples
+
+Execute all examples using Maven:
+
+```bash
+cd Examples
+mvn compile exec:java
+```
+
+This will run all examples sequentially. Output files are saved to `target/Output/<example-name>/`.
+
+## Output Location
+
+All example outputs are saved to:
+
+```
+Examples/target/Output/<example-name>/
+```
+
+For example:
+- `HelloWorld` example → `target/Output/HelloWorld/`
+- `ApplyRedaction` example → `target/Output/ApplyRedaction/`
+
+## Troubleshooting
+
+### Maven Build Errors
+
+If dependencies fail to download:
+
+```bash
+# Clean and rebuild
+mvn clean install -U
+```
+
+### Java Version Issues
+
+Ensure you're using Java 8 or later:
+
+```bash
+java -version
+javac -version
+```
+
+Set `JAVA_HOME` environment variable if needed.
+
+### Missing Sample Files
+
+Ensure all sample files are present in `Examples/Resources/SampleFiles/`. If files are missing, examples may fail.
+
+### License Warnings
+
+Examples run in trial mode by default. To remove license warnings:
+
+1. Get a temporary license from [GroupDocs](https://purchase.groupdocs.com/temp-license/100510)
+2. Update `Constants.java` with your license path
+3. Run `SetLicenseFromFile` example
+
+## Repository
+
+View the complete source code and examples on GitHub:
+
+**https://github.com/groupdocs-redaction/GroupDocs.Redaction-for-Java**

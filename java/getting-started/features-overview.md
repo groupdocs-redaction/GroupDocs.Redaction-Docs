@@ -8,6 +8,7 @@ keywords: redacted meaning, redact pdf, doc, docx, xls, xlsx, ppt, pptx, jpg, pn
 productName: GroupDocs.Redaction for Java
 hideChildren: False
 ---
+
 ## Document Redaction
 
 Redacted meaning is that a process of modifying or editing a document to remove the confidential information before publishing it. GroupDocs.Redaction is a quality redaction software, providing a single format-independent interface for redacting sensitive and classified information from the PDF, Word, Excel, PowerPoint documents and images, including the ability to change metadata and remove comments. With GroupDocs.Redaction tool you can redact PDF and save redacted document, transforming all pages into raster images or keep the document in its original format for further editing.

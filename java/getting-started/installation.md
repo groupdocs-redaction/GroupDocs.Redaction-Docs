@@ -3,12 +3,15 @@ id: installation
 url: redaction/java/installation
 title: Installation
 weight: 4
-description: ""
-keywords:
+description: Learn how to install GroupDocs.Redaction for Java in your project. Step-by-step guide for adding the library dependency using Maven, Gradle, Kotlin, Ivy, or Sbt build tools. Includes repository configuration and dependency declaration.
+keywords: installation, Maven, Gradle, dependency, repository, install GroupDocs Redaction, Java library, build tools, pom.xml, build.gradle
 productName: GroupDocs.Redaction for Java
 hideChildren: False
 ---
-GroupDocs hosts all Java APIs on [GroupDocs Repository](https://releases.groupdocs.com/java/repo/). You can easily use GroupDocs.Redaction for Java API directly in your Maven projects with simple configurations.
+
+GroupDocs.Redaction for Java is distributed via the [GroupDocs Repository](https://releases.groupdocs.com/java/repo/). You can easily add it to your project using any Java build tool (Maven, Gradle, Kotlin, Ivy, or Sbt) with simple configuration.
+
+> **Note:** The current version shown below is **25.12**. Always check the [releases page](https://releases.groupdocs.com/java/repo/com/groupdocs/groupdocs-redaction/) for the latest version.
 
 ### Specify GroupDocs Repository Configuration
 
@@ -30,7 +33,7 @@ First, you need to specify repository configuration/location in your project as
 ```xml
 repositories {
     maven {
-        url "https://repository.groupdocs.com/repo/"
+        url "https://releases.groupdocs.com/java/repo/"
     }
 }
 ```
@@ -38,7 +41,7 @@ repositories {
 {{< tab "Kotlin" >}}
 ```xml
 repositories {
-    maven(url = "https://repository.groupdocs.com/repo/")
+    maven(url = "https://releases.groupdocs.com/java/repo/")
 }
 ```
 {{< /tab >}}
@@ -72,7 +75,7 @@ Then define GroupDocs.Redaction for Java API dependency in your project as fo
     <dependency>
         <groupId>com.groupdocs</groupId>
         <artifactId>groupdocs-redaction</artifactId>
-        <version>24.9</version>
+        <version>25.12</version>
     </dependency>
 </dependencies>
 ```
@@ -80,29 +83,51 @@ Then define GroupDocs.Redaction for Java API dependency in your project as fo
 {{< tab "Gradle" >}}
 ```xml
 dependencies {
-    implementation 'com.groupdocs:groupdocs-redaction:24.9'
+    implementation 'com.groupdocs:groupdocs-redaction:25.12'
 }
 ```
 {{< /tab >}}
 {{< tab "Kotlin" >}}
 ```xml
 dependencies {
-    implementation("com.groupdocs:groupdocs-redaction:24.9")
+    implementation("com.groupdocs:groupdocs-redaction:25.12")
 }
 ```
 {{< /tab >}}
 {{< tab "Ivy" >}}
 ```xml
-<dependency org="com.groupdocs" name="groupdocs-redaction" rev="24.9">
+<dependency org="com.groupdocs" name="groupdocs-redaction" rev="25.12">
    <artifact name="groupdocs-redaction" ext="jar"/>
 </dependency>
 ```
 {{< /tab >}}
 {{< tab "Sbt" >}}
 ```xml
-libraryDependencies += "com.groupdocs" % "groupdocs-redaction" % "24.9"
+libraryDependencies += "com.groupdocs" % "groupdocs-redaction" % "25.12"
 ```
 {{< /tab >}}
 {{< /tabs >}}
 
-After performing above-mentioned steps, GroupDocs.Redaction for Java dependency will finally be added to your Maven project.
+## Verification
+
+After performing the above steps, GroupDocs.Redaction for Java dependency will be added to your project. Verify the installation by:
+
+1. **Building your project:**
+   ```bash
+   mvn clean install
+   # or
+   ./gradlew build
+   ```
+
+2. **Checking dependencies:**
+   ```bash
+   mvn dependency:tree | grep groupdocs-redaction
+   # or
+   ./gradlew dependencies | grep groupdocs-redaction
+   ```
+
+## Next Steps
+
+- Review [System Requirements]({{< ref "redaction/java/getting-started/system-requirements.md" >}}) to ensure compatibility
+- Check [Supported Document Formats]({{< ref "redaction/java/getting-started/supported-document-formats.md" >}})
+- Learn how to [Run Examples]({{< ref "redaction/java/getting-started/how-to-run-examples.md" >}})
