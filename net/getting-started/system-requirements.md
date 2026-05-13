@@ -17,67 +17,53 @@ GroupDocs.Redaction for .NET does not require any external software or third pa
 
 ## Supported Operating Systems
 
-GroupDocs.Redaction for .NET supports any 32-bit or 64-bit operating system where .NET platform is installed including, but not limited to:
+GroupDocs.Redaction for .NET supports various x86, x64, Arm32, and Arm64 operating systems where a supported .NET platform is installed, including but not limited to:
 
 ### Windows
 
-*   Microsoft Windows 2003 Server ( x64, x86)
-*   Microsoft Windows 2008 Server ( x64, x86)
-*   Microsoft Windows 2012 Server ( x64, x86)
-*   Microsoft Windows 2012 R2 Server ( x64, x86)
-*   Microsoft Windows 2016 Server ( x64, x86)
-*   Microsoft Windows 2019 Server ( x64, x86)
-*   Microsoft Windows Vista ( x64, x86)
-*   Microsoft Windows XP ( x64, x86)
-*   Microsoft Windows 7 ( x64, x86)
-*   Microsoft Windows 8, 8.1 ( x64, x86)
-*   Microsoft Windows 10 ( x64, x86)
-*   Microsoft Windows 11 ( x64, x86)
+*   Microsoft Windows 2008 SP2 Server
+*   Microsoft Windows 2012 Server
+*   Microsoft Windows 2012 R2 Server
+*   Microsoft Windows 2016 Server
+*   Microsoft Windows 2019 Server
+*   Microsoft Windows 7
+*   Microsoft Windows 8, 8.1
+*   Microsoft Windows 10
+*   Microsoft Windows 11
 
 ### UNIX
 
-*   Linux or any platform, supporting .NET Core 3.1
+*   Linux Ubuntu
+*   Linux Debian
+*   Linux Red Hat
+*   Linux Alpine
+*   Linux Fedora etc.
+
+### Other
+
+*   macOS
+*   Android (via .NET MAUI)
+*   iOS (via .NET MAUI)
 
 ## Supported Frameworks
 
-GroupDocs.Redaction for .NET  supports Microsoft .NET Framework and .NET Standard 2.0. All implementations of .NET platform, conforming to .NET Standard 2.0, are also supported.
+GroupDocs.Redaction for .NET is compatible with Microsoft .NET Framework as well as modern .NET versions such as .NET 6 and later.
 
 ### .NET Frameworks
 
-*   .NET Framework 2.0
-*   .NET Framework 3.5
-*   .NET Framework 4.0
-*   .NET Framework 4.0\_ClientProfile
-*   .NET Framework 4.5.0
-*   .NET Framework 4.5.1
-*   .NET Framework 4.5.2
-*   .NET Framework 4.6.0
-*   .NET Framework 4.6.2
-*   .NET Framework 4.5.0
-*   .NET Framework 4.5.1
-*   .NET Framework 4.6.0
 *   .NET Framework 4.6.2
-*   .NET Framework 4.7
-*   .NET Framework 4.7.2
-*   .NET Standard 2.0 
-
-### .NET Core Framework
-
-*   .NET Core 2.0 and later
 
 ### .NET (Unified Platform) 
 
-*   NET 6.0 and later
+*   NET 6.0
+*   NET 8.0
+*   NET 10.0
 
 ## Development Environments
 
 GroupDocs.Redaction for .NET can be used to develop applications in any development environment that targets the .NET platform, but the following environments are explicitly supported:
 
-*   Microsoft Visual Studio 2010
-*   Microsoft Visual Studio 2011
-*   Microsoft Visual Studio 2012
-*   Microsoft Visual Studio 2013
-*   Microsoft Visual Studio 2015
 *   Microsoft Visual Studio 2017
 *   Microsoft Visual Studio 2019
 *   Microsoft Visual Studio 2022
+*   Microsoft Visual Studio 2026
