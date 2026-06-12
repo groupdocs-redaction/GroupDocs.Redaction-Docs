@@ -8,6 +8,7 @@ description: It supports DOCX, DOCM, DOC, DOT, DOTM, XLS, XLSX, PDF, PPT, JPG, P
 keywords: file formats, Microsoft Word, Microsoft Excel, Microsoft PowerPoint, PDF, DOCX, DOCM, DOC, DOT, DOTM, XLS, XLSX, PPT, JPG, PNG, HTML, EML  
 productName: GroupDocs.Redaction for Python via .NET
 hideChildren: False
+toc: false
 ---
 ## Supported File Formats
 

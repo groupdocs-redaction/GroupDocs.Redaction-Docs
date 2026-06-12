@@ -20,100 +20,124 @@ To learn more about licensing options, purchasing, and evaluation policies, refe
 
 ## Purchased License
 
-After purchasing GroupDocs.Redaction for Python via .NET, you will receive a license file that needs to be applied to unlock the full functionality of the API. 
+After purchasing GroupDocs.Redaction for Python via .NET, you will receive a license file that unlocks the full functionality of the API. A few rules apply:
 
-License Application Requirements:
-- The license should be set only once within the application domain
-- It must be configured before using any GroupDocs.Redaction classes
-    
-### License Applying Options
+- Apply the license **only once** per process, in your start-up code.
+- Apply it **before** constructing any `Redactor` or other GroupDocs.Redaction object.
+- A license can be applied from a file path, from a binary stream (handy when the license is an embedded resource), or as a [Metered License](https://purchase.groupdocs.com/faqs/licensing/metered/) that bills by usage.
 
-Licenses can be applied from different locations:
+Use the [set_license](https://reference.groupdocs.com/redaction/python-net/groupdocs.redaction/license/set_license/) method to license the component. Calling it more than once is harmless — it simply wastes a little processor time.
 
-*   Explicit path
-*   The folder containing the _GroupDocs.Redaction.dll_ file
-*   The folder containing the assembly that called _GroupDocs.Redaction.dll_
-*   The folder containing the entry assembly (your _.exe_)
-*   As a Metered License that allows you to pay for your usage. For details, see the [Metered Licensing FAQ](https://purchase.groupdocs.com/faqs/licensing/metered/).
+### Set a license from a file
 
-When you reference _GroupDocs.Redaction.dll_ in the application, the library is copied to your output directory (unless **Copy Local** in the properties for that entry is set to false). The easiest way to set a license is often to place the license file in the same folder as _GroupDocs.Redaction.dll_ and specify just the filename without the path.
+The example below applies a license from a file path. It reads the path from the `GROUPDOCS_LIC_PATH` environment variable and falls back to a local `GroupDocs.Redaction.lic` file:
 
-Use the [setLicense](https://reference.groupdocs.com/redaction/python-net/groupdocs.redaction/license/set_license/) method to license a component.
-
-Calling `setLicense` multiple times is not harmful, it simply wastes processor time.
-
-Calling [setMeteredKey](https://reference.groupdocs.com/redaction/python-net/groupdocs.redaction/metered/set_metered_key/) multiple times is not harmful either but wastes processor time and can accumulate consumption improperly.
-
-#### Apply the License
-
-After obtaining the license, set it. This section explains how to do this. When developing your application, call the `setLicense` method in your startup code before using the GroupDocs.Redaction classes.
-
-##### Set a License from a File
-
-The following code snippet shows how to set a license from file:
-
-{{< tabs "example1">}}
-{{< tab "Python" >}}
-
+{{< tabs "code-example-set-license-from-file" >}}
+{{< tab "set_license_from_file.py" >}}
 ```python
-def run():
-    if os.path.exists("path to .lic file"):    
-        license = gr.License()
-        license.set_license("path to .lic file")
+import os
+from groupdocs.redaction import License
+
+def set_license_from_file():
+    # Resolve the license path from the environment, with a local fallback
+    license_path = os.environ.get("GROUPDOCS_LIC_PATH", "./GroupDocs.Redaction.lic")
+
+    # Apply the license before using any redaction features
+    if os.path.exists(license_path):
+        License().set_license(license_path)
         print("License set successfully.")
     else:
-       print("\n")
-```
+        print("License file not found. Running in evaluation mode.")
 
+if __name__ == "__main__":
+    set_license_from_file()
+```
 {{< /tab >}}
 {{< /tabs >}}
 
-##### Set a License from a Stream
+### Set a license from a stream
 
-The following code snippet shows how to set a license from a stream:
+You can also apply a license from any readable binary stream — useful when the license ships as an embedded resource:
 
-{{< tabs "example2">}}
-{{< tab "Python" >}}
-
+{{< tabs "code-example-set-license-from-stream" >}}
+{{< tab "set_license_from_stream.py" >}}
 ```python
-if os.path.exists("path to .lic file"):
-        with open("path to .lic file", "rb") as stream:
-            gr.License().set_license(stream)
+import os
+from groupdocs.redaction import License
 
+def set_license_from_stream():
+    # Resolve the license path from the environment, with a local fallback
+    license_path = os.environ.get("GROUPDOCS_LIC_PATH", "./GroupDocs.Redaction.lic")
+
+    # Apply the license from an open binary stream
+    if os.path.exists(license_path):
+        with open(license_path, "rb") as stream:
+            License().set_license(stream)
         print("License set successfully.")
     else:
-        print("\n")
-```
+        print("License file not found. Running in evaluation mode.")
 
+if __name__ == "__main__":
+    set_license_from_stream()
+```
 {{< /tab >}}
 {{< /tabs >}}
 
-### Changing the License File Name
+### Set a metered license
 
-You are not required to keep the license file name as GroupDocs.Redaction.lic. You can rename it to any preferred name and use that name when applying the license in your application.
+A Metered License lets you pay for what you use. Set the public and private keys with [set_metered_key](https://reference.groupdocs.com/redaction/python-net/groupdocs.redaction/metered/set_metered_key/) before using the API, then query consumption at any time:
 
-### "Cannot find license filename" Exception
+{{< tabs "code-example-set-metered-license" >}}
+{{< tab "set_metered_license.py" >}}
+```python
+from groupdocs.redaction import Metered
 
-When you download the license from the GroupDocs website, it is saved with the name GroupDocs.Redaction.lic. However, some web browsers may automatically append .xml, resulting in the file name being GroupDocs.Redaction.lic.xml.
+def set_metered_license():
+    # Replace these placeholders with your real metered public/private keys
+    public_key = "*****"
+    private_key = "*****"
 
-If your Windows settings are configured to hide file extensions (which is the default), the file may still appear as GroupDocs.Redaction.lic in File Explorer, even though the actual name is GroupDocs.Redaction.lic.xml. This discrepancy can cause the `setLicense` method to throw an exception.
+    # Skip the call until real keys are supplied (placeholder keys are rejected)
+    if "*" in public_key or "*" in private_key:
+        print("Provide real metered keys to enable metered licensing.")
+        return
 
-To fix this issue, manually rename the file to remove the .xml extension. Optionally, disable the "Hide extensions for known file types" option in Windows to prevent this issue.
+    # Apply the metered keys before using any redaction features
+    Metered().set_metered_key(public_key, private_key)
 
-## How to Evaluate GroupDocs.Redaction
+    # Query the current metered consumption
+    quantity = Metered().get_consumption_quantity()
+    credit = Metered().get_consumption_credit()
+    print(f"Consumption quantity: {quantity}, credit: {credit}")
 
-You can evaluate GroupDocs.Redaction for Python via .NET without purchasing a license by using one of the following options:
+if __name__ == "__main__":
+    set_metered_license()
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+### Changing the license file name
+
+You are not required to keep the license file name as `GroupDocs.Redaction.lic`. You can rename it to any preferred name and use that name when applying the license in your application.
+
+### "Cannot find license filename" exception
+
+When you download the license from the GroupDocs website it is saved as `GroupDocs.Redaction.lic`. However, some web browsers may automatically append `.xml`, resulting in `GroupDocs.Redaction.lic.xml`.
+
+If your Windows settings are configured to hide file extensions (the default), the file may still appear as `GroupDocs.Redaction.lic` in File Explorer even though the actual name is `GroupDocs.Redaction.lic.xml`. This discrepancy can cause `set_license` to throw an exception. To fix it, manually rename the file to remove the `.xml` extension, or disable "Hide extensions for known file types" in Windows.
+
+## How to evaluate GroupDocs.Redaction
+
+You can evaluate GroupDocs.Redaction for Python via .NET without purchasing a license by using one of the following options.
 
 ### Free Trial
 
-The evaluation version is identical to the purchased one; it becomes licensed once you set the license. You can set the license using methods described in the following sections of this article.
+The evaluation version is identical to the purchased one; it becomes fully licensed once you set a license. Without a license the Free Trial gives you access to the API's features, but with some limitations:
 
-The Free Trial version gives you access to the API's features, but with some limitations:
-
-- Only 1 document can be opened in one process.
-- Only 1 redaction can be applied to the document.
-- Any redaction is limited to 4 replacements/deletions, even if there are more matches.
-- Trial badges are placed in the document on the top of each page.
+- Only **one document** can be opened per process (a subsequent open raises a `TrialLimitationsException`).
+- Only **one redaction** can be applied to the document.
+- Any redaction is limited to **four replacements/deletions**, even if there are more matches.
+- Trial badges are placed at the top of each page of the output document.
 
 ### Temporary License
 

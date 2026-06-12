@@ -7,59 +7,60 @@ description: "This article demonstrates that how to save a document to any custo
 keywords: save a document to any custom file
 productName: GroupDocs.Redaction for Python via .NET
 hideChildren: False
+toc: True
 ---
 You might need to save a document to any custom file at any location on the local disc or a even a Stream.
 
 The following example demonstrates how to save a document to any location.
 
-**Python**
-
+{{< tabs "code-example-save-to-stream" >}}
+{{< tab "save_to_stream.py" >}}
 ```python
-import groupdocs.redaction as gr
-import groupdocs.redaction.options as gro
-import groupdocs.redaction.redactions as grr
-import groupdocs.pydrawing as grd
+from groupdocs.redaction import Redactor, RedactionStatus
+from groupdocs.redaction.options import RasterizationOptions
+from groupdocs.redaction.redactions import ExactPhraseRedaction, ReplacementOptions
+from groupdocs.pydrawing import Color
 
-def run():
 
-    # Define color of redaction
-    color = grd.Color.from_argb(255, 220, 20, 60)
+def save_to_stream():
+    # Define the color of redaction
+    color = Color.from_argb(255, 220, 20, 60)
 
     # Specify the redaction options
-    repl_opt = grr.ReplacementOptions(color)
-    ex_red = grr.ExactPhraseRedaction("John Doe", repl_opt)
+    repl_opt = ReplacementOptions(color)
+    ex_red = ExactPhraseRedaction("John Doe", repl_opt)
 
     # Load the document to be redacted
-    with gr.Redactor("source.docx") as redactor:
+    with Redactor("./sample.docx") as redactor:
 
         # Apply the redaction
         result = redactor.apply(ex_red)
-        
-        if (result.status != gr.RedactionStatus.FAILED):
-            # Save the document to a custom location and convert its pages to images
-            ro = gro.RasterizationOptions()
+
+        if result.status != RedactionStatus.FAILED:
+            # Save the document to a stream and convert its pages to images
+            ro = RasterizationOptions()
             ro.enabled = True
-            with open(output_file, "wb") as stream_out:
+            with open("./redacted-sample.pdf", "wb") as stream_out:
                 redactor.save(stream_out, ro)
 
-            print(f"Document redacted successfully.\nCheck output in {source_file}")
+            print("Document redacted successfully.\nCheck output in ./redacted-sample.pdf")
         else:
-            print(f"Redaction failed!")
+            print("Redaction failed!")
+
+
+if __name__ == "__main__":
+    save_to_stream()
 ```
-
-## More resources
-
-### GitHub examples
-
-You may easily run the code above and see the feature in action in our GitHub examples:
-
-*   [GroupDocs.Redaction for Python via .NET examples](https://github.com/groupdocs-redaction/GroupDocs.Redaction-for-Python-via-.NET)
-*   [GroupDocs.Redaction for .NET examples](https://github.com/groupdocs-redaction/GroupDocs.Redaction-for-.NET)
-*   [GroupDocs.Redaction for Java examples](https://github.com/groupdocs-redaction/GroupDocs.Redaction-for-Java)
-    
-
-### Free online document redaction App
-
-Along with full featured .NET library we provide simple, but powerful free Apps.
-
-You are welcome to perform redactions for various document formats like PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX, Emails and more with our free online [Free Online Document Redaction App](https://products.groupdocs.app/redaction).
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/redaction/python-net/_sample_files/developer-guide/advanced-usage/saving-documents/save-to-stream/sample.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "redacted-sample.pdf" >}}  
+```text
+Binary file (PDF, 1024 KB)
+```
+[Download full output](/redaction/python-net/_output_files/developer-guide/advanced-usage/saving-documents/save-to-stream/save_to_stream/redacted-sample.pdf)
+{{< /tab >}}
+{{< /tabs >}}

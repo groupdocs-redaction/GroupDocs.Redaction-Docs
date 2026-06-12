@@ -8,7 +8,7 @@ keywords: redact pdf, redaction, redact in excel
 productName: GroupDocs.Redaction for .NET
 hideChildren: True
 ---
-<img src="/redaction/net/images/home.svg" alt="GroupDocs.Redaction" align="left" style="width:110px; margin: 0 30px 20px 0"/>
+<img src="/logo/128x128/groupdocs-redaction-net.png" alt="groupdocs-redaction-net-home" align="left" style="width:110px; margin: 0 30px 30px 0"/>
 
 <img src="https://img.shields.io/nuget/v/groupdocs.redaction?label=GroupDocs.Redaction%20NuGet" alt="Nuget package">
 <img src="https://img.shields.io/nuget/dt/GroupDocs.Redaction?label=nuget%20downloads" alt="Nuget downloads">

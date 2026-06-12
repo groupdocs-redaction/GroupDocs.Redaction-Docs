@@ -8,7 +8,7 @@ keywords: redact pdf, redaction, redact in excel, Java
 productName: GroupDocs.Redaction for Java
 hideChildren: True
 ---
-<img src="/redaction/java/images/home.svg" alt="groupdocs-redaction-java-home" align="left" style="width:110px; margin: 0 30px 20px 0"/>
+<img src="/logo/128x128/groupdocs-redaction-java.png" alt="groupdocs-redaction-java-home" align="left" style="width:110px; margin: 0 30px 30px 0"/>
 
 {{< button style="primary" link="https://releases.groupdocs.com/redaction/java/release-notes/" >}} <svg class="gdoc-icon gdoc-product-doc__btn-icon"><use xlink:href="/img/groupdocs-stack.svg#document"></use></svg> Release notes {{< /button >}} 
 {{< button style="primary" link="https://releases.groupdocs.com/java/repo/com/groupdocs/groupdocs-redaction/" >}} {{< icon "gdoc_download" >}} Package repository {{< /button >}}

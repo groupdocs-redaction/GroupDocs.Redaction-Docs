@@ -7,6 +7,7 @@ description: "Learn how to deal.If you have a corporate sensitive data removal p
 keywords: list of pre-configured redactions
 productName: GroupDocs.Redaction for Python via .NET
 hideChildren: False
+toc: True
 ---
 If you have a corporate sensitive data removal policy as a list of redaction rules, you don't need to specify them in your code. You can specify an XML document with a list of pre-configured redactions.
 
@@ -14,7 +15,7 @@ Below is an example of redaction policy XML file (code properties mapping is obv
 
 **RedactionPolicy.xml**
 
-```python
+```xml
 <?xml version="1.0" encoding="utf-8"?>  
 <redactionPolicy xmlns="http://www.groupdocs.com/redaction">  
   <regexRedaction regularExpression="(dolor)" actionType="ReplaceString" replacement="foobar" />  
@@ -34,87 +35,104 @@ You can use RedactionPolicy.save() method to create XML documents of this struct
 
 The following example demonstrates how to save a [RedactionPolicy](https://reference.groupdocs.com/redaction/python-net/groupdocs.redaction/redactionpolicy/) to an XML file.
  
-**Python**
-
+{{< tabs "code-example-create-redaction-policy" >}}
+{{< tab "create_redaction_policy.py" >}}
 ```python
-import groupdocs.redaction as gr
-import groupdocs.redaction.options as gro
-import groupdocs.redaction.redactions as grr
-import groupdocs.pydrawing as grd
+from groupdocs.redaction import RedactionPolicy
+from groupdocs.redaction.redactions import (
+    ExactPhraseRedaction,
+    ReplacementOptions,
+    RegexRedaction,
+    DeleteAnnotationRedaction,
+    EraseMetadataRedaction,
+    MetadataFilters,
+)
+from groupdocs.pydrawing import Color
 
-def run():
-    # Define color of redaction
-    color = grd.Color.from_argb(255, 220, 20, 60)
 
-    # Configure Redactions
+def create_redaction_policy():
+    # Define the color of redaction
+    color = Color.from_argb(255, 220, 20, 60)
+
+    # Configure the redactions
     redactions = [
-        grr.ExactPhraseRedaction("Redaction", grr.ReplacementOptions("[Product]")),
-        grr.RegexRedaction("\\d{2}\\s*\\d{2}[^\\d]*\\d{6}", grr.ReplacementOptions(color)),
-        grr.DeleteAnnotationRedaction(),
-        grr.EraseMetadataRedaction(grr.MetadataFilters.ALL)
+        ExactPhraseRedaction("Redaction", ReplacementOptions("[Product]")),
+        RegexRedaction("\\d{2}\\s*\\d{2}[^\\d]*\\d{6}", ReplacementOptions(color)),
+        DeleteAnnotationRedaction(),
+        EraseMetadataRedaction(MetadataFilters.ALL),
     ]
 
-    # Create policy
-    policy = gr.RedactionPolicy(redactions)
+    # Create the policy
+    policy = RedactionPolicy(redactions)
 
-    # Save RedactionPolicy
-    policy.save("sample_policy.xml")
+    # Save the redaction policy to an XML file
+    policy.save("./sample_policy.xml")
+    print("Redactions policy saved to ./sample_policy.xml")
+
+
+if __name__ == "__main__":
+    create_redaction_policy()
 ```
+{{< /tab >}}
+{{< tab "sample_policy.xml" >}}  
+```text
+<?xml version="1.0"?>
+<redactionPolicy>
+  <exactPhraseRedaction actionType="ReplaceString" replacement="[Product]" searchPhrase="Redaction" />
+  <regexRedaction actionType="DrawBox" color="#DC143C" regularExpression="\d{2}\s*\d{2}[^\d]*\d{6}" />
+  <deleteAnnotationRedaction regularExpression="[.]*" />
+  <eraseMetadataRedaction filter="All" />
+</redactionPolicy>
+```
+[Download full output](/redaction/python-net/_output_files/developer-guide/advanced-usage/use-redaction-policies/create_redaction_policy/sample_policy.xml)
+{{< /tab >}}
+{{< /tabs >}}
 
-You can have as much policies, as you need, loading them to redact your documents.
+You can have as many policies as you need, loading them to redact your documents.
 
-An example below shows how to apply redaction policy to all files within given inbound folder, and save to one of outbound folders - for successfully updated files and for failed ones. Current date and time is used as a part of output file name:
+The example below loads a redaction policy from an XML file and applies every rule it contains to a document in a single `apply` call:
 
-**Python**
-
+{{< tabs "code-example-use-redaction-policy" >}}
+{{< tab "use_redaction_policy.py" >}}
 ```python
-import groupdocs.redaction as gr
-import groupdocs.redaction.options as gro
-import groupdocs.redaction.redactions as grr
-import os
-from os.path import join
+from groupdocs.redaction import Redactor, RedactionPolicy
+from groupdocs.redaction.options import SaveOptions
 
-def run():
+def use_redaction_policy():
+    # Load the redaction policy from an XML file
+    policy = RedactionPolicy.load("./redaction_policy.xml")
 
-    # Initialize RedactionPolicy
-    policy = gr.RedactionPolicy.load("sample_policy.xml")
+    # Load the document and apply the whole policy in one call
+    with Redactor("./sample.docx") as redactor:
+        redactor.apply(policy)
 
-    for file_entry in os.listdir("\inbound_dir"):
-        cur_file = os.path.join("\inbound_dir", file_entry)
+        # Keep the original format and append a suffix to the output name
+        save_options = SaveOptions()
+        save_options.add_suffix = True
+        save_options.rasterize_to_pdf = False
+        save_options.redacted_file_suffix = "redacted"
+        result_path = redactor.save(save_options)
 
-        # Load the document to be redacted
-        with gr.Redactor(cur_file) as redactor:
+    print(f"Redaction policy applied. Output saved to {result_path}.")
 
-            # Apply the redaction
-            result = redactor.apply(policy)
-
-            # Get output folder
-            result_dir = "\out_bound_done_dir"
-            if (result.status == gr.RedactionStatus.FAILED):
-                result_dir = "\out_bound_failed_dir"
-
-            output_file = join(result_dir, os.path.basename(cur_file))
-
-            # Save file
-            ro = gro.RasterizationOptions()
-            ro.enabled = False
-            with open(output_file, "wb") as stream_out:
-                redactor.save(stream_out, ro)
+if __name__ == "__main__":
+    use_redaction_policy()
 ```
-
-## More resources
-
-### GitHub examples
-
-You may easily run the code above and see the feature in action in our GitHub examples:
-
-*   [GroupDocs.Redaction for Python via .NET examples](https://github.com/groupdocs-redaction/GroupDocs.Redaction-for-Python-via-.NET)
-*   [GroupDocs.Redaction for .NET examples](https://github.com/groupdocs-redaction/GroupDocs.Redaction-for-.NET)
-*   [GroupDocs.Redaction for Java examples](https://github.com/groupdocs-redaction/GroupDocs.Redaction-for-Java)
-    
-
-### Free online document redaction App
-
-Along with full featured .NET library we provide simple, but powerful free Apps.
-
-You are welcome to perform redactions for various document formats like PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX, Emails and more with our free online [Free Online Document Redaction App](https://products.groupdocs.app/redaction).
+{{< /tab >}}
+{{< tab "redaction_policy.xml" >}}
+{{< tab-text >}}
+`redaction_policy.xml` is the policy file used in this example. Click [here](/redaction/python-net/_sample_files/developer-guide/advanced-usage/use-redaction-policies/redaction_policy.xml) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the document redacted in this example. Click [here](/redaction/python-net/_sample_files/developer-guide/advanced-usage/use-redaction-policies/sample.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "sample_redacted.docx" >}}  
+```text
+Binary file (DOCX, 16 KB)
+```
+[Download full output](/redaction/python-net/_output_files/developer-guide/advanced-usage/use-redaction-policies/use_redaction_policy/sample_redacted.docx)
+{{< /tab >}}
+{{< /tabs >}}

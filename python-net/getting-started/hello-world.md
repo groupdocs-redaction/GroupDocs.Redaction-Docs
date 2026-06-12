@@ -16,57 +16,62 @@ toc: True
 A "Hello, World!" example is often the first step when exploring GroupDocs.Redaction for Python via .NET. It serves as a simple test to confirm that your development environment is correctly set up and that the library is functioning as expected.
 
 ## Overview
-"GroupDocs.Redaction for Python via .NET" allows you to search, redact, and remove sensitive information from various document formats. A wide range of [supported formats](/redaction/python-net/supported-document-formats/) makes it versatile for different use cases.
+GroupDocs.Redaction for Python via .NET lets you search, redact, and remove sensitive information from various document formats. A wide range of [supported formats](/redaction/python-net/getting-started/supported-document-formats/) makes it versatile for different use cases.
 
-## How to Redact a Document Content
+## How to redact a document
 The following steps demonstrate how to redact sensitive information from a document using GroupDocs.Redaction for Python via .NET:
 
-1. Import `groupDocs.redaction` classes.
-2. Provide redaction parameters.
-3. Instantiate a `Redactor` object with the path to the sample document.
-4. Perform the required redaction operation.
-5. Save the result document.
+1. Import the `groupdocs.redaction` classes you need.
+2. Describe the redaction (here, an exact phrase to replace with a colored box).
+3. Instantiate a `Redactor` with the path to the sample document.
+4. Apply the redaction.
+5. Save the result.
 
-## Code Snippet
-Basic example of GroupDocs.Redaction usage:
+## Complete example
+The example below replaces every occurrence of the phrase "John Doe" with a semi-transparent red box and saves the redacted document:
 
+{{< tabs "code-example-hello-world" >}}
+{{< tab "hello_world.py" >}}
 ```python
-import groupdocs.redaction as gr
-import groupdocs.redaction.redactions as grr
+from groupdocs.redaction import Redactor
+from groupdocs.redaction.options import SaveOptions
+from groupdocs.redaction.redactions import ExactPhraseRedaction, ReplacementOptions
 from groupdocs.pydrawing import Color
 
-def run():
-    # Specify the redaction options
-    color = Color.from_argb(128, 255, 0, 0)
-    repl_o = grr.ReplacementOptions(color)
-    ep_red = grr.ExactPhraseRedaction("John Doe", repl_o)
+def hello_world():
+    # Draw a semi-transparent red box over every occurrence of "John Doe"
+    options = ReplacementOptions(Color.from_argb(128, 255, 0, 0))
+    redaction = ExactPhraseRedaction("John Doe", options)
 
-    # Load the document to be redacted
-    with gr.Redactor("source.pdf") as redactor:
+    # Load the document, apply the redaction, and save the result
+    with Redactor("./sample.docx") as redactor:
+        redactor.apply(redaction)
+        save_options = SaveOptions()
+        save_options.add_suffix = True
+        save_options.rasterize_to_pdf = True
+        save_options.redacted_file_suffix = "redacted"
+        result_path = redactor.save(save_options)
 
-        # Apply the redaction
-        result = redactor.apply(ep_red)
-        
-        # Save the redacted document
-        redactor.save()
+    print(f"Document redacted successfully. Output saved to {result_path}.")
+
+if __name__ == "__main__":
+    hello_world()
 ```
-## Run the Application
-Steps to run the sample application:
-1. Download the Sample Application: 
-    * [Download Samples Project](https://github.com/groupdocs-redaction/GroupDocs.Redaction-for-Python-via-.NET/)
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/redaction/python-net/_sample_files/getting-started/hello-world/sample.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "sample_redacted.pdf" >}}  
+```text
+Binary file (PDF, 1.0 MB)
+```
+[Download full output](/redaction/python-net/_output_files/getting-started/hello-world/hello_world/sample_redacted.pdf)
+{{< /tab >}}
+{{< /tabs >}}
 
-2. Run the Application:
-    * Navigate to the directory containing the `hello_world.py` script.
-    * Run the script:
-        ```bash 
-        python hello_world.py
-        ```
+This example rasterizes the result to a PDF named `sample_redacted.pdf`, so the redacted content cannot be recovered (`save()` rasterizes to PDF by default; the `redacted_file_suffix` option just controls the output name). To keep the original format instead, set `rasterize_to_pdf = False`.
 
-## Expected Output
-
-![](/redaction/python-net/images/hello_word.png)
-
-After executing the example, the resulting PDF file will have all instances of the text "John Doe" masked with small square images.
-
-## Additional Resources
-This demo application references the GroupDocs.Redaction for Python via .Net [code samples](https://github.com/groupdocs-redaction/GroupDocs.Redaction-for-Python-via-.NET/).
+## Additional resources
+This demo references the GroupDocs.Redaction for Python via .NET [code samples](https://github.com/groupdocs-redaction/GroupDocs.Redaction-for-Python-via-.NET/).

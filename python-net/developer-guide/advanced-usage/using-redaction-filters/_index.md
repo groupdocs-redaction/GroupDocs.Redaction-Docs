@@ -2,28 +2,26 @@
 id: redaction-filters
 url: redaction/python-net/redaction-filters
 title: Using redaction filters
+linkTitle: Using redaction filters
 weight: 1
-description: ""
-keywords: 
+description: "Scope a GroupDocs.Redaction for Python via .NET redaction to a page range or a rectangular page area using redaction filters, and combine them to target an area on specific pages."
+keywords: redaction filters, page range filter, page area filter, scope redaction, python, GroupDocs.Redaction
 productName: GroupDocs.Redaction for Python via .NET
 hideChildren: False
+toc: True
 ---
 
-GroupDocs.Redaction allows you to set the page-based scope for your redaction of two types:
-*   page range, a given number of pages at certain offset from the beginning or the end of the page;
-*   page area (on each page), which is a top-left based rectangle.  
+GroupDocs.Redaction lets you set a page-based scope for a redaction, of two kinds:
 
-All filters inherit from [RedactionFilter](https://reference.groupdocs.com/redaction/python-net/groupdocs.redaction.redactions/redactionfilter/) and as an array are set to **Filters** property of the [ReplacementOptions](https://reference.groupdocs.com/redaction/python-net/groupdocs.redaction.redactions/replacementoptions/).
+- **Page range** — a number of pages at a given offset from the beginning or the end of the document;
+- **Page area** — a top-left-based rectangle applied on each page.
 
-You can combine these filters in one set in order to set the scope of redaction to an area on a specific page. For more details, see [Use PDF redaction filters]({{< ref "redaction/python-net/developer-guide/advanced-usage/using-redaction-filters/use-pdf-redaction-filters" >}}) article.
+All filters inherit from [RedactionFilter](https://reference.groupdocs.com/redaction/python-net/groupdocs.redaction.redactions/redactionfilter/) and are passed as an array to the **filters** property of [ReplacementOptions](https://reference.groupdocs.com/redaction/python-net/groupdocs.redaction.redactions/replacementoptions/). Combine both kinds in one set to scope a redaction to an area on specific pages.
 
-## Redaction filters limitations
+## Supported formats
 
-There are the following limitations of the redaction filters with GroupDocs.Redaction v23.6:
-*   Only PDF documents are not supported.  
+Redaction filters apply to **PDF** documents. Support for additional formats is planned for future releases of GroupDocs.Redaction.
 
-We are working on adding more formats supported in future releases of GroupDocs.Redaction.
+## In this section
 
-## Learn more
-
-You can find details and examples of using redaction filters with GroupDocs.Redaction in one of these guides:
+- [Use PDF Redaction Filters]({{< ref "redaction/python-net/developer-guide/advanced-usage/using-redaction-filters/use-pdf-redaction-filters.md" >}}) — a runnable example that combines a page-range filter and a page-area filter to scope a redaction in a PDF.

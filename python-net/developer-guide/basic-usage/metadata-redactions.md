@@ -3,10 +3,11 @@ id: metadata-redactions
 url: redaction/python-net/metadata-redactions
 title: Metadata redactions
 weight: 6
-description: This article shows that how C# redaction API allows you to replace or remove metadata using filters or search by regular expression.
-keywords: C#, redaction, api, remove metadata
+description: This article shows that how Python redaction API allows you to replace or remove metadata using filters or search by regular expression.
+keywords: redaction, api, remove metadata
 productName: GroupDocs.Redaction for Python via .NET
 hideChildren: False
+toc: True
 ---
 With GroupDocs.Redaction API you can apply metadata redactions for documents of different formats like PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX and others. See full list at [supported document formats]({{< ref "redaction/python-net/getting-started/supported-document-formats.md" >}}) article.
 
@@ -16,11 +17,9 @@ GroupDocs.Redactions provides a flexible API that allows to replace or remove me
 
 Base functionality for all redactions, derived from [MetadataRedaction](https://reference.groupdocs.com/redaction/python-net/groupdocs.redaction.redactions/metadataredaction/) base class is *metadata filtering* and it is mandatory for metadata redactions. It uses flagged enumeration [MetadataFilters](https://reference.groupdocs.com/redaction/python-net/groupdocs.redaction.redactions/metadatafilters/), containing items for most frequent metadata entries. You can set the filter to *All*, or any combination of metadata. For instance, the example below sets filter to *Author*, *Manager* and *NameOfApplication* - for textual redaction or cleaning them out:
 
-**Python**
-
 ```python
-// redaction derived from MetadataRedaction
-redaction.Filter = MetadataFilters.AUTHOR | MetadataFilters.MANAGER | MetadataFilters.NAME_OF_APPLICATION;
+# redaction derived from MetadataRedaction
+redaction.filter = MetadataFilters.AUTHOR | MetadataFilters.MANAGER | MetadataFilters.NAME_OF_APPLICATION
 ```
 
 Below is the table with full list of [MetadataFilters](https://reference.groupdocs.com/redaction/python-net/groupdocs.redaction.redactions/metadatafilters/) items:
@@ -55,31 +54,47 @@ Below is the table with full list of [MetadataFilters](https://reference.groupd
 
 You can replace all or specific metadata in the document with empty (blank or minimal) values using [EraseMetadataRedaction](https://reference.groupdocs.com/redaction/python-net/groupdocs.redaction.redactions/erasemetadataredaction/) class. The example below blanks out all properties of the document:
 
-**Python**
-
+{{< tabs "code-example-clean-all-metadata" >}}
+{{< tab "clean_all_metadata.py" >}}
 ```python
-using (Redactor redactor = new Redactor(@"C:\sample.docx"))
-import groupdocs.redaction as gr
-import groupdocs.redaction.options as gro
-import groupdocs.redaction.redactions as grr
+from groupdocs.redaction import Redactor
+from groupdocs.redaction.options import SaveOptions
+from groupdocs.redaction.redactions import EraseMetadataRedaction, MetadataFilters
 
-def run():
 
-    # Specify the redaction options
-    met_red = grr.EraseMetadataRedaction(grr.MetadataFilters.ALL)
+def clean_all_metadata():
+    # Specify the redaction options to erase all metadata
+    met_red = EraseMetadataRedaction(MetadataFilters.ALL)
 
     # Load the document to be redacted
-    with gr.Redactor("sample.docx") as redactor:
-
+    with Redactor("./sample.docx") as redactor:
         # Apply the redaction
         result = redactor.apply(met_red)
-        
-        # Save the redacted document
-        so = gro.SaveOptions()
+
+        # Save the redacted document next to the source file
+        so = SaveOptions()
         so.add_suffix = True
         so.rasterize_to_pdf = False
-        result_path = redactor.save(so)
+        so.redacted_file_suffix = "redacted"
+        redactor.save(so)
+
+
+if __name__ == "__main__":
+    clean_all_metadata()
 ```
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/redaction/python-net/_sample_files/developer-guide/basic-usage/metadata-redactions/sample.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "sample_redacted.docx" >}}  
+```text
+Binary file (DOCX, 16 KB)
+```
+[Download full output](/redaction/python-net/_output_files/developer-guide/basic-usage/metadata-redactions/clean_all_metadata/sample_redacted.docx)
+{{< /tab >}}
+{{< /tabs >}}
 
 You can specify [MetadataFilter.All](https://reference.groupdocs.com/redaction/python-net/groupdocs.redaction.redactions/metadatafilters/) or use default constructor to blank out all metadata within given document, Custom - to clear all custom metadata entries.
 
@@ -87,81 +102,95 @@ You can specify [MetadataFilter.All](https://reference.groupdocs.com/redaction/p
 
 You can use [MetadataSearchRedaction](https://reference.groupdocs.com/redaction/python-net/groupdocs.redaction.redactions/metadatasearchredaction/) to remove sensitive data from document's metadata using regular expressions. For instance, we can remove any mention of "Company Ltd.":
 
-**Python**
-
+{{< tabs "code-example-redact-metadata" >}}
+{{< tab "redact_metadata.py" >}}
 ```python
-import groupdocs.redaction as gr
-import groupdocs.redaction.options as gro
-import groupdocs.redaction.redactions as grr
+from groupdocs.redaction import Redactor
+from groupdocs.redaction.options import SaveOptions
+from groupdocs.redaction.redactions import MetadataSearchRedaction
 
-def run():
 
-    # Specify the redaction options
-    met_red = grr.MetadataSearchRedaction("Company Ltd.", "--company--")
+def redact_metadata():
+    # Specify the redaction options: search pattern and replacement string
+    met_red = MetadataSearchRedaction("Company Ltd.", "--company--")
 
     # Load the document to be redacted
-    with gr.Redactor("source.pdf") as redactor:
-
+    with Redactor("./sample.docx") as redactor:
         # Apply the redaction
         result = redactor.apply(met_red)
-        
-        # Save the redacted document
-        so = gro.SaveOptions()
+
+        # Save the redacted document next to the source file
+        so = SaveOptions()
         so.add_suffix = True
         so.rasterize_to_pdf = False
-        result_path = redactor.save(so)
+        so.redacted_file_suffix = "redacted"
+        redactor.save(so)
+
+
+if __name__ == "__main__":
+    redact_metadata()
 ```
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/redaction/python-net/_sample_files/developer-guide/basic-usage/metadata-redactions/sample.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "sample_redacted.docx" >}}  
+```text
+Binary file (DOCX, 16 KB)
+```
+[Download full output](/redaction/python-net/_output_files/developer-guide/basic-usage/metadata-redactions/redact_metadata/sample_redacted.docx)
+{{< /tab >}}
+{{< /tabs >}}
 
 First argument is regular expression, second is a replacement string. You can also set scope for redaction by setting filter, e.g. to [MetadataFilter.Company](https://reference.groupdocs.com/redaction/python-net/groupdocs.redaction.redactions/metadatafilters/). - it will leave the regular expressions matches undone in all metadata items, except "Company" property:
 
-**Python**
-
+{{< tabs "code-example-redact-metadata-with-filter" >}}
+{{< tab "redact_metadata_with_filter.py" >}}
 ```python
-import groupdocs.redaction as gr
-import groupdocs.redaction.options as gro
-import groupdocs.redaction.redactions as grr
+from groupdocs.redaction import Redactor
+from groupdocs.redaction.options import SaveOptions
+from groupdocs.redaction.redactions import MetadataSearchRedaction, MetadataFilters
 
-def run():
 
-    # Specify the redaction options
-    met_red = grr.MetadataSearchRedaction("Company Ltd.", "--company--")
-    met_red.filter = grr.MetadataFilters.COMPANY
+def redact_metadata_with_filter():
+    # Specify the redaction options: search pattern and replacement string
+    met_red = MetadataSearchRedaction("Company Ltd.", "--company--")
+
+    # Limit the redaction scope to the Company metadata item only
+    met_red.filter = MetadataFilters.COMPANY
 
     # Load the document to be redacted
-    with gr.Redactor("source.pdf") as redactor:
-
+    with Redactor("./sample.docx") as redactor:
         # Apply the redaction
         result = redactor.apply(met_red)
-        
-        # Save the redacted document
-        so = gro.SaveOptions()
+
+        # Save the redacted document next to the source file
+        so = SaveOptions()
         so.add_suffix = True
         so.rasterize_to_pdf = False
-        result_path = redactor.save(so)
+        so.redacted_file_suffix = "redacted"
+        redactor.save(so)
+
+
+if __name__ == "__main__":
+    redact_metadata_with_filter()
 ```
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/redaction/python-net/_sample_files/developer-guide/basic-usage/metadata-redactions/sample.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "sample_redacted.docx" >}}  
+```text
+Binary file (DOCX, 16 KB)
+```
+[Download full output](/redaction/python-net/_output_files/developer-guide/basic-usage/metadata-redactions/redact_metadata_with_filter/sample_redacted.docx)
+{{< /tab >}}
+{{< /tabs >}}
 
 ## Metadata redaction status
 
-All metadata redactions apply to each metadata item separately, and even if metadata item redaction fails, the rest of the metadata items will be updated. You can find a list of failed, skipped (rejected) metadata items and reasons for that in [ErrorMessage](https://reference.groupdocs.com/redaction/python-net/groupdocs.redaction/redactionresult/error_message/) property of [RedactorLogEntry.Result](https://reference.groupdocs.com/redaction/python-net/groupdocs.redaction/redactorlogentry/result/).  
- 
-
-## More resources
-
-### Advanced usage topics
-
-To learn more about document redaction features, please refer to the [advanced usage section]({{< ref "redaction/python-net/developer-guide/advanced-usage/_index.md" >}}).
-
-### GitHub examples
-
-You may easily run the code above and see the feature in action in our GitHub examples:
-
-*   [GroupDocs.Redaction for Python via .NET examples](https://github.com/groupdocs-redaction/GroupDocs.Redaction-for-Python-via-.NET)
-*   [GroupDocs.Redaction for .NET examples](https://github.com/groupdocs-redaction/GroupDocs.Redaction-for-.NET)
-*   [GroupDocs.Redaction for Java examples](https://github.com/groupdocs-redaction/GroupDocs.Redaction-for-Java)
-    
-
-### Free online document redaction App
-
-Along with full featured .NET library we provide simple, but powerful free Apps.
-
-You are welcome to perform redactions for various document formats like PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX, Emails and more with our free online [Free Online Document Redaction App](https://products.groupdocs.app/redaction).
+All metadata redactions apply to each metadata item separately, and even if metadata item redaction fails, the rest of the metadata items will be updated. You can find a list of failed, skipped (rejected) metadata items and reasons for that in [ErrorMessage](https://reference.groupdocs.com/redaction/python-net/groupdocs.redaction/redactionresult/error_message/) property of [RedactorLogEntry.Result](https://reference.groupdocs.com/redaction/python-net/groupdocs.redaction/redactorlogentry/result/).

@@ -1,0 +1,282 @@
+{
+  "developer-guide/advanced-usage/create-pdf-with-image-redaction#code-example-create-pdf-with-image-redaction": {
+    "type": "file",
+    "file": "redacted-sample.pdf",
+    "path": "developer-guide/advanced-usage/create-pdf-with-image-redaction/create_pdf_with_image_redaction/redacted-sample.pdf",
+    "preview": "Binary file (PDF, 879 KB)",
+    "function": "create_pdf_with_image_redaction"
+  },
+  "developer-guide/advanced-usage/extend-supported-extensions-list#code-example-extend-supported-extensions-list": {
+    "type": "file",
+    "file": "sample_redacted.pdf",
+    "path": "developer-guide/advanced-usage/extend-supported-extensions-list/extend_supported_extensions_list/sample_redacted.pdf",
+    "preview": "Binary file (PDF, 1.9 MB)",
+    "function": "extend_supported_extensions_list"
+  },
+  "developer-guide/advanced-usage/loading-documents/load-from-local-disc#code-example-load-from-local-disc": {
+    "type": "file",
+    "file": "sample_redacted.docx",
+    "path": "developer-guide/advanced-usage/loading-documents/load-from-local-disc/load_from_local_disc/sample_redacted.docx",
+    "preview": "Binary file (DOCX, 13 KB)",
+    "function": "load_from_local_disc"
+  },
+  "developer-guide/advanced-usage/loading-documents/load-from-stream#code-example-load-from-stream": {
+    "type": "file",
+    "file": "redacted-sample.pdf",
+    "path": "developer-guide/advanced-usage/loading-documents/load-from-stream/load_from_stream/redacted-sample.pdf",
+    "preview": "Binary file (PDF, 1.2 MB)",
+    "function": "load_from_stream"
+  },
+  "developer-guide/advanced-usage/loading-documents/load-password-protected-file#code-example-load-password-protected-file": {
+    "type": "file",
+    "file": "protected_redacted.docx",
+    "path": "developer-guide/advanced-usage/loading-documents/load-password-protected-file/load_password_protected_file/protected_redacted.docx",
+    "preview": "Binary file (DOCX, 16 KB)",
+    "function": "load_password_protected_file"
+  },
+  "developer-guide/advanced-usage/loading-documents/pre-rasterize#code-example-pre-rasterize-document": {
+    "type": "file",
+    "file": "sample_redacted.pdf",
+    "path": "developer-guide/advanced-usage/loading-documents/pre-rasterize/pre_rasterize_document/sample_redacted.pdf",
+    "preview": "Binary file (PDF, 1024 KB)",
+    "function": "pre_rasterize_document"
+  },
+  "developer-guide/advanced-usage/saving-documents/save-in-original-format#code-example-save-in-original-format": {
+    "type": "file",
+    "file": "sample_2026-06-11 17-12-44.docx",
+    "path": "developer-guide/advanced-usage/saving-documents/save-in-original-format/save_in_original_format/sample_2026-06-11 17-12-44.docx",
+    "preview": "Binary file (DOCX, 16 KB)",
+    "function": "save_in_original_format"
+  },
+  "developer-guide/advanced-usage/saving-documents/save-in-rasterized-pdf#code-example-save-in-rasterized-pdf": {
+    "type": "file",
+    "file": "sample.pdf",
+    "path": "developer-guide/advanced-usage/saving-documents/save-in-rasterized-pdf/save_in_rasterized_pdf/sample.pdf",
+    "preview": "Binary file (PDF, 1024 KB)",
+    "function": "save_in_rasterized_pdf"
+  },
+  "developer-guide/advanced-usage/saving-documents/save-overwriting-original-file#code-example-save-overwriting-original-file": {
+    "type": "file",
+    "file": "sample.docx",
+    "path": "developer-guide/advanced-usage/saving-documents/save-overwriting-original-file/save_overwriting_original_file/sample.docx",
+    "preview": "Binary file (DOCX, 17 KB)",
+    "function": "save_overwriting_original_file"
+  },
+  "developer-guide/advanced-usage/saving-documents/save-to-stream#code-example-save-to-stream": {
+    "type": "file",
+    "file": "redacted-sample.pdf",
+    "path": "developer-guide/advanced-usage/saving-documents/save-to-stream/save_to_stream/redacted-sample.pdf",
+    "preview": "Binary file (PDF, 1024 KB)",
+    "function": "save_to_stream"
+  },
+  "developer-guide/advanced-usage/saving-documents/save-with-default-options#code-example-save-with-default-options": {
+    "type": "file",
+    "file": "sample_redacted.pdf",
+    "path": "developer-guide/advanced-usage/saving-documents/save-with-default-options/save_with_default_options/sample_redacted.pdf",
+    "preview": "Binary file (PDF, 1024 KB)",
+    "function": "save_with_default_options"
+  },
+  "developer-guide/advanced-usage/saving-documents/select-specific-pages-for-rasterized-pdf#code-example-select-specific-pages-for-rasterized-pdf": {
+    "type": "file",
+    "file": "multipage_sample.pdf",
+    "path": "developer-guide/advanced-usage/saving-documents/select-specific-pages-for-rasterized-pdf/select_specific_pages_for_rasterized_pdf/multipage_sample.pdf",
+    "preview": "Binary file (PDF, 10.8 MB)",
+    "function": "select_specific_pages_for_rasterized_pdf"
+  },
+  "developer-guide/advanced-usage/saving-documents/use-advanced-rasterization-options#code-example-use-advanced-rasterization-options": {
+    "type": "file",
+    "file": "sample.pdf",
+    "path": "developer-guide/advanced-usage/saving-documents/use-advanced-rasterization-options/use_advanced_rasterization_options/sample.pdf",
+    "preview": "Binary file (PDF, 1.0 MB)",
+    "function": "use_advanced_rasterization_options"
+  },
+  "developer-guide/advanced-usage/saving-documents/use-advanced-rasterization-options#code-example-use-grayscale-rasterization-option": {
+    "type": "file",
+    "file": "sample.pdf",
+    "path": "developer-guide/advanced-usage/saving-documents/use-advanced-rasterization-options/use_grayscale_rasterization_option/sample.pdf",
+    "preview": "Binary file (PDF, 979 KB)",
+    "function": "use_grayscale_rasterization_option"
+  },
+  "developer-guide/advanced-usage/use-redaction-policies#code-example-create-redaction-policy": {
+    "type": "file",
+    "file": "sample_policy.xml",
+    "path": "developer-guide/advanced-usage/use-redaction-policies/create_redaction_policy/sample_policy.xml",
+    "preview": "<?xml version=\"1.0\"?>\n<redactionPolicy>\n  <exactPhraseRedaction actionType=\"ReplaceString\" replacement=\"[Product]\" searchPhrase=\"Redaction\" />\n  <regexRedaction actionType=\"DrawBox\" color=\"#DC143C\" regularExpression=\"\\d{2}\\s*\\d{2}[^\\d]*\\d{6}\" />\n  <deleteAnnotationRedaction regularExpression=\"[.]*\" />\n  <eraseMetadataRedaction filter=\"All\" />\n</redactionPolicy>",
+    "function": "create_redaction_policy"
+  },
+  "developer-guide/advanced-usage/use-redaction-policies#code-example-use-redaction-policy": {
+    "type": "file",
+    "file": "sample_redacted.docx",
+    "path": "developer-guide/advanced-usage/use-redaction-policies/use_redaction_policy/sample_redacted.docx",
+    "preview": "Binary file (DOCX, 16 KB)",
+    "function": "use_redaction_policy"
+  },
+  "developer-guide/advanced-usage/using-redaction-filters/use-pdf-redaction-filters#code-example-use-pdf-redaction-filters": {
+    "type": "file",
+    "file": "multipage_sample_redacted.pdf",
+    "path": "developer-guide/advanced-usage/using-redaction-filters/use-pdf-redaction-filters/use_pdf_redaction_filters/multipage_sample_redacted.pdf",
+    "preview": "Binary file (PDF, 2.5 MB)",
+    "function": "use_pdf_redaction_filters"
+  },
+  "developer-guide/basic-usage/annotation-redactions#code-example-remove-all-annotations": {
+    "type": "file",
+    "file": "annotated_redacted.xlsx",
+    "path": "developer-guide/basic-usage/annotation-redactions/remove_all_annotations/annotated_redacted.xlsx",
+    "preview": "Binary file (XLSX, 12 KB)",
+    "function": "remove_all_annotations"
+  },
+  "developer-guide/basic-usage/annotation-redactions#code-example-redact-annotations": {
+    "type": "file",
+    "file": "annotated_redacted.xlsx",
+    "path": "developer-guide/basic-usage/annotation-redactions/redact_annotations/annotated_redacted.xlsx",
+    "preview": "Binary file (XLSX, 12 KB)",
+    "function": "redact_annotations"
+  },
+  "developer-guide/basic-usage/get-file-info#code-example-get-local-file-info": {
+    "type": "text",
+    "file": "get-local-file-info.txt",
+    "path": "developer-guide/basic-usage/get-file-info/get_local_file_info/get-local-file-info.txt",
+    "preview": "File type: Microsoft Word Open XML Document (.docx)\nNumber of pages: 1\nDocument size: 19370 bytes",
+    "function": "get_local_file_info"
+  },
+  "developer-guide/basic-usage/get-file-info#code-example-get-file-info-from-stream": {
+    "type": "text",
+    "file": "get-file-info-from-stream.txt",
+    "path": "developer-guide/basic-usage/get-file-info/get_file_info_from_stream/get-file-info-from-stream.txt",
+    "preview": "File type: Microsoft Word Open XML Document (.docx)\nNumber of pages: 1\nDocument size: 19370 bytes",
+    "function": "get_file_info_from_stream"
+  },
+  "developer-guide/basic-usage/get-supported-file-formats#code-example-list-supported-formats": {
+    "type": "text",
+    "file": "list-supported-formats.txt",
+    "path": "developer-guide/basic-usage/get-supported-file-formats/list_supported_formats/list-supported-formats.txt",
+    "preview": "Bitmap Image File (.bmp)\nComma Separated Values File (.csv)\nMicrosoft Word Document (.doc)\nWord Open XML Macro-Enabled Document (.docm)\nMicrosoft Word Open XML Document (.docx)\nWord Document Template (.dot)\nWord Open XML Macro-Enabled Document Template (.dotm)\nWord Open XML Document Template (.dotx)\nGraphical Interchange Format File (.gif)\nHypertext Markup Language File (.htm)\n[TRUNCATED]",
+    "function": "list_supported_formats"
+  },
+  "developer-guide/basic-usage/image-redactions#code-example-redact-image-area": {
+    "type": "file",
+    "file": "sample_redacted.pdf",
+    "path": "developer-guide/basic-usage/image-redactions/redact_image_area/sample_redacted.pdf",
+    "preview": "Binary file (PDF, 2.7 MB)",
+    "function": "redact_image_area"
+  },
+  "developer-guide/basic-usage/image-redactions#code-example-clean-image-metadata": {
+    "type": "file",
+    "file": "sample_redacted.jpg",
+    "path": "developer-guide/basic-usage/image-redactions/clean_image_metadata/sample_redacted.jpg",
+    "preview": "Binary file (JPG, 3.1 MB)",
+    "function": "clean_image_metadata"
+  },
+  "developer-guide/basic-usage/image-redactions#code-example-redact-embedded-images": {
+    "type": "file",
+    "file": "sample_redacted.pdf",
+    "path": "developer-guide/basic-usage/image-redactions/redact_embedded_images/sample_redacted.pdf",
+    "preview": "Binary file (PDF, 1022 KB)",
+    "function": "redact_embedded_images"
+  },
+  "developer-guide/basic-usage/metadata-redactions#code-example-clean-all-metadata": {
+    "type": "file",
+    "file": "sample_redacted.docx",
+    "path": "developer-guide/basic-usage/metadata-redactions/clean_all_metadata/sample_redacted.docx",
+    "preview": "Binary file (DOCX, 16 KB)",
+    "function": "clean_all_metadata"
+  },
+  "developer-guide/basic-usage/metadata-redactions#code-example-redact-metadata": {
+    "type": "file",
+    "file": "sample_redacted.docx",
+    "path": "developer-guide/basic-usage/metadata-redactions/redact_metadata/sample_redacted.docx",
+    "preview": "Binary file (DOCX, 16 KB)",
+    "function": "redact_metadata"
+  },
+  "developer-guide/basic-usage/metadata-redactions#code-example-redact-metadata-with-filter": {
+    "type": "file",
+    "file": "sample_redacted.docx",
+    "path": "developer-guide/basic-usage/metadata-redactions/redact_metadata_with_filter/sample_redacted.docx",
+    "preview": "Binary file (DOCX, 16 KB)",
+    "function": "redact_metadata_with_filter"
+  },
+  "developer-guide/basic-usage/redaction-basics#code-example-apply-redaction": {
+    "type": "file",
+    "file": "sample_redacted.docx",
+    "path": "developer-guide/basic-usage/redaction-basics/apply_redaction/sample_redacted.docx",
+    "preview": "Binary file (DOCX, 16 KB)",
+    "function": "apply_redaction"
+  },
+  "developer-guide/basic-usage/redaction-basics#code-example-apply-multiple-redactions": {
+    "type": "file",
+    "file": "sample_redacted.pdf",
+    "path": "developer-guide/basic-usage/redaction-basics/apply_multiple_redactions/sample_redacted.pdf",
+    "preview": "Binary file (PDF, 1.2 MB)",
+    "function": "apply_multiple_redactions"
+  },
+  "developer-guide/basic-usage/remove-page-redactions#code-example-remove-last-page": {
+    "type": "file",
+    "file": "multipage_sample_redacted.pdf",
+    "path": "developer-guide/basic-usage/remove-page-redactions/remove_last_page/multipage_sample_redacted.pdf",
+    "preview": "Binary file (PDF, 190 KB)",
+    "function": "remove_last_page"
+  },
+  "developer-guide/basic-usage/remove-page-redactions#code-example-remove-frame-from-image": {
+    "type": "file",
+    "file": "sample_redacted.gif",
+    "path": "developer-guide/basic-usage/remove-page-redactions/remove_frame_from_image/sample_redacted.gif",
+    "preview": "Binary file (GIF, 704 KB)",
+    "function": "remove_frame_from_image"
+  },
+  "developer-guide/basic-usage/spreadsheet-redactions#code-example-redact-spreadsheet-content": {
+    "type": "file",
+    "file": "sample_redacted.xlsx",
+    "path": "developer-guide/basic-usage/spreadsheet-redactions/redact_spreadsheet_content/sample_redacted.xlsx",
+    "preview": "Binary file (XLSX, 15 KB)",
+    "function": "redact_spreadsheet_content"
+  },
+  "developer-guide/basic-usage/text-redactions#code-example-redact-exact-phrase": {
+    "type": "file",
+    "file": "sample_redacted.docx",
+    "path": "developer-guide/basic-usage/text-redactions/redact_exact_phrase/sample_redacted.docx",
+    "preview": "Binary file (DOCX, 16 KB)",
+    "function": "redact_exact_phrase"
+  },
+  "developer-guide/basic-usage/text-redactions#code-example-redact-case-sensitive-phrase": {
+    "type": "file",
+    "file": "sample_redacted.docx",
+    "path": "developer-guide/basic-usage/text-redactions/redact_case_sensitive_phrase/sample_redacted.docx",
+    "preview": "Binary file (DOCX, 16 KB)",
+    "function": "redact_case_sensitive_phrase"
+  },
+  "developer-guide/basic-usage/text-redactions#code-example-redact-with-color-box": {
+    "type": "file",
+    "file": "sample_redacted.docx",
+    "path": "developer-guide/basic-usage/text-redactions/redact_with_color_box/sample_redacted.docx",
+    "preview": "Binary file (DOCX, 17 KB)",
+    "function": "redact_with_color_box"
+  },
+  "developer-guide/basic-usage/text-redactions#code-example-redact-right-to-left-text": {
+    "type": "file",
+    "file": "arabic_redacted.pdf",
+    "path": "developer-guide/basic-usage/text-redactions/redact_right_to_left_text/arabic_redacted.pdf",
+    "preview": "Binary file (PDF, 23 KB)",
+    "function": "redact_right_to_left_text"
+  },
+  "developer-guide/basic-usage/text-redactions#code-example-redact-with-regex": {
+    "type": "file",
+    "file": "sample_redacted.docx",
+    "path": "developer-guide/basic-usage/text-redactions/redact_with_regex/sample_redacted.docx",
+    "preview": "Binary file (DOCX, 16 KB)",
+    "function": "redact_with_regex"
+  },
+  "developer-guide/basic-usage/text-redactions#code-example-redact-whole-paragraph": {
+    "type": "file",
+    "file": "sample_redacted.pdf",
+    "path": "developer-guide/basic-usage/text-redactions/redact_whole_paragraph/sample_redacted.pdf",
+    "preview": "Binary file (PDF, 68 KB)",
+    "function": "redact_whole_paragraph"
+  },
+  "getting-started/hello-world#code-example-hello-world": {
+    "type": "file",
+    "file": "sample_redacted.pdf",
+    "path": "getting-started/hello-world/hello_world/sample_redacted.pdf",
+    "preview": "Binary file (PDF, 1.0 MB)",
+    "function": "hello_world"
+  }
+}

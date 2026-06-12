@@ -7,6 +7,7 @@ description: This article shows that how to remove pages with sensitive data fro
 keywords: remove page,PDF,Excel,PowerPoint,spreadsheet,presentation
 productName: GroupDocs.Redaction for Python via .NET
 hideChildren: False
+toc: True
 ---
 
 GroupDocs.Redaction allows to easily to remove pages from PDF documents, slides from presentations and worksheets from spreadsheet documents. 
@@ -17,32 +18,46 @@ With GroupDocs.Redaction API you can remove pages by specifying the page range b
 
 In the example below, we remove 2nd, 3rd and 4th pages from the document, if the document has enough pages:
 
-**Python**
-
+{{< tabs "code-example-remove-page-range" >}}
+{{< tab "remove_page_range.py" >}}
 ```python
-import groupdocs.redaction as gr
-import groupdocs.redaction.redactions as grr
+from groupdocs.redaction import Redactor
+from groupdocs.redaction.options import SaveOptions
+from groupdocs.redaction.redactions import RemovePageRedaction, PageSeekOrigin
 
-def run():
-    
+
+def remove_page_range():
     # Load the document to be redacted
-    with gr.Redactor("source.pdf") as redactor:
-        
+    with Redactor("./multipage_sample.pdf") as redactor:
         # Get document info
         doc_info = redactor.get_document_info()
 
         # Requires at least 4 pages
         if doc_info.page_count > 3:
+            # Remove 3 pages starting from the 2nd one (zero-based index 1)
+            rem_opt = RemovePageRedaction(PageSeekOrigin.BEGIN, 1, 3)
 
-            # Remove 3 pages starting from 2nd one, requires at least 4 pages
-            rem_opt = grr.RemovePageRedaction(grr.PageSeekOrigin.BEGIN, 1, 3)
-    
             # Apply the redaction
-                result = redactor.apply(rem_opt)
-        
-                # Save the redacted document
-                 redactor.save()
+            result = redactor.apply(rem_opt)
+
+            # Save the redacted document next to the source file
+            so = SaveOptions()
+            so.add_suffix = True
+            so.rasterize_to_pdf = False
+            so.redacted_file_suffix = "redacted"
+            redactor.save(so)
+
+
+if __name__ == "__main__":
+    remove_page_range()
 ```
+{{< /tab >}}
+{{< tab "multipage_sample.pdf" >}}
+{{< tab-text >}}
+`multipage_sample.pdf` is the sample file used in this example. Click [here](/redaction/python-net/_sample_files/developer-guide/basic-usage/remove-page-redactions/multipage_sample.pdf) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< /tabs >}}
 
 ## Remove last page
 
@@ -50,31 +65,52 @@ In some cases you might need to delete the last page or a number of pages, no ma
 
 The following example demonstrates how to remove the last page from a document:
 
-**Python**
-
+{{< tabs "code-example-remove-last-page" >}}
+{{< tab "remove_last_page.py" >}}
 ```python
-import groupdocs.redaction as gr
-import groupdocs.redaction.redactions as grr
+from groupdocs.redaction import Redactor
+from groupdocs.redaction.options import SaveOptions
+from groupdocs.redaction.redactions import RemovePageRedaction, PageSeekOrigin
 
-def run():
-    
+
+def remove_last_page():
+    # Remove 1 page counting from the end of the document
+    rem_opt = RemovePageRedaction(PageSeekOrigin.END, 0, 1)
+
     # Load the document to be redacted
-    with gr.Redactor("source.pdf") as redactor:
-        
+    with Redactor("./multipage_sample.pdf") as redactor:
         # Get document info
         doc_info = redactor.get_document_info()
 
-        # Requires at least 1 page
-        if doc_info.page_count > 0:
-
-            rem_opt = grr.RemovePageRedaction(grr.PageSeekOrigin.END, 0, 1)
-    
+        # Requires at least 2 pages so the document is not left empty
+        if doc_info.page_count > 1:
             # Apply the redaction
-                result = redactor.apply(rem_opt)
-        
-                # Save the redacted document
-                 redactor.save()
+            result = redactor.apply(rem_opt)
+
+            # Save the redacted document next to the source file
+            so = SaveOptions()
+            so.add_suffix = True
+            so.rasterize_to_pdf = False
+            so.redacted_file_suffix = "redacted"
+            redactor.save(so)
+
+
+if __name__ == "__main__":
+    remove_last_page()
 ```
+{{< /tab >}}
+{{< tab "multipage_sample.pdf" >}}
+{{< tab-text >}}
+`multipage_sample.pdf` is the sample file used in this example. Click [here](/redaction/python-net/_sample_files/developer-guide/basic-usage/remove-page-redactions/multipage_sample.pdf) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "multipage_sample_redacted.pdf" >}}  
+```text
+Binary file (PDF, 190 KB)
+```
+[Download full output](/redaction/python-net/_output_files/developer-guide/basic-usage/remove-page-redactions/remove_last_page/multipage_sample_redacted.pdf)
+{{< /tab >}}
+{{< /tabs >}}
 
 ## Remove frame from image
 
@@ -82,52 +118,49 @@ In case of a multi-frame image you might need to delete a number of frames (trea
 
 The following example demonstrates how to remove 3 frames from an animated GIF image:
 
-**Python**
-
+{{< tabs "code-example-remove-frame-from-image" >}}
+{{< tab "remove_frame_from_image.py" >}}
 ```python
-import groupdocs.redaction as gr
-import groupdocs.redaction.options as gro
-import groupdocs.redaction.redactions as grr
+from groupdocs.redaction import Redactor
+from groupdocs.redaction.options import SaveOptions
+from groupdocs.redaction.redactions import RemovePageRedaction, PageSeekOrigin
 
-def run():
 
-    # Specify the redaction options
-    rem_opt = grr.RemovePageRedaction(grr.PageSeekOrigin.BEGIN, 2, 5)
+def remove_frame_from_image():
+    # Remove frames starting from the 3rd one (zero-based index 2)
+    rem_opt = RemovePageRedaction(PageSeekOrigin.BEGIN, 2, 5)
 
-    # Load the document to be redacted
-    with gr.Redactor("sample.gif") as redactor:
-
-        # Remove 3 frames starting from 3nd one, requires at least 7 frames
+    # Load the multi-frame image to be redacted
+    with Redactor("./sample.gif") as redactor:
+        # Get document info
         doc_info = redactor.get_document_info()
 
+        # Requires at least 7 frames
         if doc_info.page_count >= 7:
             # Apply the redaction
             result = redactor.apply(rem_opt)
-        
-            # Save the redacted document
-            so = gro.SaveOptions()
+
+            # Save the redacted image next to the source file
+            so = SaveOptions()
             so.add_suffix = True
             so.rasterize_to_pdf = False
-            result_path = redactor.save(so)
+            so.redacted_file_suffix = "redacted"
+            redactor.save(so)
+
+
+if __name__ == "__main__":
+    remove_frame_from_image()
 ```
-
-## More resources
-
-### Advanced usage topics
-
-To learn more about document redaction features, please refer to the [advanced usage section]({{< ref "redaction/python-net/developer-guide/advanced-usage/_index.md" >}}).
-
-### GitHub examples
-
-You may easily run the code above and see the feature in action in our GitHub examples:
-
-*   [GroupDocs.Redaction for Python via .NET examples](https://github.com/groupdocs-redaction/GroupDocs.Redaction-for-Python-via-.NET)
-*   [GroupDocs.Redaction for .NET examples](https://github.com/groupdocs-redaction/GroupDocs.Redaction-for-.NET)
-*   [GroupDocs.Redaction for Java examples](https://github.com/groupdocs-redaction/GroupDocs.Redaction-for-Java)
-    
-
-### Free online document redaction App
-
-Along with full featured .NET library we provide simple, but powerful free Apps.
-
-You are welcome to perform redactions for various document formats like PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX, Emails and more with our free online [Free Online Document Redaction App](https://products.groupdocs.app/redaction).
+{{< /tab >}}
+{{< tab "sample.gif" >}}
+{{< tab-text >}}
+`sample.gif` is the sample file used in this example. Click [here](/redaction/python-net/_sample_files/developer-guide/basic-usage/remove-page-redactions/sample.gif) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "sample_redacted.gif" >}}  
+```text
+Binary file (GIF, 704 KB)
+```
+[Download full output](/redaction/python-net/_output_files/developer-guide/basic-usage/remove-page-redactions/remove_frame_from_image/sample_redacted.gif)
+{{< /tab >}}
+{{< /tabs >}}

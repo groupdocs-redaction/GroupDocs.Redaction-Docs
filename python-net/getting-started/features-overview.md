@@ -2,72 +2,49 @@
 id: features-overview
 url: redaction/python-net/features-overview
 title: Features Overview
+linkTitle: Features Overview
 weight: 1
-description: Redacted meaning is that a process of modifying or editing a document to remove the confidential information before publishing it. With GroupDocs.Redaction tool you can redact PDF and save redacted document, redact sensitive and classified information from MS Word (DOC, DOCX and more..), Excel (XLS, XLSX and more..), PowerPoint(PPT, PPTX and more) documents and images (JPG, PNG, BMP, GIF and more..).
-keywords: redacted meaning, redact pdf, doc, docx, xls, xlsx, ppt, pptx, jpg, png, gif,bmp
+description: "GroupDocs.Redaction for Python via .NET removes sensitive information from documents through a single, format-independent API — text, metadata, image areas, annotations, and whole pages — and saves the result in the original format or as a sanitized PDF."
+keywords: redact pdf, redact word, metadata redaction, image redaction, annotation redaction, remove page, rasterize pdf, redaction policy, python
 productName: GroupDocs.Redaction for Python via .NET
 hideChildren: False
+toc: True
 ---
-## Document Redaction Tool
 
-Redacted meaning is that a process of modifying or editing a document to remove the confidential information before publishing it. GroupDocs.Redaction is a quality redaction software, providing a single format-independent interface for redacting sensitive and classified information from the PDF, Word, Excel, PowerPoint documents and images, including the ability to change metadata and remove comments. With GroupDocs.Redaction tool you can redact PDF and save redacted document, transforming all pages into raster images or keep the document in its original format for further editing.
+GroupDocs.Redaction for Python via .NET removes or permanently obscures sensitive information across a wide range of [supported document formats]({{< ref "redaction/python-net/getting-started/supported-document-formats.md" >}}). Every redaction follows the same workflow: open a document with `Redactor`, apply one or more redactions with `apply()`, then `save()` the cleaned result either in its original format or as a sanitized PDF. The capabilities below can be combined freely in a single pass.
 
-Choosing the most appropriate redaction mode depends on your reasons to sanitize the classified information from the document. Let’s review in detail what are the differences between rasterization and saving in original format and how to choose the most suitable for your case.  
+## Text redaction
 
-#### Rasterization
+Find and replace text by an exact phrase or by a regular expression, covering both whole words and complex patterns such as e-mail addresses, phone numbers, or national ID numbers. Matched text can be replaced with substitute text or covered by a colored box so the original content cannot be recovered. In spreadsheets you can narrow the search to a single worksheet or column. See [Text Redactions]({{< ref "redaction/python-net/developer-guide/basic-usage/text-redactions.md" >}}).
 
-You can black out parts of PDF or other supported document type with our redaction toolkit and create a new PDF file with raster images of redacted document's pages. The sanitized document contains no searchable text, no metadata from the original document. At the same time, annotations (comments, badges,etc.) remain visible - but not clickable. You can use DeleteAnnotationRedaction to delete all comments in the document.
+## Metadata redaction
 
-Rasterization is the best option to choose if:  
+Erase or rewrite document metadata — author, title, company, comments, and EXIF data on images — so no sensitive details leak through document properties. You can clear all metadata, target specific fields, or replace values with new ones. See [Metadata Redactions]({{< ref "redaction/python-net/developer-guide/basic-usage/metadata-redactions.md" >}}).
 
-*   you have to conform regulations of authorities, requesting PDF as a format;
-    
-*   you have a PDF file as an original format;  
-    
-*   you need to pass the document to third parties;
+## Image-area redaction
 
-*   you need this document to be opened on different platforms.  
-    
+Black out a rectangular region of an embedded image or a scanned page by drawing a filled box over a given area — useful for hiding signatures, photos, headers, or footers where confidential data is expected to appear. See [Image Redactions]({{< ref "redaction/python-net/developer-guide/basic-usage/image-redactions.md" >}}).
 
-For all these cases rasterization is the right option.
+## Annotation redaction
 
-#### Keeping Original Format
+Rewrite or delete annotations, comments, and notes. You can remove every annotation or use a regular expression to match only the ones that contain sensitive text. See [Annotation Redactions]({{< ref "redaction/python-net/developer-guide/basic-usage/annotation-redactions.md" >}}).
 
-GroupDocs.Redaction toolkit can save the document in its original format after the redactions were applied.
+## Page removal
 
-Keeping original format is the best option to choose if:  
+Remove whole pages from PDF documents, slides from presentations, and worksheets from spreadsheets. You specify a starting page and a count, together with the direction relative to the starting point. See [Remove Page Redactions]({{< ref "redaction/python-net/developer-guide/basic-usage/remove-page-redactions.md" >}}).
 
-*   you need to continue working and editing this document in its original application bring sure that all sensitive data were removed;
-    
-*   you have to pass this document to someone else in your company for editing, but without sensitive data;
-    
-*   you need to pass the document to third parties, like contractors, but hide your sensitive information.  
-    
+## Rasterization to PDF
 
-#### Spreadsheet Redactions
+Save the cleaned document as a PDF whose pages are rendered as raster images. The resulting file contains no searchable text and none of the original metadata, so the removed content cannot be recovered. Rasterization is the right choice when you must hand a document to third parties or conform to regulations that require PDF. You can select specific pages and request PDF/A compliance through the advanced rasterization options. See [Save in Rasterized PDF]({{< ref "redaction/python-net/developer-guide/advanced-usage/saving-documents/save-in-rasterized-pdf.md" >}}) and [Advanced Rasterization Options]({{< ref "redaction/python-net/developer-guide/advanced-usage/saving-documents/use-advanced-rasterization-options.md" >}}).
 
-A special case of keeping original format is redacting spreadsheets with data. With GroupDocs.Redaction you can set the scope of a single worksheet or even a column on it to limit textual redactions only to this scope. In this case a regular expression will be matched only in a given scope, not the entire document.
+## Redaction policies
 
-#### Metadata Redactions
+Group several redactions into a reusable policy and apply the same set of rules consistently across many documents — ideal for recurring tasks such as scrubbing a standard set of fields before publishing. See [Use Redaction Policies]({{< ref "redaction/python-net/developer-guide/advanced-usage/use-redaction-policies.md" >}}).
 
-Saving the document in an original format requires deleting or redacting its metadata to remove all sensitive information. For these purposes GroupDocs.Redaction provides metadata redactions.
+## Loading and saving
 
-#### Annotation Redactions
+Load documents from a local path or from a stream, including password-protected files, and optionally pre-rasterize a document before redacting. When saving, keep the original format for further editing, overwrite the original file, rasterize to PDF, or write to a stream. See [Loading Documents]({{< ref "redaction/python-net/developer-guide/advanced-usage/loading-documents/_index.md" >}}) and [Saving Documents]({{< ref "redaction/python-net/developer-guide/advanced-usage/saving-documents/_index.md" >}}).
 
-Annotation redactions allow you to remove specific or any annotations (comments, badges, etc.) from the document. You can use regular expressions to match annotations you need to redact out.
+## On-premise
 
-#### Remove Page Redactions
-
-Remove Page redactions allow you to remove pages from PDF documents, slides from presentations and worksheets from spreadsheet documents. You can specify the page range and its relative position to remove.
-
-## Image Redactions
-
-With GroupDocs.Redaction OCR support, you can extract a text from an image, search it for data and redact sensitive data within the image. As an alternative, you can put a colored box over a given area, such as header, footer, or an area, where customer's data are expected to appear. Also you can use it to edit exif data or use it as an exif eraser.
-
-You can use GroupDocs.Redaction to redact all kinds of embedded images within a document:
-
-*   Redact each page of a PDF file, created from paper page scans;
-
-*   Create a rasterized PDF file, and edit its pages as images;
-
-*   Redact all images within a PDF, Microsoft Office or Open Office document.
+GroupDocs.Redaction for Python via .NET runs entirely on your own infrastructure — your documents never leave your environment. The package is a self-contained wheel that bundles everything it needs, so no Microsoft Office, OpenOffice, Adobe Acrobat, or separate runtime has to be installed. See [System Requirements]({{< ref "redaction/python-net/getting-started/system-requirements.md" >}}) for the supported platforms and native dependencies.
