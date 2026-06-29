@@ -23,12 +23,17 @@ In order to redact image area, you have to use [ImageAreaRedaction](https://refe
 **C#**
 
 ```csharp
+using GroupDocs.Redaction.Options.Drawing;
+
 using (Redactor redactor = new Redactor("D:\\test.jpg"))
 {
-   System.Drawing.Point samplePoint = new System.Drawing.Point(516, 311);
-   System.Drawing.Size sampleSize = new System.Drawing.Size(170, 35);
+   //System.Drawing.Point samplePoint = new System.Drawing.Point(516, 311);
+   //System.Drawing.Size sampleSize = new System.Drawing.Size(170, 35);
+   // Use GroupDocs.Redaction.Options.Drawing types instead of System.Drawing, which is scheduled for removal in future versions.
+   Point samplePoint = new Point(516, 311);
+   Size sampleSize = new Size(170, 35);
    RedactorChangeLog result = redactor.Apply(new ImageAreaRedaction(samplePoint,
-                new RegionReplacementOptions(System.Drawing.Color.Blue, sampleSize)));
+                new RegionReplacementOptions(Color.Blue, sampleSize)));
    if (result.Status != RedactionStatus.Failed)
    {
       redactor.Save();
@@ -45,9 +50,12 @@ To enable OCR-processing and search for a text using regular expressions, you ha
 **C#**
 
 ```csharp
+using GroupDocs.Redaction.Options.Drawing;
+
 using (Redactor redactor = new Redactor("D:\\test.jpg", new LoadOptions(), new RedactorSettings(new MyCustomOcrConnector())))
 {
-   RedactorChangeLog result = redactor.Apply(new RegexRedaction("\\d{4}", new ReplacementOptions(System.Drawing.Color.Blue)));
+   //RedactorChangeLog result = redactor.Apply(new RegexRedaction("\\d{4}", new ReplacementOptions(System.Drawing.Color.Blue)));
+   RedactorChangeLog result = redactor.Apply(new RegexRedaction("\\d{4}", new ReplacementOptions(Color.Blue)));
    if (result.Status != RedactionStatus.Failed)
    {
       redactor.Save();
@@ -83,12 +91,18 @@ The following example demonstrates how to redact all embedded images within a Mi
 **C#**
 
 ```csharp
+using GroupDocs.Redaction.Options.Drawing;
+
 using (Redactor redactor = new Redactor("D:\\sample.docx"))
 {
-   System.Drawing.Point samplePoint = new System.Drawing.Point(516, 311);
-   System.Drawing.Size sampleSize = new System.Drawing.Size(170, 35);
+   //System.Drawing.Point samplePoint = new System.Drawing.Point(516, 311);
+   //System.Drawing.Size sampleSize = new System.Drawing.Size(170, 35);
+   Point samplePoint = new Point(516, 311);
+   Size sampleSize = new Size(170, 35);
+   //RedactorChangeLog result = redactor.Apply(new ImageAreaRedaction(samplePoint,
+   //             new RegionReplacementOptions(System.Drawing.Color.Blue, sampleSize)));
    RedactorChangeLog result = redactor.Apply(new ImageAreaRedaction(samplePoint,
-                new RegionReplacementOptions(System.Drawing.Color.Blue, sampleSize)));
+                new RegionReplacementOptions(Color.Blue, sampleSize)));
    if (result.Status != RedactionStatus.Failed)
    {
       redactor.Save();

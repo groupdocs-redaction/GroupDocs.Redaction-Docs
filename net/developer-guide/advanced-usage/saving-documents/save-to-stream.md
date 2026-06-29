@@ -18,7 +18,9 @@ The following example demonstrates how to save a document to any location.
 using (Redactor redactor = new Redactor(@"sample.docx"))
 {
     // Here we can use document instance to perform redactions
-    RedactorChangeLog result = redactor.Apply(new ExactPhraseRedaction("John Doe", new ReplacementOptions(System.Drawing.Color.Red)));
+    //RedactorChangeLog result = redactor.Apply(new ExactPhraseRedaction("John Doe", new ReplacementOptions(System.Drawing.Color.Red)));
+    // Use GroupDocs.Redaction.Options.Drawing types instead of System.Drawing, which is scheduled for removal in future versions.
+    RedactorChangeLog result = redactor.Apply(new ExactPhraseRedaction("John Doe", new ReplacementOptions(GroupDocs.Redaction.Options.Drawing.Color.Red)));
     if (result.Status != RedactionStatus.Failed)
     {
         // Save the document to a custom location and convert its pages to images

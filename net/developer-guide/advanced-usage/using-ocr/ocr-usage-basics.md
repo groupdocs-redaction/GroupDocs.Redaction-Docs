@@ -36,9 +36,13 @@ Once the instance is passed to [RedactorSettings](https://reference.groupdocs.co
 **C#**
 
 ```csharp
+using GroupDocs.Redaction.Options.Drawing;
+
 using (Redactor redactor = new Redactor("\\Sample.docx", new LoadOptions(), new RedactorSettings(new MyOwnOcrConnector())))
 {
     // Assign an instance before using Redactor
+    // Use GroupDocs.Redaction.Options.Drawing types instead of System.Drawing, which is scheduled for removal in future versions.
+    //redactor.Apply(new ExactPhraseRedaction("John Doe", new ReplacementOptions(System.Drawing.Color.Black)));
     redactor.Apply(new ExactPhraseRedaction("John Doe", new ReplacementOptions(Color.Black)));
     redactor.Save();
 }

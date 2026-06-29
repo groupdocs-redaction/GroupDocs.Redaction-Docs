@@ -43,9 +43,13 @@ If you need a color box over the redacted text, you can use color instead of rep
 **C#**
 
 ```csharp
+using GroupDocs.Redaction.Options.Drawing;
+
 using (Redactor redactor = new Redactor(@"sample.docx"))
 {
-  redactor.Apply(new ExactPhraseRedaction("John Doe", new ReplacementOptions(System.Drawing.Color.Black)));
+  //redactor.Apply(new ExactPhraseRedaction("John Doe", new ReplacementOptions(System.Drawing.Color.Black)));
+  // Use GroupDocs.Redaction.Options.Drawing types instead of System.Drawing, which is scheduled for removal in future versions.
+  redactor.Apply(new ExactPhraseRedaction("John Doe", new ReplacementOptions(Color.Black)));
   redactor.Save();
 }
 ```
@@ -72,9 +76,12 @@ Behind the scenes, "exact phrase" redaction works though regular expressions, wh
 **C#**
 
 ```csharp
+using GroupDocs.Redaction.Options.Drawing;
+
 using (Redactor redactor = new Redactor(@"sample.docx"))
 {
-  redactor.Apply(new RegexRedaction("\\d{2}\\s*\\d{2}[^\\d]*\\d{6}", new ReplacementOptions(System.Drawing.Color.Blue)));
+  //redactor.Apply(new RegexRedaction("\\d{2}\\s*\\d{2}[^\\d]*\\d{6}", new ReplacementOptions(System.Drawing.Color.Blue)));
+  redactor.Apply(new RegexRedaction("\\d{2}\\s*\\d{2}[^\\d]*\\d{6}", new ReplacementOptions(Color.Blue)));
   redactor.Save();
 }
 ```
@@ -84,9 +91,12 @@ If you need to apply redact a whole paragraph, you might also need to use RegexR
 **C#**
 
 ```csharp
+using GroupDocs.Redaction.Options.Drawing;
+
 using (Redactor redactor = new Redactor("LoremIpsum.pdf"))
 {
-    redactor.Apply(new RegexRedaction("(Lorem(\n|.)+?urna)", new ReplacementOptions(System.Drawing.Color.Red)));
+    //redactor.Apply(new RegexRedaction("(Lorem(\n|.)+?urna)", new ReplacementOptions(System.Drawing.Color.Red)));
+    redactor.Apply(new RegexRedaction("(Lorem(\n|.)+?urna)", new ReplacementOptions(Color.Red)));
     redactor.Save();
 }
 ```

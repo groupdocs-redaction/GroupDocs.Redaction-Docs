@@ -79,7 +79,9 @@ metered.SetMeteredKey(publicKey, privateKey);
 // Apply redaction to a document
 using (Redactor redactor = new Redactor("D:\\test.docx"))
 {
-   RedactorChangeLog result = redactor.Apply(new ExactPhraseRedaction("John Doe", new ReplacementOptions(System.Drawing.Color.Red)));
+   //RedactorChangeLog result = redactor.Apply(new ExactPhraseRedaction("John Doe", new ReplacementOptions(System.Drawing.Color.Red)));
+   // Use GroupDocs.Redaction.Options.Drawing types instead of System.Drawing, which is scheduled for removal in future versions.
+   RedactorChangeLog result = redactor.Apply(new ExactPhraseRedaction("John Doe", new ReplacementOptions(GroupDocs.Redaction.Options.Drawing.Color.Red)));
    if (result.Status != RedactionStatus.Failed)
    {
       redactor.Save();

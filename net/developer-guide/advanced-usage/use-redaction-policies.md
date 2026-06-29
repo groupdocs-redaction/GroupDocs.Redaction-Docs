@@ -42,7 +42,9 @@ The following example demonstrates how to save a [RedactionPolicy](https://refer
 ```csharp
 RedactionPolicy policy = new RedactionPolicy(new Redaction[] {
     new ExactPhraseRedaction("Redaction", new ReplacementOptions("[Product]")),
-    new RegexRedaction("\\d{2}\\s*\\d{2}[^\\d]*\\d{6}", new ReplacementOptions(System.Drawing.Color.Blue)),
+    //new RegexRedaction("\\d{2}\\s*\\d{2}[^\\d]*\\d{6}", new ReplacementOptions(System.Drawing.Color.Blue)),
+    // Use GroupDocs.Redaction.Options.Drawing types instead of System.Drawing, which is scheduled for removal in future versions.    
+    new RegexRedaction("\\d{2}\\s*\\d{2}[^\\d]*\\d{6}", new ReplacementOptions(GroupDocs.Redaction.Options.Drawing.Color.Blue)),
     new DeleteAnnotationRedaction(),
     new EraseMetadataRedaction(MetadataFilters.All)
 });
