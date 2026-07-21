@@ -24,6 +24,14 @@ The following table indicates the file formats, supported by GroupDocs.Redaction
 .gdoc-markdown table.formats-table tbody tr.format-section td {
   background: var(--table-header-bg-color) !important;
   font-weight: 600;
+  text-align: center;
+  border-bottom-color: rgb(206, 211, 216);
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+}
+.gdoc-markdown table.formats-table tbody tr.format-headers th {
+  background: var(--table-header-bg-color) !important;
+  font-weight: 600;
 }
 .gdoc-markdown table.formats-table tbody tr.format-desc td {
   font-size: 0.8125rem;
@@ -175,6 +183,16 @@ The following table indicates the file formats, supported by GroupDocs.Redaction
 <tr class="format-desc"><td colspan="8">OpenDocument Text Template</td></tr>
 
 <tr class="format-section"><td colspan="8">📑 Spreadsheets</td></tr>
+<tr class="format-headers">
+  <th>Format</th>
+  <th>Document body</th>
+  <th>Metadata</th>
+  <th>Annotations (comments)</th>
+  <th>Embedded images</th>
+  <th>OCR</th>
+  <th>Remove Page</th>
+  <th>Page Filters</th>
+</tr>
 
 <tr class="format-main format-shaded">
   <td><a href="https://docs.fileformat.com/spreadsheet/xlsx/">XLSX</a></td>
@@ -309,6 +327,16 @@ The following table indicates the file formats, supported by GroupDocs.Redaction
 <tr class="format-desc format-shaded"><td colspan="8">Tab Separated Values file</td></tr>
 
 <tr class="format-section"><td colspan="8">📊 Presentations</td></tr>
+<tr class="format-headers">
+  <th>Format</th>
+  <th>Document body</th>
+  <th>Metadata</th>
+  <th>Annotations (comments)</th>
+  <th>Embedded images</th>
+  <th>OCR</th>
+  <th>Remove Page</th>
+  <th>Page Filters</th>
+</tr>
 
 <tr class="format-main">
   <td><a href="https://docs.fileformat.com/presentation/pptx/">PPTX</a></td>
@@ -431,6 +459,16 @@ The following table indicates the file formats, supported by GroupDocs.Redaction
 <tr class="format-desc format-shaded"><td colspan="8">OpenDocument Presentation Template</td></tr>
 
 <tr class="format-section"><td colspan="8">🖼️ Images</td></tr>
+<tr class="format-headers">
+  <th>Format</th>
+  <th>Document body</th>
+  <th>Metadata</th>
+  <th>Annotations (comments)</th>
+  <th>Embedded images</th>
+  <th>OCR</th>
+  <th>Remove Page</th>
+  <th>Page Filters</th>
+</tr>
 
 <tr class="format-main">
   <td><a href="https://docs.fileformat.com/image/jpeg/">JPEG</a></td>
