@@ -182,8 +182,8 @@ The following table indicates the file formats, supported by GroupDocs.Redaction
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td>&nbsp;</td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td>&nbsp;</td>
+  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td>&nbsp;</td>
 </tr>
 <tr class="format-desc format-shaded"><td colspan="8">OOXML 2007-2010</td></tr>
@@ -194,8 +194,8 @@ The following table indicates the file formats, supported by GroupDocs.Redaction
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td>&nbsp;</td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td>&nbsp;</td>
+  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td>&nbsp;</td>
 </tr>
 <tr class="format-desc"><td colspan="8">OOXML Macro Enabled Workbook</td></tr>
@@ -206,8 +206,8 @@ The following table indicates the file formats, supported by GroupDocs.Redaction
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td>&nbsp;</td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td>&nbsp;</td>
+  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td>&nbsp;</td>
 </tr>
 <tr class="format-desc format-shaded"><td colspan="8">OOXML Workbook Template</td></tr>
@@ -218,8 +218,8 @@ The following table indicates the file formats, supported by GroupDocs.Redaction
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td>&nbsp;</td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td>&nbsp;</td>
+  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td>&nbsp;</td>
 </tr>
 <tr class="format-desc"><td colspan="8">OOXML Macro Enabled Workbook Template</td></tr>
@@ -230,8 +230,8 @@ The following table indicates the file formats, supported by GroupDocs.Redaction
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td>&nbsp;</td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td>&nbsp;</td>
+  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td>&nbsp;</td>
 </tr>
 <tr class="format-desc format-shaded"><td colspan="8">Excel Workbook 97-2003</td></tr>
@@ -242,8 +242,8 @@ The following table indicates the file formats, supported by GroupDocs.Redaction
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td>&nbsp;</td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td>&nbsp;</td>
+  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td>&nbsp;</td>
 </tr>
 <tr class="format-desc"><td colspan="8">Excel Workbook Template 97-2003</td></tr>
@@ -389,10 +389,10 @@ The following table indicates the file formats, supported by GroupDocs.Redaction
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td>&nbsp;</td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td>&nbsp;</td>
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td>&nbsp;</td>
+  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
 </tr>
 <tr class="format-desc"><td colspan="8">The image file format was standardized by the Joint Photographic Experts Group.</td></tr>
 
@@ -401,10 +401,10 @@ The following table indicates the file formats, supported by GroupDocs.Redaction
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td>&nbsp;</td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td>&nbsp;</td>
+  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
+  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
+  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
 </tr>
 <tr class="format-desc format-shaded"><td colspan="8">Tagged Image File Format</td></tr>
 
@@ -413,10 +413,10 @@ The following table indicates the file formats, supported by GroupDocs.Redaction
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td>&nbsp;</td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td>&nbsp;</td>
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td>&nbsp;</td>
+  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
 </tr>
 <tr class="format-desc"><td colspan="8">Portable Network Graphics Image</td></tr>
 
@@ -425,10 +425,10 @@ The following table indicates the file formats, supported by GroupDocs.Redaction
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td>&nbsp;</td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td>&nbsp;</td>
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td>&nbsp;</td>
+  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
 </tr>
 <tr class="format-desc format-shaded"><td colspan="8">Bitmap Image Files</td></tr>
 
@@ -438,8 +438,8 @@ The following table indicates the file formats, supported by GroupDocs.Redaction
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td>&nbsp;</td>
   <td>&nbsp;</td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td>&nbsp;</td>
+  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td>&nbsp;</td>
 </tr>
 <tr class="format-desc"><td colspan="8">Graphical Interchange Format Image</td></tr>
@@ -450,8 +450,8 @@ The following table indicates the file formats, supported by GroupDocs.Redaction
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td>&nbsp;</td>
   <td>&nbsp;</td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td>&nbsp;</td>
+  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td>&nbsp;</td>
 </tr>
 <tr class="format-desc format-shaded"><td colspan="8">Graphical Interchange Format Image</td></tr>
@@ -462,8 +462,8 @@ The following table indicates the file formats, supported by GroupDocs.Redaction
   <td>&nbsp;</td>
   <td>&nbsp;</td>
   <td>&nbsp;</td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td>&nbsp;</td>
+  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td>&nbsp;</td>
 </tr>
 <tr class="format-desc"><td colspan="8">DjVu Document Format</td></tr>
