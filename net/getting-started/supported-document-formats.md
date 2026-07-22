@@ -49,6 +49,12 @@ The following table indicates the file formats, supported by GroupDocs.Redaction
 <table class="formats-table">
 <thead>
 <tr>
+</tr>
+</thead>
+<tbody>
+
+<tr class="format-section"><td colspan="8">📰 Popular formats</td></tr>
+<tr class="format-headers">
   <th>Format</th>
   <th>Document body</th>
   <th>Metadata</th>
@@ -58,8 +64,7 @@ The following table indicates the file formats, supported by GroupDocs.Redaction
   <th>Remove Page</th>
   <th>Page Filters</th>
 </tr>
-</thead>
-<tbody>
+
 <tr class="format-main format-shaded">
   <td><a href="https://docs.fileformat.com/pdf/">PDF</a></td>
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
@@ -72,7 +77,29 @@ The following table indicates the file formats, supported by GroupDocs.Redaction
 </tr>
 <tr class="format-desc format-shaded"><td colspan="8">PDF (Adobe Portable Document)</td></tr>
 
+<tr class="format-main">
+  <td><a href="https://docs.fileformat.com/image/djvu/">DJVU</a></td>
+  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
+  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
+  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
+</tr>
+<tr class="format-desc"><td colspan="8">DjVu Document Format</td></tr>
+
 <tr class="format-section"><td colspan="8">📄 Word processing</td></tr>
+<tr class="format-headers">
+  <th>Format</th>
+  <th>Document body</th>
+  <th>Metadata</th>
+  <th>Annotations (comments)</th>
+  <th>Embedded images</th>
+  <th>OCR</th>
+  <th>Remove Page</th>
+  <th>Page Filters</th>
+</tr>
 
 <tr class="format-main">
   <td><a href="https://docs.fileformat.com/word-processing/docx/">DOCX</a></td>
@@ -541,18 +568,6 @@ The following table indicates the file formats, supported by GroupDocs.Redaction
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
 </tr>
 <tr class="format-desc format-shaded"><td colspan="8">WebP Image Format</td></tr>
-
-<tr class="format-main">
-  <td><a href="https://docs.fileformat.com/image/djvu/">DJVU</a></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td>&nbsp;</td>
-  <td>&nbsp;</td>
-  <td>&nbsp;</td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-</tr>
-<tr class="format-desc"><td colspan="8">DjVu Document Format</td></tr>
 
 </tbody>
 </table>
