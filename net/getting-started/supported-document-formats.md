@@ -233,6 +233,18 @@ The following table indicates the file formats, supported by GroupDocs.Redaction
 </tr>
 <tr class="format-desc format-shaded"><td colspan="8">OOXML 2007-2010</td></tr>
 
+<tr class="format-main format-shaded">
+  <td><a href="https://docs.fileformat.com/spreadsheet/xls/">XLS</a></td>
+  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
+  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
+  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
+  <td>&nbsp;</td>
+</tr>
+<tr class="format-desc format-shaded"><td colspan="8">Excel Workbook 97-2003</td></tr>
+
 <tr class="format-main">
   <td><a href="https://docs.fileformat.com/spreadsheet/xlsm/">XLSM</a></td>
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
@@ -268,18 +280,6 @@ The following table indicates the file formats, supported by GroupDocs.Redaction
   <td>&nbsp;</td>
 </tr>
 <tr class="format-desc"><td colspan="8">OOXML Macro Enabled Workbook Template</td></tr>
-
-<tr class="format-main format-shaded">
-  <td><a href="https://docs.fileformat.com/spreadsheet/xls/">XLS</a></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td>&nbsp;</td>
-  <td>&nbsp;</td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td>&nbsp;</td>
-</tr>
-<tr class="format-desc format-shaded"><td colspan="8">Excel Workbook 97-2003</td></tr>
 
 <tr class="format-main">
   <td><a href="https://docs.fileformat.com/spreadsheet/xlt/">XLT</a></td>
