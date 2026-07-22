@@ -75,7 +75,7 @@ The following table indicates the file formats, supported by GroupDocs.Redaction
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
 </tr>
-<tr class="format-desc format-shaded"><td colspan="8">PDF (Adobe Portable Document)</td></tr>
+<tr class="format-desc format-shaded"><td colspan="8">Adobe Portable Document Format</td></tr>
 
 <tr class="format-main">
   <td><a href="https://docs.fileformat.com/image/djvu/">DJVU</a></td>
@@ -123,7 +123,7 @@ The following table indicates the file formats, supported by GroupDocs.Redaction
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td>&nbsp;</td>
 </tr>
-<tr class="format-desc format-shaded"><td colspan="8">Microsoft Word 97 - 2007 Document</td></tr>
+<tr class="format-desc format-shaded"><td colspan="8">Microsoft Word 97–2003 Document</td></tr>
 
 <tr class="format-main">
   <td><a href="https://docs.fileformat.com/word-processing/docm/">DOCM</a></td>
@@ -147,7 +147,7 @@ The following table indicates the file formats, supported by GroupDocs.Redaction
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td>&nbsp;</td>
 </tr>
-<tr class="format-desc format-shaded"><td colspan="8">Microsoft Word 97 - 2007 Template</td></tr>
+<tr class="format-desc format-shaded"><td colspan="8">Microsoft Word 97–2003 Template</td></tr>
 
 <tr class="format-main">
   <td><a href="https://docs.fileformat.com/word-processing/dotx/">DOTX</a></td>
@@ -231,7 +231,7 @@ The following table indicates the file formats, supported by GroupDocs.Redaction
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td>&nbsp;</td>
 </tr>
-<tr class="format-desc format-shaded"><td colspan="8">OOXML 2007-2010</td></tr>
+<tr class="format-desc format-shaded"><td colspan="8">Microsoft Excel Workbook</td></tr>
 
 <tr class="format-main format-shaded">
   <td><a href="https://docs.fileformat.com/spreadsheet/xls/">XLS</a></td>
@@ -243,7 +243,7 @@ The following table indicates the file formats, supported by GroupDocs.Redaction
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td>&nbsp;</td>
 </tr>
-<tr class="format-desc format-shaded"><td colspan="8">Excel Workbook 97-2003</td></tr>
+<tr class="format-desc format-shaded"><td colspan="8">Microsoft Excel Workbook 97-2003</td></tr>
 
 <tr class="format-main">
   <td><a href="https://docs.fileformat.com/spreadsheet/xlsm/">XLSM</a></td>
@@ -255,7 +255,7 @@ The following table indicates the file formats, supported by GroupDocs.Redaction
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td>&nbsp;</td>
 </tr>
-<tr class="format-desc"><td colspan="8">OOXML Macro Enabled Workbook</td></tr>
+<tr class="format-desc"><td colspan="8">Microsoft Excel Macro-Enabled Workbook</td></tr>
 
 <tr class="format-main format-shaded">
   <td><a href="https://docs.fileformat.com/spreadsheet/xltx/">XLTX</a></td>
@@ -267,7 +267,7 @@ The following table indicates the file formats, supported by GroupDocs.Redaction
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td>&nbsp;</td>
 </tr>
-<tr class="format-desc format-shaded"><td colspan="8">OOXML Workbook Template</td></tr>
+<tr class="format-desc format-shaded"><td colspan="8">Microsoft Excel Template</td></tr>
 
 <tr class="format-main">
   <td><a href="https://docs.fileformat.com/spreadsheet/xltm/">XLTM</a></td>
@@ -279,7 +279,7 @@ The following table indicates the file formats, supported by GroupDocs.Redaction
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td>&nbsp;</td>
 </tr>
-<tr class="format-desc"><td colspan="8">OOXML Macro Enabled Workbook Template</td></tr>
+<tr class="format-desc"><td colspan="8">Microsoft Excel Macro-Enabled Template</td></tr>
 
 <tr class="format-main">
   <td><a href="https://docs.fileformat.com/spreadsheet/xlt/">XLT</a></td>
@@ -291,7 +291,7 @@ The following table indicates the file formats, supported by GroupDocs.Redaction
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td>&nbsp;</td>
 </tr>
-<tr class="format-desc"><td colspan="8">Excel Workbook Template 97-2003</td></tr>
+<tr class="format-desc"><td colspan="8">Microsoft Excel 97–2003 Template</td></tr>
 
 <tr class="format-main format-shaded">
   <td><a href="https://docs.fileformat.com/spreadsheet/xlsb/">XLSB</a></td>
@@ -303,7 +303,7 @@ The following table indicates the file formats, supported by GroupDocs.Redaction
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td>&nbsp;</td>
 </tr>
-<tr class="format-desc format-shaded"><td colspan="8">Excel Binary Workbook</td></tr>
+<tr class="format-desc format-shaded"><td colspan="8">Microsoft Excel Binary Workbook</td></tr>
 
 <tr class="format-main">
   <td><a href="https://docs.fileformat.com/spreadsheet/ods/">ODS</a></td>
@@ -339,7 +339,7 @@ The following table indicates the file formats, supported by GroupDocs.Redaction
   <td>&nbsp;</td>
   <td>&nbsp;</td>
 </tr>
-<tr class="format-desc"><td colspan="8">CSV (Comma Separated Value) file</td></tr>
+<tr class="format-desc"><td colspan="8">Comma-Separated Values</td></tr>
 
 <tr class="format-main format-shaded">
   <td><a href="https://docs.fileformat.com/spreadsheet/tsv/">TAB</a></td>
@@ -351,7 +351,7 @@ The following table indicates the file formats, supported by GroupDocs.Redaction
   <td>&nbsp;</td>
   <td>&nbsp;</td>
 </tr>
-<tr class="format-desc format-shaded"><td colspan="8">Tab Separated Values file</td></tr>
+<tr class="format-desc format-shaded"><td colspan="8">Tab-Separated Values</td></tr>
 
 <tr class="format-section"><td colspan="8">📊 Presentations</td></tr>
 <tr class="format-headers">
@@ -375,7 +375,7 @@ The following table indicates the file formats, supported by GroupDocs.Redaction
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
 </tr>
-<tr class="format-desc"><td colspan="8">OOXML Microsoft PowerPoint Presentations format</td></tr>
+<tr class="format-desc"><td colspan="8">Microsoft PowerPoint Presentation</td></tr>
 
 <tr class="format-main format-shaded">
   <td><a href="https://docs.fileformat.com/presentation/ppt/">PPT</a></td>
@@ -387,7 +387,7 @@ The following table indicates the file formats, supported by GroupDocs.Redaction
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
 </tr>
-<tr class="format-desc format-shaded"><td colspan="8">PowerPoint Presentation 97-2003</td></tr>
+<tr class="format-desc format-shaded"><td colspan="8">Microsoft PowerPoint 97–2003 Presentation</td></tr>
 
 <tr class="format-main">
   <td><a href="https://docs.fileformat.com/presentation/ppsx/">PPSX</a></td>
@@ -399,7 +399,7 @@ The following table indicates the file formats, supported by GroupDocs.Redaction
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
 </tr>
-<tr class="format-desc"><td colspan="8">PowerPoint Open XML</td></tr>
+<tr class="format-desc"><td colspan="8">Microsoft PowerPoint Slide Show</td></tr>
 
 <tr class="format-main format-shaded">
   <td><a href="https://docs.fileformat.com/presentation/pps/">PPS</a></td>
@@ -411,7 +411,7 @@ The following table indicates the file formats, supported by GroupDocs.Redaction
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
 </tr>
-<tr class="format-desc format-shaded"><td colspan="8">Microsoft PowerPoint 97-2003 Slide Show</td></tr>
+<tr class="format-desc format-shaded"><td colspan="8">Microsoft PowerPoint 97–2003 Slide Show</td></tr>
 
 <tr class="format-main">
   <td><a href="https://docs.fileformat.com/presentation/pptm/">PPTM</a></td>
@@ -423,7 +423,7 @@ The following table indicates the file formats, supported by GroupDocs.Redaction
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
 </tr>
-<tr class="format-desc"><td colspan="8">Microsoft PowerPoint Open XML Macro-Enabled Presentation file</td></tr>
+<tr class="format-desc"><td colspan="8">Microsoft PowerPoint Macro-Enabled Presentation</td></tr>
 
 <tr class="format-main format-shaded">
   <td><a href="https://docs.fileformat.com/presentation/potx/">POTX</a></td>
@@ -435,7 +435,7 @@ The following table indicates the file formats, supported by GroupDocs.Redaction
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
 </tr>
-<tr class="format-desc format-shaded"><td colspan="8">Microsoft PowerPoint presentation template files</td></tr>
+<tr class="format-desc format-shaded"><td colspan="8">Microsoft PowerPoint Template</td></tr>
 
 <tr class="format-main">
   <td><a href="https://docs.fileformat.com/presentation/ppsm/">PPSM</a></td>
@@ -447,7 +447,7 @@ The following table indicates the file formats, supported by GroupDocs.Redaction
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
 </tr>
-<tr class="format-desc"><td colspan="8">Microsoft PowerPoint Open XML Macro-Enabled Slide Show file</td></tr>
+<tr class="format-desc"><td colspan="8">Microsoft PowerPoint Macro-Enabled Slide Show</td></tr>
 
 <tr class="format-main format-shaded">
   <td><a href="https://docs.fileformat.com/presentation/potm/">POTM</a></td>
@@ -459,7 +459,7 @@ The following table indicates the file formats, supported by GroupDocs.Redaction
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
 </tr>
-<tr class="format-desc format-shaded"><td colspan="8">Microsoft PowerPoint template</td></tr>
+<tr class="format-desc format-shaded"><td colspan="8">Microsoft PowerPoint Macro-Enabled Template</td></tr>
 
 <tr class="format-main">
   <td><a href="https://docs.fileformat.com/presentation/odp/">ODP</a></td>
@@ -507,7 +507,7 @@ The following table indicates the file formats, supported by GroupDocs.Redaction
   <td>&nbsp;</td>
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
 </tr>
-<tr class="format-desc"><td colspan="8">The image file format was standardized by the Joint Photographic Experts Group.</td></tr>
+<tr class="format-desc"><td colspan="8">JPEG Image</td></tr>
 
 <tr class="format-main format-shaded">
   <td><a href="https://docs.fileformat.com/image/tiff/">TIF/TIFF</a></td>
@@ -531,7 +531,7 @@ The following table indicates the file formats, supported by GroupDocs.Redaction
   <td>&nbsp;</td>
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
 </tr>
-<tr class="format-desc"><td colspan="8">Portable Network Graphics Image</td></tr>
+<tr class="format-desc"><td colspan="8">Portable Network Graphics</td></tr>
 
 <tr class="format-main format-shaded">
   <td><a href="https://docs.fileformat.com/image/bmp/">BMP</a></td>
@@ -543,7 +543,7 @@ The following table indicates the file formats, supported by GroupDocs.Redaction
   <td>&nbsp;</td>
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
 </tr>
-<tr class="format-desc format-shaded"><td colspan="8">Bitmap Image Files</td></tr>
+<tr class="format-desc format-shaded"><td colspan="8">Bitmap Image</td></tr>
 
 <tr class="format-main">
   <td><a href="https://docs.fileformat.com/image/gif/">GIF</a></td>
@@ -555,7 +555,7 @@ The following table indicates the file formats, supported by GroupDocs.Redaction
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
 </tr>
-<tr class="format-desc"><td colspan="8">Graphical Interchange Format Image</td></tr>
+<tr class="format-desc"><td colspan="8">Graphics Interchange Format</td></tr>
 
 <tr class="format-main format-shaded">
   <td><a href="https://docs.fileformat.com/image/webp/">WEBP</a></td>
@@ -567,7 +567,7 @@ The following table indicates the file formats, supported by GroupDocs.Redaction
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
 </tr>
-<tr class="format-desc format-shaded"><td colspan="8">WebP Image Format</td></tr>
+<tr class="format-desc format-shaded"><td colspan="8">WebP Image</td></tr>
 
 </tbody>
 </table>
