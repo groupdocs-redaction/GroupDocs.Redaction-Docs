@@ -120,12 +120,10 @@ using (Redactor redactor = new Redactor(@"sample.docx"))
 
 ### GitHub examples
 
-You may easily run the code above and see the feature in action in our GitHub examples:
+You may easily run the code above and see the feature in action in our GitHub examples:
 
 *   [GroupDocs.Redaction for .NET examples](https://github.com/groupdocs-redaction/GroupDocs.Redaction-for-.NET)
-    
 *   [GroupDocs.Redaction for Java examples](https://github.com/groupdocs-redaction/GroupDocs.Redaction-for-Java)
-  
 *   [GroupDocs.Redaction for Python via .NET examples](https://github.com/groupdocs-redaction/GroupDocs.Redaction-for-Python-via-.NET)
     
 
