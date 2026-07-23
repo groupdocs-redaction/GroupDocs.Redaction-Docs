@@ -522,7 +522,7 @@ The following table indicates the file formats, supported by GroupDocs.Redaction
 </tr>
 
 <tr class="format-main format-shaded">
-  <td><a href="https://docs.fileformat.com/image/tiff/">TIF/TIFF</a></td>
+  <td><a href="https://docs.fileformat.com/image/tiff/">TIFF</a></td>
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td>&nbsp;</td>
