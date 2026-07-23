@@ -4,8 +4,8 @@ url: redaction/net/supported-document-formats
 title: Supported Document Formats
 second_title: Documentation
 weight: 2
-description: It supports PDF, DOCX, DOC, XLS, XLSX, PPTX, PPT, JPG, PNG, WEBP and many more.
-keywords: PDF, DOCX, DOC, XLS, XLSX, PPTX, PDF, PPT, JPG, PNG, WEBP
+description: It supports PDF, DOCX, DOC, XLS, XLSX, PPTX, PPT, JPG, PNG, WEBP, HTML, MD, TXT and many more.
+keywords: PDF, DOCX, DOC, XLS, XLSX, PPTX, PPT, JPG, PNG, WEBP, HTML, HTM, MD, TXT, LOG
 productName: GroupDocs.Redaction for .NET
 hideChildren: False
 ---
@@ -78,16 +78,76 @@ The following table indicates the file formats, supported by GroupDocs.Redaction
 <tr class="format-desc format-shaded"><td colspan="8">Adobe Portable Document Format</td></tr>
 
 <tr class="format-main">
-  <td><a href="https://docs.fileformat.com/image/djvu/">DJVU</a></td>
+  <td><a href="https://docs.fileformat.com/word-processing/docx/">DOCX</a></td>
+  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
+  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
+  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
+  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
+  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
+  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
+  <td>&nbsp;</td>
+</tr>
+<tr class="format-desc"><td colspan="8">Microsoft Word Document</td></tr>
+
+<tr class="format-main format-shaded">
+  <td><a href="https://docs.fileformat.com/spreadsheet/xlsx/">XLSX</a></td>
+  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
+  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td>&nbsp;</td>
   <td>&nbsp;</td>
+  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td>&nbsp;</td>
+</tr>
+<tr class="format-desc format-shaded"><td colspan="8">Microsoft Excel Workbook</td></tr>
+
+<tr class="format-main">
+  <td><a href="https://docs.fileformat.com/presentation/pptx/">PPTX</a></td>
+  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
+  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
+  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
+  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
 </tr>
-<tr class="format-desc"><td colspan="8">DjVu Document Format</td></tr>
+<tr class="format-desc"><td colspan="8">Microsoft PowerPoint Presentation</td></tr>
+
+<tr class="format-main format-shaded">
+  <td><a href="https://docs.fileformat.com/image/jpeg/">JPEG</a></td>
+  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
+  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
+  <td>&nbsp;</td>
+  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
+</tr>
+<tr class="format-desc format-shaded"><td colspan="8">JPEG Image</td></tr>
+
+<tr class="format-main">
+  <td><a href="https://docs.fileformat.com/image/png/">PNG</a></td>
+  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
+  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
+  <td>&nbsp;</td>
+  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
+</tr>
+<tr class="format-desc"><td colspan="8">Portable Network Graphics</td></tr>
+
+<tr class="format-main format-shaded">
+  <td><a href="https://docs.fileformat.com/word-processing/txt/">TXT</a></td>
+  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+</tr>
+<tr class="format-desc format-shaded"><td colspan="8">Plain Text File</td></tr>
 
 <tr class="format-section"><td colspan="8">📄 Word processing</td></tr>
 <tr class="format-headers">
@@ -100,18 +160,6 @@ The following table indicates the file formats, supported by GroupDocs.Redaction
   <th>Remove Page</th>
   <th>Page Filters</th>
 </tr>
-
-<tr class="format-main">
-  <td><a href="https://docs.fileformat.com/word-processing/docx/">DOCX</a></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td>&nbsp;</td>
-</tr>
-<tr class="format-desc"><td colspan="8">Microsoft Word Document</td></tr>
 
 <tr class="format-main format-shaded">
   <td><a href="https://docs.fileformat.com/word-processing/doc">DOC</a></td>
@@ -222,18 +270,6 @@ The following table indicates the file formats, supported by GroupDocs.Redaction
 </tr>
 
 <tr class="format-main format-shaded">
-  <td><a href="https://docs.fileformat.com/spreadsheet/xlsx/">XLSX</a></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td>&nbsp;</td>
-  <td>&nbsp;</td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td>&nbsp;</td>
-</tr>
-<tr class="format-desc format-shaded"><td colspan="8">Microsoft Excel Workbook</td></tr>
-
-<tr class="format-main format-shaded">
   <td><a href="https://docs.fileformat.com/spreadsheet/xls/">XLS</a></td>
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
@@ -281,7 +317,7 @@ The following table indicates the file formats, supported by GroupDocs.Redaction
 </tr>
 <tr class="format-desc"><td colspan="8">Microsoft Excel Macro-Enabled Template</td></tr>
 
-<tr class="format-main">
+<tr class="format-main format-shaded">
   <td><a href="https://docs.fileformat.com/spreadsheet/xlt/">XLT</a></td>
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
@@ -291,9 +327,9 @@ The following table indicates the file formats, supported by GroupDocs.Redaction
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td>&nbsp;</td>
 </tr>
-<tr class="format-desc"><td colspan="8">Microsoft Excel 97–2003 Template</td></tr>
+<tr class="format-desc format-shaded"><td colspan="8">Microsoft Excel 97–2003 Template</td></tr>
 
-<tr class="format-main format-shaded">
+<tr class="format-main">
   <td><a href="https://docs.fileformat.com/spreadsheet/xlsb/">XLSB</a></td>
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
@@ -303,9 +339,9 @@ The following table indicates the file formats, supported by GroupDocs.Redaction
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td>&nbsp;</td>
 </tr>
-<tr class="format-desc format-shaded"><td colspan="8">Microsoft Excel Binary Workbook</td></tr>
+<tr class="format-desc"><td colspan="8">Microsoft Excel Binary Workbook</td></tr>
 
-<tr class="format-main">
+<tr class="format-main format-shaded">
   <td><a href="https://docs.fileformat.com/spreadsheet/ods/">ODS</a></td>
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
@@ -315,9 +351,9 @@ The following table indicates the file formats, supported by GroupDocs.Redaction
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td>&nbsp;</td>
 </tr>
-<tr class="format-desc"><td colspan="8">OpenDocument Spreadsheet</td></tr>
+<tr class="format-desc format-shaded"><td colspan="8">OpenDocument Spreadsheet</td></tr>
 
-<tr class="format-main format-shaded">
+<tr class="format-main">
   <td><a href="https://docs.fileformat.com/spreadsheet/ots/">OTS</a></td>
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
@@ -327,9 +363,9 @@ The following table indicates the file formats, supported by GroupDocs.Redaction
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td>&nbsp;</td>
 </tr>
-<tr class="format-desc format-shaded"><td colspan="8">OpenDocument Spreadsheet Template</td></tr>
+<tr class="format-desc"><td colspan="8">OpenDocument Spreadsheet Template</td></tr>
 
-<tr class="format-main">
+<tr class="format-main format-shaded">
   <td><a href="https://docs.fileformat.com/spreadsheet/csv/">CSV</a></td>
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td>&nbsp;</td>
@@ -339,9 +375,9 @@ The following table indicates the file formats, supported by GroupDocs.Redaction
   <td>&nbsp;</td>
   <td>&nbsp;</td>
 </tr>
-<tr class="format-desc"><td colspan="8">Comma-Separated Values</td></tr>
+<tr class="format-desc format-shaded"><td colspan="8">Comma-Separated Values</td></tr>
 
-<tr class="format-main format-shaded">
+<tr class="format-main">
   <td><a href="https://docs.fileformat.com/spreadsheet/tsv/">TAB</a></td>
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td>&nbsp;</td>
@@ -351,7 +387,7 @@ The following table indicates the file formats, supported by GroupDocs.Redaction
   <td>&nbsp;</td>
   <td>&nbsp;</td>
 </tr>
-<tr class="format-desc format-shaded"><td colspan="8">Tab-Separated Values</td></tr>
+<tr class="format-desc"><td colspan="8">Tab-Separated Values</td></tr>
 
 <tr class="format-section"><td colspan="8">📊 Presentations</td></tr>
 <tr class="format-headers">
@@ -364,18 +400,6 @@ The following table indicates the file formats, supported by GroupDocs.Redaction
   <th>Remove Page</th>
   <th>Page Filters</th>
 </tr>
-
-<tr class="format-main">
-  <td><a href="https://docs.fileformat.com/presentation/pptx/">PPTX</a></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-</tr>
-<tr class="format-desc"><td colspan="8">Microsoft PowerPoint Presentation</td></tr>
 
 <tr class="format-main format-shaded">
   <td><a href="https://docs.fileformat.com/presentation/ppt/">PPT</a></td>
@@ -497,18 +521,6 @@ The following table indicates the file formats, supported by GroupDocs.Redaction
   <th>Page Filters</th>
 </tr>
 
-<tr class="format-main">
-  <td><a href="https://docs.fileformat.com/image/jpeg/">JPEG</a></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td>&nbsp;</td>
-  <td>&nbsp;</td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td>&nbsp;</td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-</tr>
-<tr class="format-desc"><td colspan="8">JPEG Image</td></tr>
-
 <tr class="format-main format-shaded">
   <td><a href="https://docs.fileformat.com/image/tiff/">TIF/TIFF</a></td>
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
@@ -522,18 +534,6 @@ The following table indicates the file formats, supported by GroupDocs.Redaction
 <tr class="format-desc format-shaded"><td colspan="8">Tagged Image File Format</td></tr>
 
 <tr class="format-main">
-  <td><a href="https://docs.fileformat.com/image/png/">PNG</a></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td>&nbsp;</td>
-  <td>&nbsp;</td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td>&nbsp;</td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-</tr>
-<tr class="format-desc"><td colspan="8">Portable Network Graphics</td></tr>
-
-<tr class="format-main format-shaded">
   <td><a href="https://docs.fileformat.com/image/bmp/">BMP</a></td>
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td>&nbsp;</td>
@@ -543,9 +543,9 @@ The following table indicates the file formats, supported by GroupDocs.Redaction
   <td>&nbsp;</td>
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
 </tr>
-<tr class="format-desc format-shaded"><td colspan="8">Bitmap Image</td></tr>
+<tr class="format-desc"><td colspan="8">Bitmap Image</td></tr>
 
-<tr class="format-main">
+<tr class="format-main format-shaded">
   <td><a href="https://docs.fileformat.com/image/gif/">GIF</a></td>
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
@@ -555,9 +555,9 @@ The following table indicates the file formats, supported by GroupDocs.Redaction
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
 </tr>
-<tr class="format-desc"><td colspan="8">Graphics Interchange Format</td></tr>
+<tr class="format-desc format-shaded"><td colspan="8">Graphics Interchange Format</td></tr>
 
-<tr class="format-main format-shaded">
+<tr class="format-main">
   <td><a href="https://docs.fileformat.com/image/webp/">WEBP</a></td>
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
@@ -567,7 +567,55 @@ The following table indicates the file formats, supported by GroupDocs.Redaction
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
   <td><img src="/redaction/net/images/check.png" alt="tick"></td>
 </tr>
-<tr class="format-desc format-shaded"><td colspan="8">WebP Image</td></tr>
+<tr class="format-desc"><td colspan="8">WebP Image</td></tr>
+
+<tr class="format-section"><td colspan="8">🌐 Other formats</td></tr>
+<tr class="format-headers">
+  <th>Format</th>
+  <th>Document body</th>
+  <th>Metadata</th>
+  <th>Annotations (comments)</th>
+  <th>Embedded images</th>
+  <th>OCR</th>
+  <th>Remove Page</th>
+  <th>Page Filters</th>
+</tr>
+
+<tr class="format-main format-shaded">
+  <td><a href="https://docs.fileformat.com/image/djvu/">DJVU</a></td>
+  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
+  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
+  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
+</tr>
+<tr class="format-desc format-shaded"><td colspan="8">DjVu Document Format</td></tr>
+
+<tr class="format-main">
+  <td><a href="https://docs.fileformat.com/web/html/">HTML</a></td>
+  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+</tr>
+<tr class="format-desc"><td colspan="8">HyperText Markup Language</td></tr>
+
+<tr class="format-main format-shaded">
+  <td><a href="https://docs.fileformat.com/word-processing/md/">MD</a></td>
+  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+</tr>
+<tr class="format-desc format-shaded"><td colspan="8">Markdown Documentation File</td></tr>
 
 </tbody>
 </table>
