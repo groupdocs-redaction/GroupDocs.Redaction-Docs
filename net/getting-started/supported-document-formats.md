@@ -33,6 +33,10 @@ The following table indicates the file formats, supported by GroupDocs.Redaction
   background: var(--table-header-bg-color) !important;
   font-weight: 600;
 }
+.gdoc-markdown table.formats-table tbody tr.format-headers th:not(:first-child),
+.gdoc-markdown table.formats-table tbody tr.format-main td:not(:first-child) {
+  text-align: center;
+}
 .gdoc-markdown table.formats-table tbody tr.format-desc td {
   font-size: 0.8125rem;
   color: var(--body-font-color);
