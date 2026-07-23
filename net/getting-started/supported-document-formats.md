@@ -13,616 +13,77 @@ hideChildren: False
 
 The following table indicates the file formats, supported by GroupDocs.Redaction for .NET.
 
+### 📰 Popular formats
 
-<style>
-.gdoc-markdown table.formats-table tbody tr {
-  background-color: transparent !important;
-}
-.gdoc-markdown table.formats-table tbody tr.format-shaded {
-  background-color: var(--table-bg-color) !important;
-}
-.gdoc-markdown table.formats-table tbody tr.format-section td {
-  background: var(--table-header-bg-color) !important;
-  font-weight: 600;
-  text-align: center;
-  border-bottom-color: rgb(206, 211, 216);
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-}
-.gdoc-markdown table.formats-table tbody tr.format-headers th {
-  background: var(--table-header-bg-color) !important;
-  font-weight: 600;
-}
-.gdoc-markdown table.formats-table tbody tr.format-headers th:not(:first-child),
-.gdoc-markdown table.formats-table tbody tr.format-main td:not(:first-child) {
-  text-align: center;
-}
-.gdoc-markdown table.formats-table tbody tr.format-desc td {
-  font-size: 0.8125rem;
-  color: var(--body-font-color);
-  opacity: 0.85;
-  border-top: none;
-  padding-top: 0;
-}
-.gdoc-markdown table.formats-table tbody tr.format-main td {
-  border-bottom: none;
-  padding-bottom: 0.25rem;
-}
-</style>
+| Format | Description | Document body | Metadata | Annotations (comments) | Embedded images | OCR | Remove Page | Page Filters |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| [PDF](https://docs.fileformat.com/pdf/) | Adobe Portable Document Format | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) |
+| [DOCX](https://docs.fileformat.com/word-processing/docx/) | Microsoft Word Document | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) |  |
+| [XLSX](https://docs.fileformat.com/spreadsheet/xlsx/) | Microsoft Excel Workbook | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) |  |  | ![(tick)](/redaction/net/images/check.png) |  |
+| [PPTX](https://docs.fileformat.com/presentation/pptx/) | Microsoft PowerPoint Presentation | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) |
+| [JPEG](https://docs.fileformat.com/image/jpeg/) | JPEG Image | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) |  |  | ![(tick)](/redaction/net/images/check.png) |  | ![(tick)](/redaction/net/images/check.png) |
+| [PNG](https://docs.fileformat.com/image/png/) | Portable Network Graphics | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) |  |  | ![(tick)](/redaction/net/images/check.png) |  | ![(tick)](/redaction/net/images/check.png) |
+| [TXT](https://docs.fileformat.com/word-processing/txt/) | Plain Text File | ![(tick)](/redaction/net/images/check.png) |  |  |  |  |  |  |
 
-<table class="formats-table">
-<thead>
-<tr>
-</tr>
-</thead>
-<tbody>
+### 📄 Word processing
 
-<tr class="format-section"><td colspan="8">📰 Popular formats</td></tr>
-<tr class="format-headers">
-  <th>Format</th>
-  <th>Document body</th>
-  <th>Metadata</th>
-  <th>Annotations (comments)</th>
-  <th>Embedded images</th>
-  <th>OCR</th>
-  <th>Remove Page</th>
-  <th>Page Filters</th>
-</tr>
+| Format | Description | Document body | Metadata | Annotations (comments) | Embedded images | OCR | Remove Page | Page Filters |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| [DOC](https://docs.fileformat.com/word-processing/doc) | Microsoft Word 97–2003 Document | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) |  |
+| [DOCM](https://docs.fileformat.com/word-processing/docm/) | Microsoft Word Macro-Enabled Document | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) |  |
+| [DOT](https://docs.fileformat.com/word-processing/dot/) | Microsoft Word 97–2003 Template | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) |  |
+| [DOTX](https://docs.fileformat.com/word-processing/dotx/) | Microsoft Word Template | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) |  |
+| [DOTM](https://docs.fileformat.com/word-processing/dotm/) | Microsoft Word Macro-Enabled Template | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) |  |
+| [RTF](https://docs.fileformat.com/word-processing/rtf/) | Rich Text Format | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) |  |
+| [ODT](https://docs.fileformat.com/word-processing/odt/) | OpenDocument Text File | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) |  |
+| [OTT](https://docs.fileformat.com/word-processing/ott/) | OpenDocument Text Template | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) |  |
 
-<tr class="format-main format-shaded">
-  <td><a href="https://docs.fileformat.com/pdf/">PDF</a></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-</tr>
-<tr class="format-desc format-shaded"><td colspan="8">Adobe Portable Document Format</td></tr>
+### 📑 Spreadsheets
 
-<tr class="format-main">
-  <td><a href="https://docs.fileformat.com/word-processing/docx/">DOCX</a></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td>&nbsp;</td>
-</tr>
-<tr class="format-desc"><td colspan="8">Microsoft Word Document</td></tr>
+| Format | Description | Document body | Metadata | Annotations (comments) | Embedded images | OCR | Remove Page | Page Filters |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| [XLS](https://docs.fileformat.com/spreadsheet/xls/) | Microsoft Excel Workbook 97-2003 | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) |  |  | ![(tick)](/redaction/net/images/check.png) |  |
+| [XLSM](https://docs.fileformat.com/spreadsheet/xlsm/) | Microsoft Excel Macro-Enabled Workbook | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) |  |  | ![(tick)](/redaction/net/images/check.png) |  |
+| [XLTX](https://docs.fileformat.com/spreadsheet/xltx/) | Microsoft Excel Template | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) |  |  | ![(tick)](/redaction/net/images/check.png) |  |
+| [XLTM](https://docs.fileformat.com/spreadsheet/xltm/) | Microsoft Excel Macro-Enabled Template | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) |  |  | ![(tick)](/redaction/net/images/check.png) |  |
+| [XLT](https://docs.fileformat.com/spreadsheet/xlt/) | Microsoft Excel 97–2003 Template | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) |  |  | ![(tick)](/redaction/net/images/check.png) |  |
+| [XLSB](https://docs.fileformat.com/spreadsheet/xlsb/) | Microsoft Excel Binary Workbook | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) |  |  | ![(tick)](/redaction/net/images/check.png) |  |
+| [ODS](https://docs.fileformat.com/spreadsheet/ods/) | OpenDocument Spreadsheet | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) |  |  | ![(tick)](/redaction/net/images/check.png) |  |
+| [OTS](https://docs.fileformat.com/spreadsheet/ots/) | OpenDocument Spreadsheet Template | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) |  |  | ![(tick)](/redaction/net/images/check.png) |  |
+| [CSV](https://docs.fileformat.com/spreadsheet/csv/) | Comma-Separated Values | ![(tick)](/redaction/net/images/check.png) |  |  |  |  |  |  |
+| [TAB](https://docs.fileformat.com/spreadsheet/tsv/) | Tab-Separated Values | ![(tick)](/redaction/net/images/check.png) |  |  |  |  |  |  |
 
-<tr class="format-main format-shaded">
-  <td><a href="https://docs.fileformat.com/spreadsheet/xlsx/">XLSX</a></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td>&nbsp;</td>
-  <td>&nbsp;</td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td>&nbsp;</td>
-</tr>
-<tr class="format-desc format-shaded"><td colspan="8">Microsoft Excel Workbook</td></tr>
+### 📊 Presentations
 
-<tr class="format-main">
-  <td><a href="https://docs.fileformat.com/presentation/pptx/">PPTX</a></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-</tr>
-<tr class="format-desc"><td colspan="8">Microsoft PowerPoint Presentation</td></tr>
+| Format | Description | Document body | Metadata | Annotations (comments) | Embedded images | OCR | Remove Page | Page Filters |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| [PPT](https://docs.fileformat.com/presentation/ppt/) | Microsoft PowerPoint 97–2003 Presentation | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) |
+| [PPSX](https://docs.fileformat.com/presentation/ppsx/) | Microsoft PowerPoint Slide Show | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) |
+| [PPS](https://docs.fileformat.com/presentation/pps/) | Microsoft PowerPoint 97–2003 Slide Show | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) |
+| [PPTM](https://docs.fileformat.com/presentation/pptm/) | Microsoft PowerPoint Macro-Enabled Presentation | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) |
+| [POTX](https://docs.fileformat.com/presentation/potx/) | Microsoft PowerPoint Template | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) |
+| [PPSM](https://docs.fileformat.com/presentation/ppsm/) | Microsoft PowerPoint Macro-Enabled Slide Show | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) |
+| [POTM](https://docs.fileformat.com/presentation/potm/) | Microsoft PowerPoint Macro-Enabled Template | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) |
+| [ODP](https://docs.fileformat.com/presentation/odp/) | OpenDocument Presentation | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) |
+| [OTP](https://docs.fileformat.com/presentation/otp/) | OpenDocument Presentation Template | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) |
 
-<tr class="format-main format-shaded">
-  <td><a href="https://docs.fileformat.com/image/jpeg/">JPEG</a></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td>&nbsp;</td>
-  <td>&nbsp;</td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td>&nbsp;</td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-</tr>
-<tr class="format-desc format-shaded"><td colspan="8">JPEG Image</td></tr>
+### 🖼️ Images
 
-<tr class="format-main">
-  <td><a href="https://docs.fileformat.com/image/png/">PNG</a></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td>&nbsp;</td>
-  <td>&nbsp;</td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td>&nbsp;</td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-</tr>
-<tr class="format-desc"><td colspan="8">Portable Network Graphics</td></tr>
+| Format | Description | Document body | Metadata | Annotations (comments) | Embedded images | OCR | Remove Page | Page Filters |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| [TIFF](https://docs.fileformat.com/image/tiff/) | Tagged Image File Format | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) |  |  | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) |
+| [BMP](https://docs.fileformat.com/image/bmp/) | Bitmap Image | ![(tick)](/redaction/net/images/check.png) |  |  |  | ![(tick)](/redaction/net/images/check.png) |  | ![(tick)](/redaction/net/images/check.png) |
+| [GIF](https://docs.fileformat.com/image/gif/) | Graphics Interchange Format | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) |  |  | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) |
+| [WEBP](https://docs.fileformat.com/image/webp/) | WebP Image | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) |  |  | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) |
 
-<tr class="format-main format-shaded">
-  <td><a href="https://docs.fileformat.com/word-processing/txt/">TXT</a></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td>&nbsp;</td>
-  <td>&nbsp;</td>
-  <td>&nbsp;</td>
-  <td>&nbsp;</td>
-  <td>&nbsp;</td>
-  <td>&nbsp;</td>
-</tr>
-<tr class="format-desc format-shaded"><td colspan="8">Plain Text File</td></tr>
+### 🌐 Other formats
 
-<tr class="format-section"><td colspan="8">📄 Word processing</td></tr>
-<tr class="format-headers">
-  <th>Format</th>
-  <th>Document body</th>
-  <th>Metadata</th>
-  <th>Annotations (comments)</th>
-  <th>Embedded images</th>
-  <th>OCR</th>
-  <th>Remove Page</th>
-  <th>Page Filters</th>
-</tr>
+| Format | Description | Document body | Metadata | Annotations (comments) | Embedded images | OCR | Remove Page | Page Filters |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| [DJVU](https://docs.fileformat.com/image/djvu/) | DjVu Document Format | ![(tick)](/redaction/net/images/check.png) |  |  |  | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) |
+| [HTML](https://docs.fileformat.com/web/html/) | HyperText Markup Language | ![(tick)](/redaction/net/images/check.png) |  |  |  |  |  |  |
+| [MD](https://docs.fileformat.com/word-processing/md/) | Markdown Documentation File | ![(tick)](/redaction/net/images/check.png) |  |  |  |  |  |  |
 
-<tr class="format-main format-shaded">
-  <td><a href="https://docs.fileformat.com/word-processing/doc">DOC</a></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td>&nbsp;</td>
-</tr>
-<tr class="format-desc format-shaded"><td colspan="8">Microsoft Word 97–2003 Document</td></tr>
-
-<tr class="format-main">
-  <td><a href="https://docs.fileformat.com/word-processing/docm/">DOCM</a></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td>&nbsp;</td>
-</tr>
-<tr class="format-desc"><td colspan="8">Microsoft Word Macro-Enabled Document</td></tr>
-
-<tr class="format-main format-shaded">
-  <td><a href="https://docs.fileformat.com/word-processing/dot/">DOT</a></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td>&nbsp;</td>
-</tr>
-<tr class="format-desc format-shaded"><td colspan="8">Microsoft Word 97–2003 Template</td></tr>
-
-<tr class="format-main">
-  <td><a href="https://docs.fileformat.com/word-processing/dotx/">DOTX</a></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td>&nbsp;</td>
-</tr>
-<tr class="format-desc"><td colspan="8">Microsoft Word Template</td></tr>
-
-<tr class="format-main format-shaded">
-  <td><a href="https://docs.fileformat.com/word-processing/dotm/">DOTM</a></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td>&nbsp;</td>
-</tr>
-<tr class="format-desc format-shaded"><td colspan="8">Microsoft Word Macro-Enabled Template</td></tr>
-
-<tr class="format-main">
-  <td><a href="https://docs.fileformat.com/word-processing/rtf/">RTF</a></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td>&nbsp;</td>
-</tr>
-<tr class="format-desc"><td colspan="8">Rich Text Format</td></tr>
-
-<tr class="format-main format-shaded">
-  <td><a href="https://docs.fileformat.com/word-processing/odt/">ODT</a></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td>&nbsp;</td>
-</tr>
-<tr class="format-desc format-shaded"><td colspan="8">OpenDocument Text File</td></tr>
-
-<tr class="format-main">
-  <td><a href="https://docs.fileformat.com/word-processing/ott/">OTT</a></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td>&nbsp;</td>
-</tr>
-<tr class="format-desc"><td colspan="8">OpenDocument Text Template</td></tr>
-
-<tr class="format-section"><td colspan="8">📑 Spreadsheets</td></tr>
-<tr class="format-headers">
-  <th>Format</th>
-  <th>Document body</th>
-  <th>Metadata</th>
-  <th>Annotations (comments)</th>
-  <th>Embedded images</th>
-  <th>OCR</th>
-  <th>Remove Page</th>
-  <th>Page Filters</th>
-</tr>
-
-<tr class="format-main format-shaded">
-  <td><a href="https://docs.fileformat.com/spreadsheet/xls/">XLS</a></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td>&nbsp;</td>
-  <td>&nbsp;</td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td>&nbsp;</td>
-</tr>
-<tr class="format-desc format-shaded"><td colspan="8">Microsoft Excel Workbook 97-2003</td></tr>
-
-<tr class="format-main">
-  <td><a href="https://docs.fileformat.com/spreadsheet/xlsm/">XLSM</a></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td>&nbsp;</td>
-  <td>&nbsp;</td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td>&nbsp;</td>
-</tr>
-<tr class="format-desc"><td colspan="8">Microsoft Excel Macro-Enabled Workbook</td></tr>
-
-<tr class="format-main format-shaded">
-  <td><a href="https://docs.fileformat.com/spreadsheet/xltx/">XLTX</a></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td>&nbsp;</td>
-  <td>&nbsp;</td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td>&nbsp;</td>
-</tr>
-<tr class="format-desc format-shaded"><td colspan="8">Microsoft Excel Template</td></tr>
-
-<tr class="format-main">
-  <td><a href="https://docs.fileformat.com/spreadsheet/xltm/">XLTM</a></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td>&nbsp;</td>
-  <td>&nbsp;</td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td>&nbsp;</td>
-</tr>
-<tr class="format-desc"><td colspan="8">Microsoft Excel Macro-Enabled Template</td></tr>
-
-<tr class="format-main format-shaded">
-  <td><a href="https://docs.fileformat.com/spreadsheet/xlt/">XLT</a></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td>&nbsp;</td>
-  <td>&nbsp;</td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td>&nbsp;</td>
-</tr>
-<tr class="format-desc format-shaded"><td colspan="8">Microsoft Excel 97–2003 Template</td></tr>
-
-<tr class="format-main">
-  <td><a href="https://docs.fileformat.com/spreadsheet/xlsb/">XLSB</a></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td>&nbsp;</td>
-  <td>&nbsp;</td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td>&nbsp;</td>
-</tr>
-<tr class="format-desc"><td colspan="8">Microsoft Excel Binary Workbook</td></tr>
-
-<tr class="format-main format-shaded">
-  <td><a href="https://docs.fileformat.com/spreadsheet/ods/">ODS</a></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td>&nbsp;</td>
-  <td>&nbsp;</td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td>&nbsp;</td>
-</tr>
-<tr class="format-desc format-shaded"><td colspan="8">OpenDocument Spreadsheet</td></tr>
-
-<tr class="format-main">
-  <td><a href="https://docs.fileformat.com/spreadsheet/ots/">OTS</a></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td>&nbsp;</td>
-  <td>&nbsp;</td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td>&nbsp;</td>
-</tr>
-<tr class="format-desc"><td colspan="8">OpenDocument Spreadsheet Template</td></tr>
-
-<tr class="format-main format-shaded">
-  <td><a href="https://docs.fileformat.com/spreadsheet/csv/">CSV</a></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td>&nbsp;</td>
-  <td>&nbsp;</td>
-  <td>&nbsp;</td>
-  <td>&nbsp;</td>
-  <td>&nbsp;</td>
-  <td>&nbsp;</td>
-</tr>
-<tr class="format-desc format-shaded"><td colspan="8">Comma-Separated Values</td></tr>
-
-<tr class="format-main">
-  <td><a href="https://docs.fileformat.com/spreadsheet/tsv/">TAB</a></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td>&nbsp;</td>
-  <td>&nbsp;</td>
-  <td>&nbsp;</td>
-  <td>&nbsp;</td>
-  <td>&nbsp;</td>
-  <td>&nbsp;</td>
-</tr>
-<tr class="format-desc"><td colspan="8">Tab-Separated Values</td></tr>
-
-<tr class="format-section"><td colspan="8">📊 Presentations</td></tr>
-<tr class="format-headers">
-  <th>Format</th>
-  <th>Document body</th>
-  <th>Metadata</th>
-  <th>Annotations (comments)</th>
-  <th>Embedded images</th>
-  <th>OCR</th>
-  <th>Remove Page</th>
-  <th>Page Filters</th>
-</tr>
-
-<tr class="format-main format-shaded">
-  <td><a href="https://docs.fileformat.com/presentation/ppt/">PPT</a></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-</tr>
-<tr class="format-desc format-shaded"><td colspan="8">Microsoft PowerPoint 97–2003 Presentation</td></tr>
-
-<tr class="format-main">
-  <td><a href="https://docs.fileformat.com/presentation/ppsx/">PPSX</a></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-</tr>
-<tr class="format-desc"><td colspan="8">Microsoft PowerPoint Slide Show</td></tr>
-
-<tr class="format-main format-shaded">
-  <td><a href="https://docs.fileformat.com/presentation/pps/">PPS</a></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-</tr>
-<tr class="format-desc format-shaded"><td colspan="8">Microsoft PowerPoint 97–2003 Slide Show</td></tr>
-
-<tr class="format-main">
-  <td><a href="https://docs.fileformat.com/presentation/pptm/">PPTM</a></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-</tr>
-<tr class="format-desc"><td colspan="8">Microsoft PowerPoint Macro-Enabled Presentation</td></tr>
-
-<tr class="format-main format-shaded">
-  <td><a href="https://docs.fileformat.com/presentation/potx/">POTX</a></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-</tr>
-<tr class="format-desc format-shaded"><td colspan="8">Microsoft PowerPoint Template</td></tr>
-
-<tr class="format-main">
-  <td><a href="https://docs.fileformat.com/presentation/ppsm/">PPSM</a></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-</tr>
-<tr class="format-desc"><td colspan="8">Microsoft PowerPoint Macro-Enabled Slide Show</td></tr>
-
-<tr class="format-main format-shaded">
-  <td><a href="https://docs.fileformat.com/presentation/potm/">POTM</a></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-</tr>
-<tr class="format-desc format-shaded"><td colspan="8">Microsoft PowerPoint Macro-Enabled Template</td></tr>
-
-<tr class="format-main">
-  <td><a href="https://docs.fileformat.com/presentation/odp/">ODP</a></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-</tr>
-<tr class="format-desc"><td colspan="8">OpenDocument Presentation</td></tr>
-
-<tr class="format-main format-shaded">
-  <td><a href="https://docs.fileformat.com/presentation/otp/">OTP</a></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-</tr>
-<tr class="format-desc format-shaded"><td colspan="8">OpenDocument Presentation Template</td></tr>
-
-<tr class="format-section"><td colspan="8">🖼️ Images</td></tr>
-<tr class="format-headers">
-  <th>Format</th>
-  <th>Document body</th>
-  <th>Metadata</th>
-  <th>Annotations (comments)</th>
-  <th>Embedded images</th>
-  <th>OCR</th>
-  <th>Remove Page</th>
-  <th>Page Filters</th>
-</tr>
-
-<tr class="format-main format-shaded">
-  <td><a href="https://docs.fileformat.com/image/tiff/">TIFF</a></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td>&nbsp;</td>
-  <td>&nbsp;</td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-</tr>
-<tr class="format-desc format-shaded"><td colspan="8">Tagged Image File Format</td></tr>
-
-<tr class="format-main">
-  <td><a href="https://docs.fileformat.com/image/bmp/">BMP</a></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td>&nbsp;</td>
-  <td>&nbsp;</td>
-  <td>&nbsp;</td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td>&nbsp;</td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-</tr>
-<tr class="format-desc"><td colspan="8">Bitmap Image</td></tr>
-
-<tr class="format-main format-shaded">
-  <td><a href="https://docs.fileformat.com/image/gif/">GIF</a></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td>&nbsp;</td>
-  <td>&nbsp;</td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-</tr>
-<tr class="format-desc format-shaded"><td colspan="8">Graphics Interchange Format</td></tr>
-
-<tr class="format-main">
-  <td><a href="https://docs.fileformat.com/image/webp/">WEBP</a></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td>&nbsp;</td>
-  <td>&nbsp;</td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-</tr>
-<tr class="format-desc"><td colspan="8">WebP Image</td></tr>
-
-<tr class="format-section"><td colspan="8">🌐 Other formats</td></tr>
-<tr class="format-headers">
-  <th>Format</th>
-  <th>Document body</th>
-  <th>Metadata</th>
-  <th>Annotations (comments)</th>
-  <th>Embedded images</th>
-  <th>OCR</th>
-  <th>Remove Page</th>
-  <th>Page Filters</th>
-</tr>
-
-<tr class="format-main format-shaded">
-  <td><a href="https://docs.fileformat.com/image/djvu/">DJVU</a></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td>&nbsp;</td>
-  <td>&nbsp;</td>
-  <td>&nbsp;</td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-</tr>
-<tr class="format-desc format-shaded"><td colspan="8">DjVu Document Format</td></tr>
-
-<tr class="format-main">
-  <td><a href="https://docs.fileformat.com/web/html/">HTML</a></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td>&nbsp;</td>
-  <td>&nbsp;</td>
-  <td>&nbsp;</td>
-  <td>&nbsp;</td>
-  <td>&nbsp;</td>
-  <td>&nbsp;</td>
-</tr>
-<tr class="format-desc"><td colspan="8">HyperText Markup Language</td></tr>
-
-<tr class="format-main format-shaded">
-  <td><a href="https://docs.fileformat.com/word-processing/md/">MD</a></td>
-  <td><img src="/redaction/net/images/check.png" alt="tick"></td>
-  <td>&nbsp;</td>
-  <td>&nbsp;</td>
-  <td>&nbsp;</td>
-  <td>&nbsp;</td>
-  <td>&nbsp;</td>
-  <td>&nbsp;</td>
-</tr>
-<tr class="format-desc format-shaded"><td colspan="8">Markdown Documentation File</td></tr>
-
-</tbody>
-</table>
 {{< alert style="tip" >}}
 
 **Can't find your file format?**
