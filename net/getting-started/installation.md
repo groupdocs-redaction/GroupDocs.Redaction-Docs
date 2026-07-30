@@ -14,6 +14,55 @@ hideChildren: False
 
 NuGet is the easiest way to download and install GroupDocs.Redaction for .NET. There are ways to install it in your project.
 
+## TFM-Split NuGet Packaging
+
+⚠️ **Important**
+
+Starting with GroupDocs.Redaction for .NET 26.5, the NuGet package uses TFM-Split packaging.
+
+NuGet now downloads only the assemblies required for your project's target framework instead of downloading assemblies for all supported frameworks.
+
+### Benefits of TFM-Split
+
+- Smaller package size
+- Faster package restore
+- Reduced disk usage
+- No changes to your application code
+
+### Updating Existing Projects to TFM-Split
+
+⚠️ **Important**
+
+If you are upgrading from a version earlier than 26.5, we recommend clearing the local NuGet cache before restoring packages.
+
+This helps prevent conflicts caused by cached package metadata from previous package layouts.
+
+```
+bash:
+
+dotnet nuget locals all --clear
+
+powershell:
+
+nuget locals all -clear
+```
+
+Alternatively, if you do not want to lose all cached packages, you can remove the cached GroupDocs.Redaction packages manually:
+
+.NET Framework (packages.config) – delete the GroupDocs.Redaction NuGet package folder from your solution's packages directory.
+
+Delete the GroupDocs.Redaction folder from the global NuGet cache, typically located at:
+
+Windows: %UserProfile%\.nuget\packages\groupdocs.redaction
+
+Linux/macOS: ~/.nuget/packages/groupdocs.redaction
+
+After clearing the cache, restore your NuGet packages normally.
+
+⚠️ **Important**
+
+Clearing the NuGet cache is typically required only once when upgrading from versions earlier than 26.5 to the new TFM-Split package structure.
+
 #### Install via Package Manager GUI
 
 Follow these steps to reference GroupDocs.Redaction using Package Manager GUI:
