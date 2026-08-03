@@ -11,7 +11,7 @@ showFeedbackForm: false
 ---
 
 <div class="gdoc-list-descr">
-GroupDocs.Redaction - Redact Sensitive Content from Documents
+Powerful document redaction APIs that enable your .NET, Java, and Python applications to securely remove sensitive information from PDFs, Word documents, spreadsheets, presentations, images, and other file formats.
 </div>
 
 <h2 class="gdoc-product-title">Documentation</h2>
@@ -50,12 +50,15 @@ GroupDocs.Redaction - Redact Sensitive Content from Documents
             <div class="gdoc-platform__col">
                 <div class="gdoc-platform__col-title">
                     <svg class="gdoc-platform__col-icon"><use xlink:href="/img/groupdocs-stack.svg#document"></use></svg>
-                    <div>Redact content from documents</div>
+                    <div>Redact file content</div>
                 </div>
                 <div class="gdoc-platform__col-descr">Articles and guidelines</div>
                 <ul class="gdoc-platform__col-links">
-                    <li> <a href='/redaction/net/redaction-basics/'>Basic redactions</a></li>
-                    <li> <a href='/redaction/net/basic-usage/'>Basic usage</a></li>                  
+                    <li> <a href='/redaction/net/text-redactions/'>Text</a></li>
+                    <li> <a href='/redaction/net/metadata-redactions/'>Metadata</a></li>                  
+                    <li> <a href='/redaction/net/image-redactions/'>Image</a></li>                  
+                    <li> <a href='/redaction/net/spreadsheet-redactions/'>Spreadsheets</a></li>                  
+                    <li> <a href='/redaction/net/annotation-redactions/'>Annotation</a></li>                  
                 </ul>
             </div>
             <div class="gdoc-platform__col">
@@ -99,10 +102,13 @@ GroupDocs.Redaction - Redact Sensitive Content from Documents
                     <svg class="gdoc-platform__col-icon"><use xlink:href="/img/groupdocs-stack.svg#document"></use></svg>
                     <div>Remove sensitive information</div>
                 </div>
-                <div class="gdoc-platform__col-descr">Articles and guides for both basic and advanced development</div>
+                <div class="gdoc-platform__col-descr">Examples of Usage</div>
                 <ul class="gdoc-platform__col-links">
-                    <li> <a href='/redaction/java/ocr-usage-basics/'>Redact content using optical character recognition (OCR)</a></li>
-                    <li> <a href='/redaction/java/advanced-usage/'>Advanced usage scenarios</a></li>   
+                    <li> <a href='/redaction/java/text-redactions/'>Text</a></li>
+                    <li> <a href='/redaction/java/metadata-redactions/'>Metadata</a></li>                  
+                    <li> <a href='/redaction/java/image-redactions/'>Image</a></li>                  
+                    <li> <a href='/redaction/java/spreadsheet-redactions/'>Spreadsheets</a></li>                  
+                    <li> <a href='/redaction/java/annotation-redactions/'>Annotation</a></li>    
                 </ul>
             </div>
             <div class="gdoc-platform__col">
@@ -145,10 +151,13 @@ GroupDocs.Redaction - Redact Sensitive Content from Documents
                     <svg class="gdoc-platform__col-icon"><use xlink:href="/img/groupdocs-stack.svg#document"></use></svg>
                     <div>Manage and protect classified information</div>
                 </div>
-                <div class="gdoc-platform__col-descr">Explore articles and guides covering both basic and advanced development topics</div>
+                <div class="gdoc-platform__col-descr">Most common redaction types</div>
                 <ul class="gdoc-platform__col-links">
-                    <li> <a href='/redaction/python-net/redaction-basics/'>Basic redactions</a></li>
-                    <li> <a href='/redaction/python-net/basic-usage/'>Basic usage</a></li>                        
+                    <li> <a href='/redaction/python-net/text-redactions/'>Text</a></li>
+                    <li> <a href='/redaction/python-net/metadata-redactions/'>Metadata</a></li>                  
+                    <li> <a href='/redaction/python-net/image-redactions/'>Image</a></li>                  
+                    <li> <a href='/redaction/python-net/spreadsheet-redactions/'>Spreadsheets</a></li>                  
+                    <li> <a href='/redaction/python-net/annotation-redactions/'>Annotation</a></li>                         
                 </ul>
             </div>
             <div class="gdoc-platform__col">

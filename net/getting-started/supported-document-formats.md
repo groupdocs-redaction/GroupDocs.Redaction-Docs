@@ -1,19 +1,29 @@
 ﻿---
 id: supported-document-formats
 url: redaction/net/supported-document-formats
-title: Supported Document Formats
+title: Supported File Formats
 second_title: Documentation
 weight: 2
-description: It supports PDF, DOCX, DOC, XLS, XLSX, PPTX, PPT, JPG, PNG, WEBP, HTML, MD, TXT and many more.
-keywords: PDF, DOCX, DOC, XLS, XLSX, PPTX, PPT, JPG, PNG, WEBP, HTML, HTM, MD, TXT, LOG
+description: This topic lists the file formats supported by GroupDocs.Redaction for .NET.
+keywords: file formats, Microsoft Word, Microsoft Excel, Microsoft PowerPoint, PDF, DOCX, XLSX, PPTX, JPG, PNG, WEBP, TXT
 productName: GroupDocs.Redaction for .NET
 hideChildren: False
+toc: True
 ---
-## Supported File Formats
 
 The following table indicates the file formats, supported by GroupDocs.Redaction for .NET.
 
-### 📰 Popular formats
+{{< alert style="tip" >}}
+
+Want to redact files online? Try the [GroupDocs.Redaction App](https://products.groupdocs.app/redaction/total) to redact PDF, DOCX, XLSX, PPTX, and many other file formats.
+
+{{< /alert >}}
+
+Use the search box below to filter the supported formats by file extension.
+
+{{< table-filter placeholder="Start typing to find file format" forumUrl="https://forum.groupdocs.com/c/redaction/33">}}
+
+## 📰 Popular formats
 
 | Format | Description | Document body | Metadata | Annotations (comments) | Embedded images | OCR | Remove Page | Page Filters |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -25,10 +35,11 @@ The following table indicates the file formats, supported by GroupDocs.Redaction
 | [PNG](https://docs.fileformat.com/image/png/) | Portable Network Graphics | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) |  |  | ![(tick)](/redaction/net/images/check.png) |  | ![(tick)](/redaction/net/images/check.png) |
 | [TXT](https://docs.fileformat.com/word-processing/txt/) | Plain Text File | ![(tick)](/redaction/net/images/check.png) |  |  |  |  |  |  |
 
-### 📄 Word processing
+## 📄 Word processing
 
 | Format | Description | Document body | Metadata | Annotations (comments) | Embedded images | OCR | Remove Page | Page Filters |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| [DOCX](https://docs.fileformat.com/word-processing/docx/) | Microsoft Word Document | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) |  |
 | [DOC](https://docs.fileformat.com/word-processing/doc) | Microsoft Word 97–2003 Document | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) |  |
 | [DOCM](https://docs.fileformat.com/word-processing/docm/) | Microsoft Word Macro-Enabled Document | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) |  |
 | [DOT](https://docs.fileformat.com/word-processing/dot/) | Microsoft Word 97–2003 Template | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) |  |
@@ -38,10 +49,13 @@ The following table indicates the file formats, supported by GroupDocs.Redaction
 | [ODT](https://docs.fileformat.com/word-processing/odt/) | OpenDocument Text File | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) |  |
 | [OTT](https://docs.fileformat.com/word-processing/ott/) | OpenDocument Text Template | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) |  |
 
-### 📑 Spreadsheets
+See [Basic Redactions in Word Processing Documents](/redaction/net/redaction-basics/#apply-redaction).
+
+## 📑 Spreadsheets
 
 | Format | Description | Document body | Metadata | Annotations (comments) | Embedded images | OCR | Remove Page | Page Filters |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| [XLSX](https://docs.fileformat.com/spreadsheet/xlsx/) | Microsoft Excel Workbook | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) |  |  | ![(tick)](/redaction/net/images/check.png) |  |
 | [XLS](https://docs.fileformat.com/spreadsheet/xls/) | Microsoft Excel Workbook 97-2003 | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) |  |  | ![(tick)](/redaction/net/images/check.png) |  |
 | [XLSM](https://docs.fileformat.com/spreadsheet/xlsm/) | Microsoft Excel Macro-Enabled Workbook | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) |  |  | ![(tick)](/redaction/net/images/check.png) |  |
 | [XLTX](https://docs.fileformat.com/spreadsheet/xltx/) | Microsoft Excel Template | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) |  |  | ![(tick)](/redaction/net/images/check.png) |  |
@@ -53,10 +67,13 @@ The following table indicates the file formats, supported by GroupDocs.Redaction
 | [CSV](https://docs.fileformat.com/spreadsheet/csv/) | Comma-Separated Values | ![(tick)](/redaction/net/images/check.png) |  |  |  |  |  |  |
 | [TAB](https://docs.fileformat.com/spreadsheet/tsv/) | Tab-Separated Values | ![(tick)](/redaction/net/images/check.png) |  |  |  |  |  |  |
 
-### 📊 Presentations
+See [Spreadsheet Redaction Example](/redaction/net/spreadsheet-redactions/).
+
+## 📊 Presentations
 
 | Format | Description | Document body | Metadata | Annotations (comments) | Embedded images | OCR | Remove Page | Page Filters |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| [PPTX](https://docs.fileformat.com/presentation/pptx/) | Microsoft PowerPoint Presentation | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) |
 | [PPT](https://docs.fileformat.com/presentation/ppt/) | Microsoft PowerPoint 97–2003 Presentation | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) |
 | [PPSX](https://docs.fileformat.com/presentation/ppsx/) | Microsoft PowerPoint Slide Show | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) |
 | [PPS](https://docs.fileformat.com/presentation/pps/) | Microsoft PowerPoint 97–2003 Slide Show | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) |
@@ -67,19 +84,24 @@ The following table indicates the file formats, supported by GroupDocs.Redaction
 | [ODP](https://docs.fileformat.com/presentation/odp/) | OpenDocument Presentation | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) |
 | [OTP](https://docs.fileformat.com/presentation/otp/) | OpenDocument Presentation Template | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) |
 
-### 🖼️ Images
+## 🖼️ Images
 
 | Format | Description | Document body | Metadata | Annotations (comments) | Embedded images | OCR | Remove Page | Page Filters |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| [JPEG](https://docs.fileformat.com/image/jpeg/) | JPEG Image | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) |  |  | ![(tick)](/redaction/net/images/check.png) |  | ![(tick)](/redaction/net/images/check.png) |
+| [PNG](https://docs.fileformat.com/image/png/) | Portable Network Graphics | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) |  |  | ![(tick)](/redaction/net/images/check.png) |  | ![(tick)](/redaction/net/images/check.png) |
 | [TIFF](https://docs.fileformat.com/image/tiff/) | Tagged Image File Format | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) |  |  | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) |
 | [BMP](https://docs.fileformat.com/image/bmp/) | Bitmap Image | ![(tick)](/redaction/net/images/check.png) |  |  |  | ![(tick)](/redaction/net/images/check.png) |  | ![(tick)](/redaction/net/images/check.png) |
 | [GIF](https://docs.fileformat.com/image/gif/) | Graphics Interchange Format | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) |  |  | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) |
 | [WEBP](https://docs.fileformat.com/image/webp/) | WebP Image | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) |  |  | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) |
 
-### 🌐 Other formats
+See [Image Redaction Example](/redaction/net/image-redactions/).
+
+## 🌐 Other formats
 
 | Format | Description | Document body | Metadata | Annotations (comments) | Embedded images | OCR | Remove Page | Page Filters |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| [TXT](https://docs.fileformat.com/word-processing/txt/) | Plain Text File | ![(tick)](/redaction/net/images/check.png) |  |  |  |  |  |  |
 | [DJVU](https://docs.fileformat.com/image/djvu/) | DjVu Document Format | ![(tick)](/redaction/net/images/check.png) |  |  |  | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) |
 | [HTML](https://docs.fileformat.com/web/html/) | HyperText Markup Language | ![(tick)](/redaction/net/images/check.png) |  |  |  |  |  |  |
 | [MD](https://docs.fileformat.com/word-processing/md/) | Markdown Documentation File | ![(tick)](/redaction/net/images/check.png) |  |  |  |  |  |  |
