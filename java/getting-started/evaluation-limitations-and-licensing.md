@@ -7,6 +7,7 @@ description: free trial api version for redaction is available to evaluate the A
 keywords: redaction,license,free trial,api  
 productName: GroupDocs.Redaction for Java
 hideChildren: False
+toc: True
 ---
 {{< alert style="info" >}}You can use GroupDocs.Redaction without the license. The usage and functionalities are pretty much same as the licensed one but you will face few limitations while using the non-licensed API.{{< /alert >}}
 

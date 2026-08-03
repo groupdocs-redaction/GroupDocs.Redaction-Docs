@@ -7,6 +7,7 @@ description: Learn how to install GroupDocs.Redaction for Java in your project. 
 keywords: installation, Maven, Gradle, dependency, repository, install GroupDocs Redaction, Java library, build tools, pom.xml, build.gradle
 productName: GroupDocs.Redaction for Java
 hideChildren: False
+toc: True
 ---
 
 GroupDocs.Redaction for Java is distributed via the [GroupDocs Repository](https://releases.groupdocs.com/java/repo/). You can easily add it to your project using any Java build tool (Maven, Gradle, Kotlin, Ivy, or Sbt) with simple configuration.

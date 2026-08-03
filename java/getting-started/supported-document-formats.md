@@ -7,6 +7,7 @@ description: It supports DOCX, DOCM, DOC, DOT, DOTM, XLS, XLSX, PDF, PPT, JPG, P
 keywords: DOCX, DOCM, DOC, DOT, DOTM, XLS, XLSX, PDF, PPT, JPG, PNG, HTML, EML  
 productName: GroupDocs.Redaction for Java
 hideChildren: False
+toc: True
 ---
 ## Supported File Formats
 

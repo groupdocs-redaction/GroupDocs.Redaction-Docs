@@ -7,6 +7,7 @@ description: Learn how to run C# examples which contain many examples of data re
 keywords: data redaction, redact information in pdf, redact in word,  C# 
 productName: GroupDocs.Redaction for .NET
 hideChildren: False
+toc: True
 ---
 {{< alert style="warning" >}}Before running an example make sure that GroupDocs.Redaction has been installed successfully.{{< /alert >}}
 

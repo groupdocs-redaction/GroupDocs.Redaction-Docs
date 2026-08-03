@@ -7,6 +7,7 @@ description: Learn about Java version requirements and supported operating syste
 keywords: Java, JDK, system requirements, platforms, Windows, Linux, macOS, Java 8, Java 11, Java 17, installation requirements, supported operating systems, Java runtime
 productName: GroupDocs.Redaction for Java
 hideChildren: False
+toc: True
 ---
 ## Java Version Requirements
 

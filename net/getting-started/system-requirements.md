@@ -7,6 +7,7 @@ description: GroupDocs.Redaction for .NET supports any 32-bit or 64-bit operati
 keywords: GroupDocs.Redaction for .NET, redaction
 productName: GroupDocs.Redaction for .NET
 hideChildren: False
+toc: True
 ---
 **Contents Summary**
 

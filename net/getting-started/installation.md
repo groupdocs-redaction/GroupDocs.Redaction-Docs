@@ -7,6 +7,7 @@ description: ""
 keywords: 
 productName: GroupDocs.Redaction for .NET
 hideChildren: False
+toc: True
 ---
   
 

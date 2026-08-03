@@ -7,6 +7,7 @@ description: Redacted meaning is that a process of modifying or editing a docume
 keywords: redacted meaning, redact pdf, doc, docx, xls, xlsx, ppt, pptx, jpg, png, gif,bmp
 productName: GroupDocs.Redaction for Java
 hideChildren: False
+toc: True
 ---
 
 ## Document Redaction

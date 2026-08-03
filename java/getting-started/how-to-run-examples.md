@@ -7,6 +7,7 @@ description: Learn how to run all Java examples for GroupDocs.Redaction. Step-by
 keywords: run examples, Java examples, Maven, run all examples, code examples, tutorial
 productName: GroupDocs.Redaction for Java
 hideChildren: False
+toc: True
 ---
 
 ## Prerequisites
