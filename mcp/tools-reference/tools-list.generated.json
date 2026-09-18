@@ -1,0 +1,317 @@
+{
+  "serverVersion": "26.9.0",
+  "capturedFrom": "GroupDocs.Redaction.Mcp@26.9.0",
+  "tools": [
+    {
+      "name": "redact_text",
+      "description": "Redacts text matching a regex pattern from a document and saves the redacted file to storage. Use to permanently hide sensitive data like SSNs, emails, phone numbers, or any custom pattern. Call this tool immediately whenever the user asks to redact, hide, remove, or black out text in a document. Do NOT pre-check whether files exist — just pass the filename the user provided. The tool resolves files from storage and returns an error with available files if a name is not found. On failure, the response text starts with 'Text redaction failed for' followed by the underlying exception type, message, and inner-exception chain.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "file": {
+            "type": "object",
+            "properties": {
+              "filePath": {
+                "description": "Name or path of a file in the configured storage, e.g. 'report.pdf' or 'output/report.pdf'. Use this for files the server can already see.",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "fileContent": {
+                "description": "Base64-encoded file content, for passing a file that is not in storage. Must be accompanied by fileName so the format can be determined.",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "fileName": {
+                "description": "Filename with extension, e.g. 'report.pdf'. Required alongside fileContent. May also be used on its own as an alias for filePath.",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          },
+          "pattern": {
+            "description": "Regex pattern to match text for redaction, e.g. '\\d{3}-\\d{2}-\\d{4}' for SSN",
+            "type": "string"
+          },
+          "replacement": {
+            "description": "Replacement text (default: '[REDACTED]')",
+            "type": "string",
+            "default": "[REDACTED]"
+          },
+          "password": {
+            "description": "Password for protected documents",
+            "type": [
+              "string",
+              "null"
+            ],
+            "default": null
+          }
+        },
+        "required": [
+          "file",
+          "pattern"
+        ]
+      },
+      "execution": {
+        "taskSupport": "optional"
+      }
+    },
+    {
+      "name": "redact_image_area",
+      "description": "Covers a rectangular area of a document page with a solid-color box, permanently hiding image content (e.g. faces, signatures, stamps). Coordinates are in pixels from the top-left corner of the page. Call this tool whenever the user asks to hide, cover, or black out an image area or region in a document. Do NOT pre-check whether files exist — just pass the filename the user provided. The tool resolves files from storage and returns an error with available files if a name is not found. On failure, the response text starts with 'Image area redaction failed for' followed by the underlying exception type, message, and inner-exception chain.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "file": {
+            "type": "object",
+            "properties": {
+              "filePath": {
+                "description": "Name or path of a file in the configured storage, e.g. 'report.pdf' or 'output/report.pdf'. Use this for files the server can already see.",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "fileContent": {
+                "description": "Base64-encoded file content, for passing a file that is not in storage. Must be accompanied by fileName so the format can be determined.",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "fileName": {
+                "description": "Filename with extension, e.g. 'report.pdf'. Required alongside fileContent. May also be used on its own as an alias for filePath.",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          },
+          "x": {
+            "description": "X coordinate (pixels) of the top-left corner of the area to redact",
+            "type": "integer"
+          },
+          "y": {
+            "description": "Y coordinate (pixels) of the top-left corner of the area to redact",
+            "type": "integer"
+          },
+          "width": {
+            "description": "Width (pixels) of the area to redact",
+            "type": "integer"
+          },
+          "height": {
+            "description": "Height (pixels) of the area to redact",
+            "type": "integer"
+          },
+          "color": {
+            "description": "Fill color for the redaction box — named color (e.g. 'Black', 'Red') or hex (e.g. '#FF0000'). Default: 'Black'",
+            "type": "string",
+            "default": "Black"
+          },
+          "password": {
+            "description": "Password for protected documents",
+            "type": [
+              "string",
+              "null"
+            ],
+            "default": null
+          }
+        },
+        "required": [
+          "file",
+          "x",
+          "y",
+          "width",
+          "height"
+        ]
+      },
+      "execution": {
+        "taskSupport": "optional"
+      }
+    },
+    {
+      "name": "redact_annotations",
+      "description": "Redacts or deletes annotations (comments, sticky notes, highlights) in a document and saves the result to storage. Can replace matching annotation text with a placeholder, or delete annotations entirely. Call this tool whenever the user asks to redact, remove, hide, or clean up comments or annotations in a document. Do NOT pre-check whether files exist — just pass the filename the user provided. The tool resolves files from storage and returns an error with available files if a name is not found. On failure, the response text starts with 'Annotation redaction failed for' followed by the underlying exception type, message, and inner-exception chain.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "file": {
+            "type": "object",
+            "properties": {
+              "filePath": {
+                "description": "Name or path of a file in the configured storage, e.g. 'report.pdf' or 'output/report.pdf'. Use this for files the server can already see.",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "fileContent": {
+                "description": "Base64-encoded file content, for passing a file that is not in storage. Must be accompanied by fileName so the format can be determined.",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "fileName": {
+                "description": "Filename with extension, e.g. 'report.pdf'. Required alongside fileContent. May also be used on its own as an alias for filePath.",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          },
+          "pattern": {
+            "description": "Regex pattern to match annotations. Omit to target all annotations.",
+            "type": [
+              "string",
+              "null"
+            ],
+            "default": null
+          },
+          "replacement": {
+            "description": "Replacement text for matched annotation content. Ignored when deleteAll is true (default: '[REDACTED]')",
+            "type": "string",
+            "default": "[REDACTED]"
+          },
+          "deleteAll": {
+            "description": "When true, deletes matched annotations entirely instead of replacing their text (default: false)",
+            "type": "boolean",
+            "default": false
+          },
+          "password": {
+            "description": "Password for protected documents",
+            "type": [
+              "string",
+              "null"
+            ],
+            "default": null
+          }
+        },
+        "required": [
+          "file"
+        ]
+      },
+      "execution": {
+        "taskSupport": "optional"
+      }
+    },
+    {
+      "name": "erase_metadata",
+      "description": "Erases metadata fields from a document (author, title, company, keywords, dates, etc.) and saves the cleaned file to storage. Use to remove personally identifiable or confidential information embedded in document properties before sharing. Call this tool whenever the user asks to erase, strip, clean, or remove metadata from a document. Accepted fields (comma-separated): All, Author, Title, Subject, Category, Keywords, Description, Creator, Producer, CreatedTime, LastPrinted, LastSavedTime, TotalEditingTime, NameOfApplication, Manager, Company, ContentStatus, Version, Revision, HyperlinkBase, ContentType, Template. Default is All. Do NOT pre-check whether files exist — just pass the filename the user provided. The tool resolves files from storage and returns an error with available files if a name is not found. On failure, the response text starts with 'Metadata erasure failed for' followed by the underlying exception type, message, and inner-exception chain.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "file": {
+            "type": "object",
+            "properties": {
+              "filePath": {
+                "description": "Name or path of a file in the configured storage, e.g. 'report.pdf' or 'output/report.pdf'. Use this for files the server can already see.",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "fileContent": {
+                "description": "Base64-encoded file content, for passing a file that is not in storage. Must be accompanied by fileName so the format can be determined.",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "fileName": {
+                "description": "Filename with extension, e.g. 'report.pdf'. Required alongside fileContent. May also be used on its own as an alias for filePath.",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          },
+          "fields": {
+            "description": "Comma-separated metadata fields to erase (default: 'All'). E.g. 'Author,Company,CreatedTime'",
+            "type": "string",
+            "default": "All"
+          },
+          "password": {
+            "description": "Password for protected documents",
+            "type": [
+              "string",
+              "null"
+            ],
+            "default": null
+          }
+        },
+        "required": [
+          "file"
+        ]
+      },
+      "execution": {
+        "taskSupport": "optional"
+      }
+    },
+    {
+      "name": "get_document_info",
+      "description": "Returns the file type, page count, size, and per-page dimensions of a document as JSON, without modifying the file. Supports PDF, DOCX, XLSX, PPTX, images, and 30+ more document formats. Call this tool whenever the user asks to inspect a document, check its page count, or get its details — useful as a precondition before redacting (e.g. to read page width/height before choosing redact_image_area coordinates). Do NOT pre-check whether the file exists — just pass the filename the user provided. Returns a JSON object with fields `fileName`, `fileType`, `pageCount`, `size`, and `pages` (array of `{ number, width, height }`). On failure, the response text starts with 'Document-info lookup failed for' followed by the underlying exception type, message, and inner-exception chain.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "file": {
+            "type": "object",
+            "properties": {
+              "filePath": {
+                "description": "Name or path of a file in the configured storage, e.g. 'report.pdf' or 'output/report.pdf'. Use this for files the server can already see.",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "fileContent": {
+                "description": "Base64-encoded file content, for passing a file that is not in storage. Must be accompanied by fileName so the format can be determined.",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "fileName": {
+                "description": "Filename with extension, e.g. 'report.pdf'. Required alongside fileContent. May also be used on its own as an alias for filePath.",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          },
+          "password": {
+            "description": "Password for protected documents",
+            "type": [
+              "string",
+              "null"
+            ],
+            "default": null
+          }
+        },
+        "required": [
+          "file"
+        ]
+      },
+      "execution": {
+        "taskSupport": "optional"
+      }
+    },
+    {
+      "name": "get_license_status",
+      "description": "Returns how this MCP server is licensed, and — under metered licensing — how much has been consumed. Call this when the user asks about licensing, evaluation limitations, metered usage, remaining credit, or which product engine version is running. Returns a JSON object with `mode` (\"evaluation\", \"licensed\" or \"metered\"), `licensed` (true for both licensed and metered), `consumption` (null unless metered; otherwise `quantity` and `credit`, or `error` if the reading failed), and `server` / `engine` name and version. Takes no arguments and never modifies anything.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {}
+      }
+    }
+  ]
+}
