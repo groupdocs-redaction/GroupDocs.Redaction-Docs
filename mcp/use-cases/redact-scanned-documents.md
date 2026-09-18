@@ -40,7 +40,7 @@ The commands and config snippets on this page are for the **.NET** build of the 
 
 > Cover the bottom third of page 2 with a black box.
 
-For a specific element — a signature, a face, a header — you need its position. Two practical routes: open the page in any viewer and read the coordinates, or render a preview with a tool that can (the [GroupDocs.Annotation MCP server]({{< ref "annotation/mcp/_index.md" >}}) can return page images inline) and let a vision-capable model estimate the box.
+For a specific element — a signature, a face, a header — you need its position. Two practical routes: open the page in any viewer and read the coordinates, or render a preview with a tool that can (the [GroupDocs.Annotation MCP server](/annotation/mcp/) can return page images inline) and let a vision-capable model estimate the box.
 
 ## Always check the result visually
 

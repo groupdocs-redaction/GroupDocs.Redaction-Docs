@@ -42,7 +42,7 @@ toc: True
 
 A saved-path message naming the cleaned file. Pass `fields` to target specific ones; omit it to clear the standard identifying set.
 
-A redaction that stops at the visible page leaves the author's name in the properties — which is exactly the detail that gets noticed. For a full metadata audit across every package (EXIF, XMP, IPTC and more), the [GroupDocs.Metadata MCP server]({{< ref "metadata/mcp/_index.md" >}}) goes deeper; this tool covers the fields that matter for a disclosure pass.
+A redaction that stops at the visible page leaves the author's name in the properties — which is exactly the detail that gets noticed. For a full metadata audit across every package (EXIF, XMP, IPTC and more), the [GroupDocs.Metadata MCP server](/metadata/mcp/) goes deeper; this tool covers the fields that matter for a disclosure pass.
 
 On failure the text starts with `Metadata erasure failed for`, followed by the exception type and message.
 

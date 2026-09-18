@@ -40,7 +40,7 @@ Expect **zero**. A non-zero count means the pattern missed variants — a differ
 
 [`redact_annotations`]({{< ref "redaction/mcp/tools-reference/redact-annotations.md" >}}) and [`erase_metadata`]({{< ref "redaction/mcp/tools-reference/erase-metadata.md" >}}) applied in the pass do not prove they were applied to **this** file — the chaining rule means it is entirely possible to verify a document that skipped a step. Check the file you are about to release, not the one you think you produced.
 
-For a deeper metadata check across every package, the [GroupDocs.Metadata MCP server]({{< ref "metadata/mcp/_index.md" >}}) reads EXIF, XMP, and IPTC as well.
+For a deeper metadata check across every package, the [GroupDocs.Metadata MCP server](/metadata/mcp/) reads EXIF, XMP, and IPTC as well.
 
 ## 3. Look at the pages
 
