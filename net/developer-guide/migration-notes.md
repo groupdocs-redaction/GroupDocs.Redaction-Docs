@@ -12,7 +12,7 @@ hideChildren: False
 
 Cross-platform compatibility is improved by removing the dependency on `System.Drawing.Common`.
 
-GroupDocs.Redaction now provides better support for Linux and other supported operating systems.
+GroupDocs.Redaction now provides better support for Linux and other [Supported Operating Systems]({{< ref "redaction/net/getting-started/system-requirements.md#supported-operating-systems" >}}).
 
 Version 26.9 removes `System.Drawing` types from the public API. Color, point, size, rectangle, and font values used by redactions now come from `GroupDocs.Redaction.Options.Drawing`.
 
