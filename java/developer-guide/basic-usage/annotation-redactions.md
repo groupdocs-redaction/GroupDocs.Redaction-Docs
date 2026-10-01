@@ -7,6 +7,7 @@ description: This article shows the implementation of annotation redaction for d
 keywords: annotation, redactions,PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX 
 productName: GroupDocs.Redaction for Java
 hideChildren: False
+toc: True
 ---
 ### Remove annotations (comments etc)
 

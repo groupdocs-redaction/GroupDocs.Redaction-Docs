@@ -7,6 +7,7 @@ description: ""
 keywords: 
 productName: GroupDocs.Redaction for Java
 hideChildren: False
+toc: True
 ---
 In order to reject specific changes during redaction process or to keep a full log of changes in the document, you need to set Redactor.RedactionCallback property, to a class implementing IRedactionCallback interface. The interface contains only one method, AcceptRedaction, which receives detailed information about proposed redaction and returns Boolean value, accepted or not.
 

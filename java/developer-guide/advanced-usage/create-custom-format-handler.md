@@ -7,6 +7,7 @@ description: "This article shows how to implement one or several interfaces for 
 keywords: redaction
 productName: GroupDocs.Redaction for Java
 hideChildren: False
+toc: True
 ---
 If format is not supported, you will need to implement a handler for it by inheriting from *DocumentFormatInstance* class. Depending on the document's features and required redactions, you will also need to implement one or several interfaces, allowing GroupDocs.Redaction to work with this document format.
 

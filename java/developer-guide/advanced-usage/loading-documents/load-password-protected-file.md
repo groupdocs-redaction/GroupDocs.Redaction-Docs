@@ -7,6 +7,7 @@ description: ""
 keywords: 
 productName: GroupDocs.Redaction for Java
 hideChildren: False
+toc: True
 ---
 ### Load password-protected file
 

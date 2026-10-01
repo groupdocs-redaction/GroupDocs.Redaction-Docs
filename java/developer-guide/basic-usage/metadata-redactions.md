@@ -7,6 +7,7 @@ description: This article shows that how Java redaction API allows you to replac
 keywords: Java, redaction, api, remove metadata
 productName: GroupDocs.Redaction for Java
 hideChildren: False
+toc: True
 ---
 ### Filter metadata
 

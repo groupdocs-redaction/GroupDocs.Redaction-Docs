@@ -7,6 +7,7 @@ description: "This article explains that how to use PageAreaRedaction."
 keywords: free PDF page scope
 productName: GroupDocs.Redaction for Java
 hideChildren: False
+toc: True
 ---
 
 You can use **PageAreaRedaction** to redact an area of a specific page range from all sensitive data in text, images and annnotations. 

@@ -7,6 +7,7 @@ description: "This article explains that how to set page-level scope to PDF reda
 keywords: free PDF page scope
 productName: GroupDocs.Redaction for Java
 hideChildren: False
+toc: True
 ---
 
 You can combine **PageRangeFilter** and **PageAreaFilter** filters in one set in order to set the scope of redaction to an area on a specific page. You have to set an array of instances to **Filters** property of the **ReplacementOptions**. 

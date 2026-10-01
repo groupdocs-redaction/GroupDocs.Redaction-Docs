@@ -6,6 +6,7 @@ weight: 1
 description: This article shows that how to get the list of all supported file formats of GroupDocs.Redaction by using Java.
 productName: GroupDocs.Redaction for Java
 hideChildren: False
+toc: True
 ---
 ### Get supported file formats
 

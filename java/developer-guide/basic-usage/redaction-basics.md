@@ -7,6 +7,7 @@ description: This article shows that how Java developers can apply metadata, ima
 keywords: text redaction, java, PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX.
 productName: GroupDocs.Redaction for Java
 hideChildren: False
+toc: True
 ---
 ### Redaction types
 

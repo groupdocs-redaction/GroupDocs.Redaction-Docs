@@ -7,6 +7,7 @@ description: ""
 keywords: 
 productName: GroupDocs.Redaction for Java
 hideChildren: False
+toc: True
 ---
 
 You can implement *ILogger* interface from com.groupdocs.redaction.options package. This interface requires to implement three methods:

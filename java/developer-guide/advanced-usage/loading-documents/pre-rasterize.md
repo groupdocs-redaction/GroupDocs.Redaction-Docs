@@ -7,6 +7,7 @@ description: "This article shows how to pre-rasterize a document using the redac
 keywords: redaction API
 productName: GroupDocs.Redaction for Java
 hideChildren: False
+toc: True
 ---
 In some cases, you might need to pre-rasterize the document before opening it and applying redactions. 
 

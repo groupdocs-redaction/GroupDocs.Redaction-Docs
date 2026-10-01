@@ -7,6 +7,7 @@ description: ""
 keywords: 
 productName: GroupDocs.Redaction for Java
 hideChildren: False
+toc: True
 ---
 The following example demonstrates how to save the redacted document, replacing an original file:
 

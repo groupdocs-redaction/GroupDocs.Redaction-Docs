@@ -7,6 +7,7 @@ description: "This article explains that how to integrate any paid or free OCR s
 keywords: free OCR solution
 productName: GroupDocs.Redaction for Java
 hideChildren: False
+toc: True
 ---
 
 Although GroupDocs.Redaction itself does not contain OCR as a part of its distributable, it allows you to integrate any paid or free OCR solution. 

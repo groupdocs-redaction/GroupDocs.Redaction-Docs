@@ -7,6 +7,7 @@ description:  This article shows how to redact the pages of a document as images
 keywords: redact
 productName: GroupDocs.Redaction for Java
 hideChildren: False
+toc: True
 ---
 
 In some cases you might need to redact the pages of a document as images, redacting entire areas of the page instead or in addition to a specific text. With GroupDocs.Redaction you can use the following approach:  

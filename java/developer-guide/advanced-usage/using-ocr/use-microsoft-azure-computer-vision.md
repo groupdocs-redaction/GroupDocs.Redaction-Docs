@@ -7,6 +7,7 @@ description: "This article explains that how to use Microsoft Azure Computer Vis
 keywords: Microsoft Azure Computer Vision API
 productName: GroupDocs.Redaction for Java
 hideChildren: False
+toc: True
 ---
 
 This implementation is based on [Microsoft Azure Computer Vision API](https://docs.microsoft.com/en-US/azure/cognitive-services/computer-vision/). The service is paid, but you can [create a free subscription](https://azure.microsoft.com/free/cognitive-services/). Once you've done with subscription, you will have to [create Computer Vision resource](https://portal.azure.com/#create/Microsoft.CognitiveServicesComputerVision) using the free pricing tier (F0) to try the service, and upgrade later to a paid tier for production. As a result, you will get Computer Vision Endpoint and Subscription Key (let's suppose they are stored in the environment variables COMPUTER_VISION_ENDPOINT and COMPUTER_VISION_SUBSCRIPTION_KEY respectively). 

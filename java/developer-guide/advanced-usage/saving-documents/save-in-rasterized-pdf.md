@@ -7,10 +7,9 @@ description: ""
 keywords: 
 productName: GroupDocs.Redaction for Java
 hideChildren: False
+toc: True
 ---
 The following example demonstrates how to save the document as a rasterized PDF file:
-
-
 
 ```java
 final Redactor redactor = new Redactor(Constants.SAMPLE_DOCX);

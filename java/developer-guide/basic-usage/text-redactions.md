@@ -7,6 +7,7 @@ description:  This article explains that how Java redaction API allows you to ea
 keywords: Java, redaction, redact data, text redactions  
 productName: GroupDocs.Redaction for Java
 hideChildren: False
+toc: True
 ---
 ### Use exact phrase redaction
 

@@ -7,6 +7,7 @@ description: This article shows the implementation of Redactor class which suppo
 keywords: redactor, jpeg, png, bmp
 productName: GroupDocs.Redaction for Java
 hideChildren: False
+toc: True
 ---
 
 In GroupDocs.Redaction, *Redactor* class supports rendering of the document preview in on of these image formats:

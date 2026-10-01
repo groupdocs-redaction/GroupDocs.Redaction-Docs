@@ -7,6 +7,7 @@ description: "This article explains that how to use Aspose.OCR for Cloud SDK in 
 keywords: Java, Aspose.OCR for Cloud SDK
 productName: GroupDocs.Redaction for Java
 hideChildren: False
+toc: True
 ---
 This implementation is based on [Aspose.OCR for Cloud SDK](https://sdks.aspose.cloud/ocr/java/). Although it requires a valid Aspose.Cloud subscription, you can always [request a trial](https://dashboard.aspose.cloud/).
 

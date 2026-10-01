@@ -7,6 +7,7 @@ description: This article explains the ability of the GroupDocs.Redaction API to
 keywords: redaction, java, FileType, PageCount, FileSize
 productName: GroupDocs.Redaction for Java
 hideChildren: False
+toc: True
 ---
 ### Get file info
 

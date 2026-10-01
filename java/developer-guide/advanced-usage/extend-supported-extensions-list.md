@@ -7,6 +7,7 @@ description: "This article explains the method which can be used when for some r
 keywords: non-standard extensions
 productName: GroupDocs.Redaction for Java
 hideChildren: False
+toc: True
 ---
 ### Extend supported extensions list
 

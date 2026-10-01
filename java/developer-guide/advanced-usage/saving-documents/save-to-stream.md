@@ -7,6 +7,7 @@ description: ""
 keywords: 
 productName: GroupDocs.Redaction for Java
 hideChildren: False
+toc: True
 ---
 You might need to save a document to any custom file at any location on the local disc or a even a Stream.
 

@@ -7,6 +7,7 @@ description: This article shows that how to remove pages with sensitive data fro
 keywords: remove page,PDF,Excel,PowerPoint,spreadsheet,presentation
 productName: GroupDocs.Redaction for Java
 hideChildren: False
+toc: True
 ---
 
 GroupDocs.Redaction allows to easily to remove pages from PDF documents, slides from presentations and worksheets from spreadsheet documents. 

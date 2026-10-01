@@ -7,6 +7,7 @@ description: This article shows that how to redact data of sensitive nature from
 keywords: redact data,JPG, PNG, TIFF
 productName: GroupDocs.Redaction for Java
 hideChildren: False
+toc: True
 ---
 ### Redact image area
 

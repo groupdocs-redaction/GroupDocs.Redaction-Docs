@@ -7,6 +7,7 @@ description: Lets try to know about what is redaction or what does redacted mean
 keywords: what does redacted mean, what is redaction, redaction, Java
 productName: GroupDocs.Redaction for Java
 hideChildren: False
+toc: True
 ---
 ## What is redaction?
 
