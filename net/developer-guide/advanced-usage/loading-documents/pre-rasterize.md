@@ -23,9 +23,6 @@ bool preRasterize = true;
 using (Redactor redactor = new Redactor(@"sample.docx", new LoadOptions(preRasterize)))
 {
     // Make changes to the file as a rasterized PDF, e.g. uisng ImageAreaRedaction:
-    //System.Drawing.Point samplePoint = new System.Drawing.Point(516, 311);
-    //System.Drawing.Size sampleSize = new System.Drawing.Size(170, 35);
-    // Use GroupDocs.Redaction.Options.Drawing types instead of System.Drawing, which is scheduled for removal in future versions.
     Point samplePoint = new Point(516, 311);
     Size sampleSize = new Size(170, 35);
     RedactorChangeLog result = redactor.Apply(new ImageAreaRedaction(samplePoint,

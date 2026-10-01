@@ -13,6 +13,7 @@ This implementation is based on [Aspose.OCR for .NET on-premise API](https://pro
 **C#**
 ```csharp
     using GroupDocs.Redaction.Integration.Ocr;
+    using GroupDocs.Redaction.Options.Drawing;
 
     public class AsposeOCRStandaloneConnector : IOcrConnector
     {

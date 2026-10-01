@@ -47,8 +47,6 @@ using GroupDocs.Redaction.Options.Drawing;
 
 using (Redactor redactor = new Redactor(@"sample.docx"))
 {
-  //redactor.Apply(new ExactPhraseRedaction("John Doe", new ReplacementOptions(System.Drawing.Color.Black)));
-  // Use GroupDocs.Redaction.Options.Drawing types instead of System.Drawing, which is scheduled for removal in future versions.
   redactor.Apply(new ExactPhraseRedaction("John Doe", new ReplacementOptions(Color.Black)));
   redactor.Save();
 }
@@ -80,7 +78,6 @@ using GroupDocs.Redaction.Options.Drawing;
 
 using (Redactor redactor = new Redactor(@"sample.docx"))
 {
-  //redactor.Apply(new RegexRedaction("\\d{2}\\s*\\d{2}[^\\d]*\\d{6}", new ReplacementOptions(System.Drawing.Color.Blue)));
   redactor.Apply(new RegexRedaction("\\d{2}\\s*\\d{2}[^\\d]*\\d{6}", new ReplacementOptions(Color.Blue)));
   redactor.Save();
 }
@@ -95,7 +92,6 @@ using GroupDocs.Redaction.Options.Drawing;
 
 using (Redactor redactor = new Redactor("LoremIpsum.pdf"))
 {
-    //redactor.Apply(new RegexRedaction("(Lorem(\n|.)+?urna)", new ReplacementOptions(System.Drawing.Color.Red)));
     redactor.Apply(new RegexRedaction("(Lorem(\n|.)+?urna)", new ReplacementOptions(Color.Red)));
     redactor.Save();
 }

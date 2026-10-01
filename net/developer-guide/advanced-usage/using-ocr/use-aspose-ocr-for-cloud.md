@@ -18,6 +18,7 @@ Let's suppose that the Aspose.Cloud AppSid and AppKey are stored in system envir
 using Aspose.Ocr.Cloud.Sdk;
 using Aspose.Ocr.Cloud.Sdk.Model;
 using Aspose.Ocr.Cloud.Sdk.Model.Requests;
+using GroupDocs.Redaction.Options.Drawing;
 using Newtonsoft.Json.Linq;
 
 public class AsposeOCRForCloudConnector : IOcrConnector
