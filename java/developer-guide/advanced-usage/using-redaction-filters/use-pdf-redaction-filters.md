@@ -3,14 +3,14 @@ id: use-pdf-redaction-filters
 url: redaction/java/use-pdf-redaction-filters
 title: Use PDF redaction filters
 weight: 2
-description: "This article explains that how to set page-level scope to PDF redactions."
-keywords: free PDF page scope
+description: "Set page-level scope for redactions using PageRangeFilter and PageAreaFilter."
+keywords: PageRangeFilter, PageAreaFilter, PDF page scope
 productName: GroupDocs.Redaction for Java
 hideChildren: False
 toc: True
 ---
 
-You can combine **PageRangeFilter** and **PageAreaFilter** filters in one set in order to set the scope of redaction to an area on a specific page. You have to set an array of instances to **Filters** property of the **ReplacementOptions**. 
+You can combine **PageRangeFilter** and **PageAreaFilter** in one set to limit a redaction to an area on a specific page (or slide). Assign the filters array to the **Filters** property of **ReplacementOptions**. The same approach applies to PDF and to other formats that support page filters.
 
 The following example demonstrates how to apply redaction to the bottom half of the last page in a PDF document.
 

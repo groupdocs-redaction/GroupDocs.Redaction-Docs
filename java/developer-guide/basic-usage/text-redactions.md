@@ -3,12 +3,14 @@ id: text-redactions
 url: redaction/java/text-redactions
 title: Text redactions
 weight: 5
-description:  This article explains that how Java redaction API allows you to easily redact data of sensitive or private nature from your documents. You can apply text redaction using exact phrase or regular expression for documents of different formats like PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX and others.
-keywords: Java, redaction, redact data, text redactions  
+description: Apply text redaction with an exact phrase or regular expression to PDF, Word, Excel, PowerPoint, and other supported formats.
+keywords: Java, redaction, ExactPhraseRedaction, RegexRedaction
 productName: GroupDocs.Redaction for Java
 hideChildren: False
 toc: True
 ---
+You can redact text with [ExactPhraseRedaction](https://reference.groupdocs.com/redaction/java/com.groupdocs.redaction.redactions/ExactPhraseRedaction) or [RegexRedaction](https://reference.groupdocs.com/redaction/java/com.groupdocs.redaction.redactions/RegexRedaction), using a replacement string or a colored box via [ReplacementOptions](https://reference.groupdocs.com/redaction/java/com.groupdocs.redaction.redactions/ReplacementOptions). To limit matches to a page range or area, set filters on `ReplacementOptions` (see [Using redaction filters]({{< ref "redaction/java/developer-guide/advanced-usage/using-redaction-filters/_index.md" >}})).
+
 ### Use exact phrase redaction
 
 In the example below, we apply textual redaction, replacing personal exact phrase "John Doe" with "\[personal\]" (or any exemption code):

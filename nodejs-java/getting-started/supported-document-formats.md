@@ -1,16 +1,16 @@
 ---
 id: supported-document-formats
-url: redaction/java/supported-document-formats
+url: redaction/nodejs-java/supported-document-formats
 title: Supported Document Formats
 weight: 2
-description: This topic lists the file formats supported by GroupDocs.Redaction for Java.
+description: This topic lists the file formats supported by GroupDocs.Redaction for Node.js via Java.
 keywords: file formats, Microsoft Word, Microsoft Excel, Microsoft PowerPoint, PDF, DOCX, XLSX, PPTX, JPG, PNG, WEBP, TXT, HTML, MD, ODS
-productName: GroupDocs.Redaction for Java
+productName: GroupDocs.Redaction for Node.js via Java
 hideChildren: False
 toc: True
 ---
 
-The following table indicates the file formats, supported by GroupDocs.Redaction for Java.
+The following table indicates the file formats, supported by GroupDocs.Redaction for Node.js via Java.
 
 {{< alert style="tip" >}}
 
@@ -48,7 +48,7 @@ Use the search box below to filter the supported formats by file extension.
 | [ODT](https://docs.fileformat.com/word-processing/odt/) | OpenDocument Text File | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) |  |
 | [OTT](https://docs.fileformat.com/word-processing/ott/) | OpenDocument Text Template | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) |  |
 
-See [Redaction basics]({{< ref "redaction/java/developer-guide/basic-usage/redaction-basics.md" >}}).
+See [Redaction basics]({{< ref "redaction/nodejs-java/developer-guide/basic-usage/redaction-basics.md" >}}).
 
 ## Spreadsheets
 
@@ -67,7 +67,7 @@ See [Redaction basics]({{< ref "redaction/java/developer-guide/basic-usage/redac
 | [TSV](https://docs.fileformat.com/spreadsheet/tsv/) | Tab-Separated Values | ![(tick)](/redaction/net/images/check.png) |  |  |  |  |  |  |
 | [TAB](https://docs.fileformat.com/spreadsheet/tsv/) | Tab-Separated Values File | ![(tick)](/redaction/net/images/check.png) |  |  |  |  |  |  |
 
-See [Spreadsheet redactions]({{< ref "redaction/java/developer-guide/basic-usage/spreadsheet-redactions.md" >}}).
+See [Spreadsheet redactions]({{< ref "redaction/nodejs-java/developer-guide/basic-usage/spreadsheet-redactions.md" >}}).
 
 ## Presentations
 
@@ -94,7 +94,7 @@ See [Spreadsheet redactions]({{< ref "redaction/java/developer-guide/basic-usage
 | [BMP](https://docs.fileformat.com/image/bmp/) | Bitmap Image | ![(tick)](/redaction/net/images/check.png) |  |  |  | ![(tick)](/redaction/net/images/check.png) |  | ![(tick)](/redaction/net/images/check.png) |
 | [GIF](https://docs.fileformat.com/image/gif/) | Graphics Interchange Format | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) |  |  | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) | ![(tick)](/redaction/net/images/check.png) |
 
-See [Image redactions]({{< ref "redaction/java/developer-guide/basic-usage/image-redactions.md" >}}).
+See [Image redactions]({{< ref "redaction/nodejs-java/developer-guide/basic-usage/image-redactions.md" >}}).
 
 ## Other formats
 

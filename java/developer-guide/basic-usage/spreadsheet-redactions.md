@@ -3,11 +3,15 @@ id: spreadsheet-redactions
 url: redaction/java/spreadsheet-redactions
 title: Spreadsheet redactions
 weight: 8
-description: This article shows that how Java redaction API allows to redact data of sensitive or private nature from your XLS, XLSX, ODS spreadsheet document formats and others.
+description: Redact sensitive data in spreadsheet formats including XLS, XLSX, XLSM, XLT, XLTX, XLTM, XLSB, ODS, OTS, CSV, TSV, and TAB.
 productName: GroupDocs.Redaction for Java
 hideChildren: False
 toc: True
 ---
+GroupDocs.Redaction supports Microsoft Excel workbooks and templates (XLS, XLSX, XLSM, XLT, XLTX, XLTM, XLSB), OpenDocument spreadsheets (ODS, OTS), and text-based tables (CSV, TSV, TAB). See the full matrix in [Supported document formats]({{< ref "redaction/java/getting-started/supported-document-formats.md" >}}).
+
+DrawBox (colored rectangle) replacements are skipped for text-only formats such as CSV, TSV, and TAB — use a textual replacement string instead.
+
 ### Filter by spreadsheet and column
 
 If you have a document with one or more tables, organized into worksheets (one table per worksheet) - such as Microsoft Excel documents - you can use specific type of textual redactions, *CellColumnRedaction*. It allows you to set the scope of the redaction to a specific worksheet and/or column. The options are:

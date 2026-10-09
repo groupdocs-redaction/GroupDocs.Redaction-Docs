@@ -3,21 +3,23 @@ id: image-redactions
 url: redaction/java/image-redactions
 title: Image redactions
 weight: 9
-description: This article shows that how to redact data of sensitive nature from images of various formats like JPG, PNG, TIFF and others.
-keywords: redact data,JPG, PNG, TIFF
+description: Redact sensitive regions and metadata from images such as JPG, PNG, TIFF, BMP, and GIF.
+keywords: redact image, JPG, PNG, TIFF, ImageAreaRedaction, PageAreaFilter
 productName: GroupDocs.Redaction for Java
 hideChildren: False
 toc: True
 ---
 ### Redact image area
 
-GroupDocs.Redactions prodives a set of features to redact data of sensitive nature from images of various formats like JPG, PNG, TIFF and others. See full list at [supported document formats]({{< ref "redaction/java/getting-started/supported-document-formats.md" >}}) article.
+GroupDocs.Redaction provides features to redact sensitive data from images (JPG, PNG, TIFF, BMP, GIF, and others). See the full list in [Supported document formats]({{< ref "redaction/java/getting-started/supported-document-formats.md" >}}).
 
-GroupDocs.Redaction fr Java since version 21.6 supports two ways of redacting images, both in separate image files and embedded images:
-*   You can put a colored box over a given area, such as header, footer, or an area, where customer's data are expected to appear.
-*   You can use any 3-rd party OCR engine to process the image, search it for text and redact sensitive data within the image.   
+You can redact images both as separate files and as embedded images inside documents:
+*   Put a colored box over a given area (header, footer, or a region where customer data appears).
+*   Use a third-party OCR engine to search text on the image and redact matches.
 
-GroupDocs.Redaction for Java also allows you to change image metadata (e.g. edit EXIF data of an image or act as an "EXIF eraser").
+You can also change image metadata (for example edit EXIF or act as an "EXIF eraser") where the format exposes metadata.
+
+For multi-page or layout-aware scenarios, combine image-area redaction with [page filters]({{< ref "redaction/java/developer-guide/advanced-usage/using-redaction-filters/_index.md" >}}) (`PageRangeFilter`, `PageAreaFilter`). Coordinates follow the page (or visible image) placement when the bitmap size differs from the on-page shape.
 
 ## Redact image area
 
@@ -114,6 +116,8 @@ finally { redactor.close(); }
 ```
 
 If the redaction cannot be applied to this type of files, e.g. a spreadsheet document, *RedactorChangeLog.getStatus()* will be *RedactionStatus.Skipped*.
+
+To limit image redaction to a page range or rectangle, set filters on `ReplacementOptions` or use [PageAreaRedaction]({{< ref "redaction/java/developer-guide/advanced-usage/using-redaction-filters/use-page-area-redaction.md" >}}).
 
 ## Multi-frame images
 

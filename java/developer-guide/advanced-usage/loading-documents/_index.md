@@ -10,4 +10,6 @@ hideChildren: False
 ---
 GroupDocs.Redaction allows you to load password-protected documents and load documents from different sources.
 
+You can also pass an explicit file type in `LoadOptions` when opening from a stream or when the file extension is unreliable.
+
 For more details please refer to the following guides:
