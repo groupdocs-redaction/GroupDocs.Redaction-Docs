@@ -11,7 +11,7 @@ showFeedbackForm: false
 ---
 
 <div class="gdoc-list-descr">
-Powerful document redaction APIs that enable your .NET, Java, and Python applications to securely remove sensitive information from PDFs, Word documents, spreadsheets, presentations, images, and other file formats.
+Powerful document redaction APIs that enable your .NET, Java, Node.js, and Python applications to securely remove sensitive information from PDFs, Word documents, spreadsheets, presentations, images, and other file formats.
 </div>
 
 <h2 class="gdoc-product-title">Documentation</h2>
@@ -20,6 +20,7 @@ Powerful document redaction APIs that enable your .NET, Java, and Python applica
 <ul >
 <li><a href="#redaction_net">.NET</a></li>
 <li><a href="#redaction_java">Java</a></li>
+<li><a href="#redaction_nodejs-java">Node.js</a></li>
 <li><a href="#redaction_python-net">Python</a></li>
 <li><a href="#redaction_mcp">MCP</a></li>
 </ul>
@@ -127,6 +128,57 @@ Powerful document redaction APIs that enable your .NET, Java, and Python applica
         </div>
     </div>
     <div class="gdoc-platform">
+        <a id="redaction_nodejs-java"></a>
+        <div class="gdoc-platform__header">
+            <svg class="gdoc-platform__header-icon"><use xlink:href="/img/groupdocs-stack.svg#nodejs"></use></svg>
+            <a class="gdoc-platform__header-title"  href='/redaction/nodejs-java/'>GroupDocs.Redaction for Node.js via Java</a>
+            <a class="gdoc-platform__header-btn"  href='/redaction/nodejs-java/'>More</a>
+        </div>
+        <div class="gdoc-platform__cols">
+            <div class="gdoc-platform__col">
+                <div class="gdoc-platform__col-title">
+                    <svg class="gdoc-platform__col-icon"><use xlink:href="/img/groupdocs-stack.svg#time"></use></svg>
+                    <div>Getting started</div>
+                </div>
+                <div class="gdoc-platform__col-descr">Start quickly with our getting started documentation</div>
+                <ul class="gdoc-platform__col-links">
+                    <li> <a href='/redaction/nodejs-java/features-overview/'>Features overview</a></li>
+                    <li> <a href='/redaction/nodejs-java/supported-document-formats/'>Supported document formats</a></li>
+                    <li> <a href='/redaction/nodejs-java/system-requirements/'>System requirements</a></li>
+                    <li> <a href='/redaction/nodejs-java/installation/'>Installation</a></li>
+                </ul>
+            </div>
+            <div class="gdoc-platform__col">
+                <div class="gdoc-platform__col-title">
+                    <svg class="gdoc-platform__col-icon"><use xlink:href="/img/groupdocs-stack.svg#document"></use></svg>
+                    <div>Remove sensitive information</div>
+                </div>
+                <div class="gdoc-platform__col-descr">Examples of Usage</div>
+                <ul class="gdoc-platform__col-links">
+                    <li> <a href='/redaction/nodejs-java/text-redactions/'>Text</a></li>
+                    <li> <a href='/redaction/nodejs-java/metadata-redactions/'>Metadata</a></li>
+                    <li> <a href='/redaction/nodejs-java/image-redactions/'>Image</a></li>
+                    <li> <a href='/redaction/nodejs-java/spreadsheet-redactions/'>Spreadsheets</a></li>
+                    <li> <a href='/redaction/nodejs-java/annotation-redactions/'>Annotation</a></li>
+                </ul>
+            </div>
+            <div class="gdoc-platform__col">
+                <div class="gdoc-platform__col-title">
+                    <svg class="gdoc-platform__col-icon"><use xlink:href="/img/groupdocs-stack.svg#git-big"></use></svg>
+                    <div>Node.js via Java code examples</div>
+                </div>
+                <div class="gdoc-platform__col-descr">Package and guidance for API example usage</div>
+                <ul class="gdoc-platform__col-links gdoc-platform__col-links--alt">
+                    <li> <a href='https://www.npmjs.com/package/@groupdocs/groupdocs.redaction'>@groupdocs/groupdocs.redaction</a></li>
+                    <li> <a href='/redaction/nodejs-java/how-to-run-examples/'>How to run examples</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="gdoc-platform__footer">
+            <a class="gdoc-platform__footer-btn"  href='/redaction/nodejs-java/'>More</a>
+        </div>
+    </div>
+    <div class="gdoc-platform">
     <a id="redaction_python-net"></a>
         <div class="gdoc-platform__header">
             <svg class="gdoc-platform__header-icon"><use xlink:href="/img/groupdocs-stack.svg#python"></use></svg>
@@ -139,7 +191,7 @@ Powerful document redaction APIs that enable your .NET, Java, and Python applica
                     <svg class="gdoc-platform__col-icon"><use xlink:href="/img/groupdocs-stack.svg#time"></use></svg>
                     <div>Getting Started</div>
                 </div>
-                <div class="gdoc-platform__col-descr">Quickly get started with our beginnerís guide</div>
+                <div class="gdoc-platform__col-descr">Quickly get started with our beginnerùs guide</div>
                 <ul class="gdoc-platform__col-links">
                     <li> <a href='/redaction/python-net/features-overview/'>Features Overview</a></li>
                     <li> <a href='/redaction/python-net/supported-document-formats/'>Supported Document Formats</a></li>
@@ -188,7 +240,7 @@ Powerful document redaction APIs that enable your .NET, Java, and Python applica
                 <div class="gdoc-platform__col-title">
                 <svg class="gdoc-platform__col-icon"><use xlink:href="/img/groupdocs-stack.svg#time"></use></svg>
                 <div>Getting started</div></div>
-                <div class="gdoc-platform__col-descr">Redact text, areas, and metadata with Claude, Cursor, and Copilot ó locally</div>
+                <div class="gdoc-platform__col-descr">Redact text, areas, and metadata with Claude, Cursor, and Copilot ù locally</div>
                 <ul class="gdoc-platform__col-links">
                     <li> <a href='/redaction/mcp/getting-started/'>Quick start</a></li>
                     <li> <a href='/redaction/net/mcp/'>Install for .NET</a></li>
@@ -200,7 +252,7 @@ Powerful document redaction APIs that enable your .NET, Java, and Python applica
                     <div class="gdoc-platform__col-title">
                     <svg class="gdoc-platform__col-icon"><use xlink:href="/img/groupdocs-stack.svg#document"></use></svg>
                     <div>Use cases</div></div>
-                    <div class="gdoc-platform__col-descr">One prompt per scenario ó files never leave your machine</div>
+                    <div class="gdoc-platform__col-descr">One prompt per scenario ù files never leave your machine</div>
                     <ul class="gdoc-platform__col-links">
                         <li> <a href='/redaction/mcp/use-cases/redact-sensitive-data-with-ai-agents/'>Redact sensitive data with AI agents</a></li>
                         <li> <a href='/redaction/mcp/use-cases/prepare-documents-for-disclosure/'>Prepare documents for disclosure</a></li>
