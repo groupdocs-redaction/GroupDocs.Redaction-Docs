@@ -1,2 +1,4 @@
 deploy_key
+common/
+.DS_Store
 /.vs

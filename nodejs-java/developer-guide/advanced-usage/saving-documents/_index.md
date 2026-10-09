@@ -3,8 +3,13 @@ id: saving-documents
 url: redaction/nodejs-java/saving-documents
 title: Saving documents
 weight: 2
-description: "Save redacted documents in original format or as rasterized PDF."
+description: ""
+keywords: 
 productName: GroupDocs.Redaction for Node.js via Java
 hideChildren: False
 ---
-By default `save()` rasterizes pages to a single PDF and may add a suffix. Use `SaveOptions` to keep the original format (`setRasterizeToPDF(false)`), control suffixes, or set Word OOXML compliance via `getWordprocessingSaveOptions()`.
+Saving a document, GroupDocs.Redaction puts it in the same folder as the original file, renaming or rewriting original. If you need to save the document to any custom location, you'll have to open a *Stream* to this location. As a save option by default, *GroupDocs.Redaction* converts all pages (slides, worksheets) in a document into images and puts them in a single PDF file, so you can share the redacted document without any additional conversions. You can control this behavior through *RasterizeToPdf* property in *SaveOptions *or *Enabled* property in *RasterizationOptions* class.
+
+For word processing documents saved in the original format, you can also set the OOXML compliance level through `SaveOptions.getWordprocessingSaveOptions().setOoxmlCompliance(...)`.
+
+You can see examples of *Save* method and its options in one of these guides:

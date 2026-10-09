@@ -1,39 +1,106 @@
 ---
 id: redaction-basics
 url: redaction/nodejs-java/redaction-basics
-title: Redaction basics
+title: Redaction Basics
 weight: 4
-description: "Redaction types and how to apply them with Redactor.apply in Node.js via Java."
-keywords: apply redaction, RedactorChangeLog
+description: This article shows that how Java developers can apply metadata, image, annotation and text redaction in their documents. Wide range of document formats is supported, such as, PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX and others.
+keywords: text redaction, java, PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX.
 productName: GroupDocs.Redaction for Node.js via Java
 hideChildren: False
 toc: True
 ---
 ### Redaction types
 
+GroupDocs.Redaction comes with the following redaction types:
+
 | Type | Description | Classes |
 | --- | --- | --- |
-| [Text]({{< ref "redaction/nodejs-java/developer-guide/basic-usage/text-redactions.md" >}}) | Replace or hide text in the document body | `ExactPhraseRedaction`, `RegexRedaction` |
-| [Metadata]({{< ref "redaction/nodejs-java/developer-guide/basic-usage/metadata-redactions.md" >}}) | Erase or rewrite metadata | `EraseMetadataRedaction`, `MetadataSearchRedaction` |
-| [Annotations]({{< ref "redaction/nodejs-java/developer-guide/basic-usage/annotation-redactions.md" >}}) | Delete or rewrite annotations | `DeleteAnnotationRedaction`, `AnnotationRedaction` |
-| [Images]({{< ref "redaction/nodejs-java/developer-guide/basic-usage/image-redactions.md" >}}) | Cover an image area with a colored box | `ImageAreaRedaction` |
-| [Pages]({{< ref "redaction/nodejs-java/developer-guide/basic-usage/remove-page-redactions.md" >}}) | Remove a page range | `RemovePageRedaction` |
+| [Text]({{< ref "redaction/nodejs-java/developer-guide/basic-usage/text-redactions.md" >}}) | Replaces or hides with color block a portion of text within document body | *ExactPhraseRedaction*, *RegexRedaction* |
+| [Metadata]({{< ref "redaction/nodejs-java/developer-guide/basic-usage/metadata-redactions.md" >}}) | Replace metadata values with empty ones or redacts metadata texts | *EraseMetadataRedaction*, *MetadataSearchRedaction* |
+| [Annotations]({{< ref "redaction/nodejs-java/developer-guide/basic-usage/annotation-redactions.md" >}}) | Deletes annotations from document or redacts its texts | *DeleteAnnotationRedaction*, *AnnotationRedaction* |
+| [Images]({{< ref "redaction/nodejs-java/developer-guide/basic-usage/image-redactions.md" >}}) | Replaces specific area of an image with a colored box | *ImageAreaRedaction* |
+| [Pages]({{< ref "redaction/nodejs-java/developer-guide/basic-usage/remove-page-redactions.md" >}}) | Removes specific range of pages (slides, worksheets, etc.) | *RemovePageRedaction* |
 
 ### Apply redaction
+
+Applying redaction to a document is done through *Redactor.apply* method. As a result, you receive *RedactorChangeLog* instance, containing a log entry for each redaction applied. The entry contains reference to *Redacton* instance including its options, status of the operation (see below) and textual descriptions when applicable. If at least one redaction failed, you will see *Status* == *RedactionStatus.Failed*:
+
+
 
 ```js
 const redaction = require('@groupdocs/groupdocs.redaction');
 
 const redactor = new redaction.Redactor('sample.docx');
-try {
-  const result = redactor.apply(
-    new redaction.ExactPhraseRedaction('John Doe', new redaction.ReplacementOptions('[personal]')));
-  if (result.getStatus() !== redaction.RedactionStatus.Failed) {
+try 
+{
+    redactor.apply(new redaction.ExactPhraseRedaction('John Doe', new redaction.ReplacementOptions('[personal]')));
     redactor.save();
-  }
-} finally {
+}
+finally {
   redactor.close();
 }
 ```
 
-`apply` returns a `RedactorChangeLog`. Status values include `Applied`, `PartiallyApplied`, `Skipped`, and `Failed`.
+All possible statuses are listed in this table:
+
+| Status | Description | Possible reasons |
+| --- | --- | --- |
+| *Applied* | Redaction was fully and successfully applied | All operations within redaction process were successfully applied |
+| *PartiallyApplied* | Redaction was applied only to a part of its matches | 1) Trial limitations for replacements were exceeded2) At least one change was rejected by user |
+| *Skipped* | Redaction was skipped (not applied) | 1) Trial limitations for redactions were exceeded2) Redaction cannot be applied to this type of document3) All replacements were rejected by user and no changes were made |
+| *Failed* | Redaction failed with exception | An exception occurred in process of redaction |
+
+For detailed information you have to iterate through redaction log entries in *RedactorChangeLog.RedactionLog* and check for ErrorMessage property of any items with status other than *Applied*:
+
+
+
+```js
+const redaction = require('@groupdocs/groupdocs.redaction');
+
+const summary = redactor.apply( ... );
+if (result.getStatus() !== redaction.RedactionStatus.Failed)
+{
+	for (RedactorLogEntry logEntry : result.getRedactionLog())
+    {
+        if (logEntry.getResult().getStatus() !== redaction.RedactionStatus.Applied)
+        {
+            console.log(logEntry.getRedaction().getClass().getName() + ' status is ' + 
+               logEntry.getResult().getStatus() + ', details: ' + logEntry.getResult().getErrorMessage());
+        }
+    }
+}
+```
+
+### Apply multiple redactions
+
+You can apply as much redactions as you need in a single call to *Redactor.Apply()* method, since its overload accepts an array of redactions and redaction policy. In this case, redactions will be applied in the same order as they appear in the array. As an alternative to specifying redaction sets in your code, you can create an XML file with redaction policy, as described [here]({{< ref "redaction/nodejs-java/developer-guide/basic-usage/redaction-basics.md" >}}).
+
+
+
+```js
+const redaction = require('@groupdocs/groupdocs.redaction');
+const java = require('java');
+const Color = java.import('java.awt.Color');
+
+const redactor = new redaction.Redactor('sample.docx');
+try 
+{
+    Redaction[] redactionList = new Redaction[]
+    {
+          new redaction.ExactPhraseRedaction('John Doe', new redaction.ReplacementOptions('[Client]')),
+          new redaction.RegexRedaction('Redaction', new redaction.ReplacementOptions('[Product]')),
+          new redaction.RegexRedaction('\\d{2}\\s*\\d{2}[^\\d]*\\d{6}', new redaction.ReplacementOptions(Color.BLUE)),
+          new redaction.DeleteAnnotationRedaction(),
+          new redaction.EraseMetadataRedaction(redaction.MetadataFilters.All)
+    };
+    redactor.apply(redactionList);
+    // false, if at least one redaction failed
+    if (result.getStatus() !== redaction.RedactionStatus.Failed)
+    {
+        redactor.save();
+    }
+}
+finally {
+  redactor.close();
+}
+```

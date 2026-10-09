@@ -1,10 +1,11 @@
 ---
 id: basic-usage
 url: redaction/nodejs-java/basic-usage
-title: Basic usage
+title: Basic Usage
 weight: 1
-description: "Common redaction scenarios for GroupDocs.Redaction for Node.js via Java."
+description: ""
+keywords: 
 productName: GroupDocs.Redaction for Node.js via Java
 hideChildren: False
 ---
-Typical flow: open a document with `Redactor`, call `apply(...)` one or more times, then `save()`. Examples below assume a local file such as `sample.docx`.
+Let’s review common usage scenarios when source document "sample.docx" is stored at a local drive and you want to apply redactions to it.
