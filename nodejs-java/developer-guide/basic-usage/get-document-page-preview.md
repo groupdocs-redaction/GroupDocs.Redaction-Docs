@@ -16,31 +16,30 @@ In GroupDocs.Redaction, *Redactor* class supports rendering of the document prev
 *   Portable Network Graphics
 *   Bitmap Image File
 
-The following example demonstrates how to get a single page preview of the document. Preview streaming uses [ICreatePageStream](https://reference.groupdocs.com/redaction/java/com.groupdocs.redaction.options/ICreatePageStream) and [PreviewOptions](https://reference.groupdocs.com/redaction/java/com.groupdocs.redaction.options/PreviewOptions) from the Java API, wrapped with `java.extend`:
+The following example demonstrates how to get a single page preview of the document. Preview streaming uses [ICreatePageStream](https://reference.groupdocs.com/redaction/java/com.groupdocs.redaction.options/ICreatePageStream) and [PreviewOptions](https://reference.groupdocs.com/redaction/java/com.groupdocs.redaction.options/PreviewOptions) from the Java API, wrapped with `java.newProxy`:
 
 ```js
 const redaction = require('@groupdocs/groupdocs.redaction');
 const java = require('java');
 
 const FileOutputStream = java.import('java.io.FileOutputStream');
-const ICreatePageStream = java.import('com.groupdocs.redaction.options.ICreatePageStream');
 
-const testFile = 'D:\\sample.pdf';
+const testFile = 'sample.docx';
 const testPageNumber = 1;
-const previewFileName = `${testFile}_page${testPageNumber}.png`;
+const previewFileName = `sample_page${testPageNumber}.png`;
+
+const createPageStream = java.newProxy('com.groupdocs.redaction.options.ICreatePageStream', {
+  createPageStream: function (_pageNumber) {
+    return new FileOutputStream(previewFileName);
+  }
+});
 
 const redactor = new redaction.Redactor(testFile);
 try {
-  const createPageStream = java.extend(ICreatePageStream, {
-    createPageStream: function (pageNumber) {
-      return new FileOutputStream(previewFileName);
-    }
-  });
-
   const options = new redaction.PreviewOptions(createPageStream);
   options.setHeight(640);
   options.setWidth(480);
-  options.setPageNumbers([testPageNumber]);
+  options.setPageNumbers(java.newArray('int', [testPageNumber]));
   options.setPreviewFormat(redaction.PreviewFormats.Png);
   redactor.generatePreview(options);
   console.log(`Preview for page ${testPageNumber} was saved to "${previewFileName}"`);

@@ -43,50 +43,48 @@ const redaction = require('@groupdocs/groupdocs.redaction');
 const java = require('java');
 const Color = java.import('java.awt.Color');
 
-const policy = new redaction.RedactionPolicy(new Redaction[] {
-    new redaction.ExactPhraseRedaction('Redaction', new redaction.ReplacementOptions('[Product]')),
-    new redaction.RegexRedaction('\\d{2}\\s*\\d{2}[^\\d]*\\d{6}', new redaction.ReplacementOptions(Color.BLUE)),
-    new redaction.DeleteAnnotationRedaction(),
-    new redaction.EraseMetadataRedaction(redaction.MetadataFilters.All)
-});
+const policy = new redaction.RedactionPolicy(java.newArray('com.groupdocs.redaction.Redaction', [
+  new redaction.ExactPhraseRedaction('Redaction', new redaction.ReplacementOptions('[Product]')),
+  new redaction.RegexRedaction('\\d{2}\\s*\\d{2}[^\\d]*\\d{6}', new redaction.ReplacementOptions(Color.BLUE)),
+  new redaction.DeleteAnnotationRedaction(),
+  new redaction.EraseMetadataRedaction(redaction.MetadataFilters.All)
+]));
 policy.save('MyPolicyFile.xml');
 ```
 
 You can have as much policies, as you need, loading them to redact your documents.
 
-An example below shows how to apply redaction policy to all files within given inbound folder, and save to one of outbound folders - for successfully updated files and for failed ones. Current date and time is used as a part of output file name:
-
-
+An example below shows how to apply redaction policy to all files within given inbound folder, and save to one of outbound folders — for successfully updated files and for failed ones:
 
 ```js
 const redaction = require('@groupdocs/groupdocs.redaction');
+const java = require('java');
+const fs = require('fs');
+const path = require('path');
+const FileOutputStream = java.import('java.io.FileOutputStream');
 
 const policy = redaction.RedactionPolicy.load('Policy_file.xml');
-for (final File fileEntry : new File('\Inbound\").listFiles())
-{
-const redactor = new redaction.Redactor(fileEntry.getPath());
-    try 
-    {
-        //Apply redaction 
-const result = redactor.apply(policy);
-                    
-        // Set the output directory path, it is supposed that all folders exist
-const resultFolder = new File(result.getStatus() !== redaction.RedactionStatus.Failed ? 'Done' : 'Failed");
-                    
-        // Save the ouput files after applying redactions
-const fileStream = new FileOutputStream(resultFolder.getPath() + fileEntry.getName());
-        try 
-        {
-const options = new redaction.RasterizationOptions();
-               options.setEnabled(false);
-               redactor.save(fileStream,options);
-        }
-        finally {
-  fileStream.close();
+const inbound = 'Inbound';
+const files = fs.readdirSync(inbound)
+  .map((name) => path.join(inbound, name))
+  .filter((filePath) => fs.statSync(filePath).isFile());
+
+for (const filePath of files) {
+  const redactor = new redaction.Redactor(filePath);
+  try {
+    const result = redactor.apply(policy);
+    const resultFolder = result.getStatus() !== redaction.RedactionStatus.Failed ? 'Done' : 'Failed';
+    const fileName = path.basename(filePath);
+    const fileStream = new FileOutputStream(path.join(resultFolder, fileName));
+    try {
+      const options = new redaction.RasterizationOptions();
+      options.setEnabled(false);
+      redactor.save(fileStream, options);
+    } finally {
+      fileStream.close();
+    }
+  } finally {
+    redactor.close();
+  }
 }
-     }
-     finally {
-  redactor.close();
-}
- }
 ```

@@ -9,7 +9,7 @@ productName: GroupDocs.Redaction for Node.js via Java
 hideChildren: False
 toc: True
 ---
-> **Note:** The samples on this page are Java classes from the GroupDocs.Redaction for Java API. Use them from Node.js via Java by placing the classes on the JVM classpath, or by wrapping the same interfaces with `java.extend`.
+> **Note:** The samples on this page are Java classes from the GroupDocs.Redaction for Java API. Use them from Node.js via Java by placing the classes on the JVM classpath, or by wrapping the same interfaces with `java.newProxy`.
 
 
 If format is not supported, you will need to implement a handler for it by inheriting from *DocumentFormatInstance* class. Depending on the document's features and required redactions, you will also need to implement one or several interfaces, allowing GroupDocs.Redaction to work with this document format.

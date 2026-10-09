@@ -13,7 +13,7 @@ toc: True
 Although GroupDocs.Redaction itself does not contain OCR as a part of its distributable, it allows you to integrate any paid or free OCR solution.
 You have to implement [IOcrConnector](https://reference.groupdocs.com/redaction/java/com.groupdocs.redaction.integration/IOcrConnector) interface and its recognize() method, taking a stream with an image as an argument and returning a structured representation of the text, including bounding rectangles.
 
-> **Note:** Connector implementations are Java classes (same contracts as GroupDocs.Redaction for Java). Provide them on the JVM classpath or wrap with `java.extend`, then pass the instance into `RedactorSettings` from Node.js.
+> **Note:** Connector implementations are Java classes (same contracts as GroupDocs.Redaction for Java). Provide them on the JVM classpath or wrap with `java.newProxy`, then pass the instance into `RedactorSettings` from Node.js.
 
 **Java (connector skeleton)**
 

@@ -23,20 +23,16 @@ GroupDocs.Redaction comes with the following redaction types:
 
 ### Apply redaction
 
-Applying redaction to a document is done through *Redactor.apply* method. As a result, you receive *RedactorChangeLog* instance, containing a log entry for each redaction applied. The entry contains reference to *Redacton* instance including its options, status of the operation (see below) and textual descriptions when applicable. If at least one redaction failed, you will see *Status* == *RedactionStatus.Failed*:
-
-
+Applying redaction to a document is done through *Redactor.apply* method. As a result, you receive *RedactorChangeLog* instance, containing a log entry for each redaction applied. The entry contains reference to *Redaction* instance including its options, status of the operation (see below) and textual descriptions when applicable. If at least one redaction failed, you will see *Status* == *RedactionStatus.Failed*:
 
 ```js
 const redaction = require('@groupdocs/groupdocs.redaction');
 
 const redactor = new redaction.Redactor('sample.docx');
-try 
-{
-    redactor.apply(new redaction.ExactPhraseRedaction('John Doe', new redaction.ReplacementOptions('[personal]')));
-    redactor.save();
-}
-finally {
+try {
+  redactor.apply(new redaction.ExactPhraseRedaction('John Doe', new redaction.ReplacementOptions('[personal]')));
+  redactor.save();
+} finally {
   redactor.close();
 }
 ```
@@ -52,30 +48,25 @@ All possible statuses are listed in this table:
 
 For detailed information you have to iterate through redaction log entries in *RedactorChangeLog.RedactionLog* and check for ErrorMessage property of any items with status other than *Applied*:
 
-
-
 ```js
 const redaction = require('@groupdocs/groupdocs.redaction');
 
-const summary = redactor.apply( ... );
-if (result.getStatus() !== redaction.RedactionStatus.Failed)
-{
-	for (RedactorLogEntry logEntry : result.getRedactionLog())
-    {
-        if (logEntry.getResult().getStatus() !== redaction.RedactionStatus.Applied)
-        {
-            console.log(logEntry.getRedaction().getClass().getName() + ' status is ' + 
-               logEntry.getResult().getStatus() + ', details: ' + logEntry.getResult().getErrorMessage());
-        }
+const result = redactor.apply(/* ... */);
+if (result.getStatus() !== redaction.RedactionStatus.Failed) {
+  const log = result.getRedactionLog();
+  for (let i = 0; i < log.size(); i++) {
+    const logEntry = log.get(i);
+    if (logEntry.getResult().getStatus() !== redaction.RedactionStatus.Applied) {
+      console.log(logEntry.getRedaction().getClass().getName() + ' status is ' +
+        logEntry.getResult().getStatus() + ', details: ' + logEntry.getResult().getErrorMessage());
     }
+  }
 }
 ```
 
 ### Apply multiple redactions
 
-You can apply as much redactions as you need in a single call to *Redactor.Apply()* method, since its overload accepts an array of redactions and redaction policy. In this case, redactions will be applied in the same order as they appear in the array. As an alternative to specifying redaction sets in your code, you can create an XML file with redaction policy, as described [here]({{< ref "redaction/nodejs-java/developer-guide/basic-usage/redaction-basics.md" >}}).
-
-
+You can apply as much redactions as you need in a single call to *Redactor.apply()* method, since its overload accepts a Java array of redactions and redaction policy. Build that array with `java.newArray('com.groupdocs.redaction.Redaction', [...])` (base class is `com.groupdocs.redaction.Redaction`). In this case, redactions will be applied in the same order as they appear in the array. As an alternative to specifying redaction sets in your code, you can create an XML file with redaction policy, as described [here]({{< ref "redaction/nodejs-java/developer-guide/advanced-usage/use-redaction-policies.md" >}}).
 
 ```js
 const redaction = require('@groupdocs/groupdocs.redaction');
@@ -83,24 +74,19 @@ const java = require('java');
 const Color = java.import('java.awt.Color');
 
 const redactor = new redaction.Redactor('sample.docx');
-try 
-{
-    Redaction[] redactionList = new Redaction[]
-    {
-          new redaction.ExactPhraseRedaction('John Doe', new redaction.ReplacementOptions('[Client]')),
-          new redaction.RegexRedaction('Redaction', new redaction.ReplacementOptions('[Product]')),
-          new redaction.RegexRedaction('\\d{2}\\s*\\d{2}[^\\d]*\\d{6}', new redaction.ReplacementOptions(Color.BLUE)),
-          new redaction.DeleteAnnotationRedaction(),
-          new redaction.EraseMetadataRedaction(redaction.MetadataFilters.All)
-    };
-    redactor.apply(redactionList);
-    // false, if at least one redaction failed
-    if (result.getStatus() !== redaction.RedactionStatus.Failed)
-    {
-        redactor.save();
-    }
-}
-finally {
+try {
+  const redactionList = java.newArray('com.groupdocs.redaction.Redaction', [
+    new redaction.ExactPhraseRedaction('John Doe', new redaction.ReplacementOptions('[Client]')),
+    new redaction.RegexRedaction('Redaction', new redaction.ReplacementOptions('[Product]')),
+    new redaction.RegexRedaction('\\d{2}\\s*\\d{2}[^\\d]*\\d{6}', new redaction.ReplacementOptions(Color.BLUE)),
+    new redaction.DeleteAnnotationRedaction(),
+    new redaction.EraseMetadataRedaction(redaction.MetadataFilters.All)
+  ]);
+  const result = redactor.apply(redactionList);
+  if (result.getStatus() !== redaction.RedactionStatus.Failed) {
+    redactor.save();
+  }
+} finally {
   redactor.close();
 }
 ```
