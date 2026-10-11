@@ -11,7 +11,7 @@ serverVersion: 26.9.0
 toc: True
 ---
 
-`redact_image_area` covers a rectangle with a solid-colour box, permanently hiding whatever is underneath — a face, a signature, a stamp, a region of a scan. Coordinates are in **pixels from the top-left of the page**. Example prompt: *"Cover the signature block at the bottom of page 2"*.
+`redact_image_area` covers a rectangle with a solid-colour box, permanently hiding whatever is underneath — a face, a signature, a stamp, a region of a scan. Coordinates are in **pixels from the top-left of the page**. The tool takes no page argument — only the file and the rectangle — so check every page of the output. Example prompt: *"Cover the signature block in the rectangle at the bottom of scan.png"*.
 
 **Tool description (as the AI agent sees it):**
 
@@ -36,7 +36,7 @@ toc: True
   "name": "redact_image_area",
   "arguments": {
     "file": {
-      "filePath": "case-file.pdf"
+      "filePath": "scan.png"
     },
     "x": 100,
     "y": 640,
@@ -57,6 +57,6 @@ On failure the text starts with `Image area redaction failed for`, followed by t
 
 ## Example prompts
 
-* *"Cover the signature block at the bottom of page 2."*
+* *"Cover the signature block at the bottom of scan.png with a black box."*
 * *"Black out the photo in the top-right corner."*
-* *"Hide the stamp area on the first page."*
+* *"Hide the stamp area in the top-left corner of the scan."*

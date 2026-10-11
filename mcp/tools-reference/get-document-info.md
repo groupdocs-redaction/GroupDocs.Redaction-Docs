@@ -11,7 +11,7 @@ serverVersion: 26.9.0
 toc: True
 ---
 
-`get_document_info` returns the file type, page count, size, and **per-page dimensions** — the numbers you need before placing an area redaction. Example prompt: *"How big is page 2? I need to cover the bottom third."*
+`get_document_info` returns the file type, page count, size, and **per-page dimensions** — the numbers you need before placing an area redaction. Example prompt: *"How many pages, and how big is each one?"* It only reports; it does not choose where to redact.
 
 **Tool description (as the AI agent sees it):**
 
@@ -41,12 +41,12 @@ toc: True
 
 A JSON object with `fileName`, `fileType`, `pageCount`, `sizeBytes`, and `pages` (width and height per page).
 
-Per-page dimensions turn *"cover the bottom third of page 2"* into concrete `x`/`y`/`width`/`height` values for [`redact_image_area`]({{< ref "redaction/mcp/tools-reference/redact-image-area.md" >}}).
+Per-page dimensions help you work out concrete `x`/`y`/`width`/`height` values for [`redact_image_area`]({{< ref "redaction/mcp/tools-reference/redact-image-area.md" >}}), which takes no page argument — the rectangle applies to the file, so check every page of the output.
 
 On failure the text starts with `Document-info lookup failed for`, followed by the exception type and message.
 
 ## Example prompts
 
 * *"How many pages, and how big is each one?"*
-* *"What are the dimensions of page 2?"*
+* *"What are the dimensions of each page?"*
 * *"Is this a PDF or a Word document?"*

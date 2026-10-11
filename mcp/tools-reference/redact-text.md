@@ -47,7 +47,7 @@ A saved-path message naming the redacted file.
 
 The matched text is **replaced in the document**, not covered with a drawn rectangle — which is what makes this redaction rather than obscuring. `replacement` controls what appears in its place; a consistent marker like `[REDACTED]` makes the result reviewable.
 
-Two things to be deliberate about: a pattern that is too loose removes more than you meant, and a pattern that is too tight leaves data behind. Ask the agent to report the **match count**, and verify afterwards.
+Two things to be deliberate about: a pattern that is too loose removes more than you meant, and a pattern that is too tight leaves data behind. The tool returns the saved file, not a match count — ask the agent to name that file, and [verify]({{< ref "redaction/mcp/use-cases/verify-a-redaction.md" >}}) it afterwards.
 
 On failure the text starts with `Text redaction failed for`, followed by the exception type and message.
 

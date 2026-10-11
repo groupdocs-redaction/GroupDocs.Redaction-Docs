@@ -53,7 +53,7 @@ No. You (or the agent) supply the **pattern**. The tools apply it exactly and pr
 
 ## How do I verify a redaction?
 
-Read the redacted copy back and search it: run the same pattern again and expect zero matches, check the metadata with [`erase_metadata`]({{< ref "redaction/mcp/tools-reference/erase-metadata.md" >}}) applied, and look at the pages. The [verification workflow]({{< ref "redaction/mcp/use-cases/verify-a-redaction.md" >}}) sets this out step by step. Do not skip it — a redaction you have not verified is a claim, not a control.
+Read the redacted copy back as text with `extract_text` on the [GroupDocs.Parser MCP server](/parser/mcp/) (Docker only) and expect no hit. Do not re-run `redact_text` for this: it returns a saved file, not a count, and writes another copy. Then check the metadata with [`erase_metadata`]({{< ref "redaction/mcp/tools-reference/erase-metadata.md" >}}) applied, and look at the pages. The [verification workflow]({{< ref "redaction/mcp/use-cases/verify-a-redaction.md" >}}) sets this out step by step. Do not skip it — a redaction you have not verified is a claim, not a control.
 
 ## Why does only part of my document get redacted?
 

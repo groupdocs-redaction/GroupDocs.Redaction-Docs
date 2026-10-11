@@ -19,7 +19,7 @@ structuredData:
         - name: "Put the documents in the storage folder"
           text: "Point GROUPDOCS_MCP_STORAGE_PATH at the folder that holds the files the agent should use."
         - name: "Ask the agent"
-          text: "Take case-file.pdf and prepare it for disclosure: redact all email addresses and the name Jane Smith, delete all annotations, clear the document properties. Apply each step to the file produced by the previous one, and report the match count at every step."
+          text: "Take case-file.pdf and prepare it for disclosure: redact all email addresses and the name Jane Smith, delete all annotations, clear the document properties. Apply each step to the file produced by the previous one, and name the file each step produced."
 ---
 
 Disclosure is where partial redaction becomes a headline. The work is not hard; it is *sequential*, and each step writes a new file.
@@ -38,9 +38,9 @@ The commands and config snippets on this page are for the **.NET** build of the 
 
 ## The prompt
 
-> Take case-file.pdf and prepare it for disclosure: redact all email addresses and the name "Jane Smith", delete all annotations, clear the document properties. Apply each step to the file produced by the previous one, and report the match count at every step.
+> Take case-file.pdf and prepare it for disclosure: redact all email addresses and the name "Jane Smith", delete all annotations, clear the document properties. Apply each step to the file produced by the previous one, and name the file each step produced.
 
-The two clauses at the end are what make the result trustworthy: **chaining** keeps every redaction, and **counts** make each step checkable.
+The two clauses at the end are what make the result trustworthy: **chaining** keeps every redaction, and **named files** make each step traceable.
 
 ## Why chaining is the failure everyone hits
 
@@ -48,7 +48,7 @@ Each tool writes `<name>_redacted.<ext>`-style output rather than editing in pla
 
 ## Multiple patterns
 
-Each pattern is its own [`redact_text`]({{< ref "redaction/mcp/tools-reference/redact-text.md" >}}) call, chained the same way. Ask for them one at a time with counts, rather than as a single opaque instruction: five calls with five numbers is a record; one call with "done" is not.
+Each pattern is its own [`redact_text`]({{< ref "redaction/mcp/tools-reference/redact-text.md" >}}) call, chained the same way. Ask for them one at a time, with the file each call produced, rather than as a single opaque instruction: five calls with five named files is a record; one call with "done" is not.
 
 ## Evaluation mode makes this workflow dangerous
 
@@ -61,3 +61,8 @@ One redaction per document, four replacements maximum. A disclosure pass under t
 ## Keep the originals separate
 
 The unredacted file still exists, in the same folder, one letter different in the name. Move finished originals out of the working folder, or configure a separate `GROUPDOCS_MCP_OUTPUT_PATH` ([configuration]({{< ref "redaction/net/mcp/configuration.md" >}})) so redacted copies land somewhere distinct. Releasing the wrong file is not a redaction failure, but it fails just as badly.
+
+## Read more
+
+* [Enforce disclosure redaction policy with automated AI workflows using MCP](https://blog.groupdocs.com/redaction/enforce-disclosure-redaction-automated-workflows-mcp/) — the same scenario on the GroupDocs blog, with worked examples and the trade-offs.
+

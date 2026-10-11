@@ -52,7 +52,7 @@ With a cloud-hosted model, everything the agent says travels to the model provid
 Three ways to handle it, in order of strength:
 
 1. **Run a local model.** Nothing leaves the perimeter at all.
-2. **Ask for counts, not values.** *"Report how many matches, not what they were"* is a prompt the agent will follow.
+2. **Ask for the file, not the values.** *"Tell me which file you saved, not what you matched"* is a prompt the agent will follow.
 3. **Pass patterns by description** where possible — *"our standard account-number pattern"* rather than a literal customer identifier.
 
 None of this is a limitation of the server; it is a property of using a hosted model. It is better stated plainly than discovered later.
@@ -72,6 +72,7 @@ docker run --rm -i \
 * Pin the tag (`:26.9.0`, not `:latest`).
 * A separate output path keeps redacted copies away from the originals — worth doing here more than anywhere.
 * Licence read-only; mount only the folders the agent should reach.
+* On Linux, including the Docker image (a Linux container), `redact_image_area` and `erase_metadata` currently fail on PDF files because the PDF engine's image handling depends on `System.Drawing`, which .NET supports only on Windows; both work on Word documents, and `redact_text` works on PDF. Run PDF area redaction and metadata erasure on Windows with `dnx`.
 
 ## License management
 
@@ -97,3 +98,8 @@ Both are covered in [Licensing]({{< ref "redaction/mcp/getting-started/licensing
 **What ports does it open?** None. stdio only.
 
 **How do I prove that?** The [verification script]({{< ref "redaction/net/mcp/troubleshooting.md" >}}#verifying-an-installation-end-to-end) performs a real handshake and a real engine call so you can watch exactly what happens.
+
+## Read more
+
+* [3 architectures for AI document processing, and the one that keeps files inside your network](https://blog.groupdocs.com/total/on-premise-ai-document-processing-mcp/) — the same scenario on the GroupDocs blog, with worked examples and the trade-offs.
+

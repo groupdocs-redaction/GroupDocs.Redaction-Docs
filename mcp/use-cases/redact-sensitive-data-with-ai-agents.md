@@ -31,14 +31,18 @@ The commands and config snippets on this page are for the **.NET** build of the 
 ## The pattern
 
 1. Put the document in the storage folder the server can see.
-2. Ask: *"Redact every email address in case-file.pdf and tell me how many you replaced."*
+2. Ask: *"Redact every email address in case-file.pdf and tell me which file you saved."*
 3. The agent calls [`redact_text`]({{< ref "redaction/mcp/tools-reference/redact-text.md" >}}) with a regular expression.
 4. A redacted copy appears in your output folder; the original is untouched.
 5. You verify — see [Verify a redaction]({{< ref "redaction/mcp/use-cases/verify-a-redaction.md" >}}).
 
-## Always ask for the match count
+## Ask for the file, then check it
 
-*"Done"* is not a result. *"Replaced 14 matches"* is, because it can be wrong in a way you can notice: if you expected two and got fourteen, the pattern is too loose; if you expected fourteen and got four, you are probably in [evaluation mode]({{< ref "redaction/mcp/getting-started/licensing.md" >}}) with its four-replacement cap.
+*"Done"* is not a result. The redaction tools return the path of the saved file, not a match count, so ask the agent to name the file it produced and then [verify]({{< ref "redaction/mcp/use-cases/verify-a-redaction.md" >}}) that file. A number in the agent's reply is its own reading of the text, not tool output. In [evaluation mode]({{< ref "redaction/mcp/getting-started/licensing.md" >}}) a redaction is capped at four replacements, so an unlicensed run can leave matches in place.
+
+## Platform limit
+
+On Linux, including the Docker image (a Linux container), `redact_image_area` and `erase_metadata` currently fail on PDF files because the PDF engine's image handling depends on `System.Drawing`, which .NET supports only on Windows; both work on Word documents, and `redact_text` works on PDF. Run PDF area redaction and metadata erasure on Windows with `dnx`.
 
 ## The four places data hides
 
@@ -75,3 +79,8 @@ with `GROUPDOCS_MCP_STORAGE_PATH` pointing at the folder — [per-client config]
 * [Redact scanned documents and images]({{< ref "redaction/mcp/use-cases/redact-scanned-documents.md" >}}) — when there is no text layer.
 * [Verify a redaction]({{< ref "redaction/mcp/use-cases/verify-a-redaction.md" >}}) — proving it, not assuming it.
 * [On-premise architecture]({{< ref "redaction/mcp/use-cases/on-premise-redaction.md" >}}) — what leaves the machine, honestly.
+
+## Read more
+
+* [3 ways to redact sensitive data with AI agents and MCP](https://blog.groupdocs.com/redaction/3-ways-redact-sensitive-data-ai-agents-mcp/) — the same scenario on the GroupDocs blog, with worked examples and the trade-offs.
+

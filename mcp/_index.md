@@ -25,7 +25,7 @@ With the .NET 10 SDK installed, the same server also runs without Docker:
 dnx GroupDocs.Redaction.Mcp --yes
 ```
 
-Both are the **.NET** build of the server and run on Windows, Linux, and macOS. Other platforms will each get their own launcher — see [Install for your platform](#install-for-your-platform).
+Both are the **.NET** build of the server and run on Windows, Linux, and macOS, with one exception. On Linux, including the Docker image (a Linux container), `redact_image_area` and `erase_metadata` currently fail on PDF files because the PDF engine's image handling depends on `System.Drawing`, which .NET supports only on Windows; both work on Word documents, and `redact_text` works on PDF. Run PDF area redaction and metadata erasure on Windows with `dnx`. Other platforms will each get their own launcher — see [Install for your platform](#install-for-your-platform).
 
 Or use the [guided installer]({{< ref "redaction/mcp/getting-started/_index.md" >}}) to register the server in your AI client, verify the setup, and configure shared folders in one pass.
 
@@ -63,7 +63,7 @@ Installation, prerequisites, and client configuration are platform-specific; the
 
 The agent **proposes patterns** and drives the calls; the engine **applies them exactly**. There is no classifier deciding what looks sensitive — you get predictable, reviewable behaviour, and the responsibility for what counts as sensitive stays with you.
 
-That division is deliberate. An agent that quietly decided which names to remove would be impossible to audit, and a redaction you cannot audit is not a control. Ask the agent to report **match counts** and to verify afterwards — [how to verify]({{< ref "redaction/mcp/use-cases/verify-a-redaction.md" >}}).
+That division is deliberate. An agent that quietly decided which names to remove would be impossible to audit, and a redaction you cannot audit is not a control. The tools return the saved file, not a match count, so ask the agent to name the file each call produced, and verify that file afterwards — [how to verify]({{< ref "redaction/mcp/use-cases/verify-a-redaction.md" >}}).
 
 ## Supported AI clients
 
