@@ -16,7 +16,7 @@ hideChildren: True
 
 **Welcome to the GroupDocs.Redaction for Java**  
 <br/> 
-GroupDocs.Redaction for Java is an API for removing sensitive and classified information from the documents of different file formats. The API provides a single format-independent interface for removing sensitive and classified information from the documents. Using the API you can remove sensitive information and content from the document using different redaction methods and save the document in its original format and create a sanitized PDF document with raster images of original pages.
+GroupDocs.Redaction for Java is an API for removing sensitive and classified information from the documents of different file formats. The API provides a single format-independent interface for removing sensitive and classified information from the documents. Using the API you can remove sensitive information and content from the document using different redaction methods and save the document in its original format and create a sanitized PDF document with raster images of original pages.
 
 
 ## GroupDocs.Redaction for Java Resources
@@ -28,6 +28,7 @@ Following are the links to some useful resources you may need to accomplish your
 *   [Product Page](https://products.groupdocs.com/redaction/java)
 *   [Releases](https://releases.groupdocs.com/redaction/java/)
 *   [Maven Repository](https://releases.groupdocs.com/java/repo/com/groupdocs/groupdocs-redaction/)
-*   [API Reference Guide](https://reference.groupdocs.com/java/redaction)
+*   [API Reference Guide](https://reference.groupdocs.com/redaction/java/)
+*   [SDK, Cloud, or MCP]({{< ref "redaction/java/getting-started/sdk-cloud-mcp.md" >}})
 *   [Free Support Forum](https://forum.groupdocs.com/c/redaction)
 *   [Paid Support Helpdesk](https://helpdesk.groupdocs.com/)

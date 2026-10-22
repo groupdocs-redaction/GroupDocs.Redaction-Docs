@@ -1,0 +1,24 @@
+# GroupDocs.Redaction documentation
+
+Markdown sources for https://docs.groupdocs.com/redaction/.
+
+Java section: https://docs.groupdocs.com/redaction/java/
+
+Java package: com.groupdocs:groupdocs-redaction
+Maven repository: https://releases.groupdocs.com/java/repo/
+
+Start here for Java:
+
+- java/_index.md
+- java/getting-started/installation.md
+- java/getting-started/supported-document-formats.md
+- java/getting-started/sdk-cloud-mcp.md
+
+Examples: https://github.com/groupdocs-redaction/GroupDocs.Redaction-for-Java
+API reference: https://reference.groupdocs.com/redaction/java/
+Product page: https://products.groupdocs.com/redaction/
+Releases: https://releases.groupdocs.com/redaction/java/release-notes/
+
+Other platform folders in this repo (net, nodejs-java, python-net, mcp) stay in place.
+Do not invent a format count. Read the Java format matrix.
+MCP server (link only): https://github.com/groupdocs-redaction/GroupDocs.Redaction.Mcp

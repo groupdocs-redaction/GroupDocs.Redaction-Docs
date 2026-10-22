@@ -191,7 +191,7 @@ Powerful document redaction APIs that enable your .NET, Java, Node.js, and Pytho
                     <svg class="gdoc-platform__col-icon"><use xlink:href="/img/groupdocs-stack.svg#time"></use></svg>
                     <div>Getting Started</div>
                 </div>
-                <div class="gdoc-platform__col-descr">Quickly get started with our beginnerùs guide</div>
+                <div class="gdoc-platform__col-descr">Quickly get started with our beginnerÔøΩs guide</div>
                 <ul class="gdoc-platform__col-links">
                     <li> <a href='/redaction/python-net/features-overview/'>Features Overview</a></li>
                     <li> <a href='/redaction/python-net/supported-document-formats/'>Supported Document Formats</a></li>
@@ -240,7 +240,7 @@ Powerful document redaction APIs that enable your .NET, Java, Node.js, and Pytho
                 <div class="gdoc-platform__col-title">
                 <svg class="gdoc-platform__col-icon"><use xlink:href="/img/groupdocs-stack.svg#time"></use></svg>
                 <div>Getting started</div></div>
-                <div class="gdoc-platform__col-descr">Redact text, areas, and metadata with Claude, Cursor, and Copilot ù locally</div>
+                <div class="gdoc-platform__col-descr">Redact text, areas, and metadata with Claude, Cursor, and Copilot ÔøΩ locally</div>
                 <ul class="gdoc-platform__col-links">
                     <li> <a href='/redaction/mcp/getting-started/'>Quick start</a></li>
                     <li> <a href='/redaction/net/mcp/'>Install for .NET</a></li>
@@ -252,7 +252,7 @@ Powerful document redaction APIs that enable your .NET, Java, Node.js, and Pytho
                     <div class="gdoc-platform__col-title">
                     <svg class="gdoc-platform__col-icon"><use xlink:href="/img/groupdocs-stack.svg#document"></use></svg>
                     <div>Use cases</div></div>
-                    <div class="gdoc-platform__col-descr">One prompt per scenario ù files never leave your machine</div>
+                    <div class="gdoc-platform__col-descr">One prompt per scenario ÔøΩ files never leave your machine</div>
                     <ul class="gdoc-platform__col-links">
                         <li> <a href='/redaction/mcp/use-cases/redact-sensitive-data-with-ai-agents/'>Redact sensitive data with AI agents</a></li>
                         <li> <a href='/redaction/mcp/use-cases/prepare-documents-for-disclosure/'>Prepare documents for disclosure</a></li>
