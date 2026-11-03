@@ -8,6 +8,25 @@ keywords:
 productName: GroupDocs.Redaction for .NET
 hideChildren: False
 ---
+### Migrate to version 26.10
+
+#### Windows-specific builds
+
+Version 26.10 introduces Windows-specific builds for .NET 6, .NET 8, and .NET 10.
+
+Projects targeting `net6.0-windows`, `net8.0-windows`, or `net10.0-windows` benefit from improved compatibility with Windows applications because GroupDocs.Redaction uses Windows-specific dependencies, such as `System.Drawing`, for these target frameworks.
+
+Projects targeting `net6.0`, `net8.0`, or `net10.0` retain the cross-platform implementation suitable for Linux. These builds do not depend on `System.Drawing.Common`.
+
+Color, point, size, rectangle, and font values are still provided by `GroupDocs.Redaction.Options.Drawing` across all target frameworks.
+
+#### Evaluation limits
+
+Version 26.10 introduces updated evaluation mode limitations.
+
+Without a license, a single process can open up to 25 documents. The previous limits of 1 document, 1 redaction, and 4 replacements no longer apply. Trial badges are still added to saved documents.
+
+
 ### Migrate to version 26.9
 
 Cross-platform compatibility is improved by removing the dependency on `System.Drawing.Common`.

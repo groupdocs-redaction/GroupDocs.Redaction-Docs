@@ -60,6 +60,14 @@ GroupDocs.Redaction for .NET is compatible with Microsoft .NET Framework as well
 *   NET 8.0
 *   NET 10.0
 
+### .NET Windows
+
+*   net6.0-windows
+*   net8.0-windows
+*   net10.0-windows
+
+Starting with version 26.10, Windows-specific target frameworks are supported. They provide better compatibility with applications running on Windows by using Windows-specific dependencies, such as `System.Drawing`.
+
 ## Development Environments
 
 GroupDocs.Redaction for .NET can be used to develop applications in any development environment that targets the .NET platform, but the following environments are explicitly supported:

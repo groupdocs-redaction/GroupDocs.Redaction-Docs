@@ -34,6 +34,8 @@ using (Redactor redactor = new Redactor(@"sample.docx", new LoadOptions(preRaste
 }
 ```
 
+`Save()` writes the PDF in the same folder as the source file.
+
 ## More resources
 
 ### GitHub examples

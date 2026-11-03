@@ -15,10 +15,10 @@ toc: True
 
 You can easily download GroupDocs.Redaction for evaluation. The evaluation download is the same as the purchased download. The evaluation version simply becomes licensed when you add a few lines of code to apply the license. You will face following limitations while using the API without the license:  
 
-*   Only 1 document can be opened in one process.
-*   Only 1 redaction can be applied to the document.
-*   Any redaction is limited to 4 replacements/deletions, even if there are more matches.
-*   Trial badges are placed in the document on the top of each page.
+Starting with GroupDocs.Redaction 26.10:
+* Up to 25 documents can be opened in a single process. Attempting to open another document throws a `TrialLimitationsException`.
+* Trial badges are added to the top of each page in the saved document.
+* The previous limits of 1 document, 1 redaction, 4 replacements no longer apply.
 
 ## Licensing
 
@@ -46,6 +46,17 @@ using (FileStream fileStream = new FileStream("GroupDocs.Redaction.lic", FileMod
 {
     License lic = new License();
     lic.SetLicense(fileStream);
+}
+```
+
+#### Check whether a license is applied
+
+`License.IsLicensed` returns `true` when a valid license has been applied, and `false` when the component is running in evaluation mode.
+
+```csharp
+if (lic.IsLicensed)
+{
+    // licensed processing
 }
 ```
 
