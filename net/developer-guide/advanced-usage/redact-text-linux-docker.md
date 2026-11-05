@@ -168,6 +168,7 @@ You can run the complete sample and see PDF text redaction in a Linux Docker con
 * [Redact text on Linux with Docker](https://github.com/groupdocs-redaction/sample-crossplatform-redaction-docker-linux)
 * [GroupDocs.Redaction for .NET examples](https://github.com/groupdocs-redaction/GroupDocs.Redaction-for-.NET)
 * [GroupDocs.Redaction for Java examples](https://github.com/groupdocs-redaction/GroupDocs.Redaction-for-Java)
+* [GroupDocs.Redaction for Python via .NET examples](https://github.com/groupdocs-redaction/GroupDocs.Redaction-for-Python-via-.NET)
 
 ### Free online document redaction App
 
