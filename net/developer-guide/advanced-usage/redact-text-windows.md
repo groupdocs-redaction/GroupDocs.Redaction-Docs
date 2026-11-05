@@ -1,7 +1,7 @@
 ---
 id: redact-text-windows
 url: redaction/net/redact-text-windows
-title: Redact Text in a Word Document on Windows with GroupDocs.Redaction for .NET
+title: Redact Text in a Document on Windows
 weight: 10
 description: Learn how to redact text in a Word document on Windows using GroupDocs.Redaction for .NET 26.10. Follow this .NET 10 tutorial to replace text matching a regular expression with a replacement string.
 keywords: redact text in Word, Word document redaction, regex redaction, redact Word document on Windows, .NET 10, net10.0-windows, GroupDocs.Redaction
