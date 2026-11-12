@@ -21,7 +21,7 @@ toc: True
 
 | Name | Type | Required | Description |
 |---|---|---|---|
-| `file` | object | yes |  — [FileInput shape]({{< ref "redaction/mcp/tools-reference/_index.md#the-fileinput-shape" >}}) |
+| `file` | object | yes | The document — see [FileInput shape]({{< ref "redaction/mcp/tools-reference/_index.md#the-fileinput-shape" >}}) |
 | `pattern` | string | no | Regex pattern to match annotations. Omit to target all annotations. |
 | `replacement` | string | no | Replacement text for matched annotation content. Ignored when deleteAll is true (default: '[REDACTED]') |
 | `deleteAll` | boolean | no | When true, deletes matched annotations entirely instead of replacing their text (default: false) |

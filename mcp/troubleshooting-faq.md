@@ -65,4 +65,4 @@ Ask your agent *"list your GroupDocs redaction tools and the license status"* â€
 
 ## Still stuck?
 
-Post your config (redact license paths) and the client name in the [Redaction forum](https://forum.groupdocs.com/c/redaction/33) â€” we answer MCP questions daily. Bugs: [GitHub issues](https://github.com/groupdocs-redaction/GroupDocs.Redaction.Mcp/issues).
+Post your config (redact license paths) and the client name in the [Redaction forum](https://forum.groupdocs.com/c/redaction/33). Bugs: [GitHub issues](https://github.com/groupdocs-redaction/GroupDocs.Redaction.Mcp/issues).

@@ -60,7 +60,7 @@ None of this is a limitation of the server; it is a property of using a hosted m
 ## Docker deployment inside the perimeter
 
 ```bash
-docker run --rm -i \
+docker run --rm -i --user "$(id -u):$(id -g)" \
   -v /srv/case-files:/data \
   -v /srv/licenses:/license:ro \
   -e GROUPDOCS_MCP_STORAGE_PATH=/data \
@@ -70,6 +70,7 @@ docker run --rm -i \
 ```
 
 * Pin the tag (`:26.9.0`, not `:latest`).
+* `--user "$(id -u):$(id -g)"` (Linux) lets the container, which runs as a non-root user, write into a folder you own. A JSON client config runs no shell to expand it — write the numbers: `"--user", "1000:1000"`.
 * A separate output path keeps redacted copies away from the originals — worth doing here more than anywhere.
 * Licence read-only; mount only the folders the agent should reach.
 * On Linux, including the Docker image (a Linux container), `redact_image_area` and `erase_metadata` currently fail on PDF files because the PDF engine's image handling depends on `System.Drawing`, which .NET supports only on Windows; both work on Word documents, and `redact_text` works on PDF. Run PDF area redaction and metadata erasure on Windows with `dnx`.

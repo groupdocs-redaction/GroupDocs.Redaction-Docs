@@ -3,13 +3,13 @@ id: mcp-linux-installation
 url: redaction/net/mcp/linux-installation
 title: Install on Linux
 weight: 3
-description: "Install the GroupDocs.Redaction MCP server on Linux with the setup bootstrapper (installs PowerShell, Docker or the .NET 10 SDK with libgdiplus and libfontconfig1) and the guided installer."
+description: "Install the GroupDocs.Redaction MCP server on Linux with the setup bootstrapper (PowerShell plus Docker, or the .NET 10 SDK and its native libraries) and the guided installer."
 keywords: install MCP server Linux, MCP server Ubuntu, libgdiplus MCP error, self-hosted document redaction Linux
 productName: GroupDocs.Redaction MCP Server for .NET
 toc: True
 ---
 
-Install the GroupDocs.Redaction MCP server on **Linux** with the setup bootstrapper — it installs PowerShell (`pwsh`) plus Docker, or the .NET 10 SDK with `libgdiplus` and `libfontconfig1` — and then the guided installer:
+Install the GroupDocs.Redaction MCP server on **Linux** with the setup bootstrapper — it installs PowerShell (`pwsh`) plus Docker, or the .NET 10 SDK and its native libraries — and then the guided installer:
 
 ```bash
 git clone https://github.com/groupdocs/GroupDocs.Mcp.Installer.git
@@ -28,7 +28,7 @@ pwsh ./install-groupdocs-mcp.ps1 -Interactive
 
 ```bash
 sudo apt-get install -y --no-install-recommends \
-  libgdiplus libfontconfig1 ttf-mscorefonts-installer
+  libgdiplus libfontconfig1
 ```
 
 ## Install
@@ -44,12 +44,15 @@ pwsh ./install-groupdocs-mcp.ps1 -Channel docker \
 
 ```bash
 # Docker channel - native deps bundled in the image (amd64 + arm64):
-docker run --rm -i -v $(pwd)/documents:/data \
+docker run --rm -i --user "$(id -u):$(id -g)" \
+  -v $(pwd)/documents:/data \
   ghcr.io/groupdocs-redaction/redaction-net-mcp:latest
 
 # NuGet channel (requires .NET 10 SDK + the native deps above):
 dnx GroupDocs.Redaction.Mcp --yes
 ```
+
+The image runs as a non-root user (uid 1654), and a mounted folder keeps its host owner — `--user "$(id -u):$(id -g)"` runs the container as you, so it can write redacted files into your folder. MCP client configs are JSON and run no shell, so `$(id -u)` is not expanded there. Put the numbers in directly (`id -u` and `id -g` print them): `"--user", "1000:1000"` after `"-i"`.
 
 Client config locations on Linux: Claude Desktop `~/.config/Claude/claude_desktop_config.json`, VS Code user-level `~/.config/Code/User/mcp.json` — full list in [Register in AI clients]({{< ref "redaction/net/mcp/install-in-ai-clients.md" >}}).
 
@@ -65,6 +68,7 @@ A passing run completes the MCP handshake (six tools listed) and — when a docu
 
 * **`DllNotFoundException: libgdiplus`** in tool responses — the NuGet-channel native deps are missing; run the `apt-get install` line above, or switch to the docker channel where they are bundled.
 * **`docker: permission denied`** — your user is not in the `docker` group yet; `newgrp docker` or re-login.
+* **`Permission denied` when the server saves into the mounted folder** — the container runs as uid 1654; add `--user "$(id -u):$(id -g)"` (numbers in JSON configs).
 * **Fonts look wrong in redacted files** — install `ttf-mscorefonts-installer` (the setup script pre-accepts its EULA via debconf).
 
 Installing on a different OS? [Windows]({{< ref "redaction/net/mcp/windows-installation.md" >}}) · [macOS]({{< ref "redaction/net/mcp/macos-installation.md" >}})

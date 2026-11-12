@@ -21,7 +21,7 @@ toc: True
 
 | Name | Type | Required | Description |
 |---|---|---|---|
-| `file` | object | yes |  — [FileInput shape]({{< ref "redaction/mcp/tools-reference/_index.md#the-fileinput-shape" >}}) |
+| `file` | object | yes | The document — see [FileInput shape]({{< ref "redaction/mcp/tools-reference/_index.md#the-fileinput-shape" >}}) |
 | `pattern` | string | yes | Regex pattern to match text for redaction, e.g. '\d{3}-\d{2}-\d{4}' for SSN |
 | `replacement` | string | no | Replacement text (default: '[REDACTED]') |
 | `password` | string | no | Password for protected documents |

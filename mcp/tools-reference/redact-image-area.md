@@ -21,7 +21,7 @@ toc: True
 
 | Name | Type | Required | Description |
 |---|---|---|---|
-| `file` | object | yes |  — [FileInput shape]({{< ref "redaction/mcp/tools-reference/_index.md#the-fileinput-shape" >}}) |
+| `file` | object | yes | The document — see [FileInput shape]({{< ref "redaction/mcp/tools-reference/_index.md#the-fileinput-shape" >}}) |
 | `x` | integer | yes | X coordinate (pixels) of the top-left corner of the area to redact |
 | `y` | integer | yes | Y coordinate (pixels) of the top-left corner of the area to redact |
 | `width` | integer | yes | Width (pixels) of the area to redact |
