@@ -53,7 +53,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "annotated_redacted.xlsx" >}}  
 ```text
-Binary file (XLSX, 12 KB)
+Binary file (XLSX, 10 KB)
 ```
 [Download full output](/redaction/python-net/_output_files/developer-guide/basic-usage/annotation-redactions/remove_all_annotations/annotated_redacted.xlsx)
 {{< /tab >}}
@@ -63,7 +63,7 @@ You can use constructor without arguments to remove all annotations within the d
 
 ## Redact annotations
 
-Instead of removing all or specific annotations, you can remove sensitive data from the annotation text. For instance, we can remove all mentions of "John" in the given document, e.g.:
+Instead of removing all or specific annotations, you can remove sensitive data from the annotation text. For instance, we can remove all mentions of "Emily" in the given document, e.g.:
 
 {{< tabs "code-example-redact-annotations" >}}
 {{< tab "redact_annotations.py" >}}
@@ -75,7 +75,7 @@ from groupdocs.redaction.redactions import AnnotationRedaction
 
 def redact_annotations():
     # Specify the redaction options: search pattern and replacement string
-    a_red = AnnotationRedaction("(?im:john)", "[redacted]")
+    a_red = AnnotationRedaction("(?im:emily)", "[redacted]")
 
     # Load the document to be redacted
     with Redactor("./annotated.xlsx") as redactor:
@@ -101,7 +101,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "annotated_redacted.xlsx" >}}  
 ```text
-Binary file (XLSX, 12 KB)
+Binary file (XLSX, 10 KB)
 ```
 [Download full output](/redaction/python-net/_output_files/developer-guide/basic-usage/annotation-redactions/redact_annotations/annotated_redacted.xlsx)
 {{< /tab >}}

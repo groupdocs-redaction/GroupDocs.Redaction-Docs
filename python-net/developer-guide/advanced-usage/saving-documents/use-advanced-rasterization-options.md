@@ -26,7 +26,7 @@ from groupdocs.redaction.redactions import ExactPhraseRedaction, ReplacementOpti
 def use_advanced_rasterization_options():
     # Specify the redaction options
     repl_opt = ReplacementOptions("[personal]")
-    ex_red = ExactPhraseRedaction("John Doe", repl_opt)
+    ex_red = ExactPhraseRedaction("Emily Johnson", repl_opt)
 
     # Load the document to be redacted
     with Redactor("./sample.docx") as redactor:
@@ -57,7 +57,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "sample.pdf" >}}  
 ```text
-Binary file (PDF, 1.0 MB)
+Binary file (PDF, 834 KB)
 ```
 [Download full output](/redaction/python-net/_output_files/developer-guide/advanced-usage/saving-documents/use-advanced-rasterization-options/use_advanced_rasterization_options/sample.pdf)
 {{< /tab >}}
@@ -98,7 +98,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "sample.pdf" >}}  
 ```text
-Binary file (PDF, 979 KB)
+Binary file (PDF, 769 KB)
 ```
 [Download full output](/redaction/python-net/_output_files/developer-guide/advanced-usage/saving-documents/use-advanced-rasterization-options/use_grayscale_rasterization_option/sample.pdf)
 {{< /tab >}}

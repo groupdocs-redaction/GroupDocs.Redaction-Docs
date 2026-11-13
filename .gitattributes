@@ -1,0 +1,4 @@
+# Sample inputs and outputs are stored byte for byte: GroupDocs.Redaction-SampleFiles hashes the inputs,
+# and a checkout must not change the line endings of a text input (redaction_policy.xml has CRLF).
+python-net/_sample_files/** -text
+python-net/_output_files/** -text

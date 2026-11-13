@@ -19,6 +19,20 @@ API reference: https://reference.groupdocs.com/redaction/java/
 Product page: https://products.groupdocs.com/redaction/
 Releases: https://releases.groupdocs.com/redaction/java/release-notes/
 
+Python section: https://docs.groupdocs.com/redaction/python-net/
+Python package: groupdocs-redaction-net (PyPI); pip also installs groupdocs-shared-net
+
+Start here for Python:
+
+- python-net/_index.md
+- python-net/getting-started/installation.md
+- python-net/getting-started/supported-document-formats.md
+- python-net/agents-and-llm-integration.md
+
+Python examples: https://github.com/groupdocs-redaction/GroupDocs.Redaction-for-Python-via-.NET
+Python API reference: https://reference.groupdocs.com/redaction/python-net/
+Python releases: https://releases.groupdocs.com/redaction/python-net/release-notes/
+
 Other platform folders in this repo (net, nodejs-java, python-net, mcp) stay in place.
-Do not invent a format count. Read the Java format matrix.
+Do not invent a format count. Read the Java format matrix, or the Python one for Python.
 MCP server (link only): https://github.com/groupdocs-redaction/GroupDocs.Redaction.Mcp

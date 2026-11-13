@@ -40,7 +40,7 @@ from groupdocs.redaction.redactions import ExactPhraseRedaction, ReplacementOpti
 def apply_redaction():
     # Specify the redaction options
     repl_opt = ReplacementOptions("[personal]")
-    ex_red = ExactPhraseRedaction("John Doe", repl_opt)
+    ex_red = ExactPhraseRedaction("Emily Johnson", repl_opt)
 
     # Load the document to be redacted
     with Redactor("./sample.docx") as redactor:
@@ -67,7 +67,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "sample_redacted.docx" >}}  
 ```text
-Binary file (DOCX, 16 KB)
+Binary file (DOCX, 40 KB)
 ```
 [Download full output](/redaction/python-net/_output_files/developer-guide/basic-usage/redaction-basics/apply_redaction/sample_redacted.docx)
 {{< /tab >}}
@@ -78,28 +78,35 @@ All possible statuses of the [RedactionStatus](https://reference.groupdocs.com/r
 | Status | Description | Possible reasons |
 | --- | --- | --- |
 | *Applied* | Redaction was fully and successfully applied | All operations within redaction process were successfully applied |
-| *PartiallyApplied* | Redaction was applied only to a part of its matches | 1) Trial limitations for replacements were exceeded2) At least one change was rejected by user |
-| *Skipped* | Redaction was skipped (not applied) | 1) Trial limitations for redactions were exceeded2) Redaction cannot be applied to this type of document3) All replacements were rejected by user and no changes were made |
+| *PartiallyApplied* | Redaction was applied only to a part of its matches | At least one change was rejected by the [redaction callback]({{< ref "redaction/python-net/developer-guide/advanced-usage/use-redaction-callback.md" >}}) |
+| *Skipped* | Redaction was skipped (not applied) | 1) Redaction cannot be applied to this type of document 2) All changes were rejected by the redaction callback and no changes were made |
 | *Failed* | Redaction failed with exception | An exception occurred in process of redaction |
 
 For detailed information you have to iterate through redaction log entries in [RedactorChangeLog.RedactionLog](https://reference.groupdocs.com/redaction/python-net/groupdocs.redaction/redactorchangelog/redaction_log/) and check for [ErrorMessage](https://reference.groupdocs.com/redaction/python-net/groupdocs.redaction/redactionresult/error_message/) property of any items with status other than *Applied*:
 
 ```python
-result = redactor.apply(redaction)
-if result.status != RedactionStatus.FAILED:
-    # By default, the redacted document is saved in PDF format
-    save_options = SaveOptions()
-    save_options.add_suffix = True
-    save_options.rasterize_to_pdf = True
-    save_options.redacted_file_suffix = "redacted"
-    result_path = redactor.save(save_options)
-    print(f"Document redacted successfully.\nCheck output in {result_path}")
-else:
-    # Dump all failed or skipped redactions
-    print("Redaction failed!")
-    for log_entry in result.redaction_log:
-        if log_entry.result.status != RedactionStatus.APPLIED:
-            print(f"Status is {log_entry.result.status}, details: {log_entry.result.error_message}")
+from groupdocs.redaction import Redactor, RedactionStatus
+from groupdocs.redaction.options import SaveOptions
+from groupdocs.redaction.redactions import ExactPhraseRedaction, ReplacementOptions
+
+redaction = ExactPhraseRedaction("Emily Johnson", ReplacementOptions("[personal]"))
+
+with Redactor("./sample.docx") as redactor:
+    result = redactor.apply(redaction)
+    if result.status != RedactionStatus.FAILED:
+        # By default, the redacted document is saved in PDF format
+        save_options = SaveOptions()
+        save_options.add_suffix = True
+        save_options.rasterize_to_pdf = True
+        save_options.redacted_file_suffix = "redacted"
+        result_path = redactor.save(save_options)
+        print(f"Document redacted successfully.\nCheck output in {result_path}")
+    else:
+        # Dump all failed or skipped redactions
+        print("Redaction failed!")
+        for log_entry in result.redaction_log:
+            if log_entry.result.status != RedactionStatus.APPLIED:
+                print(f"Status is {log_entry.result.status}, details: {log_entry.result.error_message}")
 ```
 
 ## Apply multiple redactions
@@ -119,7 +126,7 @@ from groupdocs.redaction.redactions import (
     EraseMetadataRedaction,
     MetadataFilters,
 )
-from groupdocs.pydrawing import Color
+from groupdocs.redaction.options.drawing import Color
 
 
 def apply_multiple_redactions():
@@ -128,7 +135,7 @@ def apply_multiple_redactions():
 
     # Provide a list of redactions to apply in order
     redaction_list = [
-        ExactPhraseRedaction("John Doe", ReplacementOptions("[Client]")),
+        ExactPhraseRedaction("Emily Johnson", ReplacementOptions("[Client]")),
         RegexRedaction("Redaction", ReplacementOptions("[Product]")),
         RegexRedaction("\\d{2}\\s*\\d{2}[^\\d]*\\d{6}", ReplacementOptions(color)),
         DeleteAnnotationRedaction(),
@@ -166,7 +173,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "sample_redacted.pdf" >}}  
 ```text
-Binary file (PDF, 1.2 MB)
+Binary file (PDF, 1.1 MB)
 ```
 [Download full output](/redaction/python-net/_output_files/developer-guide/basic-usage/redaction-basics/apply_multiple_redactions/sample_redacted.pdf)
 {{< /tab >}}

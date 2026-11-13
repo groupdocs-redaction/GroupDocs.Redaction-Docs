@@ -26,7 +26,7 @@ from groupdocs.redaction.redactions import (
     PageAreaFilter,
     PageSeekOrigin,
 )
-from groupdocs.pydrawing import Point, Size
+from groupdocs.redaction.options.drawing import Point, Size
 
 
 def use_pdf_redaction_filters():
@@ -76,7 +76,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "multipage_sample_redacted.pdf" >}}  
 ```text
-Binary file (PDF, 2.5 MB)
+Binary file (PDF, 3.5 MB)
 ```
 [Download full output](/redaction/python-net/_output_files/developer-guide/advanced-usage/using-redaction-filters/use-pdf-redaction-filters/use_pdf_redaction_filters/multipage_sample_redacted.pdf)
 {{< /tab >}}

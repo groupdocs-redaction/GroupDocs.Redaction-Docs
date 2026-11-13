@@ -15,7 +15,7 @@ aliases:
 
 ## What is GroupDocs.Redaction?
 
-GroupDocs.Redaction for Python via .NET is a native Python library that **permanently removes or obscures sensitive content** from documents — across PDF, Microsoft Word, Excel, PowerPoint, and image formats — through a single, format-independent API. It runs entirely on-premise, requires no Microsoft Office or Adobe Acrobat installation, and ships as a pre-built wheel on Windows, Linux, and macOS.
+GroupDocs.Redaction for Python via .NET is a native Python library that **permanently removes or obscures sensitive content** from documents — across 40+ formats, PDF, Microsoft Word, Excel, PowerPoint, OpenDocument and images among them — through a single, format-independent API. It runs entirely on-premise, requires no Microsoft Office or Adobe Acrobat installation, and ships as a pre-built wheel on Windows, Linux, and macOS.
 
 Typical uses include:
 
@@ -30,12 +30,16 @@ Typical uses include:
 | Capability | Description |
 |---|---|
 | **Text Redaction** | Replace or black out text matched by an exact phrase (case-sensitive or RTL-aware) or a regular expression. See [Text Redactions]({{< ref "redaction/python-net/developer-guide/basic-usage/text-redactions.md" >}}). |
+| **Text in Images (OCR)** | Redact text in scans and embedded images through the OCR engine of your choice, such as Tesseract. See [Using OCR]({{< ref "redaction/python-net/developer-guide/advanced-usage/using-ocr/_index.md" >}}). |
 | **Metadata Redaction** | Erase metadata wholesale or by filter, or rewrite values that match a pattern. See [Metadata Redactions]({{< ref "redaction/python-net/developer-guide/basic-usage/metadata-redactions.md" >}}). |
 | **Image Redaction** | Black out a rectangular area of an image or scanned page and clean embedded image metadata. See [Image Redactions]({{< ref "redaction/python-net/developer-guide/basic-usage/image-redactions.md" >}}). |
+| **Page-Area Redaction** | Redact the text and images inside an area of a page, such as the right half of the last page. See [Use Page Area Redaction]({{< ref "redaction/python-net/developer-guide/advanced-usage/using-redaction-filters/use-page-area-redaction.md" >}}). |
 | **Annotation Redaction** | Rewrite or delete annotations, comments, and notes by pattern. See [Annotation Redactions]({{< ref "redaction/python-net/developer-guide/basic-usage/annotation-redactions.md" >}}). |
 | **Page Removal** | Remove whole pages, slides, or worksheets from a document. See [Remove Page Redactions]({{< ref "redaction/python-net/developer-guide/basic-usage/remove-page-redactions.md" >}}). |
 | **Rasterization & Saving** | Save in the original format, or rasterize to a PDF (optionally PDF/A) so redactions are irreversible. See [Saving Documents]({{< ref "redaction/python-net/developer-guide/advanced-usage/saving-documents/_index.md" >}}). |
 | **Redaction Policies** | Bundle several redactions into a reusable policy and apply it across many documents. See [Use Redaction Policies]({{< ref "redaction/python-net/developer-guide/advanced-usage/use-redaction-policies.md" >}}). |
+| **Review Each Match** | Approve or reject every match in a Python callback before it is redacted. See [Use Redaction Callback]({{< ref "redaction/python-net/developer-guide/advanced-usage/use-redaction-callback.md" >}}). |
+| **Page Previews** | Render pages to PNG, JPEG or BMP images, in files or in memory. See [Get Document Page Preview]({{< ref "redaction/python-net/developer-guide/basic-usage/get-document-page-preview.md" >}}). |
 | **Document Inspection** | Read file type, page count, and size without modifying the document. See [Get File Info]({{< ref "redaction/python-net/developer-guide/basic-usage/get-file-info.md" >}}). |
 
 ## Quick Example
@@ -52,8 +56,8 @@ from groupdocs.redaction.redactions import ExactPhraseRedaction, ReplacementOpti
 def redact_text():
     # Open the document
     with Redactor("./sample.docx") as redactor:
-        # Replace every occurrence of "John Doe" with "[personal]"
-        redactor.apply(ExactPhraseRedaction("John Doe", ReplacementOptions("[personal]")))
+        # Replace every occurrence of "Emily Johnson" with "[personal]"
+        redactor.apply(ExactPhraseRedaction("Emily Johnson", ReplacementOptions("[personal]")))
         # Rasterize the result to a PDF named sample_redacted.pdf
         save_options = SaveOptions()
         save_options.add_suffix = True
@@ -72,7 +76,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "sample_redacted.pdf" >}}  
 ```text
-Binary file (PDF, 1.0 MB)
+Binary file (PDF, 948 KB)
 ```
 [Download full output](/redaction/python-net/_output_files/product-overview/redact_text/sample_redacted.pdf)
 {{< /tab >}}
@@ -90,7 +94,7 @@ from groupdocs.redaction.options import SaveOptions
 def redact_with_options():
     with Redactor("./sample.docx") as redactor:
         # Redact a name and any 2+ digit number sequences
-        redactor.apply(ExactPhraseRedaction("John Doe", ReplacementOptions("[personal]")))
+        redactor.apply(ExactPhraseRedaction("Emily Johnson", ReplacementOptions("[personal]")))
         redactor.apply(RegexRedaction(r"\d{2,}", ReplacementOptions("[number]")))
 
         # Keep the original DOCX format instead of rasterizing to PDF
@@ -111,7 +115,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "sample_redacted.docx" >}}  
 ```text
-Binary file (DOCX, 16 KB)
+Binary file (DOCX, 40 KB)
 ```
 [Download full output](/redaction/python-net/_output_files/product-overview/redact_with_options/sample_redacted.docx)
 {{< /tab >}}

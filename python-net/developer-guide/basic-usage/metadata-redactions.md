@@ -18,7 +18,10 @@ GroupDocs.Redactions provides a flexible API that allows to replace or remove me
 Base functionality for all redactions, derived from [MetadataRedaction](https://reference.groupdocs.com/redaction/python-net/groupdocs.redaction.redactions/metadataredaction/) base class is *metadata filtering* and it is mandatory for metadata redactions. It uses flagged enumeration [MetadataFilters](https://reference.groupdocs.com/redaction/python-net/groupdocs.redaction.redactions/metadatafilters/), containing items for most frequent metadata entries. You can set the filter to *All*, or any combination of metadata. For instance, the example below sets filter to *Author*, *Manager* and *NameOfApplication* - for textual redaction or cleaning them out:
 
 ```python
-# redaction derived from MetadataRedaction
+from groupdocs.redaction.redactions import EraseMetadataRedaction, MetadataFilters
+
+# any redaction derived from MetadataRedaction has a filter
+redaction = EraseMetadataRedaction(MetadataFilters.ALL)
 redaction.filter = MetadataFilters.AUTHOR | MetadataFilters.MANAGER | MetadataFilters.NAME_OF_APPLICATION
 ```
 
@@ -90,7 +93,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "sample_redacted.docx" >}}  
 ```text
-Binary file (DOCX, 16 KB)
+Binary file (DOCX, 40 KB)
 ```
 [Download full output](/redaction/python-net/_output_files/developer-guide/basic-usage/metadata-redactions/clean_all_metadata/sample_redacted.docx)
 {{< /tab >}}
@@ -138,7 +141,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "sample_redacted.docx" >}}  
 ```text
-Binary file (DOCX, 16 KB)
+Binary file (DOCX, 40 KB)
 ```
 [Download full output](/redaction/python-net/_output_files/developer-guide/basic-usage/metadata-redactions/redact_metadata/sample_redacted.docx)
 {{< /tab >}}
@@ -185,7 +188,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "sample_redacted.docx" >}}  
 ```text
-Binary file (DOCX, 16 KB)
+Binary file (DOCX, 40 KB)
 ```
 [Download full output](/redaction/python-net/_output_files/developer-guide/basic-usage/metadata-redactions/redact_metadata_with_filter/sample_redacted.docx)
 {{< /tab >}}

@@ -24,7 +24,7 @@ from groupdocs.redaction.redactions import ExactPhraseRedaction, ReplacementOpti
 def redact_spreadsheet_content():
     # Specify the redaction options
     repl_opt = ReplacementOptions("-redacted-")
-    ex_red = ExactPhraseRedaction("John Doe", repl_opt)
+    ex_red = ExactPhraseRedaction("Emily Johnson", repl_opt)
 
     # Load the spreadsheet to be redacted
     with Redactor("./sample.xlsx") as redactor:
@@ -50,7 +50,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "sample_redacted.xlsx" >}}  
 ```text
-Binary file (XLSX, 15 KB)
+Binary file (XLSX, 8 KB)
 ```
 [Download full output](/redaction/python-net/_output_files/developer-guide/basic-usage/spreadsheet-redactions/redact_spreadsheet_content/sample_redacted.xlsx)
 {{< /tab >}}

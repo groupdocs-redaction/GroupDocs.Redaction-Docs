@@ -15,7 +15,7 @@ With GroupDocs.Redaction API you can apply text redaction using exact phrase or 
 
 ## Use exact phrase redaction
 
-In the example below, we apply textual redaction, replacing personal exact phrase "John Doe" with "\[personal\]" (or any exemption code):
+In the example below, we apply textual redaction, replacing personal exact phrase "Emily Johnson" with "\[personal\]" (or any exemption code):
 
 {{< tabs "code-example-redact-exact-phrase" >}}
 {{< tab "redact_exact_phrase.py" >}}
@@ -28,7 +28,7 @@ from groupdocs.redaction.redactions import ExactPhraseRedaction, ReplacementOpti
 def redact_exact_phrase():
     # Specify the redaction options
     repl_opt = ReplacementOptions("[personal]")
-    ex_red = ExactPhraseRedaction("John Doe", repl_opt)
+    ex_red = ExactPhraseRedaction("Emily Johnson", repl_opt)
 
     # Load the document to be redacted
     with Redactor("./sample.docx") as redactor:
@@ -54,7 +54,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "sample_redacted.docx" >}}  
 ```text
-Binary file (DOCX, 16 KB)
+Binary file (DOCX, 40 KB)
 ```
 [Download full output](/redaction/python-net/_output_files/developer-guide/basic-usage/text-redactions/redact_exact_phrase/sample_redacted.docx)
 {{< /tab >}}
@@ -76,7 +76,7 @@ def redact_case_sensitive_phrase():
 
     # Specify the redaction options
     repl_opt = ReplacementOptions("[personal]")
-    ex_red = ExactPhraseRedaction("John Doe", case_sensitive, repl_opt)
+    ex_red = ExactPhraseRedaction("Emily Johnson", case_sensitive, repl_opt)
 
     # Load the document to be redacted
     with Redactor("./sample.docx") as redactor:
@@ -102,7 +102,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "sample_redacted.docx" >}}  
 ```text
-Binary file (DOCX, 16 KB)
+Binary file (DOCX, 40 KB)
 ```
 [Download full output](/redaction/python-net/_output_files/developer-guide/basic-usage/text-redactions/redact_case_sensitive_phrase/sample_redacted.docx)
 {{< /tab >}}
@@ -116,7 +116,7 @@ If you need a color box over the redacted text, you can use color instead of rep
 from groupdocs.redaction import Redactor
 from groupdocs.redaction.options import SaveOptions
 from groupdocs.redaction.redactions import ExactPhraseRedaction, ReplacementOptions
-from groupdocs.pydrawing import Color
+from groupdocs.redaction.options.drawing import Color
 
 
 def redact_with_color_box():
@@ -125,7 +125,7 @@ def redact_with_color_box():
 
     # Specify the redaction options
     repl_opt = ReplacementOptions(color)
-    ex_red = ExactPhraseRedaction("John Doe", repl_opt)
+    ex_red = ExactPhraseRedaction("Emily Johnson", repl_opt)
 
     # Load the document to be redacted
     with Redactor("./sample.docx") as redactor:
@@ -151,13 +151,13 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "sample_redacted.docx" >}}  
 ```text
-Binary file (DOCX, 17 KB)
+Binary file (DOCX, 41 KB)
 ```
 [Download full output](/redaction/python-net/_output_files/developer-guide/basic-usage/text-redactions/redact_with_color_box/sample_redacted.docx)
 {{< /tab >}}
 {{< /tabs >}}
 
-You might need to apply redaction to a right-to-left document, such as Arabic or Hebrew. The following example demonstrates how to apply ExactPhraseRedaction to an Arabic PDF document:
+You might need to apply redaction to a right-to-left document, such as Arabic or Hebrew. The following example demonstrates how to apply `ExactPhraseRedaction` to an Arabic PDF document. Set `is_right_to_left` to `True`: without it, the phrase is not found and the redaction still reports `APPLIED`.
 
 {{< tabs "code-example-redact-right-to-left-text" >}}
 {{< tab "redact_right_to_left_text.py" >}}
@@ -168,9 +168,10 @@ from groupdocs.redaction.redactions import ExactPhraseRedaction, ReplacementOpti
 
 
 def redact_right_to_left_text():
-    # Specify the redaction options with an Arabic phrase
+    # Specify the redaction options with an Arabic word
     repl_opt = ReplacementOptions("[test]")
     ex_red = ExactPhraseRedaction("انتقد", repl_opt)
+    ex_red.is_right_to_left = True
 
     # Load the document to be redacted
     with Redactor("./arabic.pdf") as redactor:
@@ -196,7 +197,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "arabic_redacted.pdf" >}}  
 ```text
-Binary file (PDF, 23 KB)
+Binary file (PDF, 64 KB)
 ```
 [Download full output](/redaction/python-net/_output_files/developer-guide/basic-usage/text-redactions/redact_right_to_left_text/arabic_redacted.pdf)
 {{< /tab >}}
@@ -212,7 +213,7 @@ Behind the scenes, "exact phrase" redaction works though regular expressions, wh
 from groupdocs.redaction import Redactor
 from groupdocs.redaction.options import SaveOptions
 from groupdocs.redaction.redactions import RegexRedaction, ReplacementOptions
-from groupdocs.pydrawing import Color
+from groupdocs.redaction.options.drawing import Color
 
 
 def redact_with_regex():
@@ -247,7 +248,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "sample_redacted.docx" >}}  
 ```text
-Binary file (DOCX, 16 KB)
+Binary file (DOCX, 41 KB)
 ```
 [Download full output](/redaction/python-net/_output_files/developer-guide/basic-usage/text-redactions/redact_with_regex/sample_redacted.docx)
 {{< /tab >}}
@@ -261,7 +262,7 @@ If you need to apply redact a whole paragraph, you might also need to use RegexR
 from groupdocs.redaction import Redactor
 from groupdocs.redaction.options import SaveOptions
 from groupdocs.redaction.redactions import RegexRedaction, ReplacementOptions
-from groupdocs.pydrawing import Color
+from groupdocs.redaction.options.drawing import Color
 
 
 def redact_whole_paragraph():
@@ -270,7 +271,7 @@ def redact_whole_paragraph():
 
     # Specify the redaction options that match an entire paragraph
     repl_opt = ReplacementOptions(color)
-    reg_red = RegexRedaction("(Lorem(\n|.)+?urna)", repl_opt)
+    reg_red = RegexRedaction("(Delivery(\n|.)+?refunded)", repl_opt)
 
     # Load the document to be redacted
     with Redactor("./sample.pdf") as redactor:
@@ -296,7 +297,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "sample_redacted.pdf" >}}  
 ```text
-Binary file (PDF, 68 KB)
+Binary file (PDF, 56 KB)
 ```
 [Download full output](/redaction/python-net/_output_files/developer-guide/basic-usage/text-redactions/redact_whole_paragraph/sample_redacted.pdf)
 {{< /tab >}}

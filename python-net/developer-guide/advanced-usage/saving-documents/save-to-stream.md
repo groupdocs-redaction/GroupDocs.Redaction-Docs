@@ -19,7 +19,7 @@ The following example demonstrates how to save a document to any location.
 from groupdocs.redaction import Redactor, RedactionStatus
 from groupdocs.redaction.options import RasterizationOptions
 from groupdocs.redaction.redactions import ExactPhraseRedaction, ReplacementOptions
-from groupdocs.pydrawing import Color
+from groupdocs.redaction.options.drawing import Color
 
 
 def save_to_stream():
@@ -28,7 +28,7 @@ def save_to_stream():
 
     # Specify the redaction options
     repl_opt = ReplacementOptions(color)
-    ex_red = ExactPhraseRedaction("John Doe", repl_opt)
+    ex_red = ExactPhraseRedaction("Emily Johnson", repl_opt)
 
     # Load the document to be redacted
     with Redactor("./sample.docx") as redactor:
@@ -59,7 +59,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "redacted-sample.pdf" >}}  
 ```text
-Binary file (PDF, 1024 KB)
+Binary file (PDF, 937 KB)
 ```
 [Download full output](/redaction/python-net/_output_files/developer-guide/advanced-usage/saving-documents/save-to-stream/save_to_stream/redacted-sample.pdf)
 {{< /tab >}}

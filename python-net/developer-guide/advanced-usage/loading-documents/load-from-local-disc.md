@@ -51,7 +51,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "sample_redacted.docx" >}}  
 ```text
-Binary file (DOCX, 13 KB)
+Binary file (DOCX, 40 KB)
 ```
 [Download full output](/redaction/python-net/_output_files/developer-guide/advanced-usage/loading-documents/load-from-local-disc/load_from_local_disc/sample_redacted.docx)
 {{< /tab >}}

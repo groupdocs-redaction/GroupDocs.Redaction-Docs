@@ -3,48 +3,82 @@ id: supported-document-formats
 url: redaction/python-net/supported-document-formats
 title: Supported Document Formats
 second_title: Documentation
-weight: 2
-description: It supports DOCX, DOCM, DOC, DOT, DOTM, XLS, XLSX, PDF, PPT, JPG, PNG, HTML, EML and many more.
-keywords: file formats, Microsoft Word, Microsoft Excel, Microsoft PowerPoint, PDF, DOCX, DOCM, DOC, DOT, DOTM, XLS, XLSX, PPT, JPG, PNG, HTML, EML  
+weight: 4
+description: "GroupDocs.Redaction for Python via .NET redacts 40+ formats: PDF, Word, Excel, PowerPoint and OpenDocument files, images (JPEG, PNG, TIFF, WEBP, DjVu), HTML, Markdown, CSV and text, with what each redaction does on each format."
+keywords: file formats, supported formats, Microsoft Word, Microsoft Excel, Microsoft PowerPoint, OpenDocument, PDF, DOCX, DOC, RTF, ODT, XLSX, XLS, XLSB, ODS, CSV, PPTX, PPT, ODP, JPEG, PNG, TIFF, WEBP, DJVU, HTML, Markdown
 productName: GroupDocs.Redaction for Python via .NET
 hideChildren: False
 toc: false
 ---
+
 ## Supported File Formats
 
-The following table indicates the file formats, supported by GroupDocs.Redaction for Python via .NET.
+GroupDocs.Redaction for Python via .NET opens, redacts and saves 40+ document and image formats. Every format below saves in its own format and as a rasterized PDF, the default of `save()`.
 
-| Format | Description | Document body | Metadata | Annotations(comments) | Remarks | Embedded images | OCR | Remove Page | Page Filters |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| [PDF](https://docs.fileformat.com/pdf/) | Saves the document as PDF (Adobe Portable Document) format | ![(tick)](/redaction/python-net/images/check.png) | ![(tick)](/redaction/python-net/images/check.png) | ![(tick)](/redaction/python-net/images/check.png) |   | ![(tick)](/redaction/python-net/images/check.png) | ![(tick)](/redaction/python-net/images/check.png) | ![(tick)](/redaction/python-net/images/check.png) | ![(tick)](/redaction/python-net/images/check.png) |
-| [DOC](https://docs.fileformat.com/word-processing/doc) | Microsoft Word 97 - 2007 Document. | ![(tick)](/redaction/python-net/images/check.png) | ![(tick)](/redaction/python-net/images/check.png) | ![(tick)](/redaction/python-net/images/check.png) |   | ![(tick)](/redaction/python-net/images/check.png) | ![(tick)](/redaction/python-net/images/check.png) | ![(tick)](/redaction/python-net/images/check.png) |   |
-| [DOT](https://docs.fileformat.com/word-processing/dot/) | Microsoft Word 97 - 2007 Template. | ![(tick)](/redaction/python-net/images/check.png) | ![(tick)](/redaction/python-net/images/check.png) | ![(tick)](/redaction/python-net/images/check.png) |   | ![(tick)](/redaction/python-net/images/check.png) | ![(tick)](/redaction/python-net/images/check.png) | ![(tick)](/redaction/python-net/images/check.png) |   |
-| [DOCX](https://docs.fileformat.com/word-processing/docx/) | Office Open XML WordprocessingML Document (macro-free) | ![(tick)](/redaction/python-net/images/check.png) | ![(tick)](/redaction/python-net/images/check.png) | ![(tick)](/redaction/python-net/images/check.png) |   | ![(tick)](/redaction/python-net/images/check.png) | ![(tick)](/redaction/python-net/images/check.png) | ![(tick)](/redaction/python-net/images/check.png) |   |
-| [DOCM](https://docs.fileformat.com/word-processing/docm/) | Office Open XML WordprocessingML Macro-Enabled Document | ![(tick)](/redaction/python-net/images/check.png) | ![(tick)](/redaction/python-net/images/check.png) | ![(tick)](/redaction/python-net/images/check.png) |   | ![(tick)](/redaction/python-net/images/check.png) | ![(tick)](/redaction/python-net/images/check.png) | ![(tick)](/redaction/python-net/images/check.png) |   |
-| [DOTX](https://docs.fileformat.com/word-processing/dotx/) | Office Open XML WordprocessingML Template (macro-free) | ![(tick)](/redaction/python-net/images/check.png) | ![(tick)](/redaction/python-net/images/check.png) | ![(tick)](/redaction/python-net/images/check.png) |   | ![(tick)](/redaction/python-net/images/check.png) | ![(tick)](/redaction/python-net/images/check.png) | ![(tick)](/redaction/python-net/images/check.png) |   |
-| [DOTM](https://docs.fileformat.com/word-processing/dotm/) | Office Open XML WordprocessingML Macro-Enabled Template. | ![(tick)](/redaction/python-net/images/check.png) | ![(tick)](/redaction/python-net/images/check.png) | ![(tick)](/redaction/python-net/images/check.png) |   | ![(tick)](/redaction/python-net/images/check.png) | ![(tick)](/redaction/python-net/images/check.png) | ![(tick)](/redaction/python-net/images/check.png) |   |
-| [RTF](https://docs.fileformat.com/word-processing/rtf/) | RTF format. | ![(tick)](/redaction/python-net/images/check.png) | ![(tick)](/redaction/python-net/images/check.png) | ![(tick)](/redaction/python-net/images/check.png) |   | ![(tick)](/redaction/python-net/images/check.png) | ![(tick)](/redaction/python-net/images/check.png) |   |
-| [XLSX](https://docs.fileformat.com/spreadsheet/xlsx/) | OOXML 2007-2010 | ![(tick)](/redaction/python-net/images/check.png)  | ![(tick)](/redaction/python-net/images/check.png) | ![(tick)](/redaction/python-net/images/check.png) |   |   |   | ![(tick)](/redaction/python-net/images/check.png) |   |
-| [XLSM](https://docs.fileformat.com/spreadsheet/xlsm/) | OOXML Macro Enabled Workbook | ![(tick)](/redaction/python-net/images/check.png)  | ![(tick)](/redaction/python-net/images/check.png) | ![(tick)](/redaction/python-net/images/check.png) |   |   |   | ![(tick)](/redaction/python-net/images/check.png) |   |
-| [XLTX](https://docs.fileformat.com/spreadsheet/xltx/) | OOXML Workbook Template | ![(tick)](/redaction/python-net/images/check.png)  | ![(tick)](/redaction/python-net/images/check.png) | ![(tick)](/redaction/python-net/images/check.png) |   |   |   | ![(tick)](/redaction/python-net/images/check.png) |   |
-| [XLTM](https://docs.fileformat.com/spreadsheet/xltm/) | OOXML Macro Enabled Workbook Template | ![(tick)](/redaction/python-net/images/check.png)  | ![(tick)](/redaction/python-net/images/check.png) | ![(tick)](/redaction/python-net/images/check.png) |   |   |   | ![(tick)](/redaction/python-net/images/check.png) |   |
-| [XLS](https://docs.fileformat.com/spreadsheet/xls/) | Excel Workbook 97-2003 | ![(tick)](/redaction/python-net/images/check.png)  | ![(tick)](/redaction/python-net/images/check.png) | ![(tick)](/redaction/python-net/images/check.png) |   |   |   | ![(tick)](/redaction/python-net/images/check.png) |   |
-| [XLT](https://docs.fileformat.com/spreadsheet/xlt/) | Excel Workbook Template 97-2003 | ![(tick)](/redaction/python-net/images/check.png)  | ![(tick)](/redaction/python-net/images/check.png) | ![(tick)](/redaction/python-net/images/check.png) |   |   |   | ![(tick)](/redaction/python-net/images/check.png) |   |
-| [CSV](https://docs.fileformat.com/spreadsheet/csv/) | CSV (Comma Separated Value) file. | ![(tick)](/redaction/python-net/images/check.png)  | ![(tick)](/redaction/python-net/images/check.png) | ![(tick)](/redaction/python-net/images/check.png) |   |   |   |   |   |
-| [PPTX](https://docs.fileformat.com/presentation/pptx/) | OOXML Microsoft PowerPoint Presentations format | ![(tick)](/redaction/python-net/images/check.png)  | ![(tick)](/redaction/python-net/images/check.png) | ![(tick)](/redaction/python-net/images/check.png) |   | ![(tick)](/redaction/python-net/images/check.png) | ![(tick)](/redaction/python-net/images/check.png) | ![(tick)](/redaction/python-net/images/check.png) | ![(tick)](/redaction/python-net/images/check.png) |
-| [PPT](https://docs.fileformat.com/presentation/ppt/) | PowerPoint Presentation 97-2003 | ![(tick)](/redaction/python-net/images/check.png) | ![(tick)](/redaction/python-net/images/check.png) | ![(tick)](/redaction/python-net/images/check.png) |   | ![(tick)](/redaction/python-net/images/check.png) | ![(tick)](/redaction/python-net/images/check.png) | ![(tick)](/redaction/python-net/images/check.png) | ![(tick)](/redaction/python-net/images/check.png) |
-| [PPSX](https://docs.fileformat.com/presentation/ppsx/) | PowerPoint Open XML | ![(tick)](/redaction/python-net/images/check.png)  | ![(tick)](/redaction/python-net/images/check.png) | ![(tick)](/redaction/python-net/images/check.png) |   | ![(tick)](/redaction/python-net/images/check.png) | ![(tick)](/redaction/python-net/images/check.png) | ![(tick)](/redaction/python-net/images/check.png) | ![(tick)](/redaction/python-net/images/check.png) |
-| [POT](https://docs.fileformat.com/presentation/pot/) | PowerPoint template files | ![(tick)](/redaction/python-net/images/check.png)  | ![(tick)](/redaction/python-net/images/check.png) | ![(tick)](/redaction/python-net/images/check.png) |   | ![(tick)](/redaction/python-net/images/check.png) | ![(tick)](/redaction/python-net/images/check.png) | ![(tick)](/redaction/python-net/images/check.png) | ![(tick)](/redaction/python-net/images/check.png) |
-| [PPS](https://docs.fileformat.com/presentation/pps/) | Microsoft PowerPoint 97-2003 Slide Show | ![(tick)](/redaction/python-net/images/check.png)  | ![(tick)](/redaction/python-net/images/check.png) | ![(tick)](/redaction/python-net/images/check.png) |   | ![(tick)](/redaction/python-net/images/check.png) | ![(tick)](/redaction/python-net/images/check.png) | ![(tick)](/redaction/python-net/images/check.png) | ![(tick)](/redaction/python-net/images/check.png) |
-| [PPTM](https://docs.fileformat.com/presentation/pptm/) | Microsoft PowerPoint Open XML Macro-Enabled Presentation file | ![(tick)](/redaction/python-net/images/check.png)  | ![(tick)](/redaction/python-net/images/check.png) | ![(tick)](/redaction/python-net/images/check.png) |   | ![(tick)](/redaction/python-net/images/check.png) | ![(tick)](/redaction/python-net/images/check.png) | ![(tick)](/redaction/python-net/images/check.png) | ![(tick)](/redaction/python-net/images/check.png) |
-| [PPSM](https://docs.fileformat.com/presentation/ppsm/) | Microsoft PowerPoint Open XML Macro-Enabled Slide Show file | ![(tick)](/redaction/python-net/images/check.png)  | ![(tick)](/redaction/python-net/images/check.png) | ![(tick)](/redaction/python-net/images/check.png) |   | ![(tick)](/redaction/python-net/images/check.png) | ![(tick)](/redaction/python-net/images/check.png) | ![(tick)](/redaction/python-net/images/check.png) | ![(tick)](/redaction/python-net/images/check.png) |
-| [POTM](https://docs.fileformat.com/presentation/potm/) | Microsoft PowerPoint template | ![(tick)](/redaction/python-net/images/check.png)  | ![(tick)](/redaction/python-net/images/check.png) | ![(tick)](/redaction/python-net/images/check.png) |   | ![(tick)](/redaction/python-net/images/check.png) | ![(tick)](/redaction/python-net/images/check.png) | ![(tick)](/redaction/python-net/images/check.png) | ![(tick)](/redaction/python-net/images/check.png) |
-| [JPEG](https://docs.fileformat.com/image/jpeg/) | The image file format was standardized by the Joint Photographic Experts Group. | ![(tick)](/redaction/python-net/images/check.png) | ![(tick)](/redaction/python-net/images/check.png) |   |   |   | ![(tick)](/redaction/python-net/images/check.png) |   | ![(tick)](/redaction/python-net/images/check.png) |
-| [TIF/TIFF](https://docs.fileformat.com/image/tiff/) | Tagged Image File Format | ![(tick)](/redaction/python-net/images/check.png) | ![(tick)](/redaction/python-net/images/check.png) |   |   |   | ![(tick)](/redaction/python-net/images/check.png) | ![(tick)](/redaction/python-net/images/check.png) | ![(tick)](/redaction/python-net/images/check.png) |
-| [PNG](https://docs.fileformat.com/image/png/) | Portable Network Graphics Image | ![(tick)](/redaction/python-net/images/check.png) | ![(tick)](/redaction/python-net/images/check.png) |   |   |   | ![(tick)](/redaction/python-net/images/check.png) |   | ![(tick)](/redaction/python-net/images/check.png) |
-| [BMP](https://docs.fileformat.com/image/bmp/) | Bitmap Image Files | ![(tick)](/redaction/python-net/images/check.png) | ![(tick)](/redaction/python-net/images/check.png) |   |   |   | ![(tick)](/redaction/python-net/images/check.png) |   | ![(tick)](/redaction/python-net/images/check.png) |
-| [GIF](https://docs.fileformat.com/image/gif/) | Graphical Interchange Format Image | ![(tick)](/redaction/python-net/images/check.png) | ![(tick)](/redaction/python-net/images/check.png) |   |   |   |   | ![(tick)](/redaction/python-net/images/check.png) |   |
-| [DJVU](https://docs.fileformat.com/image/djvu/) | DjVu Document Format | ![(tick)](/redaction/python-net/images/check.png) |  |   |   |   |   | ![(tick)](/redaction/python-net/images/check.png) |   |
+The table shows what each kind of redaction does on each format. It was measured on GroupDocs.Redaction for Python via .NET 26.11, on Windows and Linux, with one document per format: **✓** the redaction applies, **–** the engine skips it for that format (the format has no such content), **✗** the redaction fails, or reports `APPLIED` and leaves the content in place.
+
+- **Text**: `ExactPhraseRedaction` and `RegexRedaction` with a replacement text. **OCR**: text in an image is found through an OCR connector; see [Using OCR]({{< ref "redaction/python-net/developer-guide/advanced-usage/using-ocr/_index.md" >}}).
+- **Box over text**: the same redactions with `ReplacementOptions(Color...)`, which draw a box instead of replacing the text.
+- **Metadata**: `EraseMetadataRedaction` and `MetadataSearchRedaction`. **Comments**: `AnnotationRedaction` and `DeleteAnnotationRedaction`.
+- **Image areas**: `ImageAreaRedaction`, in images and in the images a document embeds. **Remove pages**: `RemovePageRedaction`.
+
+| Format | Description | Text | Box over text | Metadata | Comments | Image areas | Remove pages |
+| --- | --- | :---: | :---: | :---: | :---: | :---: | :---: |
+| [PDF](https://docs.fileformat.com/pdf/) | Portable Document Format | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| [DOC](https://docs.fileformat.com/word-processing/doc/) | Microsoft Word 97-2003 Document | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| [DOCX](https://docs.fileformat.com/word-processing/docx/) | Office Open XML WordprocessingML Document | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| [DOCM](https://docs.fileformat.com/word-processing/docm/) | Office Open XML WordprocessingML Macro-Enabled Document | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| [DOT](https://docs.fileformat.com/word-processing/dot/) | Microsoft Word 97-2003 Template | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| [DOTX](https://docs.fileformat.com/word-processing/dotx/) | Office Open XML WordprocessingML Template | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| [DOTM](https://docs.fileformat.com/word-processing/dotm/) | Office Open XML WordprocessingML Macro-Enabled Template | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| [RTF](https://docs.fileformat.com/word-processing/rtf/) | Rich Text Format | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| [ODT](https://docs.fileformat.com/word-processing/odt/) | OpenDocument Text | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| [OTT](https://docs.fileformat.com/word-processing/ott/) | OpenDocument Text Template | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| [TXT](https://docs.fileformat.com/word-processing/txt/) | Plain Text | ✓ | – | – | – | – | – |
+| [MD](https://docs.fileformat.com/word-processing/md/) | Markdown | ✓ | ✗ | – | – | – | – |
+| [XLS](https://docs.fileformat.com/spreadsheet/xls/) | Microsoft Excel 97-2003 Workbook | ✓ | ✓ | ✓ | ✓ | – | ✓ |
+| [XLSX](https://docs.fileformat.com/spreadsheet/xlsx/) | Office Open XML Workbook | ✓ | ✓ | ✓ | ✓ | – | ✓ |
+| [XLSM](https://docs.fileformat.com/spreadsheet/xlsm/) | Office Open XML Macro-Enabled Workbook | ✓ | ✓ | ✓ | ✓ | – | ✓ |
+| [XLSB](https://docs.fileformat.com/spreadsheet/xlsb/) | Excel Binary Workbook | ✓ | ✓ | ✓ | ✓ | – | ✓ |
+| [XLT](https://docs.fileformat.com/spreadsheet/xlt/) | Microsoft Excel 97-2003 Template | ✓ | ✓ | ✓ | ✓ | – | ✓ |
+| [XLTX](https://docs.fileformat.com/spreadsheet/xltx/) | Office Open XML Workbook Template | ✓ | ✓ | ✓ | ✓ | – | ✓ |
+| [XLTM](https://docs.fileformat.com/spreadsheet/xltm/) | Office Open XML Macro-Enabled Workbook Template | ✓ | ✓ | ✓ | ✓ | – | ✓ |
+| [ODS](https://docs.fileformat.com/spreadsheet/ods/) | OpenDocument Spreadsheet | ✓ | ✓ | ✓ | ✓ | – | ✓ |
+| [OTS](https://docs.fileformat.com/spreadsheet/ots/) | OpenDocument Spreadsheet Template | ✓ | ✓ | ✓ | ✓ | – | ✓ |
+| [CSV](https://docs.fileformat.com/spreadsheet/csv/) | Comma-Separated Values | ✓ | – | ✓ | ✓ | – | ✓ |
+| [TAB](https://docs.fileformat.com/spreadsheet/tsv/) | Tab-Separated Values | ✓ | – | ✓ | ✓ | – | ✓ |
+| [PPT](https://docs.fileformat.com/presentation/ppt/) | Microsoft PowerPoint 97-2003 Presentation | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| [PPTX](https://docs.fileformat.com/presentation/pptx/) | Office Open XML Presentation | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| [PPTM](https://docs.fileformat.com/presentation/pptm/) | Office Open XML Macro-Enabled Presentation | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| [PPS](https://docs.fileformat.com/presentation/pps/) | Microsoft PowerPoint 97-2003 Slide Show | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| [PPSX](https://docs.fileformat.com/presentation/ppsx/) | Office Open XML Slide Show | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| [PPSM](https://docs.fileformat.com/presentation/ppsm/) | Office Open XML Macro-Enabled Slide Show | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| [POTX](https://docs.fileformat.com/presentation/potx/) | Office Open XML Presentation Template | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| [POTM](https://docs.fileformat.com/presentation/potm/) | Office Open XML Macro-Enabled Presentation Template | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| [ODP](https://docs.fileformat.com/presentation/odp/) | OpenDocument Presentation | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| [OTP](https://docs.fileformat.com/presentation/otp/) | OpenDocument Presentation Template | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| [BMP](https://docs.fileformat.com/image/bmp/) | Bitmap Image | OCR | – | – | – | ✓ | – |
+| [GIF](https://docs.fileformat.com/image/gif/) | Graphics Interchange Format | OCR | – | ✗ | – | ✓ | ✗ |
+| [JPEG](https://docs.fileformat.com/image/jpeg/) | JPEG Image | OCR | – | ✓ | – | ✓ | – |
+| [PNG](https://docs.fileformat.com/image/png/) | Portable Network Graphics | OCR | – | ✗ | – | ✓ | – |
+| [TIFF](https://docs.fileformat.com/image/tiff/) | Tagged Image File Format | OCR | – | ✗ | – | ✓ | ✓ |
+| [WEBP](https://docs.fileformat.com/image/webp/) | WebP Image | OCR | – | ✗ | – | ✓ | ✓ |
+| [DJVU](https://docs.fileformat.com/image/djvu/) | DjVu Document | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| [HTML](https://docs.fileformat.com/web/html/) | HyperText Markup Language | ✓ | ✗ | – | – | – | – |
+
+In HTML and Markdown a box cannot be drawn: use a replacement text. Plain text, CSV and TAB files have no room for a box either, and the engine skips it.
+
+Removing pages of a multi-frame image, measured on 8 frames:
+
+- **TIFF:** loses the pages asked for; removing the only page of a single-page TIFF reports `FAILED`.
+- **Animated WEBP:** loses the last frame or a range as asked, but removing the first frame raises "Index was out of range".
+- **Animated GIF:** loses fewer frames than asked, although the redaction reports `APPLIED`. Removing the first or the last of 8 frames leaves 8, and removing 5 from the third leaves 5.
+
+Metadata was checked in the saved files for Office Open XML, OpenDocument, RTF, PDF and image files:
+
+- **Office Open XML, OpenDocument and RTF** files lose the properties the filter names.
+- **A PDF saved as PDF** keeps the properties that only its document information dictionary holds. The engine finds a PDF's properties through its XMP packet, so a PDF whose author is written only in the dictionary keeps it, and the redaction still reports `APPLIED`. A rasterized PDF, the default of `save()`, carries none of the original's author, title or subject.
+- **Images:** JPEG files have their EXIF values blanked. PNG files lose their text chunks and keep their EXIF data. WEBP, TIFF and GIF files keep their metadata, although the redaction reports `APPLIED`. BMP files have no metadata.
 
 {{< alert style="tip" >}}
 

@@ -1,14 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>  
-<redactionPolicy xmlns="http://www.groupdocs.com/redaction">  
-  <regexRedaction regularExpression="(John)" actionType="ReplaceString" replacement="foobar" />  
-  <exactPhraseRedaction searchPhrase="foobar" caseSensitive="true" actionType="DrawBox" color="Red" />   
-   
-  <eraseMetadataRedaction filter="All" />  
-  <metadataSearchRedaction filter="Title, Author" replacement="foobar" valueExpression="(metasearch)" keyExpression="" />  
-   
-  <annotationRedaction regularExpression="(Zara)" replacement="bar" />  
-  <deleteAnnotationRedaction regularExpression="(bar)" />  
-   
-  <imageAreaRedaction pointX="15" pointY="400" width="1200" height="10" color="#AA50FC"  />  
-  <imageAreaRedaction pointX="110" pointY="120" width="360" height="200" color="Magenta"  />  
+<?xml version="1.0"?>
+<redactionPolicy>
+  <exactPhraseRedaction actionType="ReplaceString" replacement="[customer]" searchPhrase="Emily Johnson" caseSensitive="true" />
+  <regexRedaction actionType="ReplaceString" replacement="[account]" regularExpression="\d{2}\s*\d{2}[^\d]*\d{6}" />
+  <regexRedaction actionType="ReplaceString" replacement="[phone]" regularExpression="\(\d{3}\) 555-01\d{2}" />
+  <regexRedaction actionType="ReplaceString" replacement="[e-mail]" regularExpression="[\w.]+@[\w.]+\.example" />
+  <deleteAnnotationRedaction regularExpression="[.]*" />
+  <eraseMetadataRedaction filter="All" />
 </redactionPolicy>

@@ -17,7 +17,7 @@ The following example demonstrates how to save the redacted document, replacing 
 from groupdocs.redaction import Redactor, RedactionStatus
 from groupdocs.redaction.options import SaveOptions
 from groupdocs.redaction.redactions import ExactPhraseRedaction, ReplacementOptions
-from groupdocs.pydrawing import Color
+from groupdocs.redaction.options.drawing import Color
 
 
 def save_overwriting_original_file():
@@ -26,7 +26,7 @@ def save_overwriting_original_file():
 
     # Specify the redaction options
     repl_opt = ReplacementOptions(color)
-    ex_red = ExactPhraseRedaction("John Doe", repl_opt)
+    ex_red = ExactPhraseRedaction("Emily Johnson", repl_opt)
 
     # Load the document to be redacted
     with Redactor("./sample.docx") as redactor:
@@ -49,9 +49,14 @@ if __name__ == "__main__":
     save_overwriting_original_file()
 ```
 {{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example; the example overwrites it. Click [here](/redaction/python-net/_sample_files/developer-guide/advanced-usage/saving-documents/save-overwriting-original-file/sample.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
 {{< tab "sample.docx" >}}  
 ```text
-Binary file (DOCX, 17 KB)
+Binary file (DOCX, 41 KB)
 ```
 [Download full output](/redaction/python-net/_output_files/developer-guide/advanced-usage/saving-documents/save-overwriting-original-file/save_overwriting_original_file/sample.docx)
 {{< /tab >}}

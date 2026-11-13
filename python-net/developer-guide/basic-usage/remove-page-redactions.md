@@ -57,6 +57,12 @@ if __name__ == "__main__":
 `multipage_sample.pdf` is the sample file used in this example. Click [here](/redaction/python-net/_sample_files/developer-guide/basic-usage/remove-page-redactions/multipage_sample.pdf) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
+{{< tab "multipage_sample_redacted.pdf" >}}  
+```text
+Binary file (PDF, 83 KB)
+```
+[Download full output](/redaction/python-net/_output_files/developer-guide/basic-usage/remove-page-redactions/remove_page_range/multipage_sample_redacted.pdf)
+{{< /tab >}}
 {{< /tabs >}}
 
 ## Remove last page
@@ -106,7 +112,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "multipage_sample_redacted.pdf" >}}  
 ```text
-Binary file (PDF, 190 KB)
+Binary file (PDF, 83 KB)
 ```
 [Download full output](/redaction/python-net/_output_files/developer-guide/basic-usage/remove-page-redactions/remove_last_page/multipage_sample_redacted.pdf)
 {{< /tab >}}
@@ -159,7 +165,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "sample_redacted.gif" >}}  
 ```text
-Binary file (GIF, 704 KB)
+Binary file (GIF, 15 KB)
 ```
 [Download full output](/redaction/python-net/_output_files/developer-guide/basic-usage/remove-page-redactions/remove_frame_from_image/sample_redacted.gif)
 {{< /tab >}}

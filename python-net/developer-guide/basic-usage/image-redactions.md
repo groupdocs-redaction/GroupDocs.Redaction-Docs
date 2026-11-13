@@ -27,7 +27,7 @@ In order to redact image area, you have to use [ImageAreaRedaction](https://refe
 from groupdocs.redaction import Redactor, RedactionStatus
 from groupdocs.redaction.options import SaveOptions
 from groupdocs.redaction.redactions import ImageAreaRedaction, RegionReplacementOptions
-from groupdocs.pydrawing import Color, Point, Size
+from groupdocs.redaction.options.drawing import Color, Point, Size
 
 
 def redact_image_area():
@@ -67,7 +67,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "sample_redacted.pdf" >}}  
 ```text
-Binary file (PDF, 2.7 MB)
+Binary file (PDF, 393 KB)
 ```
 [Download full output](/redaction/python-net/_output_files/developer-guide/basic-usage/image-redactions/redact_image_area/sample_redacted.pdf)
 {{< /tab >}}
@@ -115,7 +115,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "sample_redacted.jpg" >}}  
 ```text
-Binary file (JPG, 3.1 MB)
+Binary file (JPG, 314 KB)
 ```
 [Download full output](/redaction/python-net/_output_files/developer-guide/basic-usage/image-redactions/clean_image_metadata/sample_redacted.jpg)
 {{< /tab >}}
@@ -135,7 +135,7 @@ The following example demonstrates how to redact all embedded images within a Mi
 from groupdocs.redaction import Redactor, RedactionStatus
 from groupdocs.redaction.options import SaveOptions
 from groupdocs.redaction.redactions import ImageAreaRedaction, RegionReplacementOptions
-from groupdocs.pydrawing import Color, Point, Size
+from groupdocs.redaction.options.drawing import Color, Point, Size
 
 
 def redact_embedded_images():
@@ -175,7 +175,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "sample_redacted.pdf" >}}  
 ```text
-Binary file (PDF, 1022 KB)
+Binary file (PDF, 953 KB)
 ```
 [Download full output](/redaction/python-net/_output_files/developer-guide/basic-usage/image-redactions/redact_embedded_images/sample_redacted.pdf)
 {{< /tab >}}

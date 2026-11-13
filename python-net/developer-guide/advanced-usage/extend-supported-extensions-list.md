@@ -30,7 +30,7 @@ def extend_supported_extensions_list():
 
     # Specify the redaction options
     repl_opt = ReplacementOptions("[redacted]")
-    ex_red = ExactPhraseRedaction("dolor", repl_opt)
+    ex_red = ExactPhraseRedaction("Emily Johnson", repl_opt)
 
     # Load the document with the newly supported extension
     with Redactor("./sample.dump") as redactor:
@@ -51,9 +51,14 @@ if __name__ == "__main__":
     extend_supported_extensions_list()
 ```
 {{< /tab >}}
+{{< tab "sample.dump" >}}
+{{< tab-text >}}
+`sample.dump` is the sample file used in this example. Click [here](/redaction/python-net/_sample_files/developer-guide/advanced-usage/extend-supported-extensions-list/sample.dump) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
 {{< tab "sample_redacted.pdf" >}}  
 ```text
-Binary file (PDF, 1.9 MB)
+Binary file (PDF, 537 KB)
 ```
 [Download full output](/redaction/python-net/_output_files/developer-guide/advanced-usage/extend-supported-extensions-list/extend_supported_extensions_list/sample_redacted.pdf)
 {{< /tab >}}

@@ -11,9 +11,9 @@ hideChildren: False
 toc: True
 ---
 
-GroupDocs.Redaction for Python via .NET is distributed as a pre-built wheel on [PyPI](https://pypi.org/project/groupdocs-redaction-net/). The PyPI index hosts a separate wheel for each supported platform, and `pip` picks the correct one automatically. Each wheel is self-contained: it bundles the embedded runtime and every managed dependency, so no Microsoft Office, OpenOffice, Adobe Acrobat, or separate runtime install is required.
+GroupDocs.Redaction for Python via .NET is distributed as pre-built wheels on [PyPI](https://pypi.org/project/groupdocs-redaction-net/). PyPI hosts a wheel for each supported platform, and `pip` picks the right one. Each wheel is self-contained: it bundles the .NET runtime and every managed dependency, so no Microsoft Office, OpenOffice, Adobe Acrobat or separate .NET install is required. `pip` also installs `groupdocs-shared-net`, a small package that holds the `groupdocs.pydrawing` and `groupdocs.pycore` modules every GroupDocs product shares.
 
-Before installing, confirm your environment matches the supported platforms and Python versions listed in the [System Requirements]({{< ref "redaction/python-net/getting-started/system-requirements.md" >}}) topic.
+Before installing, confirm your environment matches the supported platforms and Python versions listed in the [System Requirements]({{< ref "redaction/python-net/getting-started/system-requirements.md" >}}) topic. Installing needs pip 20.3 or later.
 
 ## Install Package from PyPI
 
@@ -41,21 +41,22 @@ After running the command you should see output similar to:
 
 ```bash
 Collecting groupdocs-redaction-net
-  Downloading groupdocs_redaction_net-26.6.0-py3-none-win_amd64.whl.metadata (3.0 kB)
-  Downloading groupdocs_redaction_net-26.6.0-py3-none-win_amd64.whl (40.0 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 40.0/40.0 MB 2.8 MB/s eta 0:00:00
-Installing collected packages: groupdocs-redaction-net
-Successfully installed groupdocs-redaction-net-26.6.0
+  Downloading groupdocs_redaction_net-26.11.0-py3-none-win_amd64.whl (154.5 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 154.5/154.5 MB 9.1 MB/s eta 0:00:00
+Collecting groupdocs-shared-net>=26.11.0 (from groupdocs-redaction-net)
+  Downloading groupdocs_shared_net-26.11.0-py3-none-any.whl (11 kB)
+Installing collected packages: groupdocs-shared-net, groupdocs-redaction-net
+Successfully installed groupdocs-redaction-net-26.11.0 groupdocs-shared-net-26.11.0
 ```
 
-The wheel file name will include a platform suffix that matches your operating system — for example `manylinux1_x86_64` on Ubuntu/Debian, `macosx_11_0_arm64` on Apple Silicon, or `win_amd64` on 64-bit Windows.
+The wheel's file name ends with the platform it is built for: `win_amd64` on 64-bit Windows, `manylinux_2_27_x86_64` on Linux x64 with glibc 2.27 or later, `macosx_12_0_x86_64` on Intel Macs and `macosx_12_0_arm64` on Apple Silicon, both with macOS 12 or later.
 
 ## Add the Package to `requirements.txt`
 
 For reproducible environments, pin the package version in your `requirements.txt`:
 
 ```txt
-groupdocs-redaction-net==26.6.0
+groupdocs-redaction-net==26.11.0
 ```
 
 Then install all dependencies in one step:
@@ -64,36 +65,31 @@ Then install all dependencies in one step:
 pip install -r requirements.txt
 ```
 
-## Install from a Pre-Downloaded Wheel
+## Install from Downloaded Wheels
 
-If your build environment cannot reach PyPI, download the appropriate wheel from the [GroupDocs Releases website](https://releases.groupdocs.com/redaction/python-net/) and install it locally. Wheels are published for the following four platforms:
+If your build environment cannot reach PyPI, download the wheel for your platform from the [GroupDocs Releases website](https://releases.groupdocs.com/redaction/python-net/), and `groupdocs_shared_net-26.11.0-py3-none-any.whl` from [PyPI](https://pypi.org/project/groupdocs-shared-net/#files) (or with `pip download groupdocs-shared-net==26.11.0` on a machine that can reach it). Wheels are published for four platforms:
 
 - **Windows 64-bit**: file name ends with `win_amd64.whl`
-- **Linux x64 (glibc)**: file name ends with `manylinux1_x86_64.whl`
-- **macOS Intel**: file name ends with `macosx_10_14_x86_64.whl`
-- **macOS Apple Silicon**: file name ends with `macosx_11_0_arm64.whl`
+- **Linux x64 (glibc 2.27+)**: file name ends with `manylinux_2_27_x86_64.whl`
+- **macOS Intel (12+)**: file name ends with `macosx_12_0_x86_64.whl`
+- **macOS Apple Silicon (12+)**: file name ends with `macosx_12_0_arm64.whl`
 
-Place the downloaded wheel into your project folder, then install it:
+Put both wheels in one folder, then install from it, with no index:
 
 {{< tabs "install-wheel">}}
-{{< tab "Windows (64-bit)" >}}
+{{< tab "Windows" >}}
 ```ps
-py -m pip install ./groupdocs_redaction_net-26.6.0-py3-none-win_amd64.whl
+py -m pip install --no-index --find-links ./wheels groupdocs-redaction-net
 ```
 {{< /tab >}}
-{{< tab "Linux (glibc)" >}}
+{{< tab "Linux" >}}
 ```bash
-python3 -m pip install ./groupdocs_redaction_net-26.6.0-py3-none-manylinux1_x86_64.whl
+python3 -m pip install --no-index --find-links ./wheels groupdocs-redaction-net
 ```
 {{< /tab >}}
-{{< tab "macOS (Intel)" >}}
+{{< tab "macOS" >}}
 ```bash
-python3 -m pip install ./groupdocs_redaction_net-26.6.0-py3-none-macosx_10_14_x86_64.whl
-```
-{{< /tab >}}
-{{< tab "macOS (Apple Silicon)" >}}
-```bash
-python3 -m pip install ./groupdocs_redaction_net-26.6.0-py3-none-macosx_11_0_arm64.whl
+python3 -m pip install --no-index --find-links ./wheels groupdocs-redaction-net
 ```
 {{< /tab >}}
 {{< /tabs >}}
@@ -101,41 +97,34 @@ python3 -m pip install ./groupdocs_redaction_net-26.6.0-py3-none-macosx_11_0_arm
 Expected output:
 
 ```bash
-Processing ./groupdocs_redaction_net-26.6.0-py3-none-*.whl
-Installing collected packages: groupdocs-redaction-net
-Successfully installed groupdocs-redaction-net-26.6.0
+Looking in links: ./wheels
+Processing ./wheels/groupdocs_redaction_net-26.11.0-py3-none-win_amd64.whl
+Processing ./wheels/groupdocs_shared_net-26.11.0-py3-none-any.whl (from groupdocs-redaction-net)
+Installing collected packages: groupdocs-shared-net, groupdocs-redaction-net
+Successfully installed groupdocs-redaction-net-26.11.0 groupdocs-shared-net-26.11.0
 ```
+
+Installing the product wheel alone, without `groupdocs_shared_net`, makes pip look for it on PyPI.
 
 ## Platform Prerequisites
 
-On Windows no extra steps are required. On Linux and macOS, install the native libraries the rendering engine depends on:
+Windows and macOS need nothing else. On Linux (Debian and Ubuntu shown), install ICU, which the .NET runtime needs to start, and fontconfig, which the presentation engine links (without it no PowerPoint or OpenDocument presentation opens):
 
-{{< tabs "platform-prereqs">}}
-{{< tab "Linux" >}}
 ```bash
-apt install libgdiplus libfontconfig1 libicu-dev ttf-mscorefonts-installer
+sudo apt-get install libicu-dev libfontconfig1
 ```
-{{< /tab >}}
-{{< tab "macOS" >}}
-```bash
-brew install mono-libgdiplus
-```
-{{< /tab >}}
-{{< /tabs >}}
 
-{{< alert style="warning" >}}
-In version 26.6.0, **rasterization to PDF and image-area redaction run only on Windows** — on Linux/macOS they raise `System.PlatformNotSupportedException`, and the native packages above do not lift that restriction. Text, metadata, annotation, and page redaction and original-format saves work on every platform. See [System Requirements]({{< ref "redaction/python-net/getting-started/system-requirements.md" >}}) for the full feature-support matrix.
-{{< /alert >}}
+For faithful rasterized output, also install the fonts your documents use, for example `ttf-mscorefonts-installer` for documents made with Microsoft Office. Without any font, text still renders, in a font the engine embeds. `libgdiplus` is not needed on any platform.
 
 ## Verify the Installation
 
-Confirm the package imported correctly and check the installed version:
+Confirm the package imports and check the installed version:
 
 ```bash
 python -c "import groupdocs.redaction; print('GroupDocs.Redaction is ready')"
 ```
 
-You can also list the installed package with `pip show groupdocs-redaction-net` to confirm the version and location.
+You can also list the installed packages with `pip show groupdocs-redaction-net groupdocs-shared-net` to confirm the versions and location.
 
 ## Next Steps
 

@@ -1,0 +1,16 @@
+# Harbor Lane Provisions case export, format 2
+case_id: HLP-PRIV-2026-0419
+type: data access request
+received: 2026-10-21 15:30
+due: 2026-11-20
+customer_id: HLP-20417
+customer_name: Emily Johnson
+address: 42 Maple Street, Springfield, IL 62704
+phone: (217) 555-0142
+email: emily.johnson@mailbox.example
+account: 12 34 567890
+request: "Please send me a copy of the personal data you hold about me, including the notes on my complaint about order 48213."
+linked_case: complaint about order 48213 (2026-10-16)
+assigned_to: Lena Park (Data Protection Officer)
+note: identity of Emily Johnson checked by phone on 2026-10-22.
+status: in progress

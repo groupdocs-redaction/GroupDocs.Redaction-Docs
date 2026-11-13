@@ -25,7 +25,7 @@ def load_password_protected_file():
 
     # Specify the redaction options
     repl_opt = ReplacementOptions("[personal]")
-    ex_red = ExactPhraseRedaction("John Doe", repl_opt)
+    ex_red = ExactPhraseRedaction("Emily Johnson", repl_opt)
 
     # Load the password-protected document to be redacted
     with Redactor("./protected.docx", load_opt) as redactor:
@@ -53,7 +53,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "protected_redacted.docx" >}}  
 ```text
-Binary file (DOCX, 16 KB)
+Binary file (DOCX, 45 KB)
 ```
 [Download full output](/redaction/python-net/_output_files/developer-guide/advanced-usage/loading-documents/load-password-protected-file/load_password_protected_file/protected_redacted.docx)
 {{< /tab >}}

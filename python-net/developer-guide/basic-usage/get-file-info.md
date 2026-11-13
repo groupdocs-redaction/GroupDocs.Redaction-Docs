@@ -49,7 +49,7 @@ if __name__ == "__main__":
 ```text
 File type: Microsoft Word Open XML Document (.docx)
 Number of pages: 1
-Document size: 19370 bytes
+Document size: 41216 bytes
 ```
 [Download full output](/redaction/python-net/_output_files/developer-guide/basic-usage/get-file-info/get_local_file_info/get-local-file-info.txt)
 {{< /tab >}}
@@ -89,7 +89,7 @@ if __name__ == "__main__":
 ```text
 File type: Microsoft Word Open XML Document (.docx)
 Number of pages: 1
-Document size: 19370 bytes
+Document size: 41216 bytes
 ```
 [Download full output](/redaction/python-net/_output_files/developer-guide/basic-usage/get-file-info/get_file_info_from_stream/get-file-info-from-stream.txt)
 {{< /tab >}}

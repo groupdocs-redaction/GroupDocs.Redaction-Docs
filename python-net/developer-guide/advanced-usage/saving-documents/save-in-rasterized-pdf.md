@@ -22,7 +22,7 @@ from groupdocs.redaction.redactions import ExactPhraseRedaction, ReplacementOpti
 def save_in_rasterized_pdf():
     # Specify the redaction options
     repl_opt = ReplacementOptions("[personal]")
-    ex_red = ExactPhraseRedaction("John Doe", repl_opt)
+    ex_red = ExactPhraseRedaction("Emily Johnson", repl_opt)
 
     # Load the document to be redacted
     with Redactor("./sample.docx") as redactor:
@@ -50,7 +50,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "sample.pdf" >}}  
 ```text
-Binary file (PDF, 1024 KB)
+Binary file (PDF, 948 KB)
 ```
 [Download full output](/redaction/python-net/_output_files/developer-guide/advanced-usage/saving-documents/save-in-rasterized-pdf/save_in_rasterized_pdf/sample.pdf)
 {{< /tab >}}

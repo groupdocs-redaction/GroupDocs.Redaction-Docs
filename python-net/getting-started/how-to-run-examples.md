@@ -4,158 +4,118 @@ url: redaction/python-net/how-to-run-examples
 title: How to Run Examples
 linkTitle: How to Run Examples
 weight: 7
-description: "Clone the ready-to-run GroupDocs.Redaction for Python via .NET examples repository, set up a virtual environment, and run every documented scenario locally or in Docker."
+description: "Clone the ready-to-run GroupDocs.Redaction for Python via .NET examples repository, set it up, and run every documented scenario locally, with a license, or in Docker."
 keywords: groupdocs redaction python, examples, run examples, docker, ci, python
 productName: GroupDocs.Redaction for Python via .NET
 hideChildren: False
 toc: True
 ---
 
-{{< alert style="warning" >}}Before running an example make sure that GroupDocs.Redaction for Python via .NET has been installed successfully.{{< /alert >}}
-
-The complete examples project for **GroupDocs.Redaction for Python via .NET** is hosted on [GitHub](https://github.com/groupdocs-redaction/GroupDocs.Redaction-for-Python-via-.NET). It contains standalone, runnable scripts together with the sample documents they use, so the examples work out of the box.
+The complete project [GroupDocs.Redaction for Python via .NET](https://github.com/groupdocs-redaction/GroupDocs.Redaction-for-Python-via-.NET) with code examples and sample files is hosted on GitHub. Every example of this documentation is there as a script, next to the documents it redacts.
 
 ## Prerequisites
 
-- [Python](https://www.python.org/) 3.5 – 3.14 installed and on your `PATH`.
-- [git](https://git-scm.com/) to clone the repository (or download the ZIP).
-- On Linux and macOS, the native libraries listed in the [System Requirements]({{< ref "redaction/python-net/getting-started/system-requirements.md" >}}) (`libgdiplus`, `libfontconfig1`, `libicu-dev`, and fonts).
-- Optionally, a GroupDocs.Redaction license to remove the [evaluation limitations]({{< ref "redaction/python-net/getting-started/licensing-and-subscription.md" >}}).
+- [Python 3.6-3.14](https://www.python.org/downloads/), 64-bit. The package itself supports Python 3.5-3.14; the examples use f-strings.
+- On Linux, ICU, fontconfig and fonts (`libicu-dev libfontconfig1 ttf-mscorefonts-installer`). See [System Requirements]({{< ref "redaction/python-net/getting-started/system-requirements.md" >}}) for what each one is needed for. Windows and macOS need nothing extra.
+- For the Tesseract example only, the [Tesseract](https://github.com/tesseract-ocr/tesseract) OCR engine (`apt install tesseract-ocr` on Debian and Ubuntu, `brew install tesseract` on macOS, the installer on Windows), on your `PATH`. The other OCR example uses a stub and needs nothing.
 
 ## Get the code
 
-Clone the repository with your favourite git client, or download the ZIP from GitHub:
-
 ```bash
 git clone https://github.com/groupdocs-redaction/GroupDocs.Redaction-for-Python-via-.NET.git
-cd GroupDocs.Redaction-for-Python-via-.NET
+cd ./GroupDocs.Redaction-for-Python-via-.NET/Examples
 ```
 
-## Project Structure
+## Project structure
 
-The examples live under the `Examples/` folder, organized by topic. Directory names are kebab-case and each script is standalone:
-
-```text
-GroupDocs.Redaction-for-Python-via-.NET/
-├── Dockerfile
-└── Examples/
-    ├── requirements.txt
-    ├── run_all_examples.py
-    ├── licensing/
-    │   └── set_license_from_file.py
-    ├── getting-started/
-    │   └── hello-world/
-    │       └── hello_world.py
-    └── developer-guide/
-        ├── basic-usage/
-        │   ├── text-redactions.py
-        │   ├── metadata-redactions.py
-        │   ├── image-redactions.py
-        │   ├── annotation-redactions.py
-        │   └── remove-page-redactions.py
-        └── advanced-usage/
-            ├── use-redaction-policies.py
-            ├── loading-documents/
-            └── saving-documents/
+```
+Examples/
+├── run_all_examples.py     # Runs every example, each in its own process, and prints a pass/fail summary
+├── requirements.txt
+├── product-overview/       # The two examples of the product overview
+├── licensing/              # Set a license from a file, a stream, or a metered key
+├── getting-started/
+│   ├── hello-world/        # Cover a name with a box and save a rasterized PDF
+│   └── quick-start-guide/  # A Word, a PDF and an Excel document
+└── developer-guide/
+    ├── basic-usage/        # Text, metadata, image, annotation, spreadsheet and page redactions; file info; previews
+    └── advanced-usage/     # Loading and saving options, filters, policies, the callback, logging, OCR
 ```
 
-## Setup
+The folders follow this documentation: each page's examples are in the folder of that page, with the documents they read.
 
-Create and activate a virtual environment, then install the dependencies listed in `Examples/requirements.txt`:
+## Set up
 
-{{< tabs "setup-venv">}}
+```bash
+pip install -r requirements.txt
+```
+
+`requirements.txt` installs `groupdocs-redaction-net`, which brings `groupdocs-shared-net`, and `pytesseract` and `Pillow` for the Tesseract example.
+
+To run the examples with the full feature set, apply a license. The simplest way is the `GROUPDOCS_LIC_PATH` environment variable, which the package applies at the first call into the engine:
+
+{{< tabs "set-license" >}}
 {{< tab "Windows" >}}
-```ps
-py -m venv .venv
-.venv\Scripts\activate
-py -m pip install -r Examples/requirements.txt
+```batch
+set GROUPDOCS_LIC_PATH=C:\path\to\GroupDocs.Redaction.lic
 ```
 {{< /tab >}}
-{{< tab "Linux" >}}
+{{< tab "Linux / macOS" >}}
 ```bash
-python3 -m venv .venv
-source .venv/bin/activate
-python3 -m pip install -r Examples/requirements.txt
-```
-{{< /tab >}}
-{{< tab "macOS" >}}
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-python3 -m pip install -r Examples/requirements.txt
+export GROUPDOCS_LIC_PATH=/path/to/GroupDocs.Redaction.lic
 ```
 {{< /tab >}}
 {{< /tabs >}}
 
-To run the examples without evaluation limitations, point the `GROUPDOCS_LIC_PATH` environment variable at your license file. The example scripts read this variable and apply the license automatically:
+Without a license the suite still runs, in evaluation mode: a process opens at most 25 documents, every saved page carries an evaluation notice, and long documents are cut short (see [Licensing and Evaluation]({{< ref "redaction/python-net/getting-started/licensing-and-subscription.md" >}})). `run_all_examples.py` starts each example in a process of its own, so the document limit is never reached. The three examples that read the 7-page PDF stop at the evaluation limit for PDFs of more than 4 pages; the runner reports them as notes, not failures.
 
-{{< tabs "setup-license">}}
-{{< tab "Windows" >}}
-```ps
-$env:GROUPDOCS_LIC_PATH = "C:\path\to\GroupDocs.Redaction.lic"
-```
-{{< /tab >}}
-{{< tab "Linux" >}}
-```bash
-export GROUPDOCS_LIC_PATH="/path/to/GroupDocs.Redaction.lic"
-```
-{{< /tab >}}
-{{< tab "macOS" >}}
-```bash
-export GROUPDOCS_LIC_PATH="/path/to/GroupDocs.Redaction.lic"
-```
-{{< /tab >}}
-{{< /tabs >}}
+## Run the examples
 
-See [Licensing and Evaluation]({{< ref "redaction/python-net/getting-started/licensing-and-subscription.md" >}}) for details on obtaining and applying a license.
-
-## Run
-
-Run every example at once with the runner script:
+Run the full suite, which prints a pass/fail summary at the end:
 
 ```bash
-python Examples/run_all_examples.py
+python run_all_examples.py
 ```
 
-Or run a single example by passing its path directly:
+You can also run any single example by navigating to its folder and running the script directly. Each example reads its documents from its own folder, and writes its output next to the script:
 
 ```bash
-python Examples/developer-guide/basic-usage/text-redactions.py
+cd getting-started/hello-world
+python hello_world.py
 ```
-
-The repository ships with all the sample documents and resources used by the examples, so the scripts run out of the box.
-
-{{< alert style="info" >}}Without a license the examples run in evaluation mode, which raises a `TrialLimitationsException` if more than one document is opened in the same process. The `run_all_examples.py` runner launches each example in its own process so they all complete even unlicensed, but redaction output is limited (one redaction per document, up to four replacements, and trial badges on each page).{{< /alert >}}
 
 ## Run with Docker
 
-The repository includes a `Dockerfile` that installs the native dependencies and Python packages so you can run the examples in a clean, reproducible container. From the repository root:
+The repository ships a `Dockerfile` that builds a Linux image with Python 3.13, the system packages the examples need on Linux (ICU, fontconfig, the Microsoft core fonts and Tesseract), and the package preinstalled from PyPI.
 
 ```bash
-docker build -t groupdocs-redaction-examples .
-docker run --rm groupdocs-redaction-examples
-```
+# Build the image
+docker build -t redaction-examples .
 
-To use a license inside the container, mount it and pass `GROUPDOCS_LIC_PATH`:
+# Run unlicensed (evaluation mode)
+docker run --rm redaction-examples
 
-```bash
+# Run with a license mounted from the host
 docker run --rm \
-  -v /path/to/GroupDocs.Redaction.lic:/app/GroupDocs.Redaction.lic:ro \
-  -e GROUPDOCS_LIC_PATH=/app/GroupDocs.Redaction.lic \
-  groupdocs-redaction-examples
+    -v /path/to/license:/lic:ro \
+    -e GROUPDOCS_LIC_PATH=/lic/your-license.lic \
+    redaction-examples
 ```
 
 ## Continuous integration
 
-Because the examples run headlessly and exit with a non-zero status on failure, they fit naturally into a CI pipeline. Install `Examples/requirements.txt`, supply the license through the `GROUPDOCS_LIC_PATH` environment variable (store the license as a protected secret), make sure the Linux native dependencies are present on the runner, and invoke `python Examples/run_all_examples.py` as a build step. The provided `Dockerfile` is a convenient base image for such jobs.
+The `.github/workflows/` directory contains a workflow that runs the full example suite on every push, on `ubuntu-latest` with Python 3.13 and Tesseract. The same run is reproducible locally via the `Dockerfile` above.
 
 ## Troubleshooting
 
-- **"…rasterization / image-export step is not supported on this platform" on Linux/macOS** — expected on non-Windows in 26.6.0. The rasterized-PDF and image-redaction paths use `System.Drawing.Common`, which the bundled runtime supports only on Windows, so they raise `System.PlatformNotSupportedException`. The `run_all_examples.py` runner catches this and logs the note so the suite still completes; the example's text/metadata/annotation steps still run. To exercise rasterization and image redaction, run on Windows, or save in the original format with `SaveOptions(rasterize_to_pdf=False)`. See [System Requirements]({{< ref "redaction/python-net/getting-started/system-requirements.md" >}}) for the full platform-support matrix. Installing `libgdiplus` does **not** remove this restriction.
-- **Missing or substituted fonts** — install fonts so rasterized output (on Windows) matches the original: `apt install libfontconfig1 ttf-mscorefonts-installer`.
-- **ICU / globalization errors on Linux** — install ICU: `apt install libicu-dev`.
-- **`TrialLimitationsException`** — you are running unlicensed in evaluation mode, which permits only one document open per process, one redaction, and up to four replacements. Set `GROUPDOCS_LIC_PATH` to a valid license to remove these limits.
+- **"Couldn't find a valid ICU package"**, with the Python process ending abruptly (Linux) - install ICU (`libicu-dev` on Debian and Ubuntu). Do not set `DOTNET_SYSTEM_GLOBALIZATION_INVARIANT`.
+- **`DllNotFoundException` for a presentation** (Linux) - the presentation engine links fontconfig: `sudo apt install libfontconfig1`.
+- **`TesseractNotFoundError`** in the Tesseract example - install Tesseract and put it on your `PATH` (see Prerequisites).
+- **An evaluation notice on the saved pages, a document cut short, or "At most 4 elements (for any collection) can be viewed in evaluation mode"** - the evaluation mode. Apply a license (see above); a free 30-day [temporary license](https://purchase.groupdocs.com/temporary-license) is available.
+- **`LicenseError` at the first call** - `GROUPDOCS_LIC_PATH` names a file that is missing, expired or for another product. The message gives the engine's reason.
+- **An `Aspose/Drawing/` folder appears next to an example** (Linux) - the engine's font cache. It goes there only when `~/.local/share` cannot be created, as in a read-only home; set `XDG_DATA_HOME` to a writable folder.
+- **The output differs from the output tab** - the tabs come from a run on Linux with the Microsoft core fonts, and a rasterized PDF draws its text with the fonts installed where it runs.
 
 ## Contribute
 
-If you would like to add or improve an example, we encourage you to contribute to the project. All examples in this repository are open source and can be freely used in your own applications. To contribute, fork the repository, edit the code, and create a pull request. We will review the changes and include them if found helpful.
+If you would like to add or improve an example, we encourage you to contribute to the project. All examples in this repository are open source and can be freely used in your own applications. Fork the repository, edit the source code, and open a pull request.

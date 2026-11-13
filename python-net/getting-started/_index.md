@@ -15,11 +15,12 @@ This section gets you from zero to your first redaction with GroupDocs.Redaction
 
 ## In this section
 
-- [Installation]({{< ref "redaction/python-net/getting-started/installation.md" >}}) — install from PyPI or a pre-downloaded wheel on Windows, Linux, or macOS.
-- [System Requirements]({{< ref "redaction/python-net/getting-started/system-requirements.md" >}}) — supported Python versions, operating systems, and the native libraries needed on Linux/macOS.
-- [Supported Document Formats]({{< ref "redaction/python-net/getting-started/supported-document-formats.md" >}}) — the formats you can redact and which redaction types each one supports.
-- [Hello, World!]({{< ref "redaction/python-net/getting-started/hello-world.md" >}}) — your first redaction in a few lines of code.
 - [Features Overview]({{< ref "redaction/python-net/getting-started/features-overview.md" >}}) — a tour of everything GroupDocs.Redaction can do.
+- [Installation]({{< ref "redaction/python-net/getting-started/installation.md" >}}) — install from PyPI or from downloaded wheels on Windows, Linux, or macOS.
+- [Hello, World!]({{< ref "redaction/python-net/getting-started/hello-world.md" >}}) — your first redaction in a few lines of code.
+- [System Requirements]({{< ref "redaction/python-net/getting-started/system-requirements.md" >}}) — supported Python versions and operating systems, and the two system libraries Linux needs.
+- [Quick Start Guide]({{< ref "redaction/python-net/getting-started/quick-start-guide.md" >}}) — a virtual environment, the install, and three short examples.
+- [Supported Document Formats]({{< ref "redaction/python-net/getting-started/supported-document-formats.md" >}}) — the 40+ formats you can redact and which redaction types each one supports.
 - [Licensing and Evaluation]({{< ref "redaction/python-net/getting-started/licensing-and-subscription.md" >}}) — apply a license and understand the evaluation-mode limits.
 - [How to Run Examples]({{< ref "redaction/python-net/getting-started/how-to-run-examples.md" >}}) — clone the GitHub repository and run every documented example locally or in a container.
 

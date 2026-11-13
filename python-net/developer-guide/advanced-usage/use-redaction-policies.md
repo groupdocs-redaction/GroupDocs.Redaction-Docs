@@ -47,7 +47,7 @@ from groupdocs.redaction.redactions import (
     EraseMetadataRedaction,
     MetadataFilters,
 )
-from groupdocs.pydrawing import Color
+from groupdocs.redaction.options.drawing import Color
 
 
 def create_redaction_policy():
@@ -87,6 +87,10 @@ if __name__ == "__main__":
 [Download full output](/redaction/python-net/_output_files/developer-guide/advanced-usage/use-redaction-policies/create_redaction_policy/sample_policy.xml)
 {{< /tab >}}
 {{< /tabs >}}
+
+{{< alert style="warning" >}}
+GroupDocs.Redaction 26.10 saves a case-insensitive `ExactPhraseRedaction` without a `caseSensitive` attribute, as in `sample_policy.xml` above, and `RedactionPolicy.load()` rejects such a file with `String '' was not recognized as a valid Boolean`. Add `caseSensitive="false"` to its `<exactPhraseRedaction>` elements before loading it.
+{{< /alert >}}
 
 You can have as many policies as you need, loading them to redact your documents.
 
@@ -131,7 +135,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "sample_redacted.docx" >}}  
 ```text
-Binary file (DOCX, 16 KB)
+Binary file (DOCX, 39 KB)
 ```
 [Download full output](/redaction/python-net/_output_files/developer-guide/advanced-usage/use-redaction-policies/use_redaction_policy/sample_redacted.docx)
 {{< /tab >}}

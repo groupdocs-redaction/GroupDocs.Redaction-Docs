@@ -24,7 +24,7 @@ from groupdocs.redaction.redactions import ExactPhraseRedaction, ReplacementOpti
 def save_in_original_format():
     # Specify the redaction options
     repl_opt = ReplacementOptions("[personal]")
-    ex_red = ExactPhraseRedaction("John Doe", repl_opt)
+    ex_red = ExactPhraseRedaction("Emily Johnson", repl_opt)
 
     # Load the document to be redacted
     with Redactor("./sample.docx") as redactor:
@@ -52,10 +52,10 @@ if __name__ == "__main__":
 `sample.docx` is the sample file used in this example. Click [here](/redaction/python-net/_sample_files/developer-guide/advanced-usage/saving-documents/save-in-original-format/sample.docx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
-{{< tab "sample_2026-06-11 17-10-50.docx" >}}  
+{{< tab "sample_2026-11-13 20-24-57.docx" >}}  
 ```text
-Binary file (DOCX, 16 KB)
+Binary file (DOCX, 40 KB)
 ```
-[Download full output](/redaction/python-net/_output_files/developer-guide/advanced-usage/saving-documents/save-in-original-format/save_in_original_format/sample_2026-06-11 17-10-50.docx)
+[Download full output](/redaction/python-net/_output_files/developer-guide/advanced-usage/saving-documents/save-in-original-format/save_in_original_format/sample_2026-11-13 20-24-57.docx)
 {{< /tab >}}
 {{< /tabs >}}

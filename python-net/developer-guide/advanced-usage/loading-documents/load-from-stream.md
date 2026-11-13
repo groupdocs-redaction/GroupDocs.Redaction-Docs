@@ -50,7 +50,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "redacted-sample.pdf" >}}  
 ```text
-Binary file (PDF, 1.2 MB)
+Binary file (PDF, 1.1 MB)
 ```
 [Download full output](/redaction/python-net/_output_files/developer-guide/advanced-usage/loading-documents/load-from-stream/load_from_stream/redacted-sample.pdf)
 {{< /tab >}}

@@ -39,6 +39,7 @@ if __name__ == "__main__":
 ```text
 Bitmap Image File (.bmp)
 Comma Separated Values File (.csv)
+DjVu Image (.djvu)
 Microsoft Word Document (.doc)
 Word Open XML Macro-Enabled Document (.docm)
 Microsoft Word Open XML Document (.docx)
@@ -46,7 +47,6 @@ Word Document Template (.dot)
 Word Open XML Macro-Enabled Document Template (.dotm)
 Word Open XML Document Template (.dotx)
 Graphical Interchange Format File (.gif)
-Hypertext Markup Language File (.htm)
 [TRUNCATED]
 ```
 [Download full output](/redaction/python-net/_output_files/developer-guide/basic-usage/get-supported-file-formats/list_supported_formats/list-supported-formats.txt)

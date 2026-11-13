@@ -3,7 +3,7 @@ id: home
 url: redaction/python-net
 title: GroupDocs.Redaction for Python via .NET
 weight: 1
-description: "Native Python library that permanently redacts sensitive content — text, metadata, annotations, and image areas — from PDF, Word, Excel, PowerPoint, and image files on Windows, Linux, and macOS. No Microsoft Office or Adobe Acrobat required."
+description: "Python library that permanently redacts sensitive content (text, text in scanned images, metadata, comments, image and page areas) from 40+ formats, PDF, Word, Excel, PowerPoint, OpenDocument and images among them, on Windows, Linux, and macOS. No Microsoft Office or Adobe Acrobat required."
 keywords: GroupDocs.Redaction, Python via .NET, document redaction, redact PDF, redact DOCX, redact XLSX, metadata removal, annotation redaction, image redaction, PII removal, rasterized PDF, on-premise, Windows, Linux, macOS
 productName: GroupDocs.Redaction for Python via .NET
 hideChildren: true
@@ -31,29 +31,31 @@ structuredData:
 from groupdocs.redaction import Redactor
 from groupdocs.redaction.redactions import ExactPhraseRedaction, ReplacementOptions
 
-# Redact every occurrence of "John Doe" in a document
+# Redact every occurrence of "Emily Johnson" and save the result as a rasterized PDF
 with Redactor("sample.docx") as redactor:
-    redactor.apply(ExactPhraseRedaction("John Doe", ReplacementOptions("[personal]")))
+    redactor.apply(ExactPhraseRedaction("Emily Johnson", ReplacementOptions("[personal]")))
     redactor.save()
 ```
 
 ## Features
 
 - **Text Redaction**: Replace or hide text matched by an exact phrase (case-sensitive or RTL-aware) or a regular expression, with a replacement string or a colored box.
+- **Text in Images**: Redact text in scans and embedded images through the OCR engine of your choice, such as Tesseract.
 - **Metadata Redaction**: Erase or rewrite document metadata, wholesale or filtered by property.
 - **Image & Annotation Redaction**: Black out image areas, clean embedded image metadata, and rewrite or delete annotations.
 - **Page Removal & Rasterization**: Remove pages or page ranges, and optionally flatten the result to a rasterized PDF (with PDF/A compliance) so redacted content is unrecoverable.
 - **Redaction Policies**: Describe a reusable set of redactions as a policy and apply it across many documents.
+- **Review and Previews**: Approve or reject each match in a callback, log what the engine does, and render page previews to images.
 
 ## Supported File Formats
 
-GroupDocs.Redaction supports a wide range of file formats. For a complete list, see the [full list of supported formats]({{< ref "redaction/python-net/getting-started/supported-document-formats.md" >}}).
+GroupDocs.Redaction redacts 40+ file formats. For the complete list, and what each redaction does on each format, see the [full list of supported formats]({{< ref "redaction/python-net/getting-started/supported-document-formats.md" >}}).
 
-- **Microsoft Office** (Word, Excel, PowerPoint)
-- **PDF** (Standard PDFs, PDF/A output)
-- **OpenDocument** (ODT, ODS, ODP)
-- **Images** (JPEG, PNG, GIF, BMP, TIFF)
-- **Text** (TXT, RTF, CSV)
+- **Microsoft Office** (Word, Excel, PowerPoint, including templates and macro-enabled files)
+- **PDF** (standard PDFs, PDF/A output)
+- **OpenDocument** (ODT, OTT, ODS, OTS, ODP, OTP)
+- **Images** (JPEG, PNG, GIF, BMP, TIFF, WEBP, DjVu)
+- **Text and Web** (TXT, RTF, CSV, TAB, Markdown, HTML)
 
 ## Getting Started
 
@@ -69,4 +71,4 @@ Using an AI coding assistant? The [AI Agents & LLM Integration]({{< ref "redacti
 
 ## Technical Support
 
-If you experience any issues or have suggestions, see [Technical Support]({{< ref "redaction/python-net/technical-support.md" >}}) for the available channels — the free support forum and the paid helpdesk. For licensing and evaluation questions, see [Licensing and Subscription]({{< ref "redaction/python-net/getting-started/licensing-and-subscription.md" >}}).
+If you experience any issues or have suggestions, see [Technical Support]({{< ref "redaction/python-net/technical-support.md" >}}) for the available channels — the free support forum and the paid helpdesk. For licensing and evaluation questions, see [Licensing and Evaluation]({{< ref "redaction/python-net/getting-started/licensing-and-subscription.md" >}}).

@@ -132,7 +132,7 @@ family:
       sections:
         - kind: start
           title: Getting started
-          description: Quickly get started with our beginner�s guide
+          description: Quickly get started with our beginner's guide
           links:
             - title: Features overview
               url: /redaction/python-net/features-overview/
@@ -142,6 +142,8 @@ family:
               url: /redaction/python-net/system-requirements/
             - title: Installation
               url: /redaction/python-net/installation/
+            - title: Quick start guide
+              url: /redaction/python-net/quick-start-guide/
         - kind: guide
           title: Manage and protect classified information
           description: Most common redaction types
@@ -167,7 +169,7 @@ family:
       sections:
         - kind: start
           title: Getting started
-          description: Redact text, areas, and metadata with Claude, Cursor, and Copilot � locally
+          description: Redact text, areas, and metadata with Claude, Cursor, and Copilot — locally
           links:
             - title: Quick start
               url: /redaction/mcp/getting-started/
@@ -179,7 +181,7 @@ family:
               url: /redaction/mcp/troubleshooting-faq/
         - kind: guide
           title: Use cases
-          description: One prompt per scenario � files never leave your machine
+          description: One prompt per scenario — files never leave your machine
           links:
             - title: Redact sensitive data with AI agents
               url: /redaction/mcp/use-cases/redact-sensitive-data-with-ai-agents/

@@ -26,7 +26,7 @@ from io import BytesIO
 from groupdocs.redaction import Redactor, RedactionStatus
 from groupdocs.redaction.options import RasterizationOptions
 from groupdocs.redaction.redactions import ImageAreaRedaction, RegionReplacementOptions
-from groupdocs.pydrawing import Point, Size, Color
+from groupdocs.redaction.options.drawing import Point, Size, Color
 
 
 def create_pdf_with_image_redaction():
@@ -82,7 +82,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "redacted-sample.pdf" >}}  
 ```text
-Binary file (PDF, 879 KB)
+Binary file (PDF, 929 KB)
 ```
 [Download full output](/redaction/python-net/_output_files/developer-guide/advanced-usage/create-pdf-with-image-redaction/create_pdf_with_image_redaction/redacted-sample.pdf)
 {{< /tab >}}

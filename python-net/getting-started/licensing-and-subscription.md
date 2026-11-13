@@ -1,13 +1,15 @@
 ---
-id: licensing-and-subscription
-url: redaction/python-net/licensing-and-subscription
+id: licensing-and-evaluation
+url: redaction/python-net/licensing-and-evaluation
 title: Licensing and evaluation
 weight: 5
-keywords: free, free trial, subscription, evaluation, groupdocs redaction python
+keywords: free, free trial, subscription, evaluation, evaluation limitations, license, metered license, set_license, is_licensed, set_metered_key, GROUPDOCS_LIC_PATH, LicenseError, groupdocs redaction python
 description: "GroupDocs.Redaction for Python via .NET offers flexible licensing options, including a Free Trial and a 30-day Temporary License for evaluation purposes."
 productName: GroupDocs.Redaction for Python via .NET
 hideChildren: False
 toc: True
+aliases:
+    - /redaction/python-net/licensing-and-subscription/
 ---
 
 To explore the system effectively, you may want immediate access to the API. GroupDocs.Redaction simplifies this by offering various purchase plans, along with a Free Trial and a 30-day Temporary License for evaluation.
@@ -26,7 +28,7 @@ After purchasing GroupDocs.Redaction for Python via .NET, you will receive a lic
 - Apply it **before** constructing any `Redactor` or other GroupDocs.Redaction object.
 - A license can be applied from a file path, from a binary stream (handy when the license is an embedded resource), or as a [Metered License](https://purchase.groupdocs.com/faqs/licensing/metered/) that bills by usage.
 
-Use the [set_license](https://reference.groupdocs.com/redaction/python-net/groupdocs.redaction/license/set_license/) method to license the component. Calling it more than once is harmless — it simply wastes a little processor time.
+Use the [set_license](https://reference.groupdocs.com/redaction/python-net/groupdocs.redaction/license/set_license/) method to license the component, and its `is_licensed` property to check the result. Calling it more than once is harmless — it simply wastes a little processor time.
 
 ### Set a license from a file
 
@@ -44,8 +46,9 @@ def set_license_from_file():
 
     # Apply the license before using any redaction features
     if os.path.exists(license_path):
-        License().set_license(license_path)
-        print("License set successfully.")
+        license = License()
+        license.set_license(license_path)
+        print("License set successfully:", license.is_licensed)
     else:
         print("License file not found. Running in evaluation mode.")
 
@@ -82,6 +85,27 @@ if __name__ == "__main__":
 ```
 {{< /tab >}}
 {{< /tabs >}}
+
+### Set a license from an environment variable
+
+Set `GROUPDOCS_LIC_PATH` to the license file's path, or to a URL that serves it, and the license is applied at the first call into the engine, with no licensing code:
+
+{{< tabs "env-license">}}
+{{< tab "Windows" >}}
+```ps
+$env:GROUPDOCS_LIC_PATH = "C:\licenses\GroupDocs.Redaction.lic"
+```
+{{< /tab >}}
+{{< tab "Linux / macOS" >}}
+```bash
+export GROUPDOCS_LIC_PATH="/opt/licenses/GroupDocs.Redaction.lic"
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+A license that cannot be applied (a missing file, an expired subscription, a license for another product) raises `LicenseError` from the first call into the engine on, rather than letting the process run in evaluation mode unnoticed. The message names the variable and the engine's reason. Set `GROUPDOCS_LIC_STRICT=0` to get a `LicenseWarning` and evaluation mode instead. When `GROUPDOCS_LIC_PATH` is not set, `ASPOSE_LIC_PATH` is read instead.
+
+A file that is not a license at all, passed to `set_license()`, raises `GroupDocsRedactionException` ("Data at the root level is invalid"), and the process is unlicensed afterwards, even if a license had been applied before.
 
 ### Set a metered license
 
@@ -134,10 +158,14 @@ You can evaluate GroupDocs.Redaction for Python via .NET without purchasing a li
 
 The evaluation version is identical to the purchased one; it becomes fully licensed once you set a license. Without a license the Free Trial gives you access to the API's features, but with some limitations:
 
-- Only **one document** can be opened per process (a subsequent open raises a `TrialLimitationsException`).
-- Only **one redaction** can be applied to the document.
-- Any redaction is limited to **four replacements/deletions**, even if there are more matches.
-- Trial badges are placed at the top of each page of the output document.
+- Up to **25 documents** can be opened per process. The next open raises a `TrialLimitationsException` ("Trial mode allows opening up to 25 documents per process").
+- Saved documents carry a red evaluation notice ("Created with evaluation version of GroupDocs.Redaction") at the top of each page.
+- Long documents are cut short:
+  - a rasterized PDF keeps its first 4 pages;
+  - a long Word document saved in its own format loses part of its text: a 10-page document kept 152 of its 276 paragraphs;
+  - on a PDF of more than 4 pages, `get_document_info()` raises "At most 4 elements (for any collection) can be viewed in evaluation mode", and page and metadata redactions report `FAILED` or `SKIPPED`.
+
+The number of redactions and replacements is not limited. Releases up to 26.6 also allowed only one document per process, one redaction per document and four replacements per redaction. Judge the completeness of the output with a license applied.
 
 ### Temporary License
 
