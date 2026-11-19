@@ -34,6 +34,8 @@ const callback = java.newProxy('com.groupdocs.redaction.redactions.IRedactionCal
 
 The instance of this callback is passed to a constructor of the *Redactor* class:
 
+{{< tabs "code-example-use-redaction-callback" >}}
+{{< tab "use_redaction_callback.js" >}}
 ```js
 const redaction = require('@groupdocs/groupdocs.redaction');
 
@@ -50,3 +52,16 @@ try {
   redactor.close();
 }
 ```
+{{< /tab >}}
+{{< tab "Sample.docx" >}}
+{{< tab-text >}}
+`Sample.docx` is the sample file used in this example. Click [here](/redaction/nodejs-java/_sample_files/developer-guide/advanced-usage/use-redaction-callback/Sample.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "sample_Redacted.pdf" >}}  
+```text
+Binary file (PDF, 1012 KB)
+```
+[Download full output](/redaction/nodejs-java/_output_files/developer-guide/advanced-usage/use-redaction-callback/CodeExampleUseRedactionCallback/sample_Redacted.pdf)
+{{< /tab >}}
+{{< /tabs >}}

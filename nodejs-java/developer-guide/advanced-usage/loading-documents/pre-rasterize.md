@@ -15,6 +15,8 @@ For instance, you might need to use an [ImageAreaRedaction](https://reference.gr
 
 The following example demonstrates how to pre-rasterize a Microsoft Word document:
 
+{{< tabs "code-example-pre-rasterize-document" >}}
+{{< tab "pre_rasterize_document.js" >}}
 ```js
 const redaction = require('@groupdocs/groupdocs.redaction');
 const java = require('java');
@@ -41,4 +43,19 @@ const result = redactor.apply(new redaction.ImageAreaRedaction(samplePoint,
 }
 }
 ```
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/redaction/nodejs-java/_sample_files/developer-guide/advanced-usage/loading-documents/pre-rasterize/sample.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "sample_Redacted.pdf" >}}  
+```text
+Binary file (PDF, 940 KB)
+```
+[Download full output](/redaction/nodejs-java/_output_files/developer-guide/advanced-usage/loading-documents/pre-rasterize/CodeExamplePreRasterizeDocument/sample_Redacted.pdf)
+{{< /tab >}}
+{{< /tabs >}}
+
+`save()` writes the PDF in the same folder as the source file.
 

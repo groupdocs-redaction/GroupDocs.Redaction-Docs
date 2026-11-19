@@ -23,6 +23,8 @@ The following code examples demonstrate how to get document information.
 
 
 
+{{< tabs "code-example-get-local-file-info" >}}
+{{< tab "get_local_file_info.js" >}}
 ```js
 const redaction = require('@groupdocs/groupdocs.redaction');
 
@@ -37,19 +39,38 @@ finally {
   redactor.close();
 }
 ```
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/redaction/nodejs-java/_sample_files/developer-guide/basic-usage/get-file-info/sample.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "code-example-get-local-file-info.txt" >}}  
+```text
+File type: Microsoft Word Open XML Document (.docx)
+Number of pages: 1
+Document size: 19370 bytes
+```
+[Download full output](/redaction/nodejs-java/_output_files/developer-guide/basic-usage/get-file-info/CodeExampleGetLocalFileInfo/code-example-get-local-file-info.txt)
+{{< /tab >}}
+{{< /tabs >}}
 
 ### Get file info for a file from Stream
 
 
 
+{{< tabs "code-example-get-file-info-from-stream" >}}
+{{< tab "get_file_info_from_stream.js" >}}
 ```js
 const redaction = require('@groupdocs/groupdocs.redaction');
+const java = require('java');
+const FileInputStream = java.import('java.io.FileInputStream');
 
-const stream = new FileInputStream('D:\\Sample.docx');
-const redactor = new redaction.Redactor('D:\Sample.docx');
+const stream = new FileInputStream('sample.docx');
+const redactor = new redaction.Redactor(stream);
 try 
 {
-const info = redactor.getDocumentInfo();
+    const info = redactor.getDocumentInfo();
     console.log('\nFile type: ' + info.getFileType() + '\nNumber of pages: ' + info.getPageCount() + 
             '\nDocument size: ' + info.getSize() + ' bytes');
 }
@@ -59,3 +80,18 @@ finally
     stream.close();
 }
 ```
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/redaction/nodejs-java/_sample_files/developer-guide/basic-usage/get-file-info/sample.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "code-example-get-file-info-from-stream.txt" >}}  
+```text
+File type: Microsoft Word Open XML Document (.docx)
+Number of pages: 1
+Document size: 19370 bytes
+```
+[Download full output](/redaction/nodejs-java/_output_files/developer-guide/basic-usage/get-file-info/CodeExampleGetFileInfoFromStream/code-example-get-file-info-from-stream.txt)
+{{< /tab >}}
+{{< /tabs >}}

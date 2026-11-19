@@ -25,6 +25,8 @@ GroupDocs.Redaction comes with the following redaction types:
 
 Applying redaction to a document is done through *Redactor.apply* method. As a result, you receive *RedactorChangeLog* instance, containing a log entry for each redaction applied. The entry contains reference to *Redaction* instance including its options, status of the operation (see below) and textual descriptions when applicable. If at least one redaction failed, you will see *Status* == *RedactionStatus.Failed*:
 
+{{< tabs "code-example-apply-redaction" >}}
+{{< tab "apply_redaction.js" >}}
 ```js
 const redaction = require('@groupdocs/groupdocs.redaction');
 
@@ -36,6 +38,19 @@ try {
   redactor.close();
 }
 ```
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/redaction/nodejs-java/_sample_files/developer-guide/basic-usage/redaction-basics/sample.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "sample_Redacted.pdf" >}}  
+```text
+Binary file (PDF, 1012 KB)
+```
+[Download full output](/redaction/nodejs-java/_output_files/developer-guide/basic-usage/redaction-basics/CodeExampleApplyRedaction/sample_Redacted.pdf)
+{{< /tab >}}
+{{< /tabs >}}
 
 All possible statuses are listed in this table:
 
@@ -68,6 +83,8 @@ if (result.getStatus() !== redaction.RedactionStatus.Failed) {
 
 You can apply as much redactions as you need in a single call to *Redactor.apply()* method, since its overload accepts a Java array of redactions and redaction policy. Build that array with `java.newArray('com.groupdocs.redaction.Redaction', [...])` (base class is `com.groupdocs.redaction.Redaction`). In this case, redactions will be applied in the same order as they appear in the array. As an alternative to specifying redaction sets in your code, you can create an XML file with redaction policy, as described [here]({{< ref "redaction/nodejs-java/developer-guide/advanced-usage/use-redaction-policies.md" >}}).
 
+{{< tabs "code-example-apply-multiple-redactions" >}}
+{{< tab "apply_multiple_redactions.js" >}}
 ```js
 const redaction = require('@groupdocs/groupdocs.redaction');
 const java = require('java');
@@ -90,3 +107,16 @@ try {
   redactor.close();
 }
 ```
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/redaction/nodejs-java/_sample_files/developer-guide/basic-usage/redaction-basics/sample.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "sample_Redacted.pdf" >}}  
+```text
+Binary file (PDF, 1.2 MB)
+```
+[Download full output](/redaction/nodejs-java/_output_files/developer-guide/basic-usage/redaction-basics/CodeExampleApplyMultipleRedactions/sample_Redacted.pdf)
+{{< /tab >}}
+{{< /tabs >}}

@@ -26,6 +26,8 @@ Install from npm (`@groupdocs/groupdocs.redaction`), point `JAVA_HOME` at a supp
 
 ## Quick example
 
+{{< tabs "code-example-index" >}}
+{{< tab "_index.js" >}}
 ```js
 const redaction = require('@groupdocs/groupdocs.redaction');
 
@@ -39,6 +41,13 @@ try {
   redactor.close();
 }
 ```
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/redaction/nodejs-java/_sample_files/_index/sample.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< /tabs >}}
 
 ------
 

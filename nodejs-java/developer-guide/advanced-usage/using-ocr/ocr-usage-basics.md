@@ -11,7 +11,7 @@ toc: True
 ---
 
 Although GroupDocs.Redaction itself does not contain OCR as a part of its distributable, it allows you to integrate any paid or free OCR solution.
-You have to implement [IOcrConnector](https://reference.groupdocs.com/redaction/java/com.groupdocs.redaction.integration/IOcrConnector) interface and its recognize() method, taking a stream with an image as an argument and returning a structured representation of the text, including bounding rectangles.
+You have to implement [IOcrConnector](https://reference.groupdocs.com/redaction/java/com.groupdocs.redaction.integration.ocr/IOcrConnector) interface and its recognize() method, taking a stream with an image as an argument and returning a structured representation of the text, including bounding rectangles.
 
 > **Note:** Connector implementations are Java classes (same contracts as GroupDocs.Redaction for Java). Provide them on the JVM classpath or wrap with `java.newProxy`, then pass the instance into `RedactorSettings` from Node.js.
 
@@ -55,7 +55,7 @@ try {
 }
 ```
 
-GroupDocs.Redaction provides two examples of the IOcrConnector implementation, free to use and customize for your needs. First, the [implementation based on Aspose.OCR for Cloud SDK]({{< ref "redaction/nodejs-java/developer-guide/advanced-usage/using-ocr/use-aspose-ocr-for-cloud" >}}). Second [implementation is using Microsoft Azure Cognitive Services API]({{< ref "redaction/nodejs-java/developer-guide/advanced-usage/using-ocr/use-microsoft-azure-computer-vision" >}}). Both services propose a trial subscription plan, but you can use any other free or paid OCR solution, web-based or on premise, by creating your own implementation of [IOcrConnector](https://reference.groupdocs.com/redaction/java/com.groupdocs.redaction.integration/IOcrConnector).
+GroupDocs.Redaction provides examples of the IOcrConnector implementation, free to use and customize for your needs: [Aspose.OCR for Cloud SDK]({{< ref "redaction/nodejs-java/developer-guide/advanced-usage/using-ocr/use-aspose-ocr-for-cloud" >}}), [Aspose.OCR for Java on-premise API]({{< ref "redaction/nodejs-java/developer-guide/advanced-usage/using-ocr/use-aspose-ocr-on-premise" >}}), and [Microsoft Azure Cognitive Services API]({{< ref "redaction/nodejs-java/developer-guide/advanced-usage/using-ocr/use-microsoft-azure-computer-vision" >}}). Cloud and Azure services propose a trial subscription plan, but you can use any other free or paid OCR solution, web-based or on premise, by creating your own implementation of [IOcrConnector](https://reference.groupdocs.com/redaction/java/com.groupdocs.redaction.integration.ocr/IOcrConnector).
 
 
 ## More resources

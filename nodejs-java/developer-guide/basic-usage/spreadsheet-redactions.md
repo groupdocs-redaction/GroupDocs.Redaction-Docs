@@ -23,6 +23,8 @@ If no filters are set, redactions affects the entire document. All indices are z
 
 
 
+{{< tabs "code-example-redact-spreadsheet-content" >}}
+{{< tab "redact_spreadsheet_content.js" >}}
 ```js
 const redaction = require('@groupdocs/groupdocs.redaction');
 
@@ -46,3 +48,16 @@ finally {
   redactor.close();
 }
 ```
+{{< /tab >}}
+{{< tab "sample.xlsx" >}}
+{{< tab-text >}}
+`sample.xlsx` is the sample file used in this example. Click [here](/redaction/nodejs-java/_sample_files/developer-guide/basic-usage/spreadsheet-redactions/sample.xlsx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "sample_Redacted.xlsx" >}}  
+```text
+Binary file (XLSX, 15 KB)
+```
+[Download full output](/redaction/nodejs-java/_output_files/developer-guide/basic-usage/spreadsheet-redactions/CodeExampleRedactSpreadsheetContent/sample_Redacted.xlsx)
+{{< /tab >}}
+{{< /tabs >}}

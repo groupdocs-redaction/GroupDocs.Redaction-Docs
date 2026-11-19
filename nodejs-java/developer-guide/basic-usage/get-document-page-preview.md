@@ -18,6 +18,8 @@ In GroupDocs.Redaction, *Redactor* class supports rendering of the document prev
 
 The following example demonstrates how to get a single page preview of the document. Preview streaming uses [ICreatePageStream](https://reference.groupdocs.com/redaction/java/com.groupdocs.redaction.options/ICreatePageStream) and [PreviewOptions](https://reference.groupdocs.com/redaction/java/com.groupdocs.redaction.options/PreviewOptions) from the Java API, wrapped with `java.newProxy`:
 
+{{< tabs "code-example-get-document-page-preview" >}}
+{{< tab "get_document_page_preview.js" >}}
 ```js
 const redaction = require('@groupdocs/groupdocs.redaction');
 const java = require('java');
@@ -47,3 +49,16 @@ try {
   redactor.close();
 }
 ```
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/redaction/nodejs-java/_sample_files/developer-guide/basic-usage/get-document-page-preview/sample.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "sample_page1.png" >}}  
+```text
+Binary file (PNG, 23 KB)
+```
+[Download full output](/redaction/nodejs-java/_output_files/developer-guide/basic-usage/get-document-page-preview/CodeExampleGetDocumentPagePreview/sample_page1.png)
+{{< /tab >}}
+{{< /tabs >}}

@@ -14,6 +14,8 @@ You can use **PageAreaRedaction** to redact an area of a specific page range fro
 
 The following example demonstrates how to apply **PageAreaRedaction** to the right half of the last page in a PDF document.
 
+{{< tabs "code-example-use-page-area-redaction" >}}
+{{< tab "use_page_area_redaction.js" >}}
 ```js
 const redaction = require('@groupdocs/groupdocs.redaction');
 const java = require('java');
@@ -41,4 +43,17 @@ const result = redactor.apply(new redaction.PageAreaRedaction(rx, optionsText, o
   redactor.close();
 }
 ```
+{{< /tab >}}
+{{< tab "Sample.pdf" >}}
+{{< tab-text >}}
+`Sample.pdf` is the sample file used in this example. Click [here](/redaction/nodejs-java/_sample_files/developer-guide/advanced-usage/using-redaction-filters/use-page-area-redaction/Sample.pdf) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "Sample_redacted.pdf" >}}  
+```text
+Binary file (PDF, 68 KB)
+```
+[Download full output](/redaction/nodejs-java/_output_files/developer-guide/advanced-usage/using-redaction-filters/use-page-area-redaction/CodeExampleUsePageAreaRedaction/Sample_redacted.pdf)
+{{< /tab >}}
+{{< /tabs >}}
 

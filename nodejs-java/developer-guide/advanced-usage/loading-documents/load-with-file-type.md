@@ -14,6 +14,8 @@ Set the file type to any supported constant from the [FileType](https://referenc
 
 The following example demonstrates how to load a document from a stream and from a file path while explicitly specifying the file type:
 
+{{< tabs "code-example-load-with-file-type" >}}
+{{< tab "load_with_file_type.js" >}}
 ```js
 const redaction = require('@groupdocs/groupdocs.redaction');
 const java = require('java');
@@ -45,6 +47,19 @@ finally {
   redactor.close();
 }
 ```
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/redaction/nodejs-java/_sample_files/developer-guide/advanced-usage/loading-documents/load-with-file-type/sample.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "LoremIpsum_redacted.pdf" >}}  
+```text
+Binary file (PDF, 2.8 MB)
+```
+[Download full output](/redaction/nodejs-java/_output_files/developer-guide/advanced-usage/loading-documents/load-with-file-type/CodeExampleLoadWithFileType/LoremIpsum_redacted.pdf)
+{{< /tab >}}
+{{< /tabs >}}
 
 ## More resources
 

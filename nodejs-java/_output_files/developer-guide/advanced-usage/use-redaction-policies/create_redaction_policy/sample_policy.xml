@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<redactionPolicy>
+  <exactPhraseRedaction actionType="ReplaceString" replacement="[Product]" searchPhrase="Redaction" />
+  <regexRedaction actionType="DrawBox" color="#DC143C" regularExpression="\d{2}\s*\d{2}[^\d]*\d{6}" />
+  <deleteAnnotationRedaction regularExpression="[.]*" />
+  <eraseMetadataRedaction filter="All" />
+</redactionPolicy>

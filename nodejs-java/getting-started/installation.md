@@ -20,17 +20,18 @@ See [System requirements]({{< ref "redaction/nodejs-java/getting-started/system-
 
 ### Install from npm
 
+> **Note:** The current version shown below is **26.11.0**. Always check [npm](https://www.npmjs.com/package/@groupdocs/groupdocs.redaction) for the latest version.
+
 ```bash
-npm install @groupdocs/groupdocs.redaction
+npm install @groupdocs/groupdocs.redaction@26.11.0
 ```
 
 Or with yarn / pnpm:
 
 ```bash
-yarn add @groupdocs/groupdocs.redaction
-pnpm add @groupdocs/groupdocs.redaction
+yarn add @groupdocs/groupdocs.redaction@26.11.0
+pnpm add @groupdocs/groupdocs.redaction@26.11.0
 ```
-
 ### Set up Java (`JAVA_HOME`)
 
 Windows (PowerShell):

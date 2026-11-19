@@ -15,6 +15,8 @@ In order to open password-protected documents, you have to pass your password to
 
 
 
+{{< tabs "code-example-load-password-protected-file" >}}
+{{< tab "load_password_protected_file.js" >}}
 ```js
 const redaction = require('@groupdocs/groupdocs.redaction');
 
@@ -30,3 +32,16 @@ const redactor = new redaction.Redactor('protected_sample.docx', loadOptions);
   redactor.close();
 }
 ```
+{{< /tab >}}
+{{< tab "protected.docx" >}}
+{{< tab-text >}}
+`protected.docx` is the sample file used in this example. Click [here](/redaction/nodejs-java/_sample_files/developer-guide/advanced-usage/loading-documents/load-password-protected-file/protected.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "protected_sample_Redacted.pdf" >}}  
+```text
+Binary file (PDF, 1012 KB)
+```
+[Download full output](/redaction/nodejs-java/_output_files/developer-guide/advanced-usage/loading-documents/load-password-protected-file/CodeExampleLoadPasswordProtectedFile/protected_sample_Redacted.pdf)
+{{< /tab >}}
+{{< /tabs >}}

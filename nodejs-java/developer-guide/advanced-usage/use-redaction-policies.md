@@ -38,6 +38,8 @@ You can use RedactionPolicy.save() method to create XML documents of this struct
 
 The following example demonstrates how to save a *RedactionPolicy* to an XML file.
 
+{{< tabs "code-example-create-redaction-policy" >}}
+{{< tab "create_redaction_policy.js" >}}
 ```js
 const redaction = require('@groupdocs/groupdocs.redaction');
 const java = require('java');
@@ -51,40 +53,48 @@ const policy = new redaction.RedactionPolicy(java.newArray('com.groupdocs.redact
 ]));
 policy.save('MyPolicyFile.xml');
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
 You can have as much policies, as you need, loading them to redact your documents.
 
-An example below shows how to apply redaction policy to all files within given inbound folder, and save to one of outbound folders — for successfully updated files and for failed ones:
+The example below loads a redaction policy from an XML file and applies every rule it contains to a document in a single `apply` call:
 
+{{< tabs "code-example-use-redaction-policy" >}}
+{{< tab "use_redaction_policy.js" >}}
 ```js
 const redaction = require('@groupdocs/groupdocs.redaction');
-const java = require('java');
-const fs = require('fs');
-const path = require('path');
-const FileOutputStream = java.import('java.io.FileOutputStream');
 
-const policy = redaction.RedactionPolicy.load('Policy_file.xml');
-const inbound = 'Inbound';
-const files = fs.readdirSync(inbound)
-  .map((name) => path.join(inbound, name))
-  .filter((filePath) => fs.statSync(filePath).isFile());
-
-for (const filePath of files) {
-  const redactor = new redaction.Redactor(filePath);
-  try {
-    const result = redactor.apply(policy);
-    const resultFolder = result.getStatus() !== redaction.RedactionStatus.Failed ? 'Done' : 'Failed';
-    const fileName = path.basename(filePath);
-    const fileStream = new FileOutputStream(path.join(resultFolder, fileName));
-    try {
-      const options = new redaction.RasterizationOptions();
-      options.setEnabled(false);
-      redactor.save(fileStream, options);
-    } finally {
-      fileStream.close();
-    }
-  } finally {
-    redactor.close();
+const policy = redaction.RedactionPolicy.load('redaction_policy.xml');
+const redactor = new redaction.Redactor('sample.docx');
+try {
+  const result = redactor.apply(policy);
+  if (result.getStatus() !== redaction.RedactionStatus.Failed) {
+    const saveOptions = new redaction.SaveOptions();
+    saveOptions.setAddSuffix(true);
+    saveOptions.setRasterizeToPDF(false);
+    saveOptions.setRedactedFileSuffix('redacted');
+    redactor.save(saveOptions);
   }
+} finally {
+  redactor.close();
 }
 ```
+{{< /tab >}}
+{{< tab "redaction_policy.xml" >}}
+{{< tab-text >}}
+`redaction_policy.xml` is the policy file used in this example. Click [here](/redaction/nodejs-java/_sample_files/developer-guide/advanced-usage/use-redaction-policies/redaction_policy.xml) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the document redacted in this example. Click [here](/redaction/nodejs-java/_sample_files/developer-guide/advanced-usage/use-redaction-policies/sample.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "sample_redacted.docx" >}}  
+```text
+Binary file (DOCX, 17 KB)
+```
+[Download full output](/redaction/nodejs-java/_output_files/developer-guide/advanced-usage/use-redaction-policies/CodeExampleUseRedactionPolicy/sample_redacted.docx)
+{{< /tab >}}
+{{< /tabs >}}

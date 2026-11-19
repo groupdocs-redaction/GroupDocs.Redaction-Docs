@@ -15,6 +15,8 @@ You can use GroupDocs.Redaction to remove all or specific comments and other ann
 
 
 
+{{< tabs "code-example-remove-all-annotations" >}}
+{{< tab "remove_all_annotations.js" >}}
 ```js
 const redaction = require('@groupdocs/groupdocs.redaction');
 
@@ -31,6 +33,19 @@ finally {
   redactor.close();
 }
 ```
+{{< /tab >}}
+{{< tab "annotated.xlsx" >}}
+{{< tab-text >}}
+`annotated.xlsx` is the sample file used in this example. Click [here](/redaction/nodejs-java/_sample_files/developer-guide/basic-usage/annotation-redactions/annotated.xlsx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "annotated_sample_Redacted.xlsx" >}}  
+```text
+Binary file (XLSX, 12 KB)
+```
+[Download full output](/redaction/nodejs-java/_output_files/developer-guide/basic-usage/annotation-redactions/CodeExampleRemoveAllAnnotations/annotated_sample_Redacted.xlsx)
+{{< /tab >}}
+{{< /tabs >}}
 
 You can use constructor without arguments to remove all annotations within the document.
 
@@ -40,6 +55,8 @@ Instead of removing all or specific annotations, you can remove sensitive data f
 
 
 
+{{< tabs "code-example-redact-annotations" >}}
+{{< tab "redact_annotations.js" >}}
 ```js
 const redaction = require('@groupdocs/groupdocs.redaction');
 
@@ -56,3 +73,16 @@ finally {
   redactor.close();
 }
 ```
+{{< /tab >}}
+{{< tab "annotated.xlsx" >}}
+{{< tab-text >}}
+`annotated.xlsx` is the sample file used in this example. Click [here](/redaction/nodejs-java/_sample_files/developer-guide/basic-usage/annotation-redactions/annotated.xlsx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "annotated_sample_Redacted.xlsx" >}}  
+```text
+Binary file (XLSX, 12 KB)
+```
+[Download full output](/redaction/nodejs-java/_output_files/developer-guide/basic-usage/annotation-redactions/CodeExampleRedactAnnotations/annotated_sample_Redacted.xlsx)
+{{< /tab >}}
+{{< /tabs >}}

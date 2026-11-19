@@ -17,6 +17,8 @@ In the example below, we apply textual redaction, replacing personal exact phras
 
 
 
+{{< tabs "code-example-redact-exact-phrase" >}}
+{{< tab "redact_exact_phrase.js" >}}
 ```js
 const redaction = require('@groupdocs/groupdocs.redaction');
 
@@ -30,11 +32,26 @@ finally {
   redactor.close();
 }
 ```
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/redaction/nodejs-java/_sample_files/developer-guide/basic-usage/text-redactions/sample.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "sample_Redacted.pdf" >}}  
+```text
+Binary file (PDF, 1012 KB)
+```
+[Download full output](/redaction/nodejs-java/_output_files/developer-guide/basic-usage/text-redactions/CodeExampleRedactExactPhrase/sample_Redacted.pdf)
+{{< /tab >}}
+{{< /tabs >}}
 
 By default, search for exact phase is case insensitive.For a case-sensitive redaction, there is a constructor parameter and corresponding public property:
 
 
 
+{{< tabs "code-example-redact-case-sensitive-phrase" >}}
+{{< tab "redact_case_sensitive_phrase.js" >}}
 ```js
 const redaction = require('@groupdocs/groupdocs.redaction');
 
@@ -48,11 +65,26 @@ finally {
   redactor.close();
 }
 ```
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/redaction/nodejs-java/_sample_files/developer-guide/basic-usage/text-redactions/sample.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "sample_Redacted.pdf" >}}  
+```text
+Binary file (PDF, 1012 KB)
+```
+[Download full output](/redaction/nodejs-java/_output_files/developer-guide/basic-usage/text-redactions/CodeExampleRedactCaseSensitivePhrase/sample_Redacted.pdf)
+{{< /tab >}}
+{{< /tabs >}}
 
 If you need a color box over the redacted text, you can use color instead of replacement string. The redaction will erase matched text and put a rectangle of the specified color in place of redacted text:
 
 
 
+{{< tabs "code-example-redact-with-color-box" >}}
+{{< tab "redact_with_color_box.js" >}}
 ```js
 const redaction = require('@groupdocs/groupdocs.redaction');
 const java = require('java');
@@ -68,9 +100,24 @@ finally {
   redactor.close();
 }
 ```
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/redaction/nodejs-java/_sample_files/developer-guide/basic-usage/text-redactions/sample.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "sample_Redacted.pdf" >}}  
+```text
+Binary file (PDF, 1003 KB)
+```
+[Download full output](/redaction/nodejs-java/_output_files/developer-guide/basic-usage/text-redactions/CodeExampleRedactWithColorBox/sample_Redacted.pdf)
+{{< /tab >}}
+{{< /tabs >}}
 
 You might need to apply redaction to a right-to-left document, such as Arabic or Hebrew. The following example demonstrates how to apply ExactPhraseRedaction to an Arabic PDF document:
 
+{{< tabs "code-example-redact-right-to-left-text" >}}
+{{< tab "redact_right_to_left_text.js" >}}
 ```js
 const redaction = require('@groupdocs/groupdocs.redaction');
 
@@ -86,6 +133,19 @@ finally {
   redactor.close();
 }
 ```
+{{< /tab >}}
+{{< tab "arabic.pdf" >}}
+{{< tab-text >}}
+`arabic.pdf` is the sample file used in this example. Click [here](/redaction/nodejs-java/_sample_files/developer-guide/basic-usage/text-redactions/arabic.pdf) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "Arabic_Redacted.pdf" >}}  
+```text
+Binary file (PDF, 318 KB)
+```
+[Download full output](/redaction/nodejs-java/_output_files/developer-guide/basic-usage/text-redactions/CodeExampleRedactRightToLeftText/Arabic_Redacted.pdf)
+{{< /tab >}}
+{{< /tabs >}}
 
 ### Use regular expression
 
@@ -93,6 +153,8 @@ Behind the scenes, "exact phrase" redaction works though regular expressions, wh
 
 
 
+{{< tabs "code-example-redact-with-regex" >}}
+{{< tab "redact_with_regex.js" >}}
 ```js
 const redaction = require('@groupdocs/groupdocs.redaction');
 const java = require('java');
@@ -111,9 +173,24 @@ finally {
   redactor.close();
 }
 ```
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/redaction/nodejs-java/_sample_files/developer-guide/basic-usage/text-redactions/sample.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "sample_Redacted.docx" >}}  
+```text
+Binary file (DOCX, 17 KB)
+```
+[Download full output](/redaction/nodejs-java/_output_files/developer-guide/basic-usage/text-redactions/CodeExampleRedactWithRegex/sample_Redacted.docx)
+{{< /tab >}}
+{{< /tabs >}}
 
 If you need to apply redact a whole paragraph, you might also need to use RegexRedaction. The following example demonstrates how to redact the whole paragraph in a PDF document:
 
+{{< tabs "code-example-redact-whole-paragraph" >}}
+{{< tab "redact_whole_paragraph.js" >}}
 ```js
 const redaction = require('@groupdocs/groupdocs.redaction');
 
@@ -130,3 +207,16 @@ finally {
   redactor.close();
 }
 ```
+{{< /tab >}}
+{{< tab "sample.pdf" >}}
+{{< tab-text >}}
+`sample.pdf` is the sample file used in this example. Click [here](/redaction/nodejs-java/_sample_files/developer-guide/basic-usage/text-redactions/sample.pdf) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "LoremIpsum_Redacted.pdf" >}}  
+```text
+Binary file (PDF, 2.9 MB)
+```
+[Download full output](/redaction/nodejs-java/_output_files/developer-guide/basic-usage/text-redactions/CodeExampleRedactWholeParagraph/LoremIpsum_Redacted.pdf)
+{{< /tab >}}
+{{< /tabs >}}

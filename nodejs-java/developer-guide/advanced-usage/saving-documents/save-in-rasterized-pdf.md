@@ -11,6 +11,8 @@ toc: True
 ---
 The following example demonstrates how to save the document as a rasterized PDF file:
 
+{{< tabs "code-example-save-in-rasterized-pdf" >}}
+{{< tab "save_in_rasterized_pdf.js" >}}
 ```js
 const redaction = require('@groupdocs/groupdocs.redaction');
 
@@ -29,3 +31,16 @@ finally {
   redactor.close();
 }
 ```
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/redaction/nodejs-java/_sample_files/developer-guide/advanced-usage/saving-documents/save-in-rasterized-pdf/sample.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "sample_redacted.pdf" >}}  
+```text
+Binary file (PDF, 1012 KB)
+```
+[Download full output](/redaction/nodejs-java/_output_files/developer-guide/advanced-usage/saving-documents/save-in-rasterized-pdf/CodeExampleSaveInRasterizedPdf/sample_redacted.pdf)
+{{< /tab >}}
+{{< /tabs >}}

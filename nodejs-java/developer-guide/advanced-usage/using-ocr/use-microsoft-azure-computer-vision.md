@@ -2,7 +2,7 @@
 id: use-microsoft-azure-computer-vision
 url: redaction/nodejs-java/use-microsoft-azure-computer-vision
 title: Use Microsoft Azure Computer Vision API 
-weight: 4
+weight: 5
 description: "This article explains that how to use Microsoft Azure Computer Vision API"
 keywords: Microsoft Azure Computer Vision API
 productName: GroupDocs.Redaction for Node.js via Java
@@ -45,10 +45,10 @@ import org.bouncycastle.util.Strings;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-import com.groupdocs.redaction.integration.IOcrConnector;
-import com.groupdocs.redaction.integration.RecognizedImage;
-import com.groupdocs.redaction.integration.TextFragment;
-import com.groupdocs.redaction.integration.TextLine;
+import com.groupdocs.redaction.integration.ocr.IOcrConnector;
+import com.groupdocs.redaction.integration.ocr.RecognizedImage;
+import com.groupdocs.redaction.integration.ocr.TextFragment;
+import com.groupdocs.redaction.integration.ocr.TextLine;
 
 public class MicrosoftAzureOcrConnector implements IOcrConnector
 {

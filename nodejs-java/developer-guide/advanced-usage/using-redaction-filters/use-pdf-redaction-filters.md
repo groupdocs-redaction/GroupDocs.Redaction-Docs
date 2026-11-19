@@ -14,6 +14,8 @@ You can combine **PageRangeFilter** and **PageAreaFilter** in one set to limit a
 
 The following example demonstrates how to apply redaction to the bottom half of the last page in a PDF document.
 
+{{< tabs "code-example-use-pdf-redaction-filters" >}}
+{{< tab "use_pdf_redaction_filters.js" >}}
 ```js
 const redaction = require('@groupdocs/groupdocs.redaction');
 const java = require('java');
@@ -42,4 +44,17 @@ const result = redactor.apply(new redaction.ExactPhraseRedaction('bibliography',
   redactor.close();
 }
 ```
+{{< /tab >}}
+{{< tab "multipage_sample.pdf" >}}
+{{< tab-text >}}
+`multipage_sample.pdf` is the sample file used in this example. Click [here](/redaction/nodejs-java/_sample_files/developer-guide/advanced-usage/using-redaction-filters/use-pdf-redaction-filters/multipage_sample.pdf) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "Sample_Redacted.pdf" >}}  
+```text
+Binary file (PDF, 1018 KB)
+```
+[Download full output](/redaction/nodejs-java/_output_files/developer-guide/advanced-usage/using-redaction-filters/use-pdf-redaction-filters/CodeExampleUsePdfRedactionFilters/Sample_Redacted.pdf)
+{{< /tab >}}
+{{< /tabs >}}
 

@@ -16,6 +16,8 @@ This option applies to OOXML-based Word formats such as DOCX, DOCM, DOTX, and DO
 
 The following example demonstrates how to save a redacted Word document with the Strict OOXML compliance level:
 
+{{< tabs "code-example-save-word-with-ooxml-compliance" >}}
+{{< tab "save_word_with_ooxml_compliance.js" >}}
 ```js
 const redaction = require('@groupdocs/groupdocs.redaction');
 
@@ -36,6 +38,19 @@ finally {
   redactor.close();
 }
 ```
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/redaction/nodejs-java/_sample_files/developer-guide/advanced-usage/saving-documents/save-word-with-ooxml-compliance/sample.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "sample_Strict.docx" >}}  
+```text
+Binary file (DOCX, 16 KB)
+```
+[Download full output](/redaction/nodejs-java/_output_files/developer-guide/advanced-usage/saving-documents/save-word-with-ooxml-compliance/CodeExampleSaveWordWithOoxmlCompliance/sample_Strict.docx)
+{{< /tab >}}
+{{< /tabs >}}
 
 ## More resources
 

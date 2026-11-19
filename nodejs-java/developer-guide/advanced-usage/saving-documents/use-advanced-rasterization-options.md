@@ -15,6 +15,8 @@ In order to use the advanced rasterization options you have to pass one of the o
 
 The following example demonstrates how to apply the [AdvancedRasterizationOptions](https://reference.groupdocs.com/redaction/java/groupdocs.redaction.options/advancedrasterizationoptions/) with default settings. 
 
+{{< tabs "code-example-use-advanced-rasterization-options" >}}
+{{< tab "use_advanced_rasterization_options.js" >}}
 ```js
 const redaction = require('@groupdocs/groupdocs.redaction');
 
@@ -35,6 +37,19 @@ finally {
   redactor.close();
 }
 ```
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/redaction/nodejs-java/_sample_files/developer-guide/advanced-usage/saving-documents/use-advanced-rasterization-options/sample.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "Sample_scan.pdf" >}}  
+```text
+Binary file (PDF, 1.0 MB)
+```
+[Download full output](/redaction/nodejs-java/_output_files/developer-guide/advanced-usage/saving-documents/use-advanced-rasterization-options/CodeExampleUseAdvancedRasterizationOptions/Sample_scan.pdf)
+{{< /tab >}}
+{{< /tabs >}}
 
 ### Use border rasterization option
 
@@ -42,6 +57,8 @@ You can set the custom border width by providing the "border" dictionary item wi
 
 The following example demonstrates how to apply the border advanced rasterization option with custom settings.
 
+{{< tabs "code-example-use-border-rasterization-option" >}}
+{{< tab "use_border_rasterization_option.js" >}}
 ```js
 const redaction = require('@groupdocs/groupdocs.redaction');
 
@@ -59,11 +76,26 @@ finally {
   redactor.close();
 }
 ```
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/redaction/nodejs-java/_sample_files/developer-guide/advanced-usage/saving-documents/use-advanced-rasterization-options/sample.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "Sample_scan.pdf" >}}  
+```text
+Binary file (PDF, 1.0 MB)
+```
+[Download full output](/redaction/nodejs-java/_output_files/developer-guide/advanced-usage/saving-documents/use-advanced-rasterization-options/CodeExampleUseBorderRasterizationOption/Sample_scan.pdf)
+{{< /tab >}}
+{{< /tabs >}}
 
 ### Use grayscale rasterization option
 
 The following example demonstrates how to apply the grayscale advanced rasterization option.
 
+{{< tabs "code-example-use-grayscale-rasterization-option" >}}
+{{< tab "use_grayscale_rasterization_option.js" >}}
 ```js
 const redaction = require('@groupdocs/groupdocs.redaction');
 
@@ -81,6 +113,19 @@ finally {
   redactor.close();
 }
 ```
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/redaction/nodejs-java/_sample_files/developer-guide/advanced-usage/saving-documents/use-advanced-rasterization-options/sample.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "Sample_scan.pdf" >}}  
+```text
+Binary file (PDF, 975 KB)
+```
+[Download full output](/redaction/nodejs-java/_output_files/developer-guide/advanced-usage/saving-documents/use-advanced-rasterization-options/CodeExampleUseGrayscaleRasterizationOption/Sample_scan.pdf)
+{{< /tab >}}
+{{< /tabs >}}
 
 ### Use noise rasterization option
 
@@ -88,6 +133,8 @@ You can set up the custom noise effects by providing the "maxSpots" and "spotMax
 
 The following example demonstrates how to apply the noise advanced rasterization option with custom settings.
 
+{{< tabs "code-example-use-noise-rasterization-option" >}}
+{{< tab "use_noise_rasterization_option.js" >}}
 ```js
 const redaction = require('@groupdocs/groupdocs.redaction');
 
@@ -106,6 +153,19 @@ finally {
   redactor.close();
 }
 ```
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/redaction/nodejs-java/_sample_files/developer-guide/advanced-usage/saving-documents/use-advanced-rasterization-options/sample.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "Sample_scan.pdf" >}}  
+```text
+Binary file (PDF, 1.0 MB)
+```
+[Download full output](/redaction/nodejs-java/_output_files/developer-guide/advanced-usage/saving-documents/use-advanced-rasterization-options/CodeExampleUseNoiseRasterizationOption/Sample_scan.pdf)
+{{< /tab >}}
+{{< /tabs >}}
 
 ### Use tilt rasterization option
 
@@ -113,6 +173,8 @@ You can set up the custom tilt effects by providing the "minAngle" and "randomAn
 
 The following example demonstrates how to apply the tilt advanced rasterization option with custom settings.
 
+{{< tabs "code-example-use-tilt-rasterization-option" >}}
+{{< tab "use_tilt_rasterization_option.js" >}}
 ```js
 const redaction = require('@groupdocs/groupdocs.redaction');
 
@@ -131,4 +193,17 @@ finally {
   redactor.close();
 }
 ```
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/redaction/nodejs-java/_sample_files/developer-guide/advanced-usage/saving-documents/use-advanced-rasterization-options/sample.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "Sample_scan.pdf" >}}  
+```text
+Binary file (PDF, 1.1 MB)
+```
+[Download full output](/redaction/nodejs-java/_output_files/developer-guide/advanced-usage/saving-documents/use-advanced-rasterization-options/CodeExampleUseTiltRasterizationOption/Sample_scan.pdf)
+{{< /tab >}}
+{{< /tabs >}}
 

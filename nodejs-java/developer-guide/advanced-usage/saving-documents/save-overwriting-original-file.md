@@ -11,6 +11,8 @@ toc: True
 ---
 The following example demonstrates how to save the redacted document, replacing an original file:
 
+{{< tabs "code-example-save-overwriting-original-file" >}}
+{{< tab "save_overwriting_original_file.js" >}}
 ```js
 const redaction = require('@groupdocs/groupdocs.redaction');
 const java = require('java');
@@ -36,3 +38,11 @@ try {
   redactor.close();
 }
 ```
+{{< /tab >}}
+{{< tab "OverwrittenSample.docx" >}}  
+```text
+Binary file (DOCX, 17 KB)
+```
+[Download full output](/redaction/nodejs-java/_output_files/developer-guide/advanced-usage/saving-documents/save-overwriting-original-file/CodeExampleSaveOverwritingOriginalFile/OverwrittenSample.docx)
+{{< /tab >}}
+{{< /tabs >}}

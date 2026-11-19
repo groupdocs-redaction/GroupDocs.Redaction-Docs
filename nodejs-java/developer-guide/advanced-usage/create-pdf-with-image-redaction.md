@@ -21,6 +21,8 @@ In some cases you might need to redact the pages of a document as images, redact
 The following example demonstrates how to create a rasterized PDF from a Microsoft Word document and apply image redactions to its pages:
 
 
+{{< tabs "code-example-create-pdf-with-image-redaction" >}}
+{{< tab "create_pdf_with_image_redaction.js" >}}
 ```js
 const redaction = require('@groupdocs/groupdocs.redaction');
 const java = require('java');
@@ -69,6 +71,19 @@ const options = new redaction.RasterizationOptions();
     finally { redactor.close(); inputStream.close(); }
 }
 ```
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/redaction/nodejs-java/_sample_files/developer-guide/advanced-usage/create-pdf-with-image-redaction/sample.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "redacted-sample.pdf" >}}  
+```text
+Binary file (PDF, 1010 KB)
+```
+[Download full output](/redaction/nodejs-java/_output_files/developer-guide/advanced-usage/create-pdf-with-image-redaction/CodeExampleCreatePdfWithImageRedaction/redacted-sample.pdf)
+{{< /tab >}}
+{{< /tabs >}}
 
 Please, note that you don't have to use GroupDocs.Redaction to create a rasterized PDF from an office document. You will be able to use it, if you don't have any other tool for that.
 

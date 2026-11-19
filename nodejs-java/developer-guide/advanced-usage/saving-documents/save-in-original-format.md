@@ -11,6 +11,8 @@ toc: True
 ---
 The following example demonstrates how to save file in its original format with current date as a suffix:
 
+{{< tabs "code-example-save-in-original-format" >}}
+{{< tab "save_in_original_format.js" >}}
 ```js
 const redaction = require('@groupdocs/groupdocs.redaction');
 
@@ -30,3 +32,16 @@ finally {
   redactor.close();
 }
 ```
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/redaction/nodejs-java/_sample_files/developer-guide/advanced-usage/saving-documents/save-in-original-format/sample.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "sample_19-11-2026.docx" >}}  
+```text
+Binary file (DOCX, 16 KB)
+```
+[Download full output](/redaction/nodejs-java/_output_files/developer-guide/advanced-usage/saving-documents/save-in-original-format/CodeExampleSaveInOriginalFormat/sample_19-11-2026.docx)
+{{< /tab >}}
+{{< /tabs >}}

@@ -26,6 +26,8 @@ For multi-page or layout-aware scenarios, combine image-area redaction with [pag
 In order to redact image area, you have to use [ImageAreaRedaction](https://reference.groupdocs.com/redaction/java/com.groupdocs.redaction.redactions/ImageAreaRedaction) class:
 
 **Node.js**
+{{< tabs "code-example-redact-image-area" >}}
+{{< tab "redact_image_area.js" >}}
 ```js
 const redaction = require('@groupdocs/groupdocs.redaction');
 const java = require('java');
@@ -53,6 +55,19 @@ finally {
   redactor.close();
 }
 ```
+{{< /tab >}}
+{{< tab "sample.jpg" >}}
+{{< tab-text >}}
+`sample.jpg` is the sample file used in this example. Click [here](/redaction/nodejs-java/_sample_files/developer-guide/basic-usage/image-redactions/sample.jpg) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "sample_Redacted.pdf" >}}  
+```text
+Binary file (PDF, 2.6 MB)
+```
+[Download full output](/redaction/nodejs-java/_output_files/developer-guide/basic-usage/image-redactions/CodeExampleRedactImageArea/sample_Redacted.pdf)
+{{< /tab >}}
+{{< /tabs >}}
 
 If the redaction cannot be applied to this type of files, e.g. MS Word document without embedded images, [RedactorChangeLog.getStatus()](https://reference.groupdocs.com/redaction/java/com.groupdocs.redaction/RedactorChangeLog#getStatus()) will be [RedactionStatus.Skipped](https://reference.groupdocs.com/redaction/java/com.groupdocs.redaction/RedactionStatus).
 
@@ -61,6 +76,8 @@ If the redaction cannot be applied to this type of files, e.g. MS Word document 
 To enable OCR-processing and search for a text using regular expressions, you have to implement [IOcrConnector](https://reference.groupdocs.com/redaction/java/com.groupdocs.redaction.integration/IOcrConnector) interface and pass the instance to [RedactorSettings](https://reference.groupdocs.com/redaction/java/com.groupdocs.redaction.options/RedactorSettings) constructor. For more details, see [OCR Usage Basics]({{< ref "redaction/nodejs-java/developer-guide/advanced-usage/using-ocr/ocr-usage-basics" >}}) article.
 
 **Node.js**
+{{< tabs "code-example-redact-image-ocr-text" >}}
+{{< tab "redact_image_ocr_text.js" >}}
 ```js
 const redaction = require('@groupdocs/groupdocs.redaction');
 const java = require('java');
@@ -78,6 +95,13 @@ const result = redactor.apply(new redaction.RegexRedaction('\\d{4}', new redacti
   redactor.close();
 }
 ```
+{{< /tab >}}
+{{< tab "sample.jpg" >}}
+{{< tab-text >}}
+`sample.jpg` is the sample file used in this example. Click [here](/redaction/nodejs-java/_sample_files/developer-guide/basic-usage/image-redactions/sample.jpg) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< /tabs >}}
 
 In the example above **MyCustomOcrConnector** class implements [IOcrConnector](https://reference.groupdocs.com/redaction/java/com.groupdocs.redaction.integration/IOcrConnector) interface.
 
@@ -90,6 +114,8 @@ The following example demonstrates how to edit exif data (erase them) from a pho
 
 
 
+{{< tabs "code-example-clean-image-metadata" >}}
+{{< tab "clean_image_metadata.js" >}}
 ```js
 const redaction = require('@groupdocs/groupdocs.redaction');
 
@@ -107,6 +133,19 @@ finally {
   redactor.close();
 }
 ```
+{{< /tab >}}
+{{< tab "sample.jpg" >}}
+{{< tab-text >}}
+`sample.jpg` is the sample file used in this example. Click [here](/redaction/nodejs-java/_sample_files/developer-guide/basic-usage/image-redactions/sample.jpg) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "sample_Redacted.pdf" >}}  
+```text
+Binary file (PDF, 4.3 MB)
+```
+[Download full output](/redaction/nodejs-java/_output_files/developer-guide/basic-usage/image-redactions/CodeExampleCleanImageMetadata/sample_Redacted.pdf)
+{{< /tab >}}
+{{< /tabs >}}
 
 If the redaction cannot be applied to this type of files, e.g. BMP image, *RedactorChangeLog.getStatus()* will be *RedactionStatus.Skipped*.
 
@@ -116,6 +155,8 @@ You can redact image area within all kinds of embedded images inside a document.
 
 The following example demonstrates how to redact all embedded images within a Microsoft Word document:
 
+{{< tabs "code-example-redact-embedded-images" >}}
+{{< tab "redact_embedded_images.js" >}}
 ```js
 const redaction = require('@groupdocs/groupdocs.redaction');
 const java = require('java');
@@ -139,6 +180,19 @@ finally {
   redactor.close();
 }
 ```
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/redaction/nodejs-java/_sample_files/developer-guide/basic-usage/image-redactions/sample.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "sample_Redacted.pdf" >}}  
+```text
+Binary file (PDF, 1010 KB)
+```
+[Download full output](/redaction/nodejs-java/_output_files/developer-guide/basic-usage/image-redactions/CodeExampleRedactEmbeddedImages/sample_Redacted.pdf)
+{{< /tab >}}
+{{< /tabs >}}
 
 If the redaction cannot be applied to this type of files, e.g. a spreadsheet document, *RedactorChangeLog.getStatus()* will be *RedactionStatus.Skipped*.
 

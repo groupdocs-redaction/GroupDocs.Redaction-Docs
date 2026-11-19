@@ -13,10 +13,11 @@ toc: True
 
 ## Evaluation limitations
 
-* Only 1 document can be opened in one process.
-* Only 1 redaction can be applied to the document.
-* Any redaction is limited to 4 replacements/deletions, even if there are more matches.
-* Trial badges are placed on the top of each page.
+Starting with GroupDocs.Redaction 26.11:
+
+* Up to 25 documents can be opened in a single process. Attempting to open another document throws a `TrialLimitationsException`.
+* Trial badges are added to the top of each page in the saved document.
+* The previous limits of 1 document, 1 redaction, 4 replacements no longer apply.
 
 ## Apply a license from a file
 
@@ -36,6 +37,21 @@ const redaction = require('@groupdocs/groupdocs.redaction');
 const stream = fs.createReadStream('GroupDocs.Redaction.lic');
 const license = new redaction.License();
 license.setLicense(stream);
+```
+
+## Check whether a license is applied
+
+`License.isLicensed()` returns `true` when a valid license has been applied, and `false` when the component is running in evaluation mode.
+
+```js
+const redaction = require('@groupdocs/groupdocs.redaction');
+
+const license = new redaction.License();
+license.setLicense('GroupDocs.Redaction.lic');
+
+if (license.isLicensed()) {
+  // licensed processing
+}
 ```
 
 Set the license once at application startup, before creating a `Redactor`.

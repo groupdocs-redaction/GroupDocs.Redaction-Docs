@@ -15,6 +15,8 @@ The following example demonstrates usage of Save() method with default options.
 
 
 
+{{< tabs "code-example-save-with-default-options" >}}
+{{< tab "save_with_default_options.js" >}}
 ```js
 const redaction = require('@groupdocs/groupdocs.redaction');
 
@@ -30,3 +32,16 @@ finally {
   redactor.close();
 }
 ```
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/redaction/nodejs-java/_sample_files/developer-guide/advanced-usage/saving-documents/save-with-default-options/sample.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "sample_Redacted.pdf" >}}  
+```text
+Binary file (PDF, 1012 KB)
+```
+[Download full output](/redaction/nodejs-java/_output_files/developer-guide/advanced-usage/saving-documents/save-with-default-options/CodeExampleSaveWithDefaultOptions/sample_Redacted.pdf)
+{{< /tab >}}
+{{< /tabs >}}
