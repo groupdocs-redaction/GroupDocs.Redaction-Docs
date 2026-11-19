@@ -17,6 +17,8 @@ The following example demonstrates how to open a document from local disc:
 
 
 
+{{< tabs "code-example-load-from-local-disc" >}}
+{{< tab "load_from_local_disc.java" >}}
 ```java
 final Redactor redactor = new Redactor("sample.docx");
 try 
@@ -27,3 +29,16 @@ try
 }
 finally { redactor.close(); }
 ```
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/redaction/java/_sample_files/developer-guide/advanced-usage/loading-documents/load-from-local-disc/sample.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "sample_Redacted.pdf" >}}  
+```text
+Binary file (PDF, 1.2 MB)
+```
+[Download full output](/redaction/java/_output_files/developer-guide/advanced-usage/loading-documents/load-from-local-disc/CodeExampleLoadFromLocalDisc/sample_Redacted.pdf)
+{{< /tab >}}
+{{< /tabs >}}

@@ -18,13 +18,15 @@ In GroupDocs.Redaction, *Redactor* class supports rendering of the document prev
 
 The following example demonstrates how to get a single page preview of the document.
 
+{{< tabs "code-example-get-document-page-preview" >}}
+{{< tab "get_document_page_preview.java" >}}
 ```java
 // Test file
-final String testFile = "D:\\sample.pdf";
+final String testFile = "sample.pdf";
 // Take preview of the first page
 int testPageNumber = 1;
 // Preview file name
-final String previewFileName = String.format("%s_page%d.png", testFile, testPageNumber);
+final String previewFileName = "sample_page1.png";
 // Load the document to generate preview
 final Redactor redactor = new Redactor(testFile);
 try 
@@ -49,3 +51,16 @@ try
 }
 finally { redactor.close(); }
 ```
+{{< /tab >}}
+{{< tab "sample.pdf" >}}
+{{< tab-text >}}
+`sample.pdf` is the sample file used in this example. Click [here](/redaction/java/_sample_files/developer-guide/basic-usage/get-document-page-preview/sample.pdf) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "sample_page1.png" >}}  
+```text
+Binary file (PNG, 23 KB)
+```
+[Download full output](/redaction/java/_output_files/developer-guide/basic-usage/get-document-page-preview/CodeExampleGetDocumentPagePreview/sample_page1.png)
+{{< /tab >}}
+{{< /tabs >}}

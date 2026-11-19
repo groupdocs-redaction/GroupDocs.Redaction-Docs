@@ -54,6 +54,8 @@ You can replace all or specific metadata in the document with empty (blank or mi
 
 
 
+{{< tabs "code-example-clean-all-metadata" >}}
+{{< tab "clean_all_metadata.java" >}}
 ```java
 final Redactor redactor  = new Redactor("Sample.docx");
 try 
@@ -67,6 +69,19 @@ try
 }
 finally { redactor.close(); }
 ```
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/redaction/java/_sample_files/developer-guide/basic-usage/metadata-redactions/sample.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "Sample_Redacted.docx" >}}  
+```text
+Binary file (DOCX, 16 KB)
+```
+[Download full output](/redaction/java/_output_files/developer-guide/basic-usage/metadata-redactions/CodeExampleCleanAllMetadata/Sample_Redacted.docx)
+{{< /tab >}}
+{{< /tabs >}}
 
 You can specify *MetadataFilter.All* or use default constructor to blank out all metadata within given document, Custom - to clear all custom metadata entries.
 
@@ -76,6 +91,8 @@ You can use *MetadataSearchRedaction* to remove sensitive data from document's
 
 
 
+{{< tabs "code-example-redact-metadata" >}}
+{{< tab "redact_metadata.java" >}}
 ```java
 final Redactor redactor  = new Redactor("Sample.docx");
 try 
@@ -89,11 +106,26 @@ try
 }
 finally { redactor.close(); }
 ```
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/redaction/java/_sample_files/developer-guide/basic-usage/metadata-redactions/sample.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "Sample_Redacted.docx" >}}  
+```text
+Binary file (DOCX, 16 KB)
+```
+[Download full output](/redaction/java/_output_files/developer-guide/basic-usage/metadata-redactions/CodeExampleRedactMetadata/Sample_Redacted.docx)
+{{< /tab >}}
+{{< /tabs >}}
 
 First argument is regular expression, second is a replacement string. You can also set scope for redaction by setting filter, e.g. to *MetadataFilter.Company*. - it will leave the regular expressions matches undone in all metadata items, except "Company" property:
 
 
 
+{{< tabs "code-example-redact-metadata-with-filter" >}}
+{{< tab "redact_metadata_with_filter.java" >}}
 ```java
 final Redactor redactor  = new Redactor("Sample.docx");
 try 
@@ -109,6 +141,19 @@ try
 }
 finally { redactor.close(); }
 ```
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/redaction/java/_sample_files/developer-guide/basic-usage/metadata-redactions/sample.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "Sample_Redacted.docx" >}}  
+```text
+Binary file (DOCX, 16 KB)
+```
+[Download full output](/redaction/java/_output_files/developer-guide/basic-usage/metadata-redactions/CodeExampleRedactMetadataWithFilter/Sample_Redacted.docx)
+{{< /tab >}}
+{{< /tabs >}}
 
 ### Metadata redaction status
 

@@ -14,6 +14,8 @@ You can use **PageAreaRedaction** to redact an area of a specific page range fro
 
 The following example demonstrates how to apply **PageAreaRedaction** to the right half of the last page in a PDF document.
 
+{{< tabs "code-example-use-page-area-redaction" >}}
+{{< tab "use_page_area_redaction.java" >}}
 ```java
         final Redactor redactor = new Redactor("Sample.pdf");
         try 
@@ -25,12 +27,26 @@ The following example demonstrates how to apply **PageAreaRedaction** to the rig
                 new PageAreaFilter(new java.awt.Point(300, 0), new java.awt.Dimension(300, 840)) // right half of the page
             });
             RegionReplacementOptions optionsImg = new RegionReplacementOptions(java.awt.Color.RED, new java.awt.Dimension(100, 100));
-            RedactorChangeLog result = redactor.apply(new PageAreaRedaction(rx, optionsText, optionsImg));
-            if (result.getStatus() != RedactionStatus.Failed)
-            {
-                redactor.save();
-            }                            
+            redactor.apply(new PageAreaRedaction(rx, optionsText, optionsImg));
+            SaveOptions saveOptions = new SaveOptions();
+            saveOptions.setAddSuffix(true);
+            saveOptions.setRasterizeToPDF(false);
+            saveOptions.setRedactedFileSuffix("redacted");
+            redactor.save(saveOptions);
         }
         finally { redactor.close(); }
 ```
+{{< /tab >}}
+{{< tab "Sample.pdf" >}}
+{{< tab-text >}}
+`Sample.pdf` is the sample file used in this example. Click [here](/redaction/java/_sample_files/developer-guide/advanced-usage/using-redaction-filters/use-page-area-redaction/Sample.pdf) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "Sample_redacted.pdf" >}}  
+```text
+Binary file (PDF, 68 KB)
+```
+[Download full output](/redaction/java/_output_files/developer-guide/advanced-usage/using-redaction-filters/use-page-area-redaction/CodeExampleUsePageAreaRedaction/Sample_redacted.pdf)
+{{< /tab >}}
+{{< /tabs >}}
 

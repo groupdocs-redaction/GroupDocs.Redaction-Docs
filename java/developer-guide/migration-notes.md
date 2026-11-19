@@ -9,6 +9,58 @@ productName: GroupDocs.Redaction for Java
 hideChildren: False
 toc: True
 ---
+### Migrate to version 26.11
+
+#### Evaluation limits
+
+Version 26.11 introduces updated evaluation mode limitations.
+
+Without a license, a single process can open up to 25 documents. The previous limits of 1 document, 1 redaction, and 4 replacements no longer apply. Trial badges are still added to saved documents.
+
+#### `License.isLicensed()`
+
+`License.isLicensed()` returns `true` when a valid license has been applied, and `false` when the component is running in evaluation mode.
+
+```java
+License license = new License();
+license.setLicense("GroupDocs.Redaction.lic");
+
+if (license.isLicensed()) {
+    try (Redactor redactor = new Redactor("sample.pdf")) {
+        // licensed processing
+    }
+}
+```
+
+#### OCR types moved to `com.groupdocs.redaction.integration.ocr`
+
+The following types were moved from `com.groupdocs.redaction.integration` to `com.groupdocs.redaction.integration.ocr`:
+
+* `IOcrConnector`
+* `RecognizedImage`
+* `TextLine`
+* `TextFragment`
+
+Update imports in custom OCR connectors and related code:
+
+```java
+// Before (26.10 and earlier)
+import com.groupdocs.redaction.integration.IOcrConnector;
+import com.groupdocs.redaction.integration.RecognizedImage;
+import com.groupdocs.redaction.integration.TextLine;
+import com.groupdocs.redaction.integration.TextFragment;
+
+// After (26.11)
+import com.groupdocs.redaction.integration.ocr.IOcrConnector;
+import com.groupdocs.redaction.integration.ocr.RecognizedImage;
+import com.groupdocs.redaction.integration.ocr.TextLine;
+import com.groupdocs.redaction.integration.ocr.TextFragment;
+```
+
+#### Pre-rasterize output location
+
+`LoadOptions.PreRasterize` and formats that require rasterization now save the PDF next to the source file. Previously the PDF was written to the process working directory.
+
 ### Why To Migrate?
 
   

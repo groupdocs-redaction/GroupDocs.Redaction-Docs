@@ -12,7 +12,7 @@ toc: True
 
 GroupDocs.Redaction for Java is distributed via the [GroupDocs Repository](https://releases.groupdocs.com/java/repo/). You can easily add it to your project using any Java build tool (Maven, Gradle, Kotlin, Ivy, or Sbt) with simple configuration.
 
-> **Note:** The current version shown below is **26.10**. Always check the [releases page](https://releases.groupdocs.com/java/repo/com/groupdocs/groupdocs-redaction/) for the latest version.
+> **Note:** The current version shown below is **26.11**. Always check the [releases page](https://releases.groupdocs.com/java/repo/com/groupdocs/groupdocs-redaction/) for the latest version.
 
 ### Specify GroupDocs Repository Configuration
 
@@ -76,7 +76,7 @@ Then define GroupDocs.Redaction for Java API dependency in your project as fo
     <dependency>
         <groupId>com.groupdocs</groupId>
         <artifactId>groupdocs-redaction</artifactId>
-        <version>26.10</version>
+        <version>26.11</version>
     </dependency>
 </dependencies>
 ```
@@ -84,27 +84,27 @@ Then define GroupDocs.Redaction for Java API dependency in your project as fo
 {{< tab "Gradle" >}}
 ```xml
 dependencies {
-    implementation 'com.groupdocs:groupdocs-redaction:26.10'
+    implementation 'com.groupdocs:groupdocs-redaction:26.11'
 }
 ```
 {{< /tab >}}
 {{< tab "Kotlin" >}}
 ```xml
 dependencies {
-    implementation("com.groupdocs:groupdocs-redaction:26.10")
+    implementation("com.groupdocs:groupdocs-redaction:26.11")
 }
 ```
 {{< /tab >}}
 {{< tab "Ivy" >}}
 ```xml
-<dependency org="com.groupdocs" name="groupdocs-redaction" rev="26.10">
+<dependency org="com.groupdocs" name="groupdocs-redaction" rev="26.11">
    <artifact name="groupdocs-redaction" ext="jar"/>
 </dependency>
 ```
 {{< /tab >}}
 {{< tab "Sbt" >}}
 ```xml
-libraryDependencies += "com.groupdocs" % "groupdocs-redaction" % "26.10"
+libraryDependencies += "com.groupdocs" % "groupdocs-redaction" % "26.11"
 ```
 {{< /tab >}}
 {{< /tabs >}}

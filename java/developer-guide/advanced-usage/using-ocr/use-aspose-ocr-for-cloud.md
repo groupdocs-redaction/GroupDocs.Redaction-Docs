@@ -27,10 +27,10 @@ import org.apache.commons.lang3.ArrayUtils;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-import com.groupdocs.redaction.integration.RecognizedImage;
-import com.groupdocs.redaction.integration.TextLine;
-import com.groupdocs.redaction.integration.TextFragment;
-import com.groupdocs.redaction.integration.IOcrConnector;
+import com.groupdocs.redaction.integration.ocr.RecognizedImage;
+import com.groupdocs.redaction.integration.ocr.TextLine;
+import com.groupdocs.redaction.integration.ocr.TextFragment;
+import com.groupdocs.redaction.integration.ocr.IOcrConnector;
 
 public class AsposeCloudOcrConnector implements IOcrConnector
 {

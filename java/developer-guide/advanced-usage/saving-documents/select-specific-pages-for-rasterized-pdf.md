@@ -15,6 +15,8 @@ Saving document as a rasterized PDF, you can specify starting page index (zero b
 
 
 
+{{< tabs "code-example-select-specific-pages-for-rasterized-pdf" >}}
+{{< tab "select_specific_pages_for_rasterized_pdf.java" >}}
 ```java
 final Redactor redactor = new Redactor("MultipageSample.docx");
 try 
@@ -33,3 +35,16 @@ try
 }
 finally { redactor.close(); }
 ```
+{{< /tab >}}
+{{< tab "multipage_sample.docx" >}}
+{{< tab-text >}}
+`multipage_sample.docx` is the sample file used in this example. Click [here](/redaction/java/_sample_files/developer-guide/advanced-usage/saving-documents/select-specific-pages-for-rasterized-pdf/multipage_sample.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "MultipageSample_Redacted.pdf" >}}  
+```text
+Binary file (PDF, 10.7 MB)
+```
+[Download full output](/redaction/java/_output_files/developer-guide/advanced-usage/saving-documents/select-specific-pages-for-rasterized-pdf/CodeExampleSelectSpecificPagesForRasterizedPdf/MultipageSample_Redacted.pdf)
+{{< /tab >}}
+{{< /tabs >}}

@@ -38,6 +38,8 @@ You can use RedactionPolicy.save() method to create XML documents of this struct
 
 The following example demonstrates how to save a *RedactionPolicy* to an XML file.
 
+{{< tabs "code-example-create-redaction-policy" >}}
+{{< tab "create_redaction_policy.java" >}}
 ```java
 RedactionPolicy policy = new RedactionPolicy(new Redaction[] {
     new ExactPhraseRedaction("Redaction", new ReplacementOptions("[Product]")),
@@ -45,38 +47,51 @@ RedactionPolicy policy = new RedactionPolicy(new Redaction[] {
     new DeleteAnnotationRedaction(),
     new EraseMetadataRedaction(MetadataFilters.All)
 });
-policy.save("MyPolicyFile.xml");
+policy.save("sample_policy.xml");
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
 You can have as much policies, as you need, loading them to redact your documents.
 
-An example below shows how to apply redaction policy to all files within given inbound folder, and save to one of outbound folders - for successfully updated files and for failed ones. Current date and time is used as a part of output file name:
+The example below loads a redaction policy from an XML file and applies every rule it contains to a document in a single `apply` call:
 
 
 
+{{< tabs "code-example-use-redaction-policy" >}}
+{{< tab "use_redaction_policy.java" >}}
 ```java
-RedactionPolicy policy = RedactionPolicy.load("Policy_file.xml");
-for (final File fileEntry : new File("\Inbound\").listFiles())
+RedactionPolicy policy = RedactionPolicy.load("redaction_policy.xml");
+final Redactor redactor = new Redactor("sample.docx");
+try
 {
-    final Redactor redactor  = new Redactor(fileEntry.getPath());
-    try 
+    RedactorChangeLog result = redactor.apply(policy);
+    if (result.getStatus() != RedactionStatus.Failed)
     {
-        //Apply redaction 
-        RedactorChangeLog result = redactor.apply(policy);
-                    
-        // Set the output directory path, it is supposed that all folders exist
-        File resultFolder = new File(result.getStatus() != RedactionStatus.Failed ? "Done" : "Failed");
-                    
-        // Save the ouput files after applying redactions
-        final FileOutputStream fileStream = new FileOutputStream(resultFolder.getPath() + fileEntry.getName());
-        try 
-        {
-               RasterizationOptions options = new  RasterizationOptions();
-               options.setEnabled(false);
-               redactor.save(fileStream,options);
-        }
-        finally { fileStream.close(); }
-     }
-     finally { redactor.close(); }
- }
+        SaveOptions saveOptions = new SaveOptions();
+        saveOptions.setAddSuffix(true);
+        saveOptions.setRasterizeToPDF(false);
+        saveOptions.setRedactedFileSuffix("redacted");
+        redactor.save(saveOptions);
+    }
+}
+finally { redactor.close(); }
 ```
+{{< /tab >}}
+{{< tab "redaction_policy.xml" >}}
+{{< tab-text >}}
+`redaction_policy.xml` is the policy file used in this example. Click [here](/redaction/java/_sample_files/developer-guide/advanced-usage/use-redaction-policies/redaction_policy.xml) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the document redacted in this example. Click [here](/redaction/java/_sample_files/developer-guide/advanced-usage/use-redaction-policies/sample.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "sample_redacted.docx" >}}  
+```text
+Binary file (DOCX, 17 KB)
+```
+[Download full output](/redaction/java/_output_files/developer-guide/advanced-usage/use-redaction-policies/CodeExampleUseRedactionPolicy/sample_redacted.docx)
+{{< /tab >}}
+{{< /tabs >}}

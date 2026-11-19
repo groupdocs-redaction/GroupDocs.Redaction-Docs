@@ -27,6 +27,8 @@ Applying redaction to a document is done through *Redactor.apply* method. As a
 
 
 
+{{< tabs "code-example-apply-redaction" >}}
+{{< tab "apply_redaction.java" >}}
 ```java
 final Redactor redactor = new Redactor("sample.docx");
 try 
@@ -36,6 +38,19 @@ try
 }
 finally { redactor.close(); }
 ```
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/redaction/java/_sample_files/developer-guide/basic-usage/redaction-basics/sample.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "sample_Redacted.pdf" >}}  
+```text
+Binary file (PDF, 1012 KB)
+```
+[Download full output](/redaction/java/_output_files/developer-guide/basic-usage/redaction-basics/CodeExampleApplyRedaction/sample_Redacted.pdf)
+{{< /tab >}}
+{{< /tabs >}}
 
 All possible statuses are listed in this table:
 
@@ -71,6 +86,8 @@ You can apply as much redactions as you need in a single call to *Redactor.Appl
 
 
 
+{{< tabs "code-example-apply-multiple-redactions" >}}
+{{< tab "apply_multiple_redactions.java" >}}
 ```java
 final Redactor redactor = new Redactor("sample.docx");
 try 
@@ -83,7 +100,7 @@ try
           new DeleteAnnotationRedaction(),
           new EraseMetadataRedaction(MetadataFilters.All)
     };
-    redactor.apply(redactionList);
+    RedactorChangeLog result = redactor.apply(redactionList);
     // false, if at least one redaction failed
     if (result.getStatus() != RedactionStatus.Failed)
     {
@@ -92,3 +109,16 @@ try
 }
 finally { redactor.close(); }
 ```
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/redaction/java/_sample_files/developer-guide/basic-usage/redaction-basics/sample.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "sample_Redacted.pdf" >}}  
+```text
+Binary file (PDF, 1.2 MB)
+```
+[Download full output](/redaction/java/_output_files/developer-guide/basic-usage/redaction-basics/CodeExampleApplyMultipleRedactions/sample_Redacted.pdf)
+{{< /tab >}}
+{{< /tabs >}}

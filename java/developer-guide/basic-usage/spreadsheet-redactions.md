@@ -23,6 +23,8 @@ If no filters are set, redactions affects the entire document. All indices are z
 
 
 
+{{< tabs "code-example-redact-spreadsheet-content" >}}
+{{< tab "redact_spreadsheet_content.java" >}}
 ```java
 final Redactor redactor  = new Redactor("sample.xlsx");
 try 
@@ -42,3 +44,16 @@ try
 }
 finally { redactor.close(); }
 ```
+{{< /tab >}}
+{{< tab "sample.xlsx" >}}
+{{< tab-text >}}
+`sample.xlsx` is the sample file used in this example. Click [here](/redaction/java/_sample_files/developer-guide/basic-usage/spreadsheet-redactions/sample.xlsx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "sample_Redacted.xlsx" >}}  
+```text
+Binary file (XLSX, 15 KB)
+```
+[Download full output](/redaction/java/_output_files/developer-guide/basic-usage/spreadsheet-redactions/CodeExampleRedactSpreadsheetContent/sample_Redacted.xlsx)
+{{< /tab >}}
+{{< /tabs >}}

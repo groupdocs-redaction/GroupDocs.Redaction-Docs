@@ -27,8 +27,10 @@ In order to redact image area, you have to use [ImageAreaRedaction](https://refe
 
 **Java**
 
+{{< tabs "code-example-redact-image-area" >}}
+{{< tab "redact_image_area.java" >}}
 ```java
-final Redactor redactor  = new Redactor("D:\\test.jpg");
+final Redactor redactor  = new Redactor("sample.jpg");
 try 
 {
     //Define the position on image
@@ -46,6 +48,19 @@ try
 }
 finally { redactor.close(); }
 ```
+{{< /tab >}}
+{{< tab "sample.jpg" >}}
+{{< tab-text >}}
+`sample.jpg` is the sample file used in this example. Click [here](/redaction/java/_sample_files/developer-guide/basic-usage/image-redactions/sample.jpg) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "sample_Redacted.pdf" >}}  
+```text
+Binary file (PDF, 2.6 MB)
+```
+[Download full output](/redaction/java/_output_files/developer-guide/basic-usage/image-redactions/CodeExampleRedactImageArea/sample_Redacted.pdf)
+{{< /tab >}}
+{{< /tabs >}}
 
 If the redaction cannot be applied to this type of files, e.g. MS Word document without embedded images, [RedactorChangeLog.getStatus()](https://reference.groupdocs.com/redaction/java/com.groupdocs.redaction/RedactorChangeLog#getStatus()) will be [RedactionStatus.Skipped](https://reference.groupdocs.com/redaction/java/com.groupdocs.redaction/RedactionStatus).
 
@@ -55,8 +70,10 @@ To enable OCR-processing and search for a text using regular expressions, you ha
 
 **Java**
 
-```Java
-try (Redactor redactor = new Redactor("D:\\test.jpg", new LoadOptions(), new RedactorSettings(new MyCustomOcrConnector())))
+{{< tabs "code-example-redact-image-ocr-text" >}}
+{{< tab "redact_image_ocr_text.java" >}}
+```java
+try (Redactor redactor = new Redactor("sample.jpg", new LoadOptions(), new RedactorSettings(new MyCustomOcrConnector())))
 {
    RedactorChangeLog result = redactor.apply(new RegexRedaction("\\d{4}", new ReplacementOptions(java.awt.Color.BLUE)));
    if (result.getStatus() != RedactionStatus.Failed)
@@ -65,6 +82,13 @@ try (Redactor redactor = new Redactor("D:\\test.jpg", new LoadOptions(), new Red
    };
 }
 ```
+{{< /tab >}}
+{{< tab "sample.jpg" >}}
+{{< tab-text >}}
+`sample.jpg` sample
+{{< /tab-text >}}
+{{< /tab >}}
+{{< /tabs >}}
 
 In the example above **MyCustomOcrConnector** class implements [IOcrConnector](https://reference.groupdocs.com/redaction/java/com.groupdocs.redaction.integration/IOcrConnector) interface.
 
@@ -77,8 +101,10 @@ The following example demonstrates how to edit exif data (erase them) from a pho
 
 
 
+{{< tabs "code-example-clean-image-metadata" >}}
+{{< tab "clean_image_metadata.java" >}}
 ```java
-final Redactor redactor  = new Redactor("D:\\photo.jpg");
+final Redactor redactor  = new Redactor("sample.jpg");
 try 
 {
     RedactorChangeLog result = redactor.apply(new EraseMetadataRedaction(MetadataFilters.All));
@@ -90,6 +116,19 @@ try
 }
 finally { redactor.close(); }
 ```
+{{< /tab >}}
+{{< tab "sample.jpg" >}}
+{{< tab-text >}}
+`sample.jpg` is the sample file used in this example. Click [here](/redaction/java/_sample_files/developer-guide/basic-usage/image-redactions/sample.jpg) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "sample_Redacted.pdf" >}}  
+```text
+Binary file (PDF, 4.3 MB)
+```
+[Download full output](/redaction/java/_output_files/developer-guide/basic-usage/image-redactions/CodeExampleCleanImageMetadata/sample_Redacted.pdf)
+{{< /tab >}}
+{{< /tabs >}}
 
 If the redaction cannot be applied to this type of files, e.g. BMP image, *RedactorChangeLog.getStatus()* will be *RedactionStatus.Skipped*.
 
@@ -99,8 +138,10 @@ You can redact image area within all kinds of embedded images inside a document.
 
 The following example demonstrates how to redact all embedded images within a Microsoft Word document:
 
+{{< tabs "code-example-redact-embedded-images" >}}
+{{< tab "redact_embedded_images.java" >}}
 ```java
-final Redactor redactor = new Redactor("D:\\sample.docx");
+final Redactor redactor = new Redactor("sample.docx");
 try 
 {
     java.awt.Point samplePoint = new java.awt.Point(516, 311);
@@ -114,6 +155,19 @@ try
 }
 finally { redactor.close(); }
 ```
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/redaction/java/_sample_files/developer-guide/basic-usage/image-redactions/sample.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "sample_Redacted.pdf" >}}  
+```text
+Binary file (PDF, 1010 KB)
+```
+[Download full output](/redaction/java/_output_files/developer-guide/basic-usage/image-redactions/CodeExampleRedactEmbeddedImages/sample_Redacted.pdf)
+{{< /tab >}}
+{{< /tabs >}}
 
 If the redaction cannot be applied to this type of files, e.g. a spreadsheet document, *RedactorChangeLog.getStatus()* will be *RedactionStatus.Skipped*.
 

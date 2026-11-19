@@ -13,9 +13,11 @@ The following example demonstrates how to save the redacted document, replacing 
 
 
 
+{{< tabs "code-example-save-overwriting-original-file" >}}
+{{< tab "save_overwriting_original_file.java" >}}
 ```java
 // Make a copy of sample file
-Files.copy(new File("Sample.docx").toPath(), new File("OverwrittenSample.docx").toPath(), StandardCopyOption.REPLACE_EXISTING);
+Files.copy(new File("sample.docx").toPath(), new File("OverwrittenSample.docx").toPath(), StandardCopyOption.REPLACE_EXISTING);
 // Apply redaction
 final Redactor redactor = new Redactor("OverwrittenSample.docx");
 try 
@@ -31,5 +33,14 @@ try
     }
 }
 finally { redactor.close(); }
-
+// Publish a distinct artifact for the docs output tab
+Files.copy(new File("OverwrittenSample.docx").toPath(), new File("sample_overwritten.docx").toPath(), StandardCopyOption.REPLACE_EXISTING);
 ```
+{{< /tab >}}
+{{< tab "OverwrittenSample.docx" >}}  
+```text
+Binary file (DOCX, 17 KB)
+```
+[Download full output](/redaction/java/_output_files/developer-guide/advanced-usage/saving-documents/save-overwriting-original-file/CodeExampleSaveOverwritingOriginalFile/OverwrittenSample.docx)
+{{< /tab >}}
+{{< /tabs >}}

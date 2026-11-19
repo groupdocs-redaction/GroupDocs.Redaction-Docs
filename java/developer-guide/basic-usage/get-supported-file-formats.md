@@ -19,6 +19,8 @@ The following example demonstrates how to get supported file formats list.
 
 
 
+{{< tabs "code-example-list-supported-formats" >}}
+{{< tab "list_supported_formats.java" >}}
 ```java
 Iterable<FileType> supportedFileTypes = FileType.getSupportedFileTypes();
 Iterator iterator = supportedFileTypes.iterator();      
@@ -28,3 +30,21 @@ while (iterator.hasNext())
     System.out.println(fileType);
 }
 ```
+{{< /tab >}}
+{{< tab "code-example-list-supported-formats.txt" >}}  
+```text
+Tagged Image File (.tif)
+Tagged Image File Format (.tiff)
+JPEG Image (.jpg)
+JPEG Image (.jpeg)
+Portable Network Graphic (.png)
+Graphical Interchange Format File (.gif)
+Bitmap Image File (.bmp)
+JPEG 2000 Core Image File (.jp2)
+Hypertext Markup Language File (.htm)
+Hypertext Markup Language File (.html)
+[TRUNCATED]
+```
+[Download full output](/redaction/java/_output_files/developer-guide/basic-usage/get-supported-file-formats/CodeExampleListSupportedFormats/code-example-list-supported-formats.txt)
+{{< /tab >}}
+{{< /tabs >}}
