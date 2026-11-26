@@ -62,7 +62,7 @@ public class ComputerVisionOcrConnector : IOcrConnector
                 }
                 catch (Exception ex)
                 {
-                    // MS Azure Cognintive services reports 400 Bad requests and other exceptions on small pictures and pictures with no text
+                    // MS Azure Cognitive services reports 400 Bad requests and other exceptions on small pictures and pictures with no text
                     Console.WriteLine("Microsoft Azure Cognitive Services consider this image as wrong ({0})", ex.ToString());
                 }
                 if (!string.IsNullOrEmpty(stringResponse))

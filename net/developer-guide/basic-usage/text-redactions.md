@@ -26,7 +26,7 @@ using (Redactor redactor = new Redactor(@"sample.docx"))
 }
 ```
 
-By default, search for exact phase is case insensitive.For a case-sensitive redaction, there is a constructor parameter and corresponding public property:
+By default, search for exact phrase is case insensitive.For a case-sensitive redaction, there is a constructor parameter and corresponding public property:
 
 **C#**
 
