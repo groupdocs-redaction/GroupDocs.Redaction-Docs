@@ -60,7 +60,7 @@ Binary file (DOCX, 40 KB)
 {{< /tab >}}
 {{< /tabs >}}
 
-By default, search for exact phase is case insensitive. For a case-sensitive redaction, there is a constructor parameter and corresponding public property:
+By default, search for exact phrase is case insensitive. For a case-sensitive redaction, there is a constructor parameter and corresponding public property:
 
 {{< tabs "code-example-redact-case-sensitive-phrase" >}}
 {{< tab "redact_case_sensitive_phrase.py" >}}
