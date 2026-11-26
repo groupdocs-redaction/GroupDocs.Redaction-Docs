@@ -9,7 +9,7 @@ productName: GroupDocs.Redaction for Node.js via Java
 hideChildren: False
 toc: True
 ---
-The simplest way to save the document is it provide no parameters to Save method. In this case the document will be rasterized to PDF and will have the same name as the original one except its extension (.PDF). The PDF file will be overwritten.
+The simplest way to save the document is to provide no parameters to Save method. In this case the document will be rasterized to PDF and will have the same name as the original one except its extension (.PDF). The PDF file will be overwritten.
 
 The following example demonstrates usage of Save() method with default options.
 

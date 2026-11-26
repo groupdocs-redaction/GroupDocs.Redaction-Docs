@@ -23,7 +23,7 @@ GroupDocs.Redaction comes with the following redaction types:
 
 ### Apply redaction
 
-Applying redaction to a document is done through *Redactor.apply* method. As a result, you receive *RedactorChangeLog* instance, containing a log entry for each redaction applied. The entry contains reference to *Redacton* instance including its options, status of the operation (see below) and textual descriptions when applicable. If at least one redaction failed, you will see *Status* == *RedactionStatus.Failed*:
+Applying redaction to a document is done through *Redactor.apply* method. As a result, you receive *RedactorChangeLog* instance, containing a log entry for each redaction applied. The entry contains reference to *Redaction* instance including its options, status of the operation (see below) and textual descriptions when applicable. If at least one redaction failed, you will see *Status* == *RedactionStatus.Failed*:
 
 
 

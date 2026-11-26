@@ -28,7 +28,7 @@ const loadOptions = new redaction.LoadOptions(/*preRasterize*/ true);
 const redactor = new redaction.Redactor('sample.docx', loadOptions);
         try 
         {
-            // Make changes to the file as a rasterized PDF, e.g. uisng ImageAreaRedaction:
+            // Make changes to the file as a rasterized PDF, e.g. using ImageAreaRedaction:
 const samplePoint = new Point(516, 311);
 const sampleSize = new Dimension(170, 35);
 const result = redactor.apply(new redaction.ImageAreaRedaction(samplePoint,

@@ -27,7 +27,7 @@ GroupDocs.Redaction comes with the following redaction types:
 
 ## Apply redaction
 
-Applying redaction to a document is done through [Redactor.Apply](https://reference.groupdocs.com/redaction/python-net/groupdocs.redaction/redactor/apply/) method. As a result, you receive [RedactorChangeLog](https://reference.groupdocs.com/redaction/python-net/groupdocs.redaction/redactorchangelog/) instance, containing a log entry for each redaction applied. The entry contains reference to [Redacton](https://reference.groupdocs.com/redaction/python-net/groupdocs.redaction/redaction/) instance including its options, status of the operation (see below) and textual descriptions when applicable. If at least one redaction failed, you will see [Status == RedactionStatus.Failed](https://reference.groupdocs.com/redaction/python-net/groupdocs.redaction/redactionstatus/):
+Applying redaction to a document is done through [Redactor.Apply](https://reference.groupdocs.com/redaction/python-net/groupdocs.redaction/redactor/apply/) method. As a result, you receive [RedactorChangeLog](https://reference.groupdocs.com/redaction/python-net/groupdocs.redaction/redactorchangelog/) instance, containing a log entry for each redaction applied. The entry contains reference to [Redaction](https://reference.groupdocs.com/redaction/python-net/groupdocs.redaction/redaction/) instance including its options, status of the operation (see below) and textual descriptions when applicable. If at least one redaction failed, you will see [Status == RedactionStatus.Failed](https://reference.groupdocs.com/redaction/python-net/groupdocs.redaction/redactionstatus/):
 
 {{< tabs "code-example-apply-redaction" >}}
 {{< tab "apply_redaction.py" >}}
