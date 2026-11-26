@@ -22,7 +22,7 @@ LoadOptions loadOptions = new LoadOptions(/*preRasterize*/ true);
 final Redactor redactor = new Redactor("sample.docx", loadOptions);
 try 
 {
-    // Make changes to the file as a rasterized PDF, e.g. uisng ImageAreaRedaction:
+    // Make changes to the file as a rasterized PDF, e.g. using ImageAreaRedaction:
     java.awt.Point samplePoint = new java.awt.Point(516, 311);
     java.awt.Dimension sampleSize = new java.awt.Dimension(170, 35);
     RedactorChangeLog result = redactor.apply(new ImageAreaRedaction(samplePoint,

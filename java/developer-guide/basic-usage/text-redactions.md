@@ -42,7 +42,7 @@ Binary file (PDF, 1012 KB)
 {{< /tab >}}
 {{< /tabs >}}
 
-By default, search for exact phase is case insensitive.For a case-sensitive redaction, there is a constructor parameter and corresponding public property:
+By default, search for exact phrase is case insensitive.For a case-sensitive redaction, there is a constructor parameter and corresponding public property:
 
 
 
