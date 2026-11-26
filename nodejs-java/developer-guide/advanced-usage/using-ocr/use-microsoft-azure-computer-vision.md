@@ -98,7 +98,7 @@ public class MicrosoftAzureOcrConnector implements IOcrConnector
                 }
                 catch (java.lang.Exception ex)
                 {
-                    // MS Azure Cognintive services reports 400 Bad requests and other exceptions on small pictures and pictures with no text
+                    // MS Azure Cognitive services reports 400 Bad requests and other exceptions on small pictures and pictures with no text
                     console.log("Microsoft Azure Cognitive Services consider this image as wrong: " + ex.toString());
                 } 
                 if (stringResponse != null) {
